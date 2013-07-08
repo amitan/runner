@@ -13,4 +13,17 @@
     
 }
 
+// 指定した敵を生成する
++ (Player*)createPlayer:(int)enemyId;
+
+// 敵を指定して初期化する
+- (id)initWithEnemyId:(int)enemyId;
+
+// 画面に表示する
+- (void)stageOn:(int)order;
+
+// 動作を開始/停止する
+- (void)start;
+- (void)stop;
+
 @end

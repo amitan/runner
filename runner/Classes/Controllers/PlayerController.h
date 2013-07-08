@@ -13,4 +13,9 @@
     
 }
 
+// 動作を開始/停止する
+- (void)setup;
+- (void)start;
+- (void)stop;
+
 @end

@@ -32,11 +32,15 @@ const float BASE_HEIGHT = 960.0f;
 }
 
 + (void)setTLPosition:(CCSprite*)sprite x:(float)x y:(float)y {
-    
+    [self setPosition:sprite x:x y:y offsetX:sprite.contentSize.width / 2 offsetY:sprite.contentSize.height / 2];
+}
+
++ (void)setPosition:(CCNode *)node x:(float)x y:(float)y offsetX:(float)offsetX offsetY:(float)offsetY {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
-    float dx = winSize.width / 2 - [ScaleUtil getPoint:(BASE_WIDTH / 2 - x)] + sprite.contentSize.width / 2;
-    float dy = winSize.height / 2 - [ScaleUtil getPoint:(y - BASE_HEIGHT / 2)] - sprite.contentSize.height / 2;
-    sprite.position = ccp(dx, dy);
+    float dx = winSize.width / 2 - [ScaleUtil getPoint:(BASE_WIDTH / 2 - x)] + offsetX;
+    float dy = winSize.height / 2 - [ScaleUtil getPoint:(y - BASE_HEIGHT / 2)] - offsetY;
+    node.position = ccp(dx, dy);
+    
 }
 
 @end

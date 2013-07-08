@@ -16,7 +16,7 @@
 
 @implementation GameScene
 @synthesize backgroundLayer, mapLayer, gameLayer;
-@synthesize countController, mapController;
+@synthesize countController, mapController, playerController;
 
 static GameScene *_scene = nil;
 
@@ -66,10 +66,11 @@ static GameScene *_scene = nil;
         // 管理クラスを設定
         self.countController = [CountController node];
         [self.countController addEndListner:self selector:@selector(onGameStart:)];
-        
         self.mapController = [MapController node];
+        self.playerController = [PlayerController node];
         [self addChild:self.countController z:-1];
         [self addChild:self.mapController z:-1];
+        [self addChild:self.playerController z:-1];
     }
     return self;
 }
@@ -96,6 +97,7 @@ static GameScene *_scene = nil;
 
 - (void)setup {
     [self.countController setup];
+    [self.playerController setup];
 }
 
 - (void)start {
@@ -103,11 +105,12 @@ static GameScene *_scene = nil;
 }
 
 - (void)onGameStart:(id)sender {
-    CCLOG(@"##### start!!");
+    [self.playerController start];
 }
 
 - (void)stop {
     [self.countController stop];
+    [self.playerController stop];
 }
 
 @end

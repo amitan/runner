@@ -7,19 +7,36 @@
 //
 
 #import "PlayerController.h"
+#import "Player.h"
 
+@interface PlayerController ()
+@property (nonatomic, retain)Player *_player;
+@end
 
 @implementation PlayerController
 
 - (id)init {
     self = [super init];
 	if (self) {
+        self._player = [Player createPlayer:1]; // TODO:: キャラ指定実装
     }
     return self;
 }
 
 - (void)dealloc {
     [super dealloc];
+}
+
+- (void)setup {
+    [self._player stageOn:1];
+}
+
+- (void)start {
+    [self._player start];
+}
+
+- (void)stop {
+    [self._player stop];
 }
 
 @end

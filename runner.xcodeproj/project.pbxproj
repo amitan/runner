@@ -157,6 +157,8 @@
 		F93DF6B8178B02DA007AD085 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6B7178B02DA007AD085 /* Counter.m */; };
 		F93DF6BB178B0758007AD085 /* LabelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6BA178B0758007AD085 /* LabelUtil.m */; };
 		F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6BD178B085B007AD085 /* ColorUtil.m */; };
+		F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */; };
+		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -465,6 +467,10 @@
 		F93DF6BA178B0758007AD085 /* LabelUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelUtil.m; sourceTree = "<group>"; };
 		F93DF6BC178B085B007AD085 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
 		F93DF6BD178B085B007AD085 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
+		F93DF6BF178B1F48007AD085 /* PlayerAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAnimation.h; sourceTree = "<group>"; };
+		F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAnimation.m; sourceTree = "<group>"; };
+		F93DF6C2178B1F54007AD085 /* CommonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAnimation.h; sourceTree = "<group>"; };
+		F93DF6C3178B1F54007AD085 /* CommonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -932,6 +938,10 @@
 		F93DF689178AB5BF007AD085 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				F93DF6BF178B1F48007AD085 /* PlayerAnimation.h */,
+				F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */,
+				F93DF6C2178B1F54007AD085 /* CommonAnimation.h */,
+				F93DF6C3178B1F54007AD085 /* CommonAnimation.m */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -1217,6 +1227,8 @@
 				F93DF6B8178B02DA007AD085 /* Counter.m in Sources */,
 				F93DF6BB178B0758007AD085 /* LabelUtil.m in Sources */,
 				F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */,
+				F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */,
+				F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

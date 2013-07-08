@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "CountController.h"
 #import "MapController.h"
+#import "PlayerController.h"
 
 @interface GameScene : CCScene {
     
@@ -20,6 +21,7 @@
 @property (nonatomic, retain)CCLayer *effectLayer;
 @property (nonatomic, retain)CountController *countController;
 @property (nonatomic, retain)MapController *mapController;
+@property (nonatomic, retain)PlayerController *playerController;
 
 // シングルトンオブジェクトを返すメソッド
 + (GameScene *)sharedInstance;
