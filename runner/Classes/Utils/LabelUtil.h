@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
 @interface LabelUtil : NSObject
+
++ (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size;
 
 @end

@@ -10,4 +10,8 @@
 
 @implementation ColorUtil
 
++ (ccColor3B)getDefaultFontColor {
+    return ccc3(255, 255, 255);
+}
+
 @end

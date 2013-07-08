@@ -7,7 +7,19 @@
 //
 
 #import "LabelUtil.h"
+#import "ColorUtil.h"
 
 @implementation LabelUtil
+
++ (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size {
+    return [LabelUtil _createLabel:labelWithString fontSize:size color:[ColorUtil getDefaultFontColor]];
+}
+
++ (CCLabelTTF *)_createLabel:(NSString*)labelWithString fontSize:(int)size color:(ccColor3B)color {
+    int fontSize = size / [[UIScreen mainScreen] scale];
+    CCLabelTTF *label = [CCLabelTTF labelWithString:labelWithString fontName:@"Helvetica-Bold" fontSize:fontSize];
+    label.color = color;
+    return label;
+}
 
 @end

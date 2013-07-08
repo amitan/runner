@@ -13,4 +13,10 @@
     
 }
 
+- (void)stageOn;
+- (void)stageOff;
+
+- (BOOL)isEnd;
+- (void)next;
+
 @end

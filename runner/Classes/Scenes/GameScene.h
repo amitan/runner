@@ -8,9 +8,28 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CountController.h"
+#import "MapController.h"
 
 @interface GameScene : CCScene {
     
 }
+@property (nonatomic, retain)CCLayer *backgroundLayer;
+@property (nonatomic, retain)CCLayer *mapLayer;
+@property (nonatomic, retain)CCLayer *gameLayer;
+@property (nonatomic, retain)CCLayer *effectLayer;
+@property (nonatomic, retain)CountController *countController;
+@property (nonatomic, retain)MapController *mapController;
+
+// シングルトンオブジェクトを返すメソッド
++ (GameScene *)sharedInstance;
+
+// シングルトンオブジェクトの有無に関わらずインスタンスを生成するメソッド
++ (GameScene *)createInstance:(int)worldId areaId:(int)areaId stageId:(int)stageId;
+
+// ゲームを開始/停止する
+- (void)setup;
+- (void)start;
+- (void)stop;
 
 @end

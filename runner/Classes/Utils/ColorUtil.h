@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
 @interface ColorUtil : NSObject
+
+// デフォルトの文字色を返す
++ (ccColor3B)getDefaultFontColor;
 
 @end
