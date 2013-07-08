@@ -39,4 +39,8 @@
     [self._player stop];
 }
 
+- (void)jump {
+    [self._player jump];
+}
+
 @end

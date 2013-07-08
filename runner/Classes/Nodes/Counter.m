@@ -43,10 +43,22 @@ const int MAX_COUNT = 3; // カウント最大値
     [super dealloc];
 }
 
+- (void)onEnter {
+    [super onEnter];
+    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self
+                                                              priority:0
+                                                       swallowsTouches:YES];
+}
+
+- (void)onExit {
+    [super onExit];
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
+}
+
 - (void)stageOn {
     self._count = MAX_COUNT;
     if (![self parent]) {
-        [[GameScene sharedInstance].effectLayer addChild:self];
+        [[GameScene sharedInstance].backgroundLayer addChild:self];
     }
 }
 
@@ -70,4 +82,7 @@ const int MAX_COUNT = 3; // カウント最大値
     [self._countLabel setString:[NSString stringWithFormat:@"%d", self._count]];
 }
 
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    return YES;
+}
 @end

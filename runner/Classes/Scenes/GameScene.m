@@ -16,6 +16,7 @@
 
 @implementation GameScene
 @synthesize backgroundLayer, mapLayer, gameLayer;
+@synthesize interfaceLayer;
 @synthesize countController, mapController, playerController;
 
 static GameScene *_scene = nil;
@@ -62,6 +63,10 @@ static GameScene *_scene = nil;
         // エフェクトレイヤーを追加
         self.effectLayer = [CCLayer node];
         [self.backgroundLayer addChild:self.effectLayer];
+
+        // ユーザーの入力を受け付けるレイヤーを追加
+        self.interfaceLayer = [GameInterfaceLayer node];
+        [self.backgroundLayer addChild:self.interfaceLayer];
 
         // 管理クラスを設定
         self.countController = [CountController node];

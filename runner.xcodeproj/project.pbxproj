@@ -159,6 +159,7 @@
 		F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6BD178B085B007AD085 /* ColorUtil.m */; };
 		F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */; };
 		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
+		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -471,6 +472,8 @@
 		F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAnimation.m; sourceTree = "<group>"; };
 		F93DF6C2178B1F54007AD085 /* CommonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAnimation.h; sourceTree = "<group>"; };
 		F93DF6C3178B1F54007AD085 /* CommonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAnimation.m; sourceTree = "<group>"; };
+		F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterfaceLayer.h; sourceTree = "<group>"; };
+		F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInterfaceLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -975,6 +978,8 @@
 			children = (
 				F93DF68E178AB5D8007AD085 /* GameScene.h */,
 				F93DF68F178AB5D8007AD085 /* GameScene.m */,
+				F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */,
+				F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1229,6 +1234,7 @@
 				F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */,
 				F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */,
 				F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */,
+				F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

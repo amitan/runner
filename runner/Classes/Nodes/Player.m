@@ -48,10 +48,19 @@
 
 - (void)start {
     [self._playerSprite runAction:[PlayerAnimation getWalk:self._enemyId]];
+    [self scheduleUpdate];
 }
 
 - (void)stop {
+    [self unscheduleUpdate];
     [self stopAllActions];
+}
+
+- (void)jump {
+    
+}
+
+- (void)update:(ccTime)dt {
 }
 
 @end

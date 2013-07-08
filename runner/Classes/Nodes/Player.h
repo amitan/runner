@@ -26,4 +26,7 @@
 - (void)start;
 - (void)stop;
 
+// ジャンプ
+- (void)jump;
+
 @end

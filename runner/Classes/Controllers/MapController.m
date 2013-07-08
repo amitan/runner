@@ -10,6 +10,11 @@
 #import "GameScene.h"
 #import "ScaleUtil.h"
 
+@interface MapController ()
+@property (nonatomic, retain)CCSprite *_sprite; // TODO:: 仮実装
+
+@end
+
 @implementation MapController
 
 - (id)init {
@@ -27,9 +32,9 @@
     [super onEnter];
 
     // TODO:: マップの実装
-    CCSprite *sprite = [CCSprite spriteWithSpriteFrameName:@"land1.png"];
-    [ScaleUtil setTLPosition:sprite x:0 y:BASE_HEIGHT - sprite.contentSize.height];
-    [[GameScene sharedInstance].mapLayer addChild:sprite];
+    self._sprite = [CCSprite spriteWithSpriteFrameName:@"land1.png"];
+    [ScaleUtil setTLPosition:self._sprite x:0 y:BASE_HEIGHT - self._sprite.contentSize.height];
+    [[GameScene sharedInstance].mapLayer addChild:self._sprite];
 }
 
 @end
