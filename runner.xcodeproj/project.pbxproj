@@ -139,8 +139,24 @@
 		F93DF674178AB44A007AD085 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = F93DF673178AB44A007AD085 /* vec4.c */; };
 		F93DF679178AB44A007AD085 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF678178AB44A007AD085 /* main.m */; };
 		F93DF67C178AB44A007AD085 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF67B178AB44A007AD085 /* AppDelegate.m */; };
-		F93DF67F178AB44A007AD085 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF67E178AB44A007AD085 /* HelloWorldLayer.m */; };
-		F93DF682178AB44A007AD085 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF681178AB44A007AD085 /* IntroLayer.m */; };
+		F93DF690178AB5D8007AD085 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF68F178AB5D8007AD085 /* GameScene.m */; };
+		F93DF693178AE99B007AD085 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF692178AE99B007AD085 /* PlayerController.m */; };
+		F93DF696178AEA4C007AD085 /* CountController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF695178AEA4C007AD085 /* CountController.m */; };
+		F93DF69C178AEEBB007AD085 /* game_bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */; };
+		F93DF69D178AEEBB007AD085 /* game_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF69A178AEEBB007AD085 /* game_bg.png */; };
+		F93DF6A0178AEF59007AD085 /* ScaleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF69F178AEF59007AD085 /* ScaleUtil.m */; };
+		F93DF6A3178AF043007AD085 /* GameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6A2178AF043007AD085 /* GameUtil.m */; };
+		F93DF6A8178AF86A007AD085 /* enemy.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A4178AF86A007AD085 /* enemy.plist */; };
+		F93DF6A9178AF86A007AD085 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A5178AF86A007AD085 /* enemy.png */; };
+		F93DF6AA178AF86A007AD085 /* land.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A6178AF86A007AD085 /* land.plist */; };
+		F93DF6AB178AF86A007AD085 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A7178AF86A007AD085 /* land.png */; };
+		F93DF6AE178AF914007AD085 /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6AD178AF914007AD085 /* MapController.m */; };
+		F93DF6B1178AF9F0007AD085 /* gameparts.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6AF178AF9F0007AD085 /* gameparts.plist */; };
+		F93DF6B2178AF9F0007AD085 /* gameparts.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6B0178AF9F0007AD085 /* gameparts.png */; };
+		F93DF6B5178AFE2F007AD085 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6B4178AFE2F007AD085 /* Player.m */; };
+		F93DF6B8178B02DA007AD085 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6B7178B02DA007AD085 /* Counter.m */; };
+		F93DF6BB178B0758007AD085 /* LabelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6BA178B0758007AD085 /* LabelUtil.m */; };
+		F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6BD178B085B007AD085 /* ColorUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -421,10 +437,34 @@
 		F93DF678178AB44A007AD085 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F93DF67A178AB44A007AD085 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F93DF67B178AB44A007AD085 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F93DF67D178AB44A007AD085 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		F93DF67E178AB44A007AD085 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		F93DF680178AB44A007AD085 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		F93DF681178AB44A007AD085 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		F93DF68E178AB5D8007AD085 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		F93DF68F178AB5D8007AD085 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		F93DF691178AE99B007AD085 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
+		F93DF692178AE99B007AD085 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
+		F93DF694178AEA4C007AD085 /* CountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountController.h; sourceTree = "<group>"; };
+		F93DF695178AEA4C007AD085 /* CountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountController.m; sourceTree = "<group>"; };
+		F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game_bg-568h@2x.png"; sourceTree = "<group>"; };
+		F93DF69A178AEEBB007AD085 /* game_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_bg.png; sourceTree = "<group>"; };
+		F93DF69E178AEF59007AD085 /* ScaleUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleUtil.h; sourceTree = "<group>"; };
+		F93DF69F178AEF59007AD085 /* ScaleUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleUtil.m; sourceTree = "<group>"; };
+		F93DF6A1178AF043007AD085 /* GameUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtil.h; sourceTree = "<group>"; };
+		F93DF6A2178AF043007AD085 /* GameUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtil.m; sourceTree = "<group>"; };
+		F93DF6A4178AF86A007AD085 /* enemy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = enemy.plist; sourceTree = "<group>"; };
+		F93DF6A5178AF86A007AD085 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
+		F93DF6A6178AF86A007AD085 /* land.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = land.plist; sourceTree = "<group>"; };
+		F93DF6A7178AF86A007AD085 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
+		F93DF6AC178AF914007AD085 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
+		F93DF6AD178AF914007AD085 /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
+		F93DF6AF178AF9F0007AD085 /* gameparts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gameparts.plist; sourceTree = "<group>"; };
+		F93DF6B0178AF9F0007AD085 /* gameparts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameparts.png; sourceTree = "<group>"; };
+		F93DF6B3178AFE2F007AD085 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		F93DF6B4178AFE2F007AD085 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		F93DF6B6178B02DA007AD085 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
+		F93DF6B7178B02DA007AD085 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
+		F93DF6B9178B0758007AD085 /* LabelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelUtil.h; sourceTree = "<group>"; };
+		F93DF6BA178B0758007AD085 /* LabelUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelUtil.m; sourceTree = "<group>"; };
+		F93DF6BC178B085B007AD085 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
+		F93DF6BD178B085B007AD085 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,12 +525,9 @@
 		F93DF4E9178AB447007AD085 /* runner */ = {
 			isa = PBXGroup;
 			children = (
+				F93DF688178AB5BF007AD085 /* Classes */,
 				F93DF67A178AB44A007AD085 /* AppDelegate.h */,
 				F93DF67B178AB44A007AD085 /* AppDelegate.m */,
-				F93DF67D178AB44A007AD085 /* HelloWorldLayer.h */,
-				F93DF67E178AB44A007AD085 /* HelloWorldLayer.m */,
-				F93DF680178AB44A007AD085 /* IntroLayer.h */,
-				F93DF681178AB44A007AD085 /* IntroLayer.m */,
 				F93DF4EA178AB447007AD085 /* Resources */,
 				F93DF502178AB447007AD085 /* libs */,
 				F93DF676178AB44A007AD085 /* Supporting Files */,
@@ -501,6 +538,7 @@
 		F93DF4EA178AB447007AD085 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F93DF697178AEEBB007AD085 /* images */,
 				F93DF4EB178AB447007AD085 /* Default.png */,
 				F93DF4ED178AB447007AD085 /* Default@2x.png */,
 				F93DF4EF178AB447007AD085 /* Default-568h@2x.png */,
@@ -879,6 +917,105 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F93DF688178AB5BF007AD085 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF689178AB5BF007AD085 /* Animations */,
+				F93DF68A178AB5BF007AD085 /* Controllers */,
+				F93DF68B178AB5BF007AD085 /* Nodes */,
+				F93DF68C178AB5BF007AD085 /* Scenes */,
+				F93DF68D178AB5BF007AD085 /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F93DF689178AB5BF007AD085 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		F93DF68A178AB5BF007AD085 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF691178AE99B007AD085 /* PlayerController.h */,
+				F93DF692178AE99B007AD085 /* PlayerController.m */,
+				F93DF694178AEA4C007AD085 /* CountController.h */,
+				F93DF695178AEA4C007AD085 /* CountController.m */,
+				F93DF6AC178AF914007AD085 /* MapController.h */,
+				F93DF6AD178AF914007AD085 /* MapController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F93DF68B178AB5BF007AD085 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF6B3178AFE2F007AD085 /* Player.h */,
+				F93DF6B4178AFE2F007AD085 /* Player.m */,
+				F93DF6B6178B02DA007AD085 /* Counter.h */,
+				F93DF6B7178B02DA007AD085 /* Counter.m */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		F93DF68C178AB5BF007AD085 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF68E178AB5D8007AD085 /* GameScene.h */,
+				F93DF68F178AB5D8007AD085 /* GameScene.m */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F93DF68D178AB5BF007AD085 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF69E178AEF59007AD085 /* ScaleUtil.h */,
+				F93DF69F178AEF59007AD085 /* ScaleUtil.m */,
+				F93DF6A1178AF043007AD085 /* GameUtil.h */,
+				F93DF6A2178AF043007AD085 /* GameUtil.m */,
+				F93DF6B9178B0758007AD085 /* LabelUtil.h */,
+				F93DF6BA178B0758007AD085 /* LabelUtil.m */,
+				F93DF6BC178B085B007AD085 /* ColorUtil.h */,
+				F93DF6BD178B085B007AD085 /* ColorUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F93DF697178AEEBB007AD085 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF698178AEEBB007AD085 /* bg */,
+				F93DF69B178AEEBB007AD085 /* sprites */,
+			);
+			name = images;
+			path = Resources/images;
+			sourceTree = "<group>";
+		};
+		F93DF698178AEEBB007AD085 /* bg */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */,
+				F93DF69A178AEEBB007AD085 /* game_bg.png */,
+			);
+			path = bg;
+			sourceTree = "<group>";
+		};
+		F93DF69B178AEEBB007AD085 /* sprites */ = {
+			isa = PBXGroup;
+			children = (
+				F93DF6AF178AF9F0007AD085 /* gameparts.plist */,
+				F93DF6B0178AF9F0007AD085 /* gameparts.png */,
+				F93DF6A4178AF86A007AD085 /* enemy.plist */,
+				F93DF6A5178AF86A007AD085 /* enemy.png */,
+				F93DF6A6178AF86A007AD085 /* land.plist */,
+				F93DF6A7178AF86A007AD085 /* land.png */,
+			);
+			path = sprites;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -942,6 +1079,14 @@
 				F93DF4FE178AB447007AD085 /* Icon@2x.png in Resources */,
 				F93DF501178AB447007AD085 /* iTunesArtwork in Resources */,
 				F93DF65A178AB44A007AD085 /* ChangeLog in Resources */,
+				F93DF69C178AEEBB007AD085 /* game_bg-568h@2x.png in Resources */,
+				F93DF69D178AEEBB007AD085 /* game_bg.png in Resources */,
+				F93DF6A8178AF86A007AD085 /* enemy.plist in Resources */,
+				F93DF6A9178AF86A007AD085 /* enemy.png in Resources */,
+				F93DF6AA178AF86A007AD085 /* land.plist in Resources */,
+				F93DF6AB178AF86A007AD085 /* land.png in Resources */,
+				F93DF6B1178AF9F0007AD085 /* gameparts.plist in Resources */,
+				F93DF6B2178AF9F0007AD085 /* gameparts.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,8 +1207,16 @@
 				F93DF674178AB44A007AD085 /* vec4.c in Sources */,
 				F93DF679178AB44A007AD085 /* main.m in Sources */,
 				F93DF67C178AB44A007AD085 /* AppDelegate.m in Sources */,
-				F93DF67F178AB44A007AD085 /* HelloWorldLayer.m in Sources */,
-				F93DF682178AB44A007AD085 /* IntroLayer.m in Sources */,
+				F93DF690178AB5D8007AD085 /* GameScene.m in Sources */,
+				F93DF693178AE99B007AD085 /* PlayerController.m in Sources */,
+				F93DF696178AEA4C007AD085 /* CountController.m in Sources */,
+				F93DF6A0178AEF59007AD085 /* ScaleUtil.m in Sources */,
+				F93DF6A3178AF043007AD085 /* GameUtil.m in Sources */,
+				F93DF6AE178AF914007AD085 /* MapController.m in Sources */,
+				F93DF6B5178AFE2F007AD085 /* Player.m in Sources */,
+				F93DF6B8178B02DA007AD085 /* Counter.m in Sources */,
+				F93DF6BB178B0758007AD085 /* LabelUtil.m in Sources */,
+				F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,6 +1322,7 @@
 				F93DF687178AB44A007AD085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
