@@ -160,6 +160,7 @@
 		F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */; };
 		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
 		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
+		F9ABA62A178C456300A02626 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA629178C456300A02626 /* Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -474,6 +475,8 @@
 		F93DF6C3178B1F54007AD085 /* CommonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAnimation.m; sourceTree = "<group>"; };
 		F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterfaceLayer.h; sourceTree = "<group>"; };
 		F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInterfaceLayer.m; sourceTree = "<group>"; };
+		F9ABA628178C456300A02626 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		F9ABA629178C456300A02626 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -969,6 +972,8 @@
 				F93DF6B4178AFE2F007AD085 /* Player.m */,
 				F93DF6B6178B02DA007AD085 /* Counter.h */,
 				F93DF6B7178B02DA007AD085 /* Counter.m */,
+				F9ABA628178C456300A02626 /* Block.h */,
+				F9ABA629178C456300A02626 /* Block.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -1235,6 +1240,7 @@
 				F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */,
 				F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */,
 				F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */,
+				F9ABA62A178C456300A02626 /* Block.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

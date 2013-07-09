@@ -31,7 +31,7 @@ const float BASE_HEIGHT = 960.0f;
     return point / [[UIScreen mainScreen] scale];
 }
 
-+ (void)setTLPosition:(CCSprite*)sprite x:(float)x y:(float)y {
++ (void)setTLPosition:(CCNode*)sprite x:(float)x y:(float)y {
     [self setPosition:sprite x:x y:y offsetX:sprite.contentSize.width / 2 offsetY:sprite.contentSize.height / 2];
 }
 

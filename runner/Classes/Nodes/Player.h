@@ -29,4 +29,8 @@
 // ジャンプ
 - (void)jump;
 
+// 座標を取得する
+- (CGPoint)getCenterBottomPosition;
+- (CGPoint)getRightPosition;
+
 @end

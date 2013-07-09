@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Block.h"
 
 @interface MapController : CCNode {
     
 }
+
+// 接触しているか
+- (Block*)getCollidedBlock:(CGPoint)position;
+
+// マップをスクロールする
+- (void)scroll:(float)dx;
 
 @end
