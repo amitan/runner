@@ -11,6 +11,12 @@
 
 @interface GameUtil : NSObject
 
+// タッチ優先度
+typedef enum {
+    BUTTON_PRIORITY = -1,
+    POPUP_PRIORITY = -10,
+} TOUCH_PRIORITY;
+
 // ファイル名をもとに端末に応じた画像名を返す
 + (NSString*) getBgSpriteName:(NSString *)fileName ext:(NSString *)ext ;
 

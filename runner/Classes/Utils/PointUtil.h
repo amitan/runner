@@ -1,5 +1,5 @@
 //
-//  ScaleUtil.h
+//  PointUtil.h
 //  runner
 //
 //  Created by Ayumi Otomo on 2013/07/08.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface ScaleUtil : NSObject
+@interface PointUtil : NSObject
 
 extern const float BASE_WIDTH;
 extern const float BASE_HEIGHT;
@@ -21,6 +21,7 @@ extern const float BASE_HEIGHT;
 + (float)getPoint:(float)point;
 
 // スケール値を考慮した座標を設定する
++ (void)setCenterPosition:(CCNode*)node x:(float)x y:(float)y; // 画像中心基準
 + (void)setTLPosition:(CCNode*)node x:(float)x y:(float)y; // 画像左上基準
 + (void)setPosition:(CCNode*)node x:(float)x y:(float)y offsetX:(float)offsetX offsetY:(float)offsetY;
 

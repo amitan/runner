@@ -24,4 +24,9 @@
     return [CCAnimation animationWithSpriteFrames:frames delay:duration];
 }
 
++ (id)getBlinkAnimation {
+    id blink = [CCBlink actionWithDuration:1.0f blinks:1];
+    return [CCRepeatForever actionWithAction:blink];
+}
+
 @end

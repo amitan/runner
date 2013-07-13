@@ -7,7 +7,7 @@
 //
 
 #import "Block.h"
-#import "ScaleUtil.h"
+#import "PointUtil.h"
 #import "GameScene.h"
 
 @interface Block ()

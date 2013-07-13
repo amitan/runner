@@ -11,7 +11,7 @@
 
 @implementation PlayerAnimation
 
-+ (id)getWalk:(int)enemyId {
++ (id)getWalkAnimation:(int)enemyId {
     CCAnimation *animation = [CommonAnimation getFrameAnimation:[NSString stringWithFormat:@"enemy%d_right", enemyId] frameNum:3];
     return [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]];
 }

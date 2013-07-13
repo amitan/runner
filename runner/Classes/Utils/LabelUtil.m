@@ -8,6 +8,7 @@
 
 #import "LabelUtil.h"
 #import "ColorUtil.h"
+#import "PointUtil.h"
 
 @implementation LabelUtil
 
@@ -17,8 +18,17 @@
 
 + (CCLabelTTF *)_createLabel:(NSString*)labelWithString fontSize:(int)size color:(ccColor3B)color {
     int fontSize = size / [[UIScreen mainScreen] scale];
-    CCLabelTTF *label = [CCLabelTTF labelWithString:labelWithString fontName:@"Helvetica-Bold" fontSize:fontSize];
+    CCLabelTTF *label = [CCLabelTTF labelWithString:labelWithString fontName:@"MisakiGothic" fontSize:fontSize];
     label.color = color;
+    return label;
+}
+
++ (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size dimensions:(CGSize)dimensions alignment:(CCTextAlignment)alignment {
+    int fontSize = size / [[UIScreen mainScreen] scale];
+    CGSize newDimensions = CGSizeMake([PointUtil getPoint:dimensions.width], [PointUtil getPoint:dimensions.height]);
+    CCLabelTTF *label = [CCLabelTTF labelWithString:labelWithString fontName:@"MisakiGothic" fontSize:fontSize
+                                         dimensions:newDimensions hAlignment:alignment vAlignment:kCCVerticalTextAlignmentCenter];
+    label.color = [ColorUtil getDefaultFontColor];
     return label;
 }
 

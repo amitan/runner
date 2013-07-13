@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
+#import "AdController.h"
 
 // Added only for iOS 6 support
 @interface MyNavigationController : UINavigationController <CCDirectorDelegate>
+@property (nonatomic, retain) AdController *adController;
 @end
 
 @interface AppController : NSObject <UIApplicationDelegate>

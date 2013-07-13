@@ -18,9 +18,7 @@
 		F93DF4E6178AB447007AD085 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4E5178AB447007AD085 /* CoreText.framework */; };
 		F93DF4E8178AB447007AD085 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4E7178AB447007AD085 /* GameKit.framework */; };
 		F93DF4EC178AB447007AD085 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF4EB178AB447007AD085 /* Default.png */; };
-		F93DF4EE178AB447007AD085 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF4ED178AB447007AD085 /* Default@2x.png */; };
 		F93DF4F0178AB447007AD085 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF4EF178AB447007AD085 /* Default-568h@2x.png */; };
-		F93DF4F2178AB447007AD085 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF4F1178AB447007AD085 /* Default-Landscape~ipad.png */; };
 		F93DF4F4178AB447007AD085 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF4F3178AB447007AD085 /* Icon-72.png */; };
 		F93DF4F6178AB447007AD085 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF4F5178AB447007AD085 /* Icon-Small-50.png */; };
 		F93DF4F8178AB447007AD085 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF4F7178AB447007AD085 /* Icon-Small.png */; };
@@ -144,7 +142,7 @@
 		F93DF696178AEA4C007AD085 /* CountController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF695178AEA4C007AD085 /* CountController.m */; };
 		F93DF69C178AEEBB007AD085 /* game_bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */; };
 		F93DF69D178AEEBB007AD085 /* game_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF69A178AEEBB007AD085 /* game_bg.png */; };
-		F93DF6A0178AEF59007AD085 /* ScaleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF69F178AEF59007AD085 /* ScaleUtil.m */; };
+		F93DF6A0178AEF59007AD085 /* PointUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF69F178AEF59007AD085 /* PointUtil.m */; };
 		F93DF6A3178AF043007AD085 /* GameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6A2178AF043007AD085 /* GameUtil.m */; };
 		F93DF6A8178AF86A007AD085 /* enemy.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A4178AF86A007AD085 /* enemy.plist */; };
 		F93DF6A9178AF86A007AD085 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A5178AF86A007AD085 /* enemy.png */; };
@@ -161,6 +159,18 @@
 		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
 		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
 		F9ABA62A178C456300A02626 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA629178C456300A02626 /* Block.m */; };
+		F9ABA62D178C81E600A02626 /* MapPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA62C178C81E600A02626 /* MapPage.m */; };
+		F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA62F178E84C300A02626 /* TitleLayer.m */; };
+		F9ABA633178E938E00A02626 /* subparts.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA631178E938E00A02626 /* subparts.plist */; };
+		F9ABA634178E938E00A02626 /* subparts.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA632178E938E00A02626 /* subparts.png */; };
+		F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA636178E971700A02626 /* misaki_gothic.ttf */; };
+		F9ABA639178F05BE00A02626 /* title_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA638178F05BE00A02626 /* title_bg.png */; };
+		F9ABA63C178F0E4700A02626 /* CCSpriteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA63B178F0E4700A02626 /* CCSpriteButton.m */; };
+		F9ABA63F1791038A00A02626 /* AdController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA63E1791038A00A02626 /* AdController.m */; };
+		F9ABA6461791079600A02626 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA6421791079600A02626 /* libNendAd.a */; };
+		F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA6441791079600A02626 /* NADView_readme.txt */; };
+		F9ABA6491791080800A02626 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA6481791080700A02626 /* AdSupport.framework */; };
+		F9ABA64B1791081000A02626 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA64A1791081000A02626 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,9 +186,7 @@
 		F93DF4E5178AB447007AD085 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		F93DF4E7178AB447007AD085 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		F93DF4EB178AB447007AD085 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
-		F93DF4ED178AB447007AD085 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		F93DF4EF178AB447007AD085 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		F93DF4F1178AB447007AD085 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		F93DF4F3178AB447007AD085 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
 		F93DF4F5178AB447007AD085 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
 		F93DF4F7178AB447007AD085 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
@@ -449,8 +457,8 @@
 		F93DF695178AEA4C007AD085 /* CountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountController.m; sourceTree = "<group>"; };
 		F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game_bg-568h@2x.png"; sourceTree = "<group>"; };
 		F93DF69A178AEEBB007AD085 /* game_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_bg.png; sourceTree = "<group>"; };
-		F93DF69E178AEF59007AD085 /* ScaleUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleUtil.h; sourceTree = "<group>"; };
-		F93DF69F178AEF59007AD085 /* ScaleUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleUtil.m; sourceTree = "<group>"; };
+		F93DF69E178AEF59007AD085 /* PointUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointUtil.h; sourceTree = "<group>"; };
+		F93DF69F178AEF59007AD085 /* PointUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointUtil.m; sourceTree = "<group>"; };
 		F93DF6A1178AF043007AD085 /* GameUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtil.h; sourceTree = "<group>"; };
 		F93DF6A2178AF043007AD085 /* GameUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtil.m; sourceTree = "<group>"; };
 		F93DF6A4178AF86A007AD085 /* enemy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = enemy.plist; sourceTree = "<group>"; };
@@ -477,6 +485,24 @@
 		F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInterfaceLayer.m; sourceTree = "<group>"; };
 		F9ABA628178C456300A02626 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F9ABA629178C456300A02626 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		F9ABA62B178C81E600A02626 /* MapPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPage.h; sourceTree = "<group>"; };
+		F9ABA62C178C81E600A02626 /* MapPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPage.m; sourceTree = "<group>"; };
+		F9ABA62E178E84C300A02626 /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
+		F9ABA62F178E84C300A02626 /* TitleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLayer.m; sourceTree = "<group>"; };
+		F9ABA631178E938E00A02626 /* subparts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = subparts.plist; sourceTree = "<group>"; };
+		F9ABA632178E938E00A02626 /* subparts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subparts.png; sourceTree = "<group>"; };
+		F9ABA636178E971700A02626 /* misaki_gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = misaki_gothic.ttf; sourceTree = "<group>"; };
+		F9ABA638178F05BE00A02626 /* title_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_bg.png; sourceTree = "<group>"; };
+		F9ABA63A178F0E4700A02626 /* CCSpriteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteButton.h; sourceTree = "<group>"; };
+		F9ABA63B178F0E4700A02626 /* CCSpriteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteButton.m; sourceTree = "<group>"; };
+		F9ABA63D1791038A00A02626 /* AdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdController.h; sourceTree = "<group>"; };
+		F9ABA63E1791038A00A02626 /* AdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdController.m; sourceTree = "<group>"; };
+		F9ABA6411791079600A02626 /* libAdapterNend.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterNend.a; sourceTree = "<group>"; };
+		F9ABA6421791079600A02626 /* libNendAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNendAd.a; sourceTree = "<group>"; };
+		F9ABA6431791079600A02626 /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
+		F9ABA6441791079600A02626 /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
+		F9ABA6481791080700A02626 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F9ABA64A1791081000A02626 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +510,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ABA64B1791081000A02626 /* Security.framework in Frameworks */,
+				F9ABA6491791080800A02626 /* AdSupport.framework in Frameworks */,
 				F93DF4D6178AB447007AD085 /* QuartzCore.framework in Frameworks */,
 				F93DF4D8178AB447007AD085 /* OpenGLES.framework in Frameworks */,
 				F93DF4DA178AB447007AD085 /* OpenAL.framework in Frameworks */,
@@ -494,6 +522,7 @@
 				F93DF4E4178AB447007AD085 /* CoreGraphics.framework in Frameworks */,
 				F93DF4E6178AB447007AD085 /* CoreText.framework in Frameworks */,
 				F93DF4E8178AB447007AD085 /* GameKit.framework in Frameworks */,
+				F9ABA6461791079600A02626 /* libNendAd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +532,8 @@
 		F93DF4C9178AB447007AD085 = {
 			isa = PBXGroup;
 			children = (
+				F9ABA64A1791081000A02626 /* Security.framework */,
+				F9ABA6481791080700A02626 /* AdSupport.framework */,
 				F93DF4E9178AB447007AD085 /* runner */,
 				F93DF4D4178AB447007AD085 /* Frameworks */,
 				F93DF4D3178AB447007AD085 /* Products */,
@@ -550,11 +581,10 @@
 		F93DF4EA178AB447007AD085 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABA635178E971700A02626 /* font */,
 				F93DF697178AEEBB007AD085 /* images */,
 				F93DF4EB178AB447007AD085 /* Default.png */,
-				F93DF4ED178AB447007AD085 /* Default@2x.png */,
 				F93DF4EF178AB447007AD085 /* Default-568h@2x.png */,
-				F93DF4F1178AB447007AD085 /* Default-Landscape~ipad.png */,
 				F93DF4F3178AB447007AD085 /* Icon-72.png */,
 				F93DF4F5178AB447007AD085 /* Icon-Small-50.png */,
 				F93DF4F7178AB447007AD085 /* Icon-Small.png */,
@@ -570,6 +600,7 @@
 		F93DF502178AB447007AD085 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABA6401791079600A02626 /* NendAd */,
 				F93DF62D178AB44A007AD085 /* LICENSE_cocos2d.txt */,
 				F93DF643178AB44A007AD085 /* LICENSE_CocosDenshion.txt */,
 				F93DF675178AB44A007AD085 /* LICENSE_Kazmath.txt */,
@@ -961,6 +992,8 @@
 				F93DF695178AEA4C007AD085 /* CountController.m */,
 				F93DF6AC178AF914007AD085 /* MapController.h */,
 				F93DF6AD178AF914007AD085 /* MapController.m */,
+				F9ABA63D1791038A00A02626 /* AdController.h */,
+				F9ABA63E1791038A00A02626 /* AdController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -974,6 +1007,8 @@
 				F93DF6B7178B02DA007AD085 /* Counter.m */,
 				F9ABA628178C456300A02626 /* Block.h */,
 				F9ABA629178C456300A02626 /* Block.m */,
+				F9ABA62B178C81E600A02626 /* MapPage.h */,
+				F9ABA62C178C81E600A02626 /* MapPage.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -985,6 +1020,8 @@
 				F93DF68F178AB5D8007AD085 /* GameScene.m */,
 				F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */,
 				F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */,
+				F9ABA62E178E84C300A02626 /* TitleLayer.h */,
+				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -992,14 +1029,16 @@
 		F93DF68D178AB5BF007AD085 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F93DF69E178AEF59007AD085 /* ScaleUtil.h */,
-				F93DF69F178AEF59007AD085 /* ScaleUtil.m */,
+				F93DF69E178AEF59007AD085 /* PointUtil.h */,
+				F93DF69F178AEF59007AD085 /* PointUtil.m */,
 				F93DF6A1178AF043007AD085 /* GameUtil.h */,
 				F93DF6A2178AF043007AD085 /* GameUtil.m */,
 				F93DF6B9178B0758007AD085 /* LabelUtil.h */,
 				F93DF6BA178B0758007AD085 /* LabelUtil.m */,
 				F93DF6BC178B085B007AD085 /* ColorUtil.h */,
 				F93DF6BD178B085B007AD085 /* ColorUtil.m */,
+				F9ABA63A178F0E4700A02626 /* CCSpriteButton.h */,
+				F9ABA63B178F0E4700A02626 /* CCSpriteButton.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1017,6 +1056,7 @@
 		F93DF698178AEEBB007AD085 /* bg */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABA638178F05BE00A02626 /* title_bg.png */,
 				F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */,
 				F93DF69A178AEEBB007AD085 /* game_bg.png */,
 			);
@@ -1026,6 +1066,8 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABA631178E938E00A02626 /* subparts.plist */,
+				F9ABA632178E938E00A02626 /* subparts.png */,
 				F93DF6AF178AF9F0007AD085 /* gameparts.plist */,
 				F93DF6B0178AF9F0007AD085 /* gameparts.png */,
 				F93DF6A4178AF86A007AD085 /* enemy.plist */,
@@ -1034,6 +1076,27 @@
 				F93DF6A7178AF86A007AD085 /* land.png */,
 			);
 			path = sprites;
+			sourceTree = "<group>";
+		};
+		F9ABA635178E971700A02626 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABA636178E971700A02626 /* misaki_gothic.ttf */,
+			);
+			name = font;
+			path = Resources/font;
+			sourceTree = "<group>";
+		};
+		F9ABA6401791079600A02626 /* NendAd */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABA6411791079600A02626 /* libAdapterNend.a */,
+				F9ABA6421791079600A02626 /* libNendAd.a */,
+				F9ABA6431791079600A02626 /* NADView.h */,
+				F9ABA6441791079600A02626 /* NADView_readme.txt */,
+			);
+			name = NendAd;
+			path = libs/NendAd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1088,9 +1151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93DF4EC178AB447007AD085 /* Default.png in Resources */,
-				F93DF4EE178AB447007AD085 /* Default@2x.png in Resources */,
 				F93DF4F0178AB447007AD085 /* Default-568h@2x.png in Resources */,
-				F93DF4F2178AB447007AD085 /* Default-Landscape~ipad.png in Resources */,
 				F93DF4F4178AB447007AD085 /* Icon-72.png in Resources */,
 				F93DF4F6178AB447007AD085 /* Icon-Small-50.png in Resources */,
 				F93DF4F8178AB447007AD085 /* Icon-Small.png in Resources */,
@@ -1107,6 +1168,11 @@
 				F93DF6AB178AF86A007AD085 /* land.png in Resources */,
 				F93DF6B1178AF9F0007AD085 /* gameparts.plist in Resources */,
 				F93DF6B2178AF9F0007AD085 /* gameparts.png in Resources */,
+				F9ABA633178E938E00A02626 /* subparts.plist in Resources */,
+				F9ABA634178E938E00A02626 /* subparts.png in Resources */,
+				F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */,
+				F9ABA639178F05BE00A02626 /* title_bg.png in Resources */,
+				F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1230,7 +1296,7 @@
 				F93DF690178AB5D8007AD085 /* GameScene.m in Sources */,
 				F93DF693178AE99B007AD085 /* PlayerController.m in Sources */,
 				F93DF696178AEA4C007AD085 /* CountController.m in Sources */,
-				F93DF6A0178AEF59007AD085 /* ScaleUtil.m in Sources */,
+				F93DF6A0178AEF59007AD085 /* PointUtil.m in Sources */,
 				F93DF6A3178AF043007AD085 /* GameUtil.m in Sources */,
 				F93DF6AE178AF914007AD085 /* MapController.m in Sources */,
 				F93DF6B5178AFE2F007AD085 /* Player.m in Sources */,
@@ -1241,6 +1307,10 @@
 				F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */,
 				F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */,
 				F9ABA62A178C456300A02626 /* Block.m in Sources */,
+				F9ABA62D178C81E600A02626 /* MapPage.m in Sources */,
+				F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */,
+				F9ABA63C178F0E4700A02626 /* CCSpriteButton.m in Sources */,
+				F9ABA63F1791038A00A02626 /* AdController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1262,7 +1332,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1281,7 +1351,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1297,6 +1367,11 @@
 				GCC_PREFIX_HEADER = runner/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"runner/libs/kazmath/include\"";
 				INFOPLIST_FILE = runner/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/runner/libs/NendAd\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1316,6 +1391,11 @@
 				GCC_PREFIX_HEADER = runner/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"runner/libs/kazmath/include\"";
 				INFOPLIST_FILE = runner/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/runner/libs/NendAd\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",

@@ -14,4 +14,7 @@
 // デフォルトの文字色を返す
 + (ccColor3B)getDefaultFontColor;
 
+// タッチ時の文字色を返す
++ (ccColor3B)getTouchedFontColor;
+
 @end

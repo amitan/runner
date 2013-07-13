@@ -8,7 +8,7 @@
 
 #import "MapController.h"
 #import "GameScene.h"
-#import "ScaleUtil.h"
+#import "PointUtil.h"
 #import "Block.h"
 
 @interface MapController ()
@@ -35,12 +35,12 @@
 
     // TODO:: マップの実装
     self._block = [Block node];
-    [ScaleUtil setPosition:self._block x:0 y:BASE_HEIGHT offsetX:[self._block getWidth] / 2 offsetY:-[self._block getHeight] / 2];
+    [PointUtil setPosition:self._block x:0 y:BASE_HEIGHT offsetX:[self._block getWidth] / 2 offsetY:-[self._block getHeight] / 2];
     [[GameScene sharedInstance].gameLayer addChild:self._block];
 
-    self._block2 = [Block node];
-    [ScaleUtil setPosition:self._block2 x:0 y:BASE_HEIGHT offsetX:[self._block2 getWidth] offsetY:-[self._block getHeight]];
-    [[GameScene sharedInstance].gameLayer addChild:self._block2];
+//    self._block2 = [Block node];
+//    [PointUtil setPosition:self._block2 x:0 y:BASE_HEIGHT offsetX:[self._block2 getWidth] offsetY:-[self._block getHeight]];
+//    [[GameScene sharedInstance].gameLayer addChild:self._block2];
 
 }
 
@@ -51,16 +51,12 @@
         return self._block;
     } else if (CGRectContainsPoint([self._block getBox], ccpAdd(point, ccp(-1, -1)))) {
         return self._block;
-    } else if (CGRectContainsPoint([self._block2 getBox], ccpAdd(point, ccp(1, 1)))) {
-        return self._block2;
-    } else if (CGRectContainsPoint([self._block2 getBox], ccpAdd(point, ccp(-1, -1)))) {
-        return self._block2;
     }
     return NULL;
 }
 
 - (void)scroll:(float)dx {
-    self._block2.position = ccp(self._block2.position.x - dx, self._block2.position.y);
+//    self._block2.position = ccp(self._block2.position.x - dx, self._block2.position.y);
 }
 
 @end

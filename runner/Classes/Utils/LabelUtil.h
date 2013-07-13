@@ -12,5 +12,5 @@
 @interface LabelUtil : NSObject
 
 + (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size;
-
++ (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size dimensions:(CGSize)dimensions alignment:(CCTextAlignment)alignment;
 @end

@@ -8,7 +8,7 @@
 
 #import "Player.h"
 #import "GameScene.h"
-#import "ScaleUtil.h"
+#import "PointUtil.h"
 #import "PlayerAnimation.h"
 
 @interface Player ()
@@ -51,12 +51,12 @@ const int INIT_SPEED = 100;
 }
 
 - (void)stageOn:(int)order { // TODO:: orderの実装
-    [ScaleUtil setPosition:self x:100 y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
+    [PointUtil setPosition:self x:100 y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
     [[GameScene sharedInstance].gameLayer addChild:self];
 }
 
 - (void)start {
-    [self._playerSprite runAction:[PlayerAnimation getWalk:self._enemyId]];
+    [self._playerSprite runAction:[PlayerAnimation getWalkAnimation:self._enemyId]];
     [self scheduleUpdate];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "GameScene.h"
-#import "ScaleUtil.h"
+#import "PointUtil.h"
 #import "GameUtil.h"
 
 @interface GameScene ()
@@ -43,7 +43,7 @@ static GameScene *_scene = nil;
         
         // 背景を設定
         self.backgroundLayer = [CCLayer node];
-        self.backgroundLayer.scale = [ScaleUtil getScale];
+        self.backgroundLayer.scale = [PointUtil getScale];
         [self addChild:self.backgroundLayer];
 
         // 背景画像を追加

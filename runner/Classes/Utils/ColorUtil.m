@@ -14,4 +14,8 @@
     return ccc3(255, 255, 255);
 }
 
++ (ccColor3B)getTouchedFontColor {
+    return ccc3(255, 255, 0);
+}
+
 @end

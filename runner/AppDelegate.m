@@ -10,8 +10,10 @@
 
 #import "AppDelegate.h"
 #import "GameScene.h"
+#import "TitleLayer.h"
 
 @implementation MyNavigationController
+@synthesize adController;
 
 // The available orientations should be defined in the Info.plist file.
 // And in iOS 6+ only, you can override it in the Root View controller in the "supportedInterfaceOrientations" method.
@@ -45,15 +47,20 @@
 -(void) directorDidReshapeProjection:(CCDirector*)director
 {
 	if (director.runningScene == nil) {
+
+        // 広告
+        self.adController = [AdController node];
         
-        // preload sprite sheet
+        // アセットプリロード
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"enemy.plist"];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"land.plist"];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"gameparts.plist"];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"subparts.plist"];
 
 		// Add the first scene to the stack. The director will draw it immediately into the framebuffer. (Animation is started automatically when the view is displayed.)
 		// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-		[director runWithScene: [GameScene createInstance:1 areaId:10 stageId:1]];
+		[director runWithScene: [TitleLayer scene]];
+//		[director runWithScene: [GameScene createInstance:1 areaId:10 stageId:1]];
 	}
 }
 @end
@@ -162,14 +169,18 @@
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
 {
-	if( [navController_ visibleViewController] == director_)
+	if ([navController_ visibleViewController] == director_) {
+        [navController_.adController pause];
 		[director_ stopAnimation];
+    }
 }
 
 -(void) applicationWillEnterForeground:(UIApplication*)application
 {
-	if ([navController_ visibleViewController] == director_)
+	if ([navController_ visibleViewController] == director_) {
+        [navController_.adController resume];
 		[director_ startAnimation];
+    }
 }
 
 // application will be killed

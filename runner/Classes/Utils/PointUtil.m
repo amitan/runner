@@ -1,14 +1,14 @@
 //
-//  ScaleUtil.m
+//  PointUtil.m
 //  runner
 //
 //  Created by Ayumi Otomo on 2013/07/08.
 //  Copyright (c) 2013年 Ayumi Otomo. All rights reserved.
 //
 
-#import "ScaleUtil.h"
+#import "PointUtil.h"
 
-@implementation ScaleUtil
+@implementation PointUtil
 
 const float BASE_WIDTH = 640.0f;
 const float BASE_HEIGHT = 960.0f;
@@ -31,14 +31,18 @@ const float BASE_HEIGHT = 960.0f;
     return point / [[UIScreen mainScreen] scale];
 }
 
++ (void)setCenterPosition:(CCNode*)sprite x:(float)x y:(float)y {
+    [self setPosition:sprite x:x y:y offsetX:0 offsetY:0];
+}
+
 + (void)setTLPosition:(CCNode*)sprite x:(float)x y:(float)y {
     [self setPosition:sprite x:x y:y offsetX:sprite.contentSize.width / 2 offsetY:sprite.contentSize.height / 2];
 }
 
 + (void)setPosition:(CCNode *)node x:(float)x y:(float)y offsetX:(float)offsetX offsetY:(float)offsetY {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
-    float dx = winSize.width / 2 - [ScaleUtil getPoint:(BASE_WIDTH / 2 - x)] + offsetX;
-    float dy = winSize.height / 2 - [ScaleUtil getPoint:(y - BASE_HEIGHT / 2)] - offsetY;
+    float dx = winSize.width / 2 - [PointUtil getPoint:(BASE_WIDTH / 2 - x)] + offsetX;
+    float dy = winSize.height / 2 - [PointUtil getPoint:(y - BASE_HEIGHT / 2)] - offsetY;
     node.position = ccp(dx, dy);
     
 }
