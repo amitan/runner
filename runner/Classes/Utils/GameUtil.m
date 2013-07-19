@@ -26,4 +26,10 @@
         return NO;
     }
 }
+
++ (void)replaceScene:(CCScene *)scene {
+    CCScene *transition = [CCTransitionFade transitionWithDuration:1.0 scene:scene withColor:ccc3(255, 255, 255)];
+    [[CCDirector sharedDirector] replaceScene:transition];
+}
+
 @end

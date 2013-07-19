@@ -9,13 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Block.h"
+#import "Player.h"
 
 @interface MapController : CCNode {
     
 }
 
-// 接触しているか
-- (Block*)getCollidedBlock:(CGPoint)position;
+// 動作を開始/停止する
+- (void)setup;
+- (void)start;
+- (void)stop;
+
+// 衝突しているブロックを取得する
+- (Block*)getHitBlock:(CGPoint)point;
+
+// コインに衝突しているかチェックする
+- (BOOL)checkHitCoins:(CGPoint)point;
 
 // マップをスクロールする
 - (void)scroll:(float)dx;

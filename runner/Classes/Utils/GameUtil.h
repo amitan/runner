@@ -23,5 +23,7 @@ typedef enum {
 // 4インチの端末かどうか
 + (BOOL)is4inchDevice;
 
+// 指定した画面に遷移する
++ (void)replaceScene:(CCScene*)scene;
 
 @end

@@ -7,15 +7,41 @@
             <key>black_belt.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,3},{640,150}}</string>
+                <string>{{3,3},{640,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{640,150}}</string>
+                <string>{{0,0},{640,100}}</string>
                 <key>sourceSize</key>
-                <string>{640,150}</string>
+                <string>{640,100}</string>
+            </dict>
+            <key>coin1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{647,3},{30,49}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{30,49}}</string>
+                <key>sourceSize</key>
+                <string>{30,49}</string>
+            </dict>
+            <key>coin2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{681,3},{30,49}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{30,49}}</string>
+                <key>sourceSize</key>
+                <string>{30,49}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -25,9 +51,9 @@
             <key>realTextureFileName</key>
             <string>gameparts.png</string>
             <key>size</key>
-            <string>{1024,256}</string>
+            <string>{1024,128}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:0382dd4c437840fb237bf3562e227ece$</string>
+            <string>$TexturePacker:SmartUpdate:423c9c28a534c8a94f4e101276af6f90$</string>
             <key>textureFileName</key>
             <string>gameparts.png</string>
         </dict>

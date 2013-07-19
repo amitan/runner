@@ -142,6 +142,8 @@
         <key>fileList</key>
         <array>
             <filename>../sprites/gameparts/black_belt.png</filename>
+            <filename>../sprites/gameparts/coin1.png</filename>
+            <filename>../sprites/gameparts/coin2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

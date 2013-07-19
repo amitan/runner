@@ -11,6 +11,7 @@
 #import "CountController.h"
 #import "MapController.h"
 #import "PlayerController.h"
+#import "HeaderController.h"
 #import "GameInterfaceLayer.h"
 
 @interface GameScene : CCScene {
@@ -19,11 +20,13 @@
 @property (nonatomic, retain)CCLayer *backgroundLayer;
 @property (nonatomic, retain)CCLayer *mapLayer;
 @property (nonatomic, retain)CCLayer *gameLayer;
+@property (nonatomic, retain)CCLayer *hudLayer;
 @property (nonatomic, retain)CCLayer *effectLayer;
 @property (nonatomic, retain)GameInterfaceLayer *interfaceLayer;
 @property (nonatomic, retain)CountController *countController;
 @property (nonatomic, retain)MapController *mapController;
 @property (nonatomic, retain)PlayerController *playerController;
+@property (nonatomic, retain)HeaderController *headerController;
 
 // シングルトンオブジェクトを返すメソッド
 + (GameScene *)sharedInstance;

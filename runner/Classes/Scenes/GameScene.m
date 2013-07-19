@@ -16,8 +16,10 @@
 
 @implementation GameScene
 @synthesize backgroundLayer, mapLayer, gameLayer;
+@synthesize hudLayer, effectLayer;
 @synthesize interfaceLayer;
 @synthesize countController, mapController, playerController;
+@synthesize headerController;
 
 static GameScene *_scene = nil;
 
@@ -60,6 +62,10 @@ static GameScene *_scene = nil;
         self.gameLayer = [CCLayer node];
         [self.backgroundLayer addChild:self.gameLayer];
 
+        // ヘッダー・フッターレイヤーを追加
+        self.hudLayer = [CCLayer node];
+        [self.backgroundLayer addChild:self.hudLayer];
+
         // エフェクトレイヤーを追加
         self.effectLayer = [CCLayer node];
         [self.backgroundLayer addChild:self.effectLayer];
@@ -73,9 +79,11 @@ static GameScene *_scene = nil;
         [self.countController addEndListner:self selector:@selector(onGameStart:)];
         self.mapController = [MapController node];
         self.playerController = [PlayerController node];
+        self.headerController = [HeaderController node];
         [self addChild:self.countController z:-1];
         [self addChild:self.mapController z:-1];
         [self addChild:self.playerController z:-1];
+        [self addChild:self.headerController z:-1];
     }
     return self;
 }
@@ -102,6 +110,8 @@ static GameScene *_scene = nil;
 
 - (void)setup {
     [self.countController setup];
+    [self.mapController setup];
+    [self.headerController setup];
     [self.playerController setup];
 }
 
@@ -110,11 +120,15 @@ static GameScene *_scene = nil;
 }
 
 - (void)onGameStart:(id)sender {
+    [self.mapController start];
+    [self.headerController start];
     [self.playerController start];
 }
 
 - (void)stop {
     [self.countController stop];
+    [self.mapController stop];
+    [self.headerController stop];
     [self.playerController stop];
 }
 

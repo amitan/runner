@@ -13,8 +13,21 @@
     
 }
 
+// 指定したブロックを生成する
++ (Block*)createBlock:(int)blockId;
+
+// ブロックを指定して初期化する
+-(id) initWithBlockId:(int)blockId;
+
+// ブロックの幅/高さを取得する
 - (float)getWidth;
 - (float)getHeight;
-- (CGRect)getBox;
+
+// 座標がブロックに含まれているか判定する
+- (BOOL)isHit:(CGPoint)point;
+
+// レイヤーベースの接地点座標を取得する
+- (float)getLandPoint;
+- (float)getLeftPoint;
 
 @end

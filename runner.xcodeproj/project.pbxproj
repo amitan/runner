@@ -146,8 +146,6 @@
 		F93DF6A3178AF043007AD085 /* GameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6A2178AF043007AD085 /* GameUtil.m */; };
 		F93DF6A8178AF86A007AD085 /* enemy.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A4178AF86A007AD085 /* enemy.plist */; };
 		F93DF6A9178AF86A007AD085 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A5178AF86A007AD085 /* enemy.png */; };
-		F93DF6AA178AF86A007AD085 /* land.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A6178AF86A007AD085 /* land.plist */; };
-		F93DF6AB178AF86A007AD085 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6A7178AF86A007AD085 /* land.png */; };
 		F93DF6AE178AF914007AD085 /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6AD178AF914007AD085 /* MapController.m */; };
 		F93DF6B1178AF9F0007AD085 /* gameparts.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6AF178AF9F0007AD085 /* gameparts.plist */; };
 		F93DF6B2178AF9F0007AD085 /* gameparts.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6B0178AF9F0007AD085 /* gameparts.png */; };
@@ -158,8 +156,15 @@
 		F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */; };
 		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
 		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
+		F9A468AD1792FF9A002BAFB7 /* block.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468AB1792FF9A002BAFB7 /* block.plist */; };
+		F9A468AE1792FF9A002BAFB7 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468AC1792FF9A002BAFB7 /* block.png */; };
+		F9A468B91795451E002BAFB7 /* Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468B81795451E002BAFB7 /* Page1.m */; };
+		F9A468BC179545A3002BAFB7 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468BB179545A3002BAFB7 /* Page.m */; };
+		F9A468BF1795518A002BAFB7 /* Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468BE1795518A002BAFB7 /* Page2.m */; };
+		F9A468C217955438002BAFB7 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C117955438002BAFB7 /* Coin.m */; };
+		F9A468C51795E2B2002BAFB7 /* HeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C41795E2B1002BAFB7 /* HeaderController.m */; };
+		F9A468C81799AE7D002BAFB7 /* Page3.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C71799AE7C002BAFB7 /* Page3.m */; };
 		F9ABA62A178C456300A02626 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA629178C456300A02626 /* Block.m */; };
-		F9ABA62D178C81E600A02626 /* MapPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA62C178C81E600A02626 /* MapPage.m */; };
 		F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA62F178E84C300A02626 /* TitleLayer.m */; };
 		F9ABA633178E938E00A02626 /* subparts.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA631178E938E00A02626 /* subparts.plist */; };
 		F9ABA634178E938E00A02626 /* subparts.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA632178E938E00A02626 /* subparts.png */; };
@@ -171,6 +176,10 @@
 		F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA6441791079600A02626 /* NADView_readme.txt */; };
 		F9ABA6491791080800A02626 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA6481791080700A02626 /* AdSupport.framework */; };
 		F9ABA64B1791081000A02626 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA64A1791081000A02626 /* Security.framework */; };
+		F9ABA64E1791917500A02626 /* StageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA64D1791917400A02626 /* StageLayer.m */; };
+		F9ABA6511791D9CC00A02626 /* stage_bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA64F1791D9CC00A02626 /* stage_bg-568h@2x.png */; };
+		F9ABA6521791D9CC00A02626 /* stage_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA6501791D9CC00A02626 /* stage_bg.png */; };
+		F9ABA655179208FA00A02626 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA654179208FA00A02626 /* Map.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -463,8 +472,6 @@
 		F93DF6A2178AF043007AD085 /* GameUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtil.m; sourceTree = "<group>"; };
 		F93DF6A4178AF86A007AD085 /* enemy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = enemy.plist; sourceTree = "<group>"; };
 		F93DF6A5178AF86A007AD085 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
-		F93DF6A6178AF86A007AD085 /* land.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = land.plist; sourceTree = "<group>"; };
-		F93DF6A7178AF86A007AD085 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
 		F93DF6AC178AF914007AD085 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
 		F93DF6AD178AF914007AD085 /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
 		F93DF6AF178AF9F0007AD085 /* gameparts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gameparts.plist; sourceTree = "<group>"; };
@@ -483,10 +490,22 @@
 		F93DF6C3178B1F54007AD085 /* CommonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAnimation.m; sourceTree = "<group>"; };
 		F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterfaceLayer.h; sourceTree = "<group>"; };
 		F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInterfaceLayer.m; sourceTree = "<group>"; };
+		F9A468AB1792FF9A002BAFB7 /* block.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = block.plist; sourceTree = "<group>"; };
+		F9A468AC1792FF9A002BAFB7 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
+		F9A468B71795451E002BAFB7 /* Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1.h; sourceTree = "<group>"; };
+		F9A468B81795451E002BAFB7 /* Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1.m; sourceTree = "<group>"; };
+		F9A468BA179545A3002BAFB7 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		F9A468BB179545A3002BAFB7 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		F9A468BD1795518A002BAFB7 /* Page2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page2.h; sourceTree = "<group>"; };
+		F9A468BE1795518A002BAFB7 /* Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2.m; sourceTree = "<group>"; };
+		F9A468C017955437002BAFB7 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		F9A468C117955438002BAFB7 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
+		F9A468C31795E2B1002BAFB7 /* HeaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderController.h; sourceTree = "<group>"; };
+		F9A468C41795E2B1002BAFB7 /* HeaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderController.m; sourceTree = "<group>"; };
+		F9A468C61799AE7C002BAFB7 /* Page3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page3.h; sourceTree = "<group>"; };
+		F9A468C71799AE7C002BAFB7 /* Page3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page3.m; sourceTree = "<group>"; };
 		F9ABA628178C456300A02626 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F9ABA629178C456300A02626 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
-		F9ABA62B178C81E600A02626 /* MapPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPage.h; sourceTree = "<group>"; };
-		F9ABA62C178C81E600A02626 /* MapPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPage.m; sourceTree = "<group>"; };
 		F9ABA62E178E84C300A02626 /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
 		F9ABA62F178E84C300A02626 /* TitleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLayer.m; sourceTree = "<group>"; };
 		F9ABA631178E938E00A02626 /* subparts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = subparts.plist; sourceTree = "<group>"; };
@@ -503,6 +522,12 @@
 		F9ABA6441791079600A02626 /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
 		F9ABA6481791080700A02626 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F9ABA64A1791081000A02626 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F9ABA64C1791917400A02626 /* StageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageLayer.h; sourceTree = "<group>"; };
+		F9ABA64D1791917400A02626 /* StageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageLayer.m; sourceTree = "<group>"; };
+		F9ABA64F1791D9CC00A02626 /* stage_bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stage_bg-568h@2x.png"; sourceTree = "<group>"; };
+		F9ABA6501791D9CC00A02626 /* stage_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stage_bg.png; sourceTree = "<group>"; };
+		F9ABA653179208FA00A02626 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		F9ABA654179208FA00A02626 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -994,6 +1019,8 @@
 				F93DF6AD178AF914007AD085 /* MapController.m */,
 				F9ABA63D1791038A00A02626 /* AdController.h */,
 				F9ABA63E1791038A00A02626 /* AdController.m */,
+				F9A468C31795E2B1002BAFB7 /* HeaderController.h */,
+				F9A468C41795E2B1002BAFB7 /* HeaderController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1001,14 +1028,17 @@
 		F93DF68B178AB5BF007AD085 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				F9A468B617954513002BAFB7 /* pages */,
 				F93DF6B3178AFE2F007AD085 /* Player.h */,
 				F93DF6B4178AFE2F007AD085 /* Player.m */,
 				F93DF6B6178B02DA007AD085 /* Counter.h */,
 				F93DF6B7178B02DA007AD085 /* Counter.m */,
 				F9ABA628178C456300A02626 /* Block.h */,
 				F9ABA629178C456300A02626 /* Block.m */,
-				F9ABA62B178C81E600A02626 /* MapPage.h */,
-				F9ABA62C178C81E600A02626 /* MapPage.m */,
+				F9ABA653179208FA00A02626 /* Map.h */,
+				F9ABA654179208FA00A02626 /* Map.m */,
+				F9A468C017955437002BAFB7 /* Coin.h */,
+				F9A468C117955438002BAFB7 /* Coin.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -1022,6 +1052,8 @@
 				F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */,
 				F9ABA62E178E84C300A02626 /* TitleLayer.h */,
 				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
+				F9ABA64C1791917400A02626 /* StageLayer.h */,
+				F9ABA64D1791917400A02626 /* StageLayer.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1056,6 +1088,8 @@
 		F93DF698178AEEBB007AD085 /* bg */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABA64F1791D9CC00A02626 /* stage_bg-568h@2x.png */,
+				F9ABA6501791D9CC00A02626 /* stage_bg.png */,
 				F9ABA638178F05BE00A02626 /* title_bg.png */,
 				F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */,
 				F93DF69A178AEEBB007AD085 /* game_bg.png */,
@@ -1066,16 +1100,31 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F9A468AB1792FF9A002BAFB7 /* block.plist */,
+				F9A468AC1792FF9A002BAFB7 /* block.png */,
 				F9ABA631178E938E00A02626 /* subparts.plist */,
 				F9ABA632178E938E00A02626 /* subparts.png */,
 				F93DF6AF178AF9F0007AD085 /* gameparts.plist */,
 				F93DF6B0178AF9F0007AD085 /* gameparts.png */,
 				F93DF6A4178AF86A007AD085 /* enemy.plist */,
 				F93DF6A5178AF86A007AD085 /* enemy.png */,
-				F93DF6A6178AF86A007AD085 /* land.plist */,
-				F93DF6A7178AF86A007AD085 /* land.png */,
 			);
 			path = sprites;
+			sourceTree = "<group>";
+		};
+		F9A468B617954513002BAFB7 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				F9A468BA179545A3002BAFB7 /* Page.h */,
+				F9A468BB179545A3002BAFB7 /* Page.m */,
+				F9A468B71795451E002BAFB7 /* Page1.h */,
+				F9A468B81795451E002BAFB7 /* Page1.m */,
+				F9A468BD1795518A002BAFB7 /* Page2.h */,
+				F9A468BE1795518A002BAFB7 /* Page2.m */,
+				F9A468C61799AE7C002BAFB7 /* Page3.h */,
+				F9A468C71799AE7C002BAFB7 /* Page3.m */,
+			);
+			path = pages;
 			sourceTree = "<group>";
 		};
 		F9ABA635178E971700A02626 /* font */ = {
@@ -1164,8 +1213,6 @@
 				F93DF69D178AEEBB007AD085 /* game_bg.png in Resources */,
 				F93DF6A8178AF86A007AD085 /* enemy.plist in Resources */,
 				F93DF6A9178AF86A007AD085 /* enemy.png in Resources */,
-				F93DF6AA178AF86A007AD085 /* land.plist in Resources */,
-				F93DF6AB178AF86A007AD085 /* land.png in Resources */,
 				F93DF6B1178AF9F0007AD085 /* gameparts.plist in Resources */,
 				F93DF6B2178AF9F0007AD085 /* gameparts.png in Resources */,
 				F9ABA633178E938E00A02626 /* subparts.plist in Resources */,
@@ -1173,6 +1220,10 @@
 				F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */,
 				F9ABA639178F05BE00A02626 /* title_bg.png in Resources */,
 				F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */,
+				F9ABA6511791D9CC00A02626 /* stage_bg-568h@2x.png in Resources */,
+				F9ABA6521791D9CC00A02626 /* stage_bg.png in Resources */,
+				F9A468AD1792FF9A002BAFB7 /* block.plist in Resources */,
+				F9A468AE1792FF9A002BAFB7 /* block.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,10 +1358,17 @@
 				F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */,
 				F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */,
 				F9ABA62A178C456300A02626 /* Block.m in Sources */,
-				F9ABA62D178C81E600A02626 /* MapPage.m in Sources */,
 				F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */,
 				F9ABA63C178F0E4700A02626 /* CCSpriteButton.m in Sources */,
 				F9ABA63F1791038A00A02626 /* AdController.m in Sources */,
+				F9ABA64E1791917500A02626 /* StageLayer.m in Sources */,
+				F9ABA655179208FA00A02626 /* Map.m in Sources */,
+				F9A468B91795451E002BAFB7 /* Page1.m in Sources */,
+				F9A468BC179545A3002BAFB7 /* Page.m in Sources */,
+				F9A468BF1795518A002BAFB7 /* Page2.m in Sources */,
+				F9A468C217955438002BAFB7 /* Coin.m in Sources */,
+				F9A468C51795E2B2002BAFB7 /* HeaderController.m in Sources */,
+				F9A468C81799AE7D002BAFB7 /* Page3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

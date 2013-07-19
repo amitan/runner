@@ -10,10 +10,11 @@
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "Block.h"
+#import "Map.h"
+#import "Page3.h"
 
 @interface MapController ()
-@property (nonatomic, retain)Block *_block;
-@property (nonatomic, retain)Block *_block2;
+@property (nonatomic, retain)Map *_map;
 @end
 
 @implementation MapController
@@ -30,33 +31,42 @@
     [super dealloc];
 }
 
-- (void)onEnter {
-    [super onEnter];
-
-    // TODO:: マップの実装
-    self._block = [Block node];
-    [PointUtil setPosition:self._block x:0 y:BASE_HEIGHT offsetX:[self._block getWidth] / 2 offsetY:-[self._block getHeight] / 2];
-    [[GameScene sharedInstance].gameLayer addChild:self._block];
-
-//    self._block2 = [Block node];
-//    [PointUtil setPosition:self._block2 x:0 y:BASE_HEIGHT offsetX:[self._block2 getWidth] offsetY:-[self._block getHeight]];
-//    [[GameScene sharedInstance].gameLayer addChild:self._block2];
-
+- (void)setup {
+    self._map = [Map node];
+    [PointUtil setTLPosition:self._map x:0 y:0];
+    [[GameScene sharedInstance].gameLayer addChild:self._map];
+    
+    Page *page = [Page3 node];
+    [self._map addPage:page];
+    
+    Page *page2 = [Page3 node];
+    [self._map addPage:page2];    
 }
 
-- (Block*)getCollidedBlock:(CGPoint)point {
+- (void)start {
+    [self._map start];
+}
 
-    // 境界線は含むことにする
-    if (CGRectContainsPoint([self._block getBox], ccpAdd(point, ccp(1, 1)))) {
-        return self._block;
-    } else if (CGRectContainsPoint([self._block getBox], ccpAdd(point, ccp(-1, -1)))) {
-        return self._block;
-    }
-    return NULL;
+- (void)stop {
+    [self._map stop];
+}
+
+- (Block*)getHitBlock:(CGPoint)point {
+
+    // 境界線は含む
+    Block *block = [self._map getHitBlock:ccpAdd(point, ccp(1, 1))];
+    if (block) return block;
+
+    block = [self._map getHitBlock:ccpAdd(point, ccp(-1, -1))];
+    return block;
+}
+
+- (BOOL)checkHitCoins:(CGPoint)point {
+    return [self._map checkHitCoins:point];
 }
 
 - (void)scroll:(float)dx {
-//    self._block2.position = ccp(self._block2.position.x - dx, self._block2.position.y);
+    self._map.position = ccp(self._map.position.x - dx, self._map.position.y);
 }
 
 @end

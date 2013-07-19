@@ -12,6 +12,6 @@
 @interface PlayerAnimation : NSObject
 
 // 歩行アニメーションを取得
-+ (id)getWalkAnimation:(int)enemyId;
++ (id)getWalkAction:(int)enemyId;
 
 @end

@@ -19,6 +19,7 @@ extern const float BASE_HEIGHT;
 
 // スケール値を考慮した座標点を取得する
 + (float)getPoint:(float)point;
++ (CGPoint)getPosition:(float)x y:(float)y;
 
 // スケール値を考慮した座標を設定する
 + (void)setCenterPosition:(CCNode*)node x:(float)x y:(float)y; // 画像中心基準

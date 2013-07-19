@@ -31,6 +31,10 @@ const float BASE_HEIGHT = 960.0f;
     return point / [[UIScreen mainScreen] scale];
 }
 
++ (CGPoint)getPosition:(float)x y:(float)y {
+    return ccp([self getPoint:x], [self getPoint:y]);
+}
+
 + (void)setCenterPosition:(CCNode*)sprite x:(float)x y:(float)y {
     [self setPosition:sprite x:x y:y offsetX:0 offsetY:0];
 }

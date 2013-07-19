@@ -24,7 +24,16 @@
     return [CCAnimation animationWithSpriteFrames:frames delay:duration];
 }
 
-+ (id)getBlinkAnimation {
++ (id)getFrameRepeatAction:(NSString *)name frameNum:(int)num {
+    return [self getFrameRepeatAction:name frameNum:num duration:0.5f];
+}
+
++ (id)getFrameRepeatAction:(NSString *)name frameNum:(int)num duration:(float)duration {
+    CCAnimation *animation = [self getFrameAnimation:name frameNum:num duration:duration];
+    return [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]];
+}
+
++ (id)getBlinkAction {
     id blink = [CCBlink actionWithDuration:1.0f blinks:1];
     return [CCRepeatForever actionWithAction:blink];
 }

@@ -143,6 +143,7 @@
         <array>
             <filename>../sprites/subparts/title_btn.png</filename>
             <filename>../sprites/subparts/selector.png</filename>
+            <filename>../sprites/subparts/header_coin.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

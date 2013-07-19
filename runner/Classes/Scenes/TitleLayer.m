@@ -11,6 +11,8 @@
 #import "LabelUtil.h"
 #import "CCSpriteButton.h"
 #import "CommonAnimation.h"
+#import "StageLayer.h"
+#import "GameUtil.h"
 
 @implementation TitleLayer
 
@@ -37,18 +39,21 @@
         [PointUtil setTLPosition:playButton x:46 y:150];
         CCLabelTTF *playLabel = [LabelUtil createLabel:@"ぼうけんをする" fontSize:30 dimensions:CGSizeMake(320, 88) alignment:kCCTextAlignmentLeft];
         [playButton addLabel:playLabel offsetX:50 offsetY:0];
+        [playButton addClickListner:self selector:@selector(clickPlayButton:)];
         [self addChild:playButton];
         
         CCSpriteButton *configButton = [CCSpriteButton spriteWithSpriteFrameName:@"title_btn.png"];
         [PointUtil setTLPosition:configButton x:46 y:238];
         CCLabelTTF *configLabel = [LabelUtil createLabel:@"せっていをかえる" fontSize:30 dimensions:CGSizeMake(320, 88) alignment:kCCTextAlignmentLeft];
         [configButton addLabel:configLabel offsetX:50 offsetY:0];
+        [configButton addClickListner:self selector:@selector(clickConfigButton:)];
         [self addChild:configButton];
 
         CCSpriteButton *othersButton = [CCSpriteButton spriteWithSpriteFrameName:@"title_btn.png"];
         [PointUtil setTLPosition:othersButton x:46 y:326];
         CCLabelTTF *othersLabel = [LabelUtil createLabel:@"おすすめをみる" fontSize:30 dimensions:CGSizeMake(320, 88) alignment:kCCTextAlignmentLeft];
         [othersButton addLabel:othersLabel offsetX:50 offsetY:0];
+        [othersButton addClickListner:self selector:@selector(clickOthersButton:)];
         [self addChild:othersButton];
         
         // ラベルの追加
@@ -61,7 +66,7 @@
         CCSprite *selectorSprite = [CCSprite spriteWithSpriteFrameName:@"selector.png"];
         [PointUtil setCenterPosition:selectorSprite x:71 y:190];
         [self addChild:selectorSprite];
-        [selectorSprite runAction:[CommonAnimation getBlinkAnimation]];
+        [selectorSprite runAction:[CommonAnimation getBlinkAction]];
     }
     return self;
 }
@@ -70,8 +75,17 @@
     [super dealloc];
 }
 
-- (void)onEnter {
-    [super onEnter];
+// ぼうけんをはじめる
+- (void)clickPlayButton:(id)sender {
+    [GameUtil replaceScene:[StageLayer scene]];
+}
+
+// せっていをかえる
+- (void)clickConfigButton:(id)sender {
+}
+
+// おすすめをみる
+- (void)clickOthersButton:(id)sender {
 }
 
 @end

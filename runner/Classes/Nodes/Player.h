@@ -31,6 +31,14 @@
 
 // 座標を取得する
 - (CGPoint)getCenterBottomPosition;
-- (CGPoint)getRightPosition;
+- (CGPoint)getCenterRightPosition;
+- (CGPoint)getTopLeftPosition;
+- (CGPoint)getTopRightPosition;
+- (CGPoint)getBottomLeftPosition;
+- (CGPoint)getBottomRightPosition;
+
+// 幅・高さを取得する
+- (float)getWidth;
+- (float)getHeight;
 
 @end

@@ -14,7 +14,9 @@
 // フレームアニメーションを取得
 + (CCAnimation*)getFrameAnimation:(NSString*)name frameNum:(int)num;
 + (CCAnimation*)getFrameAnimation:(NSString*)name frameNum:(int)num duration:(float)duration;
++ (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num;
++ (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num duration:(float)duration;
 
 // 点滅アニメーションを取得
-+ (id)getBlinkAnimation;
++ (id)getBlinkAction;
 @end
