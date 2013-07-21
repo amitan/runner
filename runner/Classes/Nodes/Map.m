@@ -9,6 +9,7 @@
 #import "Map.h"
 #import "PointUtil.h"
 #import "Page1.h"
+#import "GameScene.h"
 
 @interface Map ()
 @property (nonatomic, readwrite)float _currentRight;
@@ -57,7 +58,7 @@ const int INTERVAL1 = 150;
     float dx = [PointUtil getPoint:interval];
     page.position = ccp(self._currentRight + dx, 0);
     self._currentRight = page.position.x + [page getWidth];
-    [self addChild:page];
+    [page stageOn:self];
     [self._pages addObject:page];
     
     if (isPlaying) {
@@ -109,8 +110,10 @@ const int INTERVAL1 = 150;
         }
     }
     if (result) {
-        [self._pages removeObjectAtIndex:0];
-        [self addPage:[Page1 node]];
+        Page *page = [self._pages objectAtIndex:0];
+        [page stageOff];
+        [self._pages removeObject:page];
+        [self addPage:[[GameScene sharedInstance].pageController getPage]];
     }
 }
 

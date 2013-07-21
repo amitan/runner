@@ -49,6 +49,7 @@
 {
 	if (director.runningScene == nil) {
 
+        [self _initRandom];
         // 広告
 //        self.adController = [AdController node];
         
@@ -67,6 +68,16 @@
 		[director runWithScene: [GameScene createInstance:1 areaId:10 stageId:1]];
 	}
 }
+
+- (void)_initRandom {
+	struct timeval t;
+	gettimeofday(&t, nil);
+	unsigned int i;
+	i = t.tv_sec;
+	i += t.tv_usec;
+	srandom(i);
+}
+
 @end
 
 

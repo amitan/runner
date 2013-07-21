@@ -75,7 +75,7 @@ const int ADJUST_LIMIT = 50;
 
 - (void)stop {
     [self unscheduleUpdate];
-    [self stopAllActions];
+    [self._playerSprite stopAllActions];
 }
 
 - (void)jump {

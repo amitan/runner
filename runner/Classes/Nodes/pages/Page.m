@@ -11,9 +11,14 @@
 #import "Enemy.h"
 #import "GameScene.h"
 #import "PointUtil.h"
+#import "Page1.h"
+#import "Page2.h"
+#import "Page3.h"
+#import "Page4.h"
 
 @interface Page ()
 @property (nonatomic, readwrite)BOOL _finishCoinBonus;
+@property (nonatomic, readwrite)BOOL _isStaged;
 @end
 
 @implementation Page
@@ -24,8 +29,36 @@
 	if (self) {
         isPlaying = false;
         self._finishCoinBonus = false;
+        self._isStaged = false;
     }
     return self;
+}
+
++ (Page*)create:(int)pageId {
+    switch (pageId) {
+        case 1:
+            return [Page1 node];
+        case 2:
+            return [Page2 node];
+        case 3:
+            return [Page3 node];
+        case 4:
+            return [Page4 node];
+        default:
+            return [Page1 node];
+    }
+}
+
+- (void)stageOn:(CCNode*)map {
+    self._isStaged = true;
+    [map addChild:self];
+}
+
+- (void)stageOff {
+    self._isStaged = false;
+    [self stop];
+    [self reset];
+    [self removeFromParentAndCleanup:NO];
 }
 
 - (void)start {
@@ -51,9 +84,11 @@
 - (void)reset {
     self._finishCoinBonus = false;
     for (Coin *coin in self._coins) {
+        [coin reset];
         [coin stageOn:self];
     }
     for (Enemy *enemy in self._enemies) {
+        [enemy reset];
         [enemy stageOn:self];
     }
 }
@@ -113,6 +148,10 @@
         return true;
     }
     return false;
+}
+
+- (BOOL)isStaged {
+    return self._isStaged;
 }
 
 @end

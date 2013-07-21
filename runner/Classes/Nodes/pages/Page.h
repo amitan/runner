@@ -21,9 +21,16 @@
 @property (nonatomic, retain)NSMutableArray *_coins;
 @property (nonatomic, retain)NSMutableArray *_enemies;
 
+// 指定したページを生成する
++ (Page*)create:(int)pageId;
+
 // アニメーションを開始/停止する
 - (void)start;
 - (void)stop;
+
+// ページをマップに配置/解除する
+- (void)stageOn:(CCNode*)map;
+- (void)stageOff;
 
 // ページ幅を取得
 - (float)getWidth;
@@ -40,5 +47,8 @@
 
 // ページが画面外か
 - (BOOL)isOut;
+
+// ページを配置済みか
+- (BOOL)isStaged;
 
 @end

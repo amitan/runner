@@ -36,7 +36,10 @@
 }
 
 - (void)stop {
-    [self stopAllActions];
+    [self._coinSprite stopAllActions];
+}
+
+- (void)reset {
 }
 
 - (void)stageOn:(CCNode*)page {

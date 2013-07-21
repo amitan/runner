@@ -19,7 +19,8 @@
 + (id)getDeadAction {
     id rotate = [CCRotateTo actionWithDuration:0.5f angle:180];
     id move = [CCMoveBy actionWithDuration:0.5f position:[PointUtil getPosition:150 y:-300]];
-    return [CCSpawn actions:rotate, move, nil];
+    id resetRotate = [CCRotateTo actionWithDuration:0 angle:0];
+    return [CCSequence actions:[CCSpawn actions:rotate, move, nil], resetRotate, nil];
 }
 
 @end

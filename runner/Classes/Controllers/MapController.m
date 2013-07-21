@@ -40,9 +40,10 @@
     [[GameScene sharedInstance].gameLayer addChild:self._map];
 
     // 初期ページを追加
-    [self._map addPage:[Page1 node]];
-    [self._map addPage:[Page2 node]];
-    [self._map addPage:[Page3 node]];
+    PageController *pageController = [GameScene sharedInstance].pageController;
+    [self._map addPage:[pageController getPage:1]];
+    [self._map addPage:[pageController getPage:2]];
+    [self._map addPage:[pageController getPage:3]];
 }
 
 - (void)start {

@@ -16,6 +16,7 @@
 // コインアニメーションを開始/停止する
 - (void)start;
 - (void)stop;
+- (void)reset;
 
 // コインをページに追加する
 - (void)stageOn:(CCNode*)page;

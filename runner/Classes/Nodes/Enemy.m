@@ -50,7 +50,11 @@
 }
 
 - (void)stop {
-    [self stopAllActions];
+    [self._enemySprite stopAllActions];
+}
+
+- (void)reset {
+    self._enemySprite.position = ccp(0, 0);
 }
 
 - (BOOL)isHit:(CGPoint)point {

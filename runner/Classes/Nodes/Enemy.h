@@ -25,6 +25,7 @@
 // アニメーションを開始/停止する
 - (void)start;
 - (void)stop;
+- (void)reset;
 
 // 座標が敵に含まれているか判定する
 - (BOOL)isHit:(CGPoint)point;
