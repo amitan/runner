@@ -28,6 +28,9 @@
 - (BOOL)attackEnemyIfCollided:(CGPoint)point;
 - (BOOL)isHit:(CGPoint)point;
 
+// スピードアップするか判定する
+- (BOOL)checkSpeedUp:(CGPoint)point;
+
 // マップをスクロールする
 - (void)scroll:(float)dx;
 

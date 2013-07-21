@@ -9,6 +9,7 @@
 #import "Counter.h"
 #import "GameScene.h"
 #import "LabelUtil.h"
+#import "PointUtil.h"
 
 @interface Counter ()
 @property (nonatomic, readwrite)int _count;
@@ -33,7 +34,7 @@ const int MAX_COUNT = 3; // カウント最大値
         
         // ラベルを追加
         self._countLabel = [LabelUtil createLabel:@"" fontSize:70];
-        self._countLabel.position = ccp(background.contentSize.width / 2, background.contentSize.height / 2);
+        self._countLabel.position = ccp(background.contentSize.width / 2, background.contentSize.height / 2 - [PointUtil getPoint:8]);
         [background addChild:self._countLabel];
     }
     return self;

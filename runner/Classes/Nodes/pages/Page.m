@@ -11,10 +11,12 @@
 #import "Enemy.h"
 #import "GameScene.h"
 #import "PointUtil.h"
+#import "Page0.h"
 #import "Page1.h"
 #import "Page2.h"
 #import "Page3.h"
 #import "Page4.h"
+#import "Page900.h"
 
 @interface Page ()
 @property (nonatomic, readwrite)BOOL _finishCoinBonus;
@@ -22,12 +24,13 @@
 @end
 
 @implementation Page
-@synthesize isPlaying;
+@synthesize isPlaying, isSpeedUp;
 
 - (id)init {
     self = [super init];
 	if (self) {
-        isPlaying = false;
+        self.isPlaying = false;
+        self.isSpeedUp = false;
         self._finishCoinBonus = false;
         self._isStaged = false;
     }
@@ -44,8 +47,10 @@
             return [Page3 node];
         case 4:
             return [Page4 node];
+        case 900:
+            return [Page900 node];
         default:
-            return [Page1 node];
+            return [Page0 node];
     }
 }
 
@@ -62,7 +67,7 @@
 }
 
 - (void)start {
-    isPlaying = true;
+    self.isPlaying = true;
     for (Coin *coin in self._coins) {
         [coin start];
     }
@@ -72,7 +77,7 @@
 }
 
 - (void)stop {
-    isPlaying = false;
+    self.isPlaying = false;
     for (Coin *coin in self._coins) {
         [coin stop];
     }
@@ -95,6 +100,10 @@
 
 - (float)getWidth {
     return [self._land getWidth];
+}
+
+- (CGPoint)getLandPosition:(Block*)block {
+    return ccpAdd(ccp([block getWidth] / 2, [block getHeight] / 2), [PointUtil getPosition:0 y:-BASE_HEIGHT]);
 }
 
 - (Block*)getHitBlock:(CGPoint)point {

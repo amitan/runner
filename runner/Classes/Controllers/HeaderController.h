@@ -24,6 +24,11 @@
 // コインボーナスを加算する
 - (void)addCoinBonus:(int)num;
 
-// 距離を加算する
+// 距離を加算/取得する
 - (void)addDistance:(float)num;
+- (int)getDistance;
+
+// 演出を表示する
+- (void)showSpeedUpEffect;
+
 @end

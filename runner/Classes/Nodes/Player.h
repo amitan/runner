@@ -29,6 +29,9 @@
 // ジャンプ
 - (void)jump;
 
+// スピードアップ
+- (void)speedUp;
+
 // 座標を取得する
 - (CGPoint)getCenterBottomPosition;
 - (CGPoint)getCenterTopPosition;

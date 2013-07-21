@@ -20,15 +20,28 @@
             <key>coin_bonus.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,61},{178,39}}</string>
+                <string>{{145,3},{178,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{178,39}}</string>
+                <string>{{0,0},{178,40}}</string>
                 <key>sourceSize</key>
-                <string>{178,39}</string>
+                <string>{178,40}</string>
+            </dict>
+            <key>speed_up.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,61},{282,58}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{282,58}}</string>
+                <key>sourceSize</key>
+                <string>{282,58}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -38,9 +51,9 @@
             <key>realTextureFileName</key>
             <string>header.png</string>
             <key>size</key>
-            <string>{256,128}</string>
+            <string>{512,128}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c0059ea299136ea1a59665a38f814dd3$</string>
+            <string>$TexturePacker:SmartUpdate:f582b5fb5a7f6e9fe25ed1f0daa2faa1$</string>
             <key>textureFileName</key>
             <string>header.png</string>
         </dict>

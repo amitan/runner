@@ -143,6 +143,7 @@
         <array>
             <filename>../sprites/header/coin_base.png</filename>
             <filename>../sprites/header/coin_bonus.png</filename>
+            <filename>../sprites/header/speed_up.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -11,24 +11,23 @@
 #import "PointUtil.h"
 #import "PlayerAnimation.h"
 #import "Enemy.h"
+#import "PointUtil.h"
 
 @interface Player ()
 @property (nonatomic, readwrite)int _monsterId;
 @property (nonatomic, readwrite)BOOL _isStaged;
-@property (nonatomic, readwrite)int _jumpNum, _currentJumpNum;
+@property (nonatomic, readwrite)int _jumpNum, _currentJumpNum, _jumpSpeed;
 @property (nonatomic, retain)CCSprite *_playerSprite;
 @property (nonatomic, readwrite)BOOL _onGround, _isAdjusting;
 @property (nonatomic, readwrite)float _vx, _vy;
 @property (nonatomic, readwrite)float _properPositionX;
 @property (nonatomic, readwrite)float _limitX, _limitY;
+@property (nonatomic, readwrite)int _speedStep;
 @end
 
 @implementation Player
-const int JUMP_SPEED = 1000;
-const int GRAVITY = 30;
-const int INIT_SPEED = 300;
-const int ADJUST_DISTANCE = 1;
-const int ADJUST_LIMIT = 50;
+const int GRAVITY = 35;
+const int MAX_SPEED_STEP = 3;
 
 + (Player*)createPlayer:(int)monsterId {
     return [[[self alloc] initWithMonsterId:monsterId] autorelease];
@@ -44,10 +43,11 @@ const int ADJUST_LIMIT = 50;
         self._isStaged = false;
         self._jumpNum = 1;
         self._onGround = true;
-        self._vx = INIT_SPEED;
+        self._vx = [PointUtil getPoint:300];
         self._isAdjusting = false;
         self._limitX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
+        self._jumpSpeed = [PointUtil getPoint:1000];
         
         // アニメーションの最初のコマを読み込む
         NSString* fileName = [NSString stringWithFormat:@"monster%d_right1.png", self._monsterId];
@@ -81,7 +81,15 @@ const int ADJUST_LIMIT = 50;
 - (void)jump {
     if ((self._currentJumpNum == 0 && self._onGround) || (self._currentJumpNum != 0 && self._currentJumpNum < self._jumpNum)) {
         self._currentJumpNum++;
-        self._vy += JUMP_SPEED;
+        self._vy += self._jumpSpeed;
+    }
+}
+
+- (void)speedUp {
+    if (self._speedStep < MAX_SPEED_STEP) {
+        [[GameScene sharedInstance].headerController showSpeedUpEffect];
+        self._vx *= 1.3;
+        self._speedStep++;
     }
 }
 
@@ -145,10 +153,10 @@ const int ADJUST_LIMIT = 50;
                 self._isAdjusting = false;
                 x = self._properPositionX;
             } else {
-                x = self.position.x + ADJUST_DISTANCE;
+                x = self.position.x + [PointUtil getPoint:1];
             }
         } else { // 規定値より後ろにいる場合
-            if (self._properPositionX - ADJUST_LIMIT > self.position.x) {
+            if (self._properPositionX - [PointUtil getPoint:50] > self.position.x) {
                 self._isAdjusting = true;
             }
         }
@@ -164,7 +172,7 @@ const int ADJUST_LIMIT = 50;
     
     // 敵チェック
     if ([mapController attackEnemyIfCollided:nextCenterBottomYPosition]) {
-        self._vy += JUMP_SPEED * 1.5;
+        self._vy += self._jumpSpeed * 1.5;
         y += self._vy * dt;
     
     // ブロックチェック
@@ -193,6 +201,13 @@ const int ADJUST_LIMIT = 50;
         }
     }
     self.position = ccp(x, y);
+    
+    ///////////////////////////////////////////////////////////////
+    // スピードアップ判定
+    ///////////////////////////////////////////////////////////////
+    if ([mapController checkSpeedUp:self.position]) {
+        [self speedUp];
+    }
 }
 
 - (void)dead {

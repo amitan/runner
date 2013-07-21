@@ -16,10 +16,12 @@
 @interface HeaderController ()
 @property (nonatomic, readwrite)int _coinNum;
 @property (nonatomic, readwrite)float _dx;
+@property (nonatomic, readwrite)int _currentDistance;
 @property (nonatomic, retain)CCLabelTTF *_coinNumLabel;
 @property (nonatomic, retain)CCLabelTTF *_distanceLabel;
 @property (nonatomic, retain)CCSprite *_coinBonus;
 @property (nonatomic, retain)CCLabelTTF *_coinBonusLabel;
+@property (nonatomic, retain)CCSprite *_speedUp;
 @end
 
 @implementation HeaderController
@@ -51,7 +53,13 @@
     coinUnit.position = [PointUtil getPosition:122 y:20];
     [coinBaseSprite addChild:coinUnit];
 
-    // エフェクト追加
+    // スピードアップエフェクト追加
+    self._speedUp = [CCSprite spriteWithSpriteFrameName:@"speed_up.png"];
+    [PointUtil setTLPosition:self._speedUp x:179 y:174];
+    self._speedUp.scale = 0;
+    [[GameScene sharedInstance].hudLayer addChild:self._speedUp];
+
+    // コインボーナスエフェクト追加
     self._coinBonus = [CCSprite spriteWithSpriteFrameName:@"coin_bonus.png"];
     [PointUtil setTLPosition:self._coinBonus x:BASE_WIDTH y:174];
     self._coinBonusLabel = [LabelUtil createLabel:@"" fontSize:42 dimensions:CGSizeMake(100, 30) alignment:kCCTextAlignmentLeft];
@@ -72,9 +80,8 @@
 }
 
 - (void)sync {
-    int distanceInt = self._dx / 128.0f;
     [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", self._coinNum]];
-    [self._distanceLabel setString:[NSString stringWithFormat:@"%dM", distanceInt]];
+    [self._distanceLabel setString:[NSString stringWithFormat:@"%dM", self._currentDistance]];
 }
 
 - (void)addCoin:(int)num {
@@ -92,6 +99,19 @@
 
 - (void)addDistance:(float)dx {
     self._dx += dx;
-    [self sync];
+    float nextDistance = [self getDistance];
+    if (self._currentDistance != nextDistance) {
+        self._currentDistance = nextDistance;
+        [self sync];
+    }
 }
+
+- (int)getDistance {
+    return self._dx / 128.0f;
+}
+
+- (void)showSpeedUpEffect {
+    [self._speedUp runAction:[CommonAnimation getSpeedUpAction]];
+}
+
 @end

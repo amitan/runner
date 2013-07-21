@@ -14,7 +14,8 @@
 @interface Page : CCNode {
     
 }
-@property (nonatomic, readonly)BOOL isPlaying;
+@property (nonatomic, readwrite)BOOL isPlaying;
+@property (nonatomic, readwrite)BOOL isSpeedUp;
 @property (nonatomic, retain)Block *_land;
 @property (nonatomic, retain)Coin *_lastCoin;
 @property (nonatomic, retain)NSMutableArray *_blocks;
@@ -27,6 +28,7 @@
 // アニメーションを開始/停止する
 - (void)start;
 - (void)stop;
+- (void)reset;
 
 // ページをマップに配置/解除する
 - (void)stageOn:(CCNode*)map;
@@ -34,6 +36,7 @@
 
 // ページ幅を取得
 - (float)getWidth;
+- (CGPoint)getLandPosition:(Block*)block;
 
 // 衝突したブロックを取得する
 - (Block*)getHitBlock:(CGPoint)point;

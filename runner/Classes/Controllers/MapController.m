@@ -41,9 +41,9 @@
 
     // 初期ページを追加
     PageController *pageController = [GameScene sharedInstance].pageController;
+    [self._map addPage:[pageController getPage:0]];
     [self._map addPage:[pageController getPage:1]];
     [self._map addPage:[pageController getPage:2]];
-    [self._map addPage:[pageController getPage:3]];
 }
 
 - (void)start {
@@ -74,6 +74,10 @@
 
 - (BOOL)isHit:(CGPoint)point {
     return [self._map isHit:point];
+}
+
+- (BOOL)checkSpeedUp:(CGPoint)point {
+    return [self._map checkSpeedUp:point];
 }
 
 - (void)scroll:(float)dx {

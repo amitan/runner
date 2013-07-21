@@ -21,4 +21,7 @@
 // ジャンプ
 - (void)jump;
 
+// スピードアップ
+- (void)speedUp;
+
 @end

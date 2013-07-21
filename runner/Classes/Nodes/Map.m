@@ -14,11 +14,11 @@
 @interface Map ()
 @property (nonatomic, readwrite)float _currentRight;
 @property (nonatomic, retain)NSMutableArray *_pages;
+@property (nonatomic, readwrite)int _pageNum;
 @end
 
 @implementation Map
-const int MAX_PAGE_NUM = 30;
-const int INTERVAL1 = 150;
+const int SPEED_UP_PAGE = 900;
 @synthesize isPlaying;
 
 - (id)init {
@@ -26,25 +26,25 @@ const int INTERVAL1 = 150;
 	if (self) {
         
         // 初期設定
-        isPlaying = false;
-        self._pages = [NSMutableArray arrayWithCapacity:MAX_PAGE_NUM];
+        self.isPlaying = false;
+        self._pages = [NSMutableArray arrayWithCapacity:5];
     }
     return self;
 }
 
 - (void)start {
-    isPlaying = true;
+    self.isPlaying = true;
     for (Page *page in self._pages) {
-        if (![page isPlaying]) {
+        if (!page.isPlaying) {
             [page start];
         }
     }
 }
 
 - (void)stop {
-    isPlaying = false;
+    self.isPlaying = false;
     for (Page *page in self._pages) {
-        if ([page isPlaying]) {
+        if (page.isPlaying) {
             [page stop];
         }
     }    
@@ -60,8 +60,9 @@ const int INTERVAL1 = 150;
     self._currentRight = page.position.x + [page getWidth];
     [page stageOn:self];
     [self._pages addObject:page];
+    self._pageNum++;
     
-    if (isPlaying) {
+    if (self.isPlaying) {
         [page start];
     }
 }
@@ -92,6 +93,15 @@ const int INTERVAL1 = 150;
     return [currentPage isHit:location];
 }
 
+- (BOOL)checkSpeedUp:(CGPoint)point {
+    Page *currentPage = [self getCurrentPage:point];
+    if (currentPage.isSpeedUp) {
+        currentPage.isSpeedUp = false;
+        return true;
+    }
+    return false;
+}
+
 - (Page*)getCurrentPage:(CGPoint)point {
     CGPoint location = ccpSub(point, self.position);
     for (Page *page in self._pages) {
@@ -113,7 +123,12 @@ const int INTERVAL1 = 150;
         Page *page = [self._pages objectAtIndex:0];
         [page stageOff];
         [self._pages removeObject:page];
-        [self addPage:[[GameScene sharedInstance].pageController getPage]];
+        
+        if (self._pageNum % 10 == 0) { // TODO:: スピードアップ間隔の調整
+            [self addPage:[[GameScene sharedInstance].pageController getPage:SPEED_UP_PAGE]];
+        } else {
+            [self addPage:[[GameScene sharedInstance].pageController getPage]];
+        }
     }
 }
 

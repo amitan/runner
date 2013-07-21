@@ -23,4 +23,7 @@
 // エフェクト出現アニメーションを取得
 + (id)getEffectAppearAction;
 
+// スピードアップアニメーションを取得
++ (id)getSpeedUpAction;
+
 @end

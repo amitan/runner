@@ -2,7 +2,7 @@
 //  Page4.h
 //  runner
 //
-//  Created by Ayumi Otomo on 2013/07/20.
+//  Created by Ayumi Otomo on 2013/07/21.
 //  Copyright 2013年 Ayumi Otomo. All rights reserved.
 //
 

@@ -14,7 +14,7 @@
 @interface Map : CCNode {
     
 }
-@property (nonatomic, readonly)BOOL isPlaying;
+@property (nonatomic, readwrite)BOOL isPlaying;
 
 extern const int INTERVAL1;
 
@@ -35,6 +35,9 @@ extern const int INTERVAL1;
 // 敵チェック
 - (BOOL)attackEnemyIfCollided:(CGPoint)point;
 - (BOOL)isHit:(CGPoint)point;
+
+// スピードアップするか判定する
+- (BOOL)checkSpeedUp:(CGPoint)point;
 
 // 必要に応じてページの追加/削除を行う
 - (void)refillIfNeeded;

@@ -43,4 +43,8 @@
     [self._player jump];
 }
 
+- (void)speedUp {
+    [self._player speedUp];
+}
+
 @end
