@@ -12,6 +12,7 @@
 #import "MapController.h"
 #import "PlayerController.h"
 #import "HeaderController.h"
+#import "PageController.h"
 #import "GameInterfaceLayer.h"
 
 @interface GameScene : CCScene {
@@ -27,6 +28,7 @@
 @property (nonatomic, retain)MapController *mapController;
 @property (nonatomic, retain)PlayerController *playerController;
 @property (nonatomic, retain)HeaderController *headerController;
+@property (nonatomic, retain)PageController *pageController;
 
 // シングルトンオブジェクトを返すメソッド
 + (GameScene *)sharedInstance;

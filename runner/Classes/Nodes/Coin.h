@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "Page.h"
 
 @interface Coin : CCNode {
     
@@ -19,8 +18,12 @@
 - (void)stop;
 
 // コインをページに追加する
-- (void)stageOn:(Page*)page;
+- (void)stageOn:(CCNode*)page;
 
 // 座標がコインに含まれているか判定する
 - (BOOL)takenIfCollided:(CGPoint)point;
+
+// コインを取得済みか
+- (BOOL)hasTaken;
+
 @end

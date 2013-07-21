@@ -19,7 +19,7 @@
 @synthesize hudLayer, effectLayer;
 @synthesize interfaceLayer;
 @synthesize countController, mapController, playerController;
-@synthesize headerController;
+@synthesize headerController, pageController;
 
 static GameScene *_scene = nil;
 
@@ -80,10 +80,12 @@ static GameScene *_scene = nil;
         self.mapController = [MapController node];
         self.playerController = [PlayerController node];
         self.headerController = [HeaderController node];
+        self.pageController = [PageController node];
         [self addChild:self.countController z:-1];
         [self addChild:self.mapController z:-1];
         [self addChild:self.playerController z:-1];
         [self addChild:self.headerController z:-1];
+        [self addChild:self.pageController z:-1];
     }
     return self;
 }

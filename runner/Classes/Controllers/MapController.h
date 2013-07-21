@@ -20,11 +20,13 @@
 - (void)start;
 - (void)stop;
 
-// 衝突しているブロックを取得する
+// 衝突しているブロック/エネミーを取得する
 - (Block*)getHitBlock:(CGPoint)point;
 
-// コインに衝突しているかチェックする
-- (BOOL)checkHitCoins:(CGPoint)point;
+// コイン/敵に衝突しているかチェックする
+- (BOOL)takeCoinsIfCollided:(CGPoint)point;
+- (BOOL)attackEnemyIfCollided:(CGPoint)point;
+- (BOOL)isHit:(CGPoint)point;
 
 // マップをスクロールする
 - (void)scroll:(float)dx;

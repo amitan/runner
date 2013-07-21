@@ -14,10 +14,10 @@
 }
 
 // 指定した敵を生成する
-+ (Player*)createPlayer:(int)enemyId;
++ (Player*)createPlayer:(int)monsterId;
 
 // 敵を指定して初期化する
-- (id)initWithEnemyId:(int)enemyId;
+- (id)initWithMonsterId:(int)monsterId;
 
 // 画面に表示する
 - (void)stageOn:(int)order;
@@ -31,6 +31,7 @@
 
 // 座標を取得する
 - (CGPoint)getCenterBottomPosition;
+- (CGPoint)getCenterTopPosition;
 - (CGPoint)getCenterRightPosition;
 - (CGPoint)getTopLeftPosition;
 - (CGPoint)getTopRightPosition;
@@ -40,5 +41,8 @@
 // 幅・高さを取得する
 - (float)getWidth;
 - (float)getHeight;
+
+// 死亡する
+- (void)dead;
 
 @end

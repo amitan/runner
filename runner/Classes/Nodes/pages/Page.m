@@ -7,6 +7,14 @@
 //
 
 #import "Page.h"
+#import "Coin.h"
+#import "Enemy.h"
+#import "GameScene.h"
+#import "PointUtil.h"
+
+@interface Page ()
+@property (nonatomic, readwrite)BOOL _finishCoinBonus;
+@end
 
 @implementation Page
 @synthesize isPlaying;
@@ -15,35 +23,95 @@
     self = [super init];
 	if (self) {
         isPlaying = false;
+        self._finishCoinBonus = false;
     }
     return self;
 }
 
-// needs to be overwritten
 - (void)start {
     isPlaying = true;
+    for (Coin *coin in self._coins) {
+        [coin start];
+    }
+    for (Enemy *enemy in self._enemies) {
+        [enemy start];
+    }
 }
 
-// needs to be overwritten
 - (void)stop {
     isPlaying = false;
+    for (Coin *coin in self._coins) {
+        [coin stop];
+    }
+    for (Enemy *enemy in self._enemies) {
+        [enemy stop];
+    }
 }
 
-// needs to be overwritten
 - (void)reset {
+    self._finishCoinBonus = false;
+    for (Coin *coin in self._coins) {
+        [coin stageOn:self];
+    }
+    for (Enemy *enemy in self._enemies) {
+        [enemy stageOn:self];
+    }
 }
 
-// needs to be overwritten
 - (float)getWidth {
-    return 0;
+    return [self._land getWidth];
 }
 
-// needs to be overwritten
 - (Block*)getHitBlock:(CGPoint)point {
+    for (Block *block in self._blocks) {
+        if ([block isHit:point]) return block;
+    }
+    if ([self._land isHit:point]) return self._land;
     return NULL;
 }
 
-- (BOOL)checkHitCoins:(CGPoint)point {
+- (BOOL)takeCoinsIfCollided:(CGPoint)point {
+    
+    // コイン取得チェック
+    BOOL result = false;
+    for (Coin *coin in self._coins) {
+        if ([coin takenIfCollided:point]) result = true;
+    }
+    // コインボーナスチェック
+    if (!self._finishCoinBonus && self._lastCoin && [self._lastCoin hasTaken]) {
+        self._finishCoinBonus = true;
+        BOOL bonus = true;
+        for (Coin *coin in self._coins) {
+            if (![coin hasTaken]) bonus = false;
+        }
+        if (bonus) {
+            [[GameScene sharedInstance].headerController addCoinBonus:self._coins.count];
+        }
+    }
+    return result;
+}
+
+- (BOOL)attackEnemyIfCollided:(CGPoint)point {
+    for (Enemy *enemy in self._enemies) {
+        if ([enemy deadIfCollided:point]) return true;
+    }
+    return false;
+}
+
+- (BOOL)isHit:(CGPoint)point {
+    for (Enemy *enemy in self._enemies) {
+        if ([enemy isHit:point]) return true;
+    }
+    return false;    
+}
+
+- (BOOL)isOut {
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    float limitX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
+    float currentRightX = self.position.x + [self parent].position.x + [self getWidth];
+    if (currentRightX < limitX) {
+        return true;
+    }
     return false;
 }
 

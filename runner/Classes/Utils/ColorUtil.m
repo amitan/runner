@@ -18,4 +18,8 @@
     return ccc3(255, 255, 0);
 }
 
++ (ccColor3B)getEffectOrangeFontColor {
+    return ccc3(255, 140, 0);
+}
+
 @end

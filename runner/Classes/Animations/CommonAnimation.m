@@ -7,6 +7,7 @@
 //
 
 #import "CommonAnimation.h"
+#import "PointUtil.h"
 
 @implementation CommonAnimation
 
@@ -36,6 +37,16 @@
 + (id)getBlinkAction {
     id blink = [CCBlink actionWithDuration:1.0f blinks:1];
     return [CCRepeatForever actionWithAction:blink];
+}
+
++ (id)getEffectAppearAction {
+    float dx = -BASE_WIDTH + 10;
+    id fadeIn = [CCFadeIn actionWithDuration:0];
+    id moveTo = [CCMoveBy actionWithDuration:0.5f position:[PointUtil getPosition:dx y:0]];
+    id delay = [CCDelayTime actionWithDuration:0.3f];
+    id fadeOut = [CCFadeOut actionWithDuration:0.2f];
+    id reset = [CCMoveBy actionWithDuration:0 position:[PointUtil getPosition:-dx y:0]];
+    return [CCSequence actions:fadeIn, moveTo, delay, fadeOut, reset, nil];
 }
 
 @end

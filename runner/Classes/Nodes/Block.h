@@ -23,6 +23,9 @@
 - (float)getWidth;
 - (float)getHeight;
 
+// ブロックをページに追加する
+- (void)stageOn:(CCNode*)page;
+
 // 座標がブロックに含まれているか判定する
 - (BOOL)isHit:(CGPoint)point;
 

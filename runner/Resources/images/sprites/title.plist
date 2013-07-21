@@ -4,23 +4,10 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>header_coin.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{3,3},{138,54}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{138,54}}</string>
-                <key>sourceSize</key>
-                <string>{138,54}</string>
-            </dict>
             <key>selector.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{145,3},{20,29}}</string>
+                <string>{{3,3},{20,29}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +20,7 @@
             <key>title_btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{169,3},{1,1}}</string>
+                <string>{{27,3},{1,1}}</string>
                 <key>offset</key>
                 <string>{-159.5,43.5}</string>
                 <key>rotated</key>
@@ -49,13 +36,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>subparts.png</string>
+            <string>title.png</string>
             <key>size</key>
-            <string>{256,64}</string>
+            <string>{32,64}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:3548810af4b64524c7e971d362f9bd09$</string>
+            <string>$TexturePacker:SmartUpdate:2efed7d3f9650e4727839f245f3a6a90$</string>
             <key>textureFileName</key>
-            <string>subparts.png</string>
+            <string>title.png</string>
         </dict>
     </dict>
 </plist>

@@ -17,4 +17,7 @@
 // タッチ時の文字色を返す
 + (ccColor3B)getTouchedFontColor;
 
+// エフェクトの文字色を返す
++ (ccColor3B)getEffectOrangeFontColor;
+
 @end

@@ -30,6 +30,13 @@ extern const int INTERVAL1;
 - (Block*)getHitBlock:(CGPoint)point;
 
 // コインを取得しているかチェックする
-- (BOOL)checkHitCoins:(CGPoint)point;
+- (BOOL)takeCoinsIfCollided:(CGPoint)point;
+
+// 敵チェック
+- (BOOL)attackEnemyIfCollided:(CGPoint)point;
+- (BOOL)isHit:(CGPoint)point;
+
+// 必要に応じてページの追加/削除を行う
+- (void)refillIfNeeded;
 
 @end

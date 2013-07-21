@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>enemy1_right1.png</key>
+            <key>monster1_right1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3,3},{59,48}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{59,48}</string>
             </dict>
-            <key>enemy1_right2.png</key>
+            <key>monster1_right2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{66,3},{59,44}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{59,44}</string>
             </dict>
-            <key>enemy1_right3.png</key>
+            <key>monster1_right3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{129,3},{63,39}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{63,39}</string>
             </dict>
-            <key>enemy2_right1.png</key>
+            <key>monster2_right1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3,55},{59,48}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{59,48}</string>
             </dict>
-            <key>enemy2_right2.png</key>
+            <key>monster2_right2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{66,55},{59,44}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{59,44}</string>
             </dict>
-            <key>enemy2_right3.png</key>
+            <key>monster2_right3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{129,55},{63,39}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{63,39}</string>
             </dict>
-            <key>enemy3_right1.png</key>
+            <key>monster3_right1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3,107},{59,48}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{59,48}</string>
             </dict>
-            <key>enemy3_right2.png</key>
+            <key>monster3_right2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{66,107},{59,44}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{59,44}</string>
             </dict>
-            <key>enemy3_right3.png</key>
+            <key>monster3_right3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{129,107},{63,39}}</string>
@@ -127,13 +127,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>enemy.png</string>
+            <string>monster.png</string>
             <key>size</key>
             <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6087ee3fd6156b53c8ae5a6add38bce8$</string>
+            <string>$TexturePacker:SmartUpdate:e33dd1d6051fc4602cdaf85b6bbde3f0$</string>
             <key>textureFileName</key>
-            <string>enemy.png</string>
+            <string>monster.png</string>
         </dict>
     </dict>
 </plist>

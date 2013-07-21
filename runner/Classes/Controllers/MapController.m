@@ -11,7 +11,10 @@
 #import "PointUtil.h"
 #import "Block.h"
 #import "Map.h"
+#import "Page1.h"
+#import "Page2.h"
 #import "Page3.h"
+#import "Page4.h"
 
 @interface MapController ()
 @property (nonatomic, retain)Map *_map;
@@ -35,12 +38,11 @@
     self._map = [Map node];
     [PointUtil setTLPosition:self._map x:0 y:0];
     [[GameScene sharedInstance].gameLayer addChild:self._map];
-    
-    Page *page = [Page3 node];
-    [self._map addPage:page];
-    
-    Page *page2 = [Page3 node];
-    [self._map addPage:page2];    
+
+    // 初期ページを追加
+    [self._map addPage:[Page1 node]];
+    [self._map addPage:[Page2 node]];
+    [self._map addPage:[Page3 node]];
 }
 
 - (void)start {
@@ -61,12 +63,22 @@
     return block;
 }
 
-- (BOOL)checkHitCoins:(CGPoint)point {
-    return [self._map checkHitCoins:point];
+- (BOOL)takeCoinsIfCollided:(CGPoint)point {
+    return [self._map takeCoinsIfCollided:point];
+}
+
+- (BOOL)attackEnemyIfCollided:(CGPoint)point {
+    return [self._map attackEnemyIfCollided:point];
+}
+
+- (BOOL)isHit:(CGPoint)point {
+    return [self._map isHit:point];
 }
 
 - (void)scroll:(float)dx {
     self._map.position = ccp(self._map.position.x - dx, self._map.position.y);
+    [[GameScene sharedInstance].headerController addDistance:dx];
+    [self._map refillIfNeeded];
 }
 
 @end

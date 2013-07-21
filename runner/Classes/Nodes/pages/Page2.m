@@ -11,26 +11,20 @@
 #import "PointUtil.h"
 #import "Coin.h"
 
-@interface Page2 ()
-@property (nonatomic, retain)Block *_land;
-@property (nonatomic, retain)NSMutableArray *_coins;
-@end
-
 // 地面とコイン
 @implementation Page2
-const int MAX_COIN_NUM = 12;
 
 - (id)init {
     self = [super init];
 	if (self) {
         
         // 初期設定
-        self._coins = [NSMutableArray arrayWithCapacity:MAX_COIN_NUM];
+        self._coins = [NSMutableArray arrayWithCapacity:12];
         
         // 地面を追加
         self._land = [Block createBlock:1];
         self._land.position = [PointUtil getPosition:[self._land getWidth] / 2 y:-BASE_HEIGHT + [self._land getHeight] / 2];
-        [self addChild:self._land];
+        [self._land stageOn:self];
         
         // コインを追加
         Coin *coin1 = [Coin node];
@@ -45,6 +39,7 @@ const int MAX_COIN_NUM = 12;
         Coin *coin14 = [Coin node];
         Coin *coin15 = [Coin node];
         Coin *coin16 = [Coin node];
+        self._lastCoin = coin16;
 
         coin1.position = [PointUtil getPosition:100 y:-600];
         coin2.position = [PointUtil getPosition:150 y:-550];
@@ -78,44 +73,6 @@ const int MAX_COIN_NUM = 12;
         }
     }
     return self;
-}
-
-- (void)start {
-    [super start];
-    for (Coin *coin in self._coins) {
-        [coin start];
-    }
-}
-
-- (void)stop {
-    [super stop];
-    for (Coin *coin in self._coins) {
-        [coin stop];
-    }
-}
-
-- (void)reset {
-    for (Coin *coin in self._coins) {
-        [coin stageOn:self];
-    }
-}
-
-- (float)getWidth {
-    return [self._land getWidth];
-}
-
-- (Block*)getHitBlock:(CGPoint)point {
-    if ([self._land isHit:point]) return self._land;
-    return NULL;
-
-}
-
-- (BOOL)checkHitCoins:(CGPoint)point {
-    for (Coin *coin in self._coins) {
-        BOOL result = [coin takenIfCollided:point];
-        if (result) return true;
-    }
-    return false;
 }
 
 @end

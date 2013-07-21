@@ -43,6 +43,12 @@
     return self._sprite.contentSize.height;
 }
 
+- (void)stageOn:(CCNode*)page {
+    if (![self parent]) {
+        [page addChild:self];
+    }
+}
+
 - (BOOL)isHit:(CGPoint)point {
     if (CGRectContainsPoint([self _getLayerBasedBox], point)) {
         return true;

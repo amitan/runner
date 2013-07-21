@@ -39,7 +39,7 @@
     [self stopAllActions];
 }
 
-- (void)stageOn:(Page*)page {
+- (void)stageOn:(CCNode*)page {
     self._isStaged = true;
     if (![self parent]) {
         [page addChild:self];
@@ -63,11 +63,14 @@
         [self removeFromParentAndCleanup:NO];
         
         HeaderController *header = [GameScene sharedInstance].headerController;
-        header.coinNum += 1;
-        [header sync];
+        [header addCoin:1];
         return true;
     }
     return false;
+}
+
+- (BOOL)hasTaken {
+    return !self._isStaged;
 }
 
 @end

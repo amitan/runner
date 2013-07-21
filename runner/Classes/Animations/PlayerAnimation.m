@@ -11,9 +11,15 @@
 
 @implementation PlayerAnimation
 
-+ (id)getWalkAction:(int)enemyId {
-    CCAnimation *animation = [CommonAnimation getFrameAnimation:[NSString stringWithFormat:@"enemy%d_right", enemyId] frameNum:3];
-    return [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]];
++ (id)getWalkAction:(int)monsterId {
+    return [CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"monster%d_right", monsterId] frameNum:3];
+}
+
++ (CCParticleSystem*)getDeadParticle {
+    CCParticleSystem *emitter = [CCParticleSystemQuad particleWithFile:@"dead.plist"];
+    emitter.duration = 0.5f;
+    emitter.autoRemoveOnFinish = YES;
+    return emitter;
 }
 
 @end

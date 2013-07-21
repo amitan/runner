@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../runner/Resources/images/sprites/enemy.png</filename>
+        <filename>../../runner/Resources/images/sprites/monster.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../runner/Resources/images/sprites/enemy.plist</filename>
+        <filename>../../runner/Resources/images/sprites/monster.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
@@ -141,15 +141,15 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/enemy/enemy1_right1.png</filename>
-            <filename>../sprites/enemy/enemy1_right2.png</filename>
-            <filename>../sprites/enemy/enemy1_right3.png</filename>
-            <filename>../sprites/enemy/enemy2_right1.png</filename>
-            <filename>../sprites/enemy/enemy2_right2.png</filename>
-            <filename>../sprites/enemy/enemy2_right3.png</filename>
-            <filename>../sprites/enemy/enemy3_right1.png</filename>
-            <filename>../sprites/enemy/enemy3_right2.png</filename>
-            <filename>../sprites/enemy/enemy3_right3.png</filename>
+            <filename>../sprites/monster/monster1_right1.png</filename>
+            <filename>../sprites/monster/monster1_right2.png</filename>
+            <filename>../sprites/monster/monster1_right3.png</filename>
+            <filename>../sprites/monster/monster2_right1.png</filename>
+            <filename>../sprites/monster/monster2_right2.png</filename>
+            <filename>../sprites/monster/monster2_right3.png</filename>
+            <filename>../sprites/monster/monster3_right1.png</filename>
+            <filename>../sprites/monster/monster3_right2.png</filename>
+            <filename>../sprites/monster/monster3_right3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

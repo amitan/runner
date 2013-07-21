@@ -19,4 +19,8 @@
 
 // 点滅アニメーションを取得
 + (id)getBlinkAction;
+
+// エフェクト出現アニメーションを取得
++ (id)getEffectAppearAction;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "Map.h"
 #import "PointUtil.h"
+#import "Page1.h"
 
 @interface Map ()
 @property (nonatomic, readwrite)float _currentRight;
@@ -72,10 +73,22 @@ const int INTERVAL1 = 150;
     return (block) ? block : NULL;
 }
 
-- (BOOL)checkHitCoins:(CGPoint)point {
+- (BOOL)takeCoinsIfCollided:(CGPoint)point {
     Page *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
-    return [currentPage checkHitCoins:location];
+    return [currentPage takeCoinsIfCollided:location];
+}
+
+- (BOOL)attackEnemyIfCollided:(CGPoint)point {
+    Page *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    return [currentPage attackEnemyIfCollided:location];
+}
+
+- (BOOL)isHit:(CGPoint)point {
+    Page *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    return [currentPage isHit:location];
 }
 
 - (Page*)getCurrentPage:(CGPoint)point {
@@ -86,6 +99,19 @@ const int INTERVAL1 = 150;
         }
     }
     return NULL;
+}
+
+- (void)refillIfNeeded {
+    BOOL result = false;
+    for (Page *page in self._pages) {
+        if ([page isOut]) {
+            result = true;
+        }
+    }
+    if (result) {
+        [self._pages removeObjectAtIndex:0];
+        [self addPage:[Page1 node]];
+    }
 }
 
 @end

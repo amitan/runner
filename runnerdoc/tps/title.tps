@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../runner/Resources/images/sprites/subparts.png</filename>
+        <filename>../../runner/Resources/images/sprites/title.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../runner/Resources/images/sprites/subparts.plist</filename>
+        <filename>../../runner/Resources/images/sprites/title.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
@@ -141,9 +141,8 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/subparts/title_btn.png</filename>
-            <filename>../sprites/subparts/selector.png</filename>
-            <filename>../sprites/subparts/header_coin.png</filename>
+            <filename>../sprites/title/selector.png</filename>
+            <filename>../sprites/title/title_btn.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
