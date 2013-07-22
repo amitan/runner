@@ -24,4 +24,8 @@
 // スピードアップ
 - (void)speedUp;
 
+// 仲間の移動座標を設定する
+- (void)moveFollower:(int)order points:(NSMutableArray*)points;
+- (void)followerUpdate;
+
 @end

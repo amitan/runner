@@ -12,6 +12,7 @@
 #import "PlayerAnimation.h"
 #import "Enemy.h"
 #import "PointUtil.h"
+#import "Follower.h"
 
 @interface Player ()
 @property (nonatomic, readwrite)int _monsterId;
@@ -23,6 +24,9 @@
 @property (nonatomic, readwrite)float _properPositionX;
 @property (nonatomic, readwrite)float _limitX, _limitY;
 @property (nonatomic, readwrite)int _speedStep;
+@property (nonatomic, readwrite)float _dx1, _dx2;
+@property (nonatomic, retain)NSMutableArray *_follower1Points;
+@property (nonatomic, retain)NSMutableArray *_follower2Points;
 @end
 
 @implementation Player
@@ -48,6 +52,8 @@ const int MAX_SPEED_STEP = 3;
         self._limitX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
         self._jumpSpeed = [PointUtil getPoint:1000];
+        self._follower1Points = [NSMutableArray array];
+        self._follower2Points = [NSMutableArray array];
         
         // アニメーションの最初のコマを読み込む
         NSString* fileName = [NSString stringWithFormat:@"monster%d_right1.png", self._monsterId];
@@ -61,9 +67,9 @@ const int MAX_SPEED_STEP = 3;
     [super dealloc];
 }
 
-- (void)stageOn:(int)order { // TODO:: orderの実装
+- (void)stageOn {
     self._isStaged = true;
-    [PointUtil setPosition:self x:150 y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
+    [PointUtil setPosition:self x:180 y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
     self._properPositionX = self.position.x;
     [[GameScene sharedInstance].gameLayer addChild:self];
 }
@@ -180,12 +186,13 @@ const int MAX_SPEED_STEP = 3;
     
         // 着地判定
         Block *blockY = [mapController getHitBlock:nextCenterBottomYPosition];
+        if (!blockY) blockY = [mapController getHitBlock:ccpAdd(nextCenterBottomYPosition, ccp(-[self getWidth] / 2, 0))];
         if (blockY) {
             if (self._vy <= 0) {
+                self._onGround = true;
                 y = [blockY getLandPoint] + self._playerSprite.contentSize.height / 2;
                 self._vy = 0;
                 self._currentJumpNum = 0;
-                self._onGround = true;
             }
         } else {
             self._onGround = false; // 衝突していないので空中
@@ -200,7 +207,27 @@ const int MAX_SPEED_STEP = 3;
             }
         }
     }
+    
+    ///////////////////////////////////////////////////////////////
+    // 位置更新
+    ///////////////////////////////////////////////////////////////
+    self._dx1 += dx;
+    self._dx2 += dx;
+    CGPoint diff = ccpSub(ccp(x, y), self.position);
+    [self._follower1Points addObject:[NSValue valueWithCGPoint:diff]];
+    [self._follower2Points addObject:[NSValue valueWithCGPoint:diff]];
+    if ([PointUtil getPoint:FOLLOWER_DX] < self._dx1) {
+        self._dx1 = 0;
+        [[GameScene sharedInstance].playerController moveFollower:1 points:self._follower1Points];
+        self._follower1Points = [NSMutableArray array];
+    }
+    if ([PointUtil getPoint:FOLLOWER_DX * 2] < self._dx2) {
+        self._dx2 = 0;
+        [[GameScene sharedInstance].playerController moveFollower:2 points:self._follower2Points];
+        self._follower2Points = [NSMutableArray array];
+    }
     self.position = ccp(x, y);
+    [[GameScene sharedInstance].playerController followerUpdate];
     
     ///////////////////////////////////////////////////////////////
     // スピードアップ判定

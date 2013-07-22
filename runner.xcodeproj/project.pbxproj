@@ -178,6 +178,7 @@
 		F9A468E9179B7104002BAFB7 /* PageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468E8179B7102002BAFB7 /* PageController.m */; };
 		F9A468EC179BB281002BAFB7 /* Page4.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468EB179BB27F002BAFB7 /* Page4.m */; };
 		F9A468EF179BDD6A002BAFB7 /* Page900.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468EE179BDD69002BAFB7 /* Page900.m */; };
+		F9A468F2179C94BA002BAFB7 /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468F1179C94B9002BAFB7 /* Follower.m */; };
 		F9ABA62A178C456300A02626 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA629178C456300A02626 /* Block.m */; };
 		F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA62F178E84C300A02626 /* TitleLayer.m */; };
 		F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA636178E971700A02626 /* misaki_gothic.ttf */; };
@@ -536,6 +537,8 @@
 		F9A468EB179BB27F002BAFB7 /* Page4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page4.m; sourceTree = "<group>"; };
 		F9A468ED179BDD67002BAFB7 /* Page900.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page900.h; sourceTree = "<group>"; };
 		F9A468EE179BDD69002BAFB7 /* Page900.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page900.m; sourceTree = "<group>"; };
+		F9A468F0179C94B6002BAFB7 /* Follower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Follower.h; sourceTree = "<group>"; };
+		F9A468F1179C94B9002BAFB7 /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
 		F9ABA628178C456300A02626 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F9ABA629178C456300A02626 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 		F9ABA62E178E84C300A02626 /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
@@ -1075,6 +1078,8 @@
 				F9A468C117955438002BAFB7 /* Coin.m */,
 				F9A468CC1799CC53002BAFB7 /* Enemy.h */,
 				F9A468CD1799CC54002BAFB7 /* Enemy.m */,
+				F9A468F0179C94B6002BAFB7 /* Follower.h */,
+				F9A468F1179C94B9002BAFB7 /* Follower.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -1437,6 +1442,7 @@
 				F9A468E9179B7104002BAFB7 /* PageController.m in Sources */,
 				F9A468EC179BB281002BAFB7 /* Page4.m in Sources */,
 				F9A468EF179BDD6A002BAFB7 /* Page900.m in Sources */,
+				F9A468F2179C94BA002BAFB7 /* Follower.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

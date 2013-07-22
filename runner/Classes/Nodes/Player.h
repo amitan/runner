@@ -13,14 +13,14 @@
     
 }
 
-// 指定した敵を生成する
+// 指定したモンスターを生成する
 + (Player*)createPlayer:(int)monsterId;
 
-// 敵を指定して初期化する
+// モンスターを指定して初期化する
 - (id)initWithMonsterId:(int)monsterId;
 
 // 画面に表示する
-- (void)stageOn:(int)order;
+- (void)stageOn;
 
 // 動作を開始/停止する
 - (void)start;

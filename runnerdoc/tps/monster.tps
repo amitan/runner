@@ -150,6 +150,12 @@
             <filename>../sprites/monster/monster3_right1.png</filename>
             <filename>../sprites/monster/monster3_right2.png</filename>
             <filename>../sprites/monster/monster3_right3.png</filename>
+            <filename>../sprites/monster/monster4_right1.png</filename>
+            <filename>../sprites/monster/monster4_right2.png</filename>
+            <filename>../sprites/monster/monster4_right3.png</filename>
+            <filename>../sprites/monster/monster5_right1.png</filename>
+            <filename>../sprites/monster/monster5_right2.png</filename>
+            <filename>../sprites/monster/monster5_right3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
