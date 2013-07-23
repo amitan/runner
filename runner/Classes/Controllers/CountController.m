@@ -36,11 +36,12 @@
 
 - (void)start {
     [self._counter stageOn];
-    self._timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
+    self._timer = [NSTimer scheduledTimerWithTimeInterval:0.8f target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
 }
 
 - (void)stop {
     [self _stopTimer];
+    [self._counter stageOff];
 }
 
 - (void)_stopTimer {

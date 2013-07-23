@@ -129,7 +129,7 @@
             if (![coin hasTaken]) bonus = false;
         }
         if (bonus) {
-            [[GameScene sharedInstance].headerController addCoinBonus:self._coins.count];
+            [[GameScene sharedInstance].hudController addCoinBonus:self._coins.count];
         }
     }
     return result;

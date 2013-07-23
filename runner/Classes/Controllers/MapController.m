@@ -82,7 +82,7 @@
 
 - (void)scroll:(float)dx {
     self._map.position = ccp(self._map.position.x - dx, self._map.position.y);
-    [[GameScene sharedInstance].headerController addDistance:dx];
+    [[GameScene sharedInstance].hudController addDistance:dx];
     [self._map refillIfNeeded];
 }
 

@@ -93,7 +93,7 @@ const int MAX_SPEED_STEP = 3;
 
 - (void)speedUp {
     if (self._speedStep < MAX_SPEED_STEP) {
-        [[GameScene sharedInstance].headerController showSpeedUpEffect];
+        [[GameScene sharedInstance].hudController showSpeedUpEffect];
         self._vx *= 1.3;
         self._speedStep++;
     }

@@ -1,19 +1,21 @@
 //
-//  HeaderController.m
+//  HudController.m
 //  runner
 //
 //  Created by Ayumi Otomo on 2013/07/17.
 //  Copyright 2013年 Ayumi Otomo. All rights reserved.
 //
 
-#import "HeaderController.h"
+#import "HudController.h"
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "LabelUtil.h"
 #import "ColorUtil.h"
 #import "CommonAnimation.h"
+#import "CCSpriteButton.h"
+#import "Pause.h"
 
-@interface HeaderController ()
+@interface HudController ()
 @property (nonatomic, readwrite)int _coinNum;
 @property (nonatomic, readwrite)float _dx;
 @property (nonatomic, readwrite)int _currentDistance;
@@ -22,13 +24,17 @@
 @property (nonatomic, retain)CCSprite *_coinBonus;
 @property (nonatomic, retain)CCLabelTTF *_coinBonusLabel;
 @property (nonatomic, retain)CCSprite *_speedUp;
+@property (nonatomic, retain)CCSpriteButton *_stopSprite, *_playSprite;
+@property (nonatomic, readwrite)BOOL _isPausing;
+@property (nonatomic, retain)Pause *_pause;
 @end
 
-@implementation HeaderController
+@implementation HudController
 
 - (id)init {
     self = [super init];
 	if (self) {
+        self._isPausing = false;
     }
     return self;
 }
@@ -68,7 +74,21 @@
     [self._coinBonus addChild:self._coinBonusLabel];
     self._coinBonus.visible = NO;
     [[GameScene sharedInstance].hudLayer addChild:self._coinBonus];
+    
+    // 停止/再生ボタン
+    self._stopSprite = [CCSpriteButton spriteWithSpriteFrameName:@"stop_btn.png"];
+    [self._stopSprite addClickListner:self selector:@selector(clickStopButton:)];
+    [PointUtil setTLPosition:self._stopSprite x:10 y:850];
+    [[GameScene sharedInstance].hudLayer addChild:self._stopSprite];    
 
+    self._playSprite = [CCSpriteButton spriteWithSpriteFrameName:@"play_btn.png"];
+    [self._playSprite addClickListner:self selector:@selector(clickPlayButton:)];
+    [PointUtil setTLPosition:self._playSprite x:10 y:850];
+    [[GameScene sharedInstance].hudLayer addChild:self._playSprite];
+
+    // 停止ビュー
+    self._pause = [Pause node];
+    
     // 同期
     [self sync];
 }
@@ -82,6 +102,17 @@
 - (void)sync {
     [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", self._coinNum]];
     [self._distanceLabel setString:[NSString stringWithFormat:@"%dM", self._currentDistance]];
+    if (self._isPausing) {
+        self._stopSprite.visible = NO;
+        self._playSprite.visible = YES;
+        self._stopSprite.isEnabled = NO;
+        self._playSprite.isEnabled = YES;
+    } else {
+        self._stopSprite.visible = YES;
+        self._playSprite.visible = NO;
+        self._stopSprite.isEnabled = YES;
+        self._playSprite.isEnabled = NO;
+    }
 }
 
 - (void)addCoin:(int)num {
@@ -112,6 +143,20 @@
 
 - (void)showSpeedUpEffect {
     [self._speedUp runAction:[CommonAnimation getSpeedUpAction]];
+}
+
+- (void)clickPlayButton:(id)sender {
+    [self._pause stageOff];
+    self._isPausing = false;
+    [[GameScene sharedInstance] start];
+    [self sync];
+}
+
+- (void)clickStopButton:(id)sender {
+    self._isPausing = true;
+    [[GameScene sharedInstance] stop];
+    [self sync];
+    [self._pause stageOn];
 }
 
 @end

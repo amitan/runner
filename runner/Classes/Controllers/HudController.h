@@ -1,5 +1,5 @@
 //
-//  HeaderController.h
+//  HudController.h
 //  runner
 //
 //  Created by Ayumi Otomo on 2013/07/17.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface HeaderController : CCNode {
+@interface HudController : CCNode {
     
 }
 

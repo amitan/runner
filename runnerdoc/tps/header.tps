@@ -144,6 +144,8 @@
             <filename>../sprites/header/coin_base.png</filename>
             <filename>../sprites/header/coin_bonus.png</filename>
             <filename>../sprites/header/speed_up.png</filename>
+            <filename>../sprites/header/play_btn.png</filename>
+            <filename>../sprites/header/stop_btn.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

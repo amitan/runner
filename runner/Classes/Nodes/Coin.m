@@ -65,7 +65,7 @@
         self._isStaged = false;
         [self removeFromParentAndCleanup:NO];
         
-        HeaderController *header = [GameScene sharedInstance].headerController;
+        HudController *header = [GameScene sharedInstance].hudController;
         [header addCoin:1];
         return true;
     }

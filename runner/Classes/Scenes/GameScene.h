@@ -11,7 +11,7 @@
 #import "CountController.h"
 #import "MapController.h"
 #import "PlayerController.h"
-#import "HeaderController.h"
+#import "HudController.h"
 #import "PageController.h"
 #import "GameInterfaceLayer.h"
 
@@ -27,7 +27,7 @@
 @property (nonatomic, retain)CountController *countController;
 @property (nonatomic, retain)MapController *mapController;
 @property (nonatomic, retain)PlayerController *playerController;
-@property (nonatomic, retain)HeaderController *headerController;
+@property (nonatomic, retain)HudController *hudController;
 @property (nonatomic, retain)PageController *pageController;
 
 // シングルトンオブジェクトを返すメソッド
