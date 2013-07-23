@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Pause : CCNode {
+@interface Pause : CCNode<CCTouchOneByOneDelegate> {
     
 }
 - (void)stageOn;

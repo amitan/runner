@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 
 @interface GameUtil : NSObject
+extern const int INIT_PLAYER_X;
 
 // タッチ優先度
 typedef enum {

@@ -10,6 +10,7 @@
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "PlayerAnimation.h"
+#import "GameUtil.h"
 
 @interface Follower ()
 @property (nonatomic, readwrite)int _monsterId;
@@ -41,7 +42,7 @@ const int FOLLOWER_DX = 70; // 前のモンスターとの間隔
 }
 
 - (void)stageOn:(int)order {
-    [PointUtil setPosition:self x:180 - order * FOLLOWER_DX y:760 offsetX:0 offsetY:-self._followerSprite.contentSize.height / 2];
+    [PointUtil setPosition:self x:INIT_PLAYER_X - order * FOLLOWER_DX y:760 offsetX:0 offsetY:-self._followerSprite.contentSize.height / 2];
     [[GameScene sharedInstance].gameLayer addChild:self];
 }
 

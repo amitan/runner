@@ -9,6 +9,7 @@
 #import "GameUtil.h"
 
 @implementation GameUtil
+const int INIT_PLAYER_X = 250;
 
 + (NSString*) getBgSpriteName:(NSString *)fileName ext:(NSString *)ext {
     if ([GameUtil is4inchDevice]) {

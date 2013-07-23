@@ -13,6 +13,7 @@
 #import "Enemy.h"
 #import "PointUtil.h"
 #import "Follower.h"
+#import "GameUtil.h"
 
 @interface Player ()
 @property (nonatomic, readwrite)int _monsterId;
@@ -30,7 +31,8 @@
 @end
 
 @implementation Player
-const int GRAVITY = 35;
+const int GRAVITY = 70;
+const int JUMP_SPEED = 1500;
 const int MAX_SPEED_STEP = 3;
 
 + (Player*)createPlayer:(int)monsterId {
@@ -51,7 +53,7 @@ const int MAX_SPEED_STEP = 3;
         self._isAdjusting = false;
         self._limitX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
-        self._jumpSpeed = [PointUtil getPoint:1000];
+        self._jumpSpeed = [PointUtil getPoint:JUMP_SPEED];
         self._follower1Points = [NSMutableArray array];
         self._follower2Points = [NSMutableArray array];
         
@@ -69,7 +71,7 @@ const int MAX_SPEED_STEP = 3;
 
 - (void)stageOn {
     self._isStaged = true;
-    [PointUtil setPosition:self x:180 y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
+    [PointUtil setPosition:self x:INIT_PLAYER_X y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
     self._properPositionX = self.position.x;
     [[GameScene sharedInstance].gameLayer addChild:self];
 }
@@ -130,7 +132,7 @@ const int MAX_SPEED_STEP = 3;
     ///////////////////////////////////////////////////////////////
     // 当たり判定用座標計算
     ///////////////////////////////////////////////////////////////
-    self._vy -= GRAVITY;
+    self._vy -= [PointUtil getPoint:GRAVITY];
     float dx = self._vx * dt;
     float dy = self._vy * dt;
     float x = self.position.x;

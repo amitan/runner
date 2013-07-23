@@ -13,6 +13,7 @@
 #import "CommonAnimation.h"
 #import "StageLayer.h"
 #import "GameUtil.h"
+#import "GameScene.h"
 
 @implementation TitleLayer
 
@@ -77,7 +78,7 @@
 
 // ぼうけんをはじめる
 - (void)clickPlayButton:(id)sender {
-    [GameUtil replaceScene:[StageLayer scene]];
+    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1]];
 }
 
 // せっていをかえる

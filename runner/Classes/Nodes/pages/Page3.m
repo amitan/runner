@@ -17,7 +17,7 @@
 	if (self) {
         
         // 初期設定
-        self._enemies = [NSMutableArray arrayWithCapacity:4];
+        self._enemies = [NSMutableArray arrayWithCapacity:2];
         self._blocks = [NSMutableArray arrayWithCapacity:5];
         self._coins = [NSMutableArray arrayWithCapacity:8];
         
@@ -29,18 +29,12 @@
         // 敵を追加
         Enemy *enemy1 = [Enemy createEnemy:1];
         Enemy *enemy2 = [Enemy createEnemy:1];
-        Enemy *enemy3 = [Enemy createEnemy:1];
-        Enemy *enemy4 = [Enemy createEnemy:1];
         
-        enemy1.position = [PointUtil getPosition:100 y:-715];
-        enemy2.position = [PointUtil getPosition:184 y:-715];
-        enemy3.position = [PointUtil getPosition:268 y:-715];
-        enemy4.position = [PointUtil getPosition:352 y:-715];
+        enemy1.position = [PointUtil getPosition:184 y:-715];
+        enemy2.position = [PointUtil getPosition:352 y:-715];
         
         [self._enemies addObject:enemy1];
         [self._enemies addObject:enemy2];
-        [self._enemies addObject:enemy3];
-        [self._enemies addObject:enemy4];
         
         for (Enemy *enemy in self._enemies) {
             [enemy stageOn:self];

@@ -33,20 +33,20 @@
             <key>play_btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{327,3},{106,108}}</string>
+                <string>{{327,3},{66,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{106,108}}</string>
+                <string>{{0,0},{66,68}}</string>
                 <key>sourceSize</key>
-                <string>{106,108}</string>
+                <string>{66,68}</string>
             </dict>
             <key>speed_up.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,115},{282,58}}</string>
+                <string>{{3,75},{282,58}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,15 +59,15 @@
             <key>stop_btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{289,115},{106,108}}</string>
+                <string>{{289,75},{66,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{106,108}}</string>
+                <string>{{0,0},{66,68}}</string>
                 <key>sourceSize</key>
-                <string>{106,108}</string>
+                <string>{66,68}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -79,7 +79,7 @@
             <key>size</key>
             <string>{512,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:fd836b56487b9b2668619de2f12dc998$</string>
+            <string>$TexturePacker:SmartUpdate:6b28c5562df2baf0a900171fbe490baa$</string>
             <key>textureFileName</key>
             <string>header.png</string>
         </dict>

@@ -43,12 +43,12 @@
     
     // 距離表示追加
     self._distanceLabel = [LabelUtil createLabel:@"" fontSize:50];
-    [PointUtil setPosition:self._distanceLabel x:320 y:146 offsetX:0 offsetY:0];
+    [PointUtil setPosition:self._distanceLabel x:320 y:156 offsetX:0 offsetY:0];
     [[GameScene sharedInstance].hudLayer addChild:self._distanceLabel];
     
     // コイン表示追加
     CCSprite *coinBaseSprite = [CCSprite spriteWithSpriteFrameName:@"coin_base.png"];
-    [PointUtil setTLPosition:coinBaseSprite x:492 y:110];
+    [PointUtil setTLPosition:coinBaseSprite x:492 y:117];
     [[GameScene sharedInstance].hudLayer addChild:coinBaseSprite];
     
     self._coinNumLabel = [LabelUtil createLabel:@"" fontSize:30 dimensions:CGSizeMake(138, 54) alignment:kCCTextAlignmentRight];
@@ -78,12 +78,12 @@
     // 停止/再生ボタン
     self._stopSprite = [CCSpriteButton spriteWithSpriteFrameName:@"stop_btn.png"];
     [self._stopSprite addClickListner:self selector:@selector(clickStopButton:)];
-    [PointUtil setTLPosition:self._stopSprite x:10 y:850];
+    [PointUtil setTLPosition:self._stopSprite x:10 y:110];
     [[GameScene sharedInstance].hudLayer addChild:self._stopSprite];    
 
     self._playSprite = [CCSpriteButton spriteWithSpriteFrameName:@"play_btn.png"];
     [self._playSprite addClickListner:self selector:@selector(clickPlayButton:)];
-    [PointUtil setTLPosition:self._playSprite x:10 y:850];
+    [PointUtil setTLPosition:self._playSprite x:10 y:110];
     [[GameScene sharedInstance].hudLayer addChild:self._playSprite];
 
     // 停止ビュー

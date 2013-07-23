@@ -41,19 +41,19 @@
         Coin *coin16 = [Coin node];
         self._lastCoin = coin16;
 
-        coin1.position = [PointUtil getPosition:100 y:-650];
-        coin2.position = [PointUtil getPosition:150 y:-600];
-        coin3.position = [PointUtil getPosition:200 y:-550];
-        coin4.position = [PointUtil getPosition:250 y:-550];
-        coin5.position = [PointUtil getPosition:300 y:-600];
-        coin6.position = [PointUtil getPosition:350 y:-650];
+        coin1.position = [PointUtil getPosition:100 y:-720];
+        coin2.position = [PointUtil getPosition:150 y:-720];
+        coin3.position = [PointUtil getPosition:200 y:-720];
+        coin4.position = [PointUtil getPosition:250 y:-720];
+        coin5.position = [PointUtil getPosition:300 y:-720];
+        coin6.position = [PointUtil getPosition:350 y:-720];
+        coin11.position = [PointUtil getPosition:400 y:-720];
+        coin12.position = [PointUtil getPosition:450 y:-720];
         
-        coin11.position = [PointUtil getPosition:550 y:-650];
-        coin12.position = [PointUtil getPosition:600 y:-600];
-        coin13.position = [PointUtil getPosition:650 y:-550];
-        coin14.position = [PointUtil getPosition:700 y:-550];
-        coin15.position = [PointUtil getPosition:750 y:-600];
-        coin16.position = [PointUtil getPosition:800 y:-650];
+        coin13.position = [PointUtil getPosition:600 y:-600];
+        coin14.position = [PointUtil getPosition:650 y:-550];
+        coin15.position = [PointUtil getPosition:700 y:-550];
+        coin16.position = [PointUtil getPosition:750 y:-600];
 
         [self._coins addObject:coin1];
         [self._coins addObject:coin2];
