@@ -55,13 +55,13 @@
                       self._coinSprite.contentSize.width, self._coinSprite.contentSize.height);
 }
 
-- (BOOL)takenIfCollided:(CGPoint)point {
+- (BOOL)takenIfCollided:(CGRect)rect {
     
     // コインがステージ上にない場合はfalse
     if (!self._isStaged) return false;
     
     // 当たり判定チェック
-    if (CGRectContainsPoint([self _getLayerBasedBox], point)) {
+    if (CGRectIntersectsRect([self _getLayerBasedBox], rect)) {
         self._isStaged = false;
         [self removeFromParentAndCleanup:NO];
         

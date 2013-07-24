@@ -24,7 +24,7 @@
 - (Block*)getHitBlock:(CGPoint)point;
 
 // コイン/敵に衝突しているかチェックする
-- (BOOL)takeCoinsIfCollided:(CGPoint)point;
+- (BOOL)takeCoinsIfCollided:(CGRect)rect;
 - (BOOL)attackEnemyIfCollided:(CGPoint)point;
 - (BOOL)isHit:(CGPoint)point;
 

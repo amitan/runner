@@ -114,12 +114,12 @@
     return NULL;
 }
 
-- (BOOL)takeCoinsIfCollided:(CGPoint)point {
+- (BOOL)takeCoinsIfCollided:(CGRect)rect {
     
     // コイン取得チェック
     BOOL result = false;
     for (Coin *coin in self._coins) {
-        if ([coin takenIfCollided:point]) result = true;
+        if ([coin takenIfCollided:rect]) result = true;
     }
     // コインボーナスチェック
     if (!self._finishCoinBonus && self._lastCoin && [self._lastCoin hasTaken]) {

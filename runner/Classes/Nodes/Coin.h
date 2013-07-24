@@ -22,7 +22,7 @@
 - (void)stageOn:(CCNode*)page;
 
 // 座標がコインに含まれているか判定する
-- (BOOL)takenIfCollided:(CGPoint)point;
+- (BOOL)takenIfCollided:(CGRect)rect;
 
 // コインを取得済みか
 - (BOOL)hasTaken;

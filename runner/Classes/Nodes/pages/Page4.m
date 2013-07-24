@@ -71,7 +71,6 @@
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }
-
     }
     return self;
 }

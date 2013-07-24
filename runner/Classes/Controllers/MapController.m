@@ -64,8 +64,8 @@
     return block;
 }
 
-- (BOOL)takeCoinsIfCollided:(CGPoint)point {
-    return [self._map takeCoinsIfCollided:point];
+- (BOOL)takeCoinsIfCollided:(CGRect)rect {
+    return [self._map takeCoinsIfCollided:rect];
 }
 
 - (BOOL)attackEnemyIfCollided:(CGPoint)point {

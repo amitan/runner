@@ -141,10 +141,7 @@ const int MAX_SPEED_STEP = 3;
     ///////////////////////////////////////////////////////////////
     // コイン/アイテム判定
     ///////////////////////////////////////////////////////////////
-    [mapController takeCoinsIfCollided:[self getTopLeftPosition]];
-    [mapController takeCoinsIfCollided:[self getTopRightPosition]];
-    [mapController takeCoinsIfCollided:[self getBottomLeftPosition]];
-    [mapController takeCoinsIfCollided:[self getBottomRightPosition]];
+    [mapController takeCoinsIfCollided:[self getRect]];
 
     ///////////////////////////////////////////////////////////////
     // 横軸の判定
@@ -246,6 +243,10 @@ const int MAX_SPEED_STEP = 3;
     deadParticle.position = self.position;
     [[GameScene sharedInstance].effectLayer addChild:deadParticle];
     [self removeFromParentAndCleanup:NO];
+}
+
+- (CGRect)getRect {
+    return CGRectMake(self.position.x - [self getWidth] / 2, self.position.y - [self getHeight] / 2, [self getWidth], [self getHeight]);
 }
 
 - (CGPoint)getCenterBottomPosition {
