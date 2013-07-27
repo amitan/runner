@@ -12,7 +12,6 @@
 #import "PlayerAnimation.h"
 #import "Enemy.h"
 #import "PointUtil.h"
-#import "Follower.h"
 #import "GameUtil.h"
 
 @interface Player ()
@@ -25,15 +24,14 @@
 @property (nonatomic, readwrite)float _properPositionX;
 @property (nonatomic, readwrite)float _limitX, _limitY;
 @property (nonatomic, readwrite)int _speedStep;
-@property (nonatomic, readwrite)float _dx1, _dx2;
-@property (nonatomic, retain)NSMutableArray *_follower1Points;
-@property (nonatomic, retain)NSMutableArray *_follower2Points;
 @end
 
 @implementation Player
 const int GRAVITY = 70;
 const int JUMP_SPEED = 1500;
 const int MAX_SPEED_STEP = 3;
+const int INIT_SCROLL_SPEED = 300;
+const int INIT_PLAYER_X = 200;
 
 + (Player*)createPlayer:(int)monsterId {
     return [[[self alloc] initWithMonsterId:monsterId] autorelease];
@@ -49,13 +47,11 @@ const int MAX_SPEED_STEP = 3;
         self._isStaged = false;
         self._jumpNum = 1;
         self._onGround = true;
-        self._vx = [PointUtil getPoint:300];
+        self._vx = [PointUtil getPoint:INIT_SCROLL_SPEED];
         self._isAdjusting = false;
         self._limitX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
         self._jumpSpeed = [PointUtil getPoint:JUMP_SPEED];
-        self._follower1Points = [NSMutableArray array];
-        self._follower2Points = [NSMutableArray array];
         
         // アニメーションの最初のコマを読み込む
         NSString* fileName = [NSString stringWithFormat:@"monster%d_right1.png", self._monsterId];
@@ -210,23 +206,7 @@ const int MAX_SPEED_STEP = 3;
     ///////////////////////////////////////////////////////////////
     // 位置更新
     ///////////////////////////////////////////////////////////////
-    self._dx1 += dx;
-    self._dx2 += dx;
-    CGPoint diff = ccpSub(ccp(x, y), self.position);
-    [self._follower1Points addObject:[NSValue valueWithCGPoint:diff]];
-    [self._follower2Points addObject:[NSValue valueWithCGPoint:diff]];
-    if ([PointUtil getPoint:FOLLOWER_DX] < self._dx1) {
-        self._dx1 = 0;
-        [[GameScene sharedInstance].playerController moveFollower:1 points:self._follower1Points];
-        self._follower1Points = [NSMutableArray array];
-    }
-    if ([PointUtil getPoint:FOLLOWER_DX * 2] < self._dx2) {
-        self._dx2 = 0;
-        [[GameScene sharedInstance].playerController moveFollower:2 points:self._follower2Points];
-        self._follower2Points = [NSMutableArray array];
-    }
     self.position = ccp(x, y);
-    [[GameScene sharedInstance].playerController followerUpdate];
     
     ///////////////////////////////////////////////////////////////
     // スピードアップ判定

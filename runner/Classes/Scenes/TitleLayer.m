@@ -78,11 +78,12 @@
 
 // ぼうけんをはじめる
 - (void)clickPlayButton:(id)sender {
-    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1]];
+    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1 isRandom:false]];
 }
 
 // せっていをかえる
 - (void)clickConfigButton:(id)sender {
+    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1 isRandom:true]];
 }
 
 // おすすめをみる

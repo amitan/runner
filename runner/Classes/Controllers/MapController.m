@@ -34,16 +34,10 @@
     [super dealloc];
 }
 
-- (void)setup {
-    self._map = [Map node];
+- (void)setup:(int)stageId isRandom:(BOOL)isRandom {
+    self._map = [Map createMap:stageId isRandom:isRandom];
     [PointUtil setTLPosition:self._map x:0 y:0];
     [[GameScene sharedInstance].gameLayer addChild:self._map];
-
-    // 初期ページを追加
-    PageController *pageController = [GameScene sharedInstance].pageController;
-    [self._map addPage:[pageController getPage:0]];
-    [self._map addPage:[pageController getPage:1]];
-    [self._map addPage:[pageController getPage:2]];
 }
 
 - (void)start {

@@ -12,12 +12,24 @@
 @interface Block : CCNode {
     
 }
+@property (nonatomic, retain)CCSprite *_sprite;
 
 // 指定したブロックを生成する
 + (Block*)createBlock:(int)blockId;
 
+// 指定したブロックを生成する
++ (Block*)createHatena:(int)blockId;
+
+// 指定したブロックを生成する
++ (Block*)createPipe:(int)blockId;
+
 // ブロックを指定して初期化する
 -(id) initWithBlockId:(int)blockId;
+
+// ブロックアニメーションを開始/停止する
+- (void)start;
+- (void)stop;
+- (void)reset;
 
 // ブロックの幅/高さを取得する
 - (float)getWidth;

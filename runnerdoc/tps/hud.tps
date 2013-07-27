@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../runner/Resources/images/sprites/block.png</filename>
+        <filename>../../runner/Resources/images/sprites/hud.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>block.java</filename>
+            <filename>header.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../runner/Resources/images/sprites/block.plist</filename>
+        <filename>../../runner/Resources/images/sprites/hud.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
@@ -141,9 +141,11 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/block/block1.png</filename>
-            <filename>../sprites/block/block101.png</filename>
-            <filename>../sprites/block/block2.png</filename>
+            <filename>../sprites/hud/coin_base.png</filename>
+            <filename>../sprites/hud/coin_bonus.png</filename>
+            <filename>../sprites/hud/play_btn.png</filename>
+            <filename>../sprites/hud/speed_up.png</filename>
+            <filename>../sprites/hud/stop_btn.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

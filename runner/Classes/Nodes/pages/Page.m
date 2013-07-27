@@ -12,6 +12,10 @@
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "Page0.h"
+#import "Page101.h"
+#import "Page102.h"
+#import "Page103.h"
+
 #import "Page1.h"
 #import "Page2.h"
 #import "Page3.h"
@@ -39,18 +43,15 @@
 
 + (Page*)create:(int)pageId {
     switch (pageId) {
-        case 1:
-            return [Page1 node];
-        case 2:
-            return [Page2 node];
-        case 3:
-            return [Page3 node];
-        case 4:
-            return [Page4 node];
-        case 900:
-            return [Page900 node];
-        default:
-            return [Page0 node];
+        case 1: return [Page1 node];
+        case 2: return [Page2 node];
+        case 3: return [Page3 node];
+        case 4: return [Page4 node];
+        case 101: return [Page101 node];
+        case 102: return [Page102 node];
+        case 103: return [Page103 node];
+        case 900: return [Page900 node];
+        default: return [Page0 node];
     }
 }
 
@@ -68,6 +69,9 @@
 
 - (void)start {
     self.isPlaying = true;
+    for (Block *block in self._blocks) {
+        [block start];
+    }
     for (Coin *coin in self._coins) {
         [coin start];
     }
@@ -78,6 +82,9 @@
 
 - (void)stop {
     self.isPlaying = false;
+    for (Block *block in self._blocks) {
+        [block stop];
+    }
     for (Coin *coin in self._coins) {
         [coin stop];
     }
@@ -88,6 +95,10 @@
 
 - (void)reset {
     self._finishCoinBonus = false;
+    for (Block *block in self._blocks) {
+        [block reset];
+        [block stageOn:self];
+    }
     for (Coin *coin in self._coins) {
         [coin reset];
         [coin stageOn:self];

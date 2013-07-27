@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../runner/Resources/images/sprites/header.png</filename>
+        <filename>../../runner/Resources/images/sprites/land.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>header.java</filename>
+            <filename>land.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../runner/Resources/images/sprites/header.plist</filename>
+        <filename>../../runner/Resources/images/sprites/land.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
@@ -141,11 +141,10 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/header/coin_base.png</filename>
-            <filename>../sprites/header/coin_bonus.png</filename>
-            <filename>../sprites/header/speed_up.png</filename>
-            <filename>../sprites/header/play_btn.png</filename>
-            <filename>../sprites/header/stop_btn.png</filename>
+            <filename>../sprites/land/block1.png</filename>
+            <filename>../sprites/land/block2.png</filename>
+            <filename>../sprites/land/block3.png</filename>
+            <filename>../sprites/land/block4.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

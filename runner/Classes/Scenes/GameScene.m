@@ -11,6 +11,8 @@
 #import "GameUtil.h"
 
 @interface GameScene ()
+@property (nonatomic, readwrite)int _stageId;
+@property (nonatomic, readwrite)BOOL _isRandom;
 @property (nonatomic, readwrite)BOOL _isSetup;
 @end
 
@@ -27,20 +29,22 @@ static GameScene *_scene = nil;
 	return _scene;
 }
 
-+ (GameScene *)createInstance:(int)worldId areaId:(int)areaId stageId:(int)stageId {
++ (GameScene *)createInstance:(int)worldId areaId:(int)areaId stageId:(int)stageId isRandom:(BOOL)isRandom {
     if (_scene != nil) {
         _scene = nil;
     }
-    _scene = [[[self alloc] initWithStage:worldId areaId:areaId stageId:stageId] autorelease];
+    _scene = [[[self alloc] initWithStage:worldId areaId:areaId stageId:stageId isRandom:isRandom] autorelease];
 	return _scene;
 }
 
-- (id)initWithStage:(int)worldId areaId:(int)areaId stageId:(int)stageId {
+- (id)initWithStage:(int)worldId areaId:(int)areaId stageId:(int)stageId isRandom:isRandom {
     self = [super init];
 	if (self) {
         
         // 初期値を追加
         self._isSetup = false;
+        self._stageId = stageId;
+        self._isRandom = isRandom;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         
         // 背景を設定
@@ -112,7 +116,7 @@ static GameScene *_scene = nil;
 
 - (void)setup {
     [self.countController setup];
-    [self.mapController setup];
+    [self.mapController setup:self._stageId isRandom:self._isRandom];
     [self.hudController setup];
     [self.playerController setup];
 }

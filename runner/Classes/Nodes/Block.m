@@ -9,30 +9,45 @@
 #import "Block.h"
 #import "PointUtil.h"
 #import "GameScene.h"
+#import "StandardBlock.h"
+#import "HatenaBlock.h"
+#import "PipeBlock.h"
 
 @interface Block ()
-@property (nonatomic, retain)CCSprite *_sprite;
 @end
 
 @implementation Block
 
 + (Block*)createBlock:(int)blockId {
-    return [[[self alloc] initWithBlockId:blockId] autorelease];
+    return [[[StandardBlock alloc] initWithBlockId:blockId] autorelease];
 }
 
-- (id)initWithBlockId:(int)blockId {
-    self = [super init];
-	if (self) {
++ (Block*)createHatena:(int)blockId {
+    return [[[HatenaBlock alloc] initWithBlockId:blockId] autorelease];
+}
 
-        // 画像を追加
-        self._sprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"block%d.png", blockId]];
-        [self addChild:self._sprite];
++ (Block*)createPipe:(int)blockId {
+    return [[[PipeBlock alloc] initWithBlockId:blockId] autorelease];
+}
+
+- (id) initWithBlockId:(int)blockId {
+    self = [super init];
+    if (self) {
     }
     return self;
 }
 
 - (void)dealloc {
     [super dealloc];
+}
+
+- (void)start {
+}
+
+- (void)stop {
+}
+
+- (void)reset {
 }
 
 - (float)getWidth {

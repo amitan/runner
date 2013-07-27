@@ -17,23 +17,10 @@
                 <key>sourceSize</key>
                 <string>{1280,200}</string>
             </dict>
-            <key>block101.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1287,3},{64,64}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{64,64}}</string>
-                <key>sourceSize</key>
-                <string>{64,64}</string>
-            </dict>
             <key>block2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1355,3},{320,200}}</string>
+                <string>{{1287,3},{320,200}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -43,19 +30,45 @@
                 <key>sourceSize</key>
                 <string>{320,200}</string>
             </dict>
+            <key>block3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,207},{1920,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1920,200}}</string>
+                <key>sourceSize</key>
+                <string>{1920,200}</string>
+            </dict>
+            <key>block4.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,411},{640,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{640,200}}</string>
+                <key>sourceSize</key>
+                <string>{640,200}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>block.png</string>
+            <string>land.png</string>
             <key>size</key>
-            <string>{2048,256}</string>
+            <string>{2048,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:4b412268ddb382ee20b19b458465a19a$</string>
+            <string>$TexturePacker:SmartUpdate:010be2dc61d1aaf0acc1a649028d36ba$</string>
             <key>textureFileName</key>
-            <string>block.png</string>
+            <string>land.png</string>
         </dict>
     </dict>
 </plist>

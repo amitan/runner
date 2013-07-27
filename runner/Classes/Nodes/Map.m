@@ -12,6 +12,9 @@
 #import "GameScene.h"
 
 @interface Map ()
+@property (nonatomic, readwrite)int _stageId;
+@property (nonatomic, readwrite)int _isRandom;
+@property (nonatomic, readwrite)int _currentPageIndex;
 @property (nonatomic, readwrite)float _currentRight;
 @property (nonatomic, retain)NSMutableArray *_pages;
 @property (nonatomic, readwrite)int _pageNum;
@@ -19,17 +22,37 @@
 
 @implementation Map
 const int SPEED_UP_PAGE = 900;
+const int INIT_PAGE_NUM = 3;
 @synthesize isPlaying;
 
-- (id)init {
++ (Map*)createMap:(int)stageId isRandom:(BOOL)isRandom {
+    return [[[self alloc] initWithStageId:stageId isRandom:isRandom] autorelease];
+}
+
+- (id)initWithStageId:(int)stageId isRandom:(BOOL)isRandom {
     self = [super init];
 	if (self) {
-        
+
         // 初期設定
-        self.isPlaying = false;
+        self._stageId = stageId;
+        self._isRandom = isRandom;
         self._pages = [NSMutableArray arrayWithCapacity:5];
+        self.isPlaying = false;
+        
+        // 初期ページを追加
+        PageController *pageController = [GameScene sharedInstance].pageController;
+        for (int i = 0; i < INIT_PAGE_NUM; i++) {
+            int pageIndex = (!isRandom) ? [self _getFixedPageIndex:self._currentPageIndex] : i;
+            [self addPage:[pageController getPage:pageIndex]];
+            self._currentPageIndex++;
+        }
     }
     return self;
+}
+
+- (int)_getFixedPageIndex:(int)index {
+    if (index == 0) return index;
+    return self._stageId * 100 + index;
 }
 
 - (void)start {
@@ -126,7 +149,10 @@ const int SPEED_UP_PAGE = 900;
         [page stageOff];
         [self._pages removeObject:page];
         
-        if (self._pageNum % 10 == 0) { // TODO:: スピードアップ間隔の調整
+        if (!self._isRandom) {
+            [self addPage:[[GameScene sharedInstance].pageController getPage:[self _getFixedPageIndex:self._currentPageIndex]]];
+            self._currentPageIndex++;
+        } else if (self._pageNum % 10 == 0) { // TODO:: スピードアップ間隔の調整
             [self addPage:[[GameScene sharedInstance].pageController getPage:SPEED_UP_PAGE]];
         } else {
             [self addPage:[[GameScene sharedInstance].pageController getPage]];

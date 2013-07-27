@@ -144,6 +144,11 @@
             <filename>../sprites/gameparts/black_belt.png</filename>
             <filename>../sprites/gameparts/coin1.png</filename>
             <filename>../sprites/gameparts/coin2.png</filename>
+            <filename>../sprites/gameparts/block101.png</filename>
+            <filename>../sprites/gameparts/hatena2.png</filename>
+            <filename>../sprites/gameparts/hatena1.png</filename>
+            <filename>../sprites/gameparts/block201.png</filename>
+            <filename>../sprites/gameparts/pipe1.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

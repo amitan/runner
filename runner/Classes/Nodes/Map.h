@@ -16,7 +16,11 @@
 }
 @property (nonatomic, readwrite)BOOL isPlaying;
 
-extern const int INTERVAL1;
+// 指定したマップを生成する
++ (Map*)createMap:(int)stageId isRandom:(BOOL)isRandom;
+
+// ステージを指定してマップを初期化する
+- (id)initWithStageId:(int)stageId isRandom:(BOOL)isRandom;
 
 // アニメーションを開始/停止する
 - (void)start;

@@ -34,7 +34,7 @@
 + (GameScene *)sharedInstance;
 
 // シングルトンオブジェクトの有無に関わらずインスタンスを生成するメソッド
-+ (GameScene *)createInstance:(int)worldId areaId:(int)areaId stageId:(int)stageId;
++ (GameScene *)createInstance:(int)worldId areaId:(int)areaId stageId:(int)stageId isRandom:(BOOL)isRandom;
 
 // ゲームを開始/停止する
 - (void)setup;
