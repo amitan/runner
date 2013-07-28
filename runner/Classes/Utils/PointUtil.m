@@ -14,6 +14,11 @@ const float BASE_WIDTH = 640.0f;
 const float BASE_HEIGHT = 960.0f;
 
 + (float)getScale {
+    float scale = [PointUtil getScaleWithoutRetina];
+    return scale * [[UIScreen mainScreen] scale];
+}
+
++ (float)getScaleWithoutRetina {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     float width = winSize.width;
     float height = winSize.height;
@@ -23,8 +28,7 @@ const float BASE_HEIGHT = 960.0f;
     }
     float scaleX = width / BASE_WIDTH;
     float scaleY = height / BASE_HEIGHT;
-    float scale = (scaleX < scaleY) ? scaleX : scaleY;
-    return scale * [[UIScreen mainScreen] scale];
+    return (scaleX < scaleY) ? scaleX : scaleY;
 }
 
 + (float)getPoint:(float)point {

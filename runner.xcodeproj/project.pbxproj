@@ -11,6 +11,7 @@
 		F9052E5E17A179580078EE9C /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = F9052E5C17A179570078EE9C /* land.png */; };
 		F9052E6817A432720078EE9C /* Page5.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6717A432720078EE9C /* Page5.m */; };
 		F9052E6B17A432840078EE9C /* Page6.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6A17A432840078EE9C /* Page6.m */; };
+		F9052E6E17A56D170078EE9C /* GameResultLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6D17A56D170078EE9C /* GameResultLayer.m */; };
 		F93DF4D6178AB447007AD085 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D5178AB447007AD085 /* QuartzCore.framework */; };
 		F93DF4D8178AB447007AD085 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D7178AB447007AD085 /* OpenGLES.framework */; };
 		F93DF4DA178AB447007AD085 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D9178AB447007AD085 /* OpenAL.framework */; };
@@ -207,6 +208,8 @@
 		F9052E6717A432720078EE9C /* Page5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page5.m; sourceTree = "<group>"; };
 		F9052E6917A432830078EE9C /* Page6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page6.h; sourceTree = "<group>"; };
 		F9052E6A17A432840078EE9C /* Page6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page6.m; sourceTree = "<group>"; };
+		F9052E6C17A56D170078EE9C /* GameResultLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultLayer.h; sourceTree = "<group>"; };
+		F9052E6D17A56D170078EE9C /* GameResultLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultLayer.m; sourceTree = "<group>"; };
 		F93DF4D2178AB447007AD085 /* runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93DF4D5178AB447007AD085 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F93DF4D7178AB447007AD085 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1107,6 +1110,8 @@
 				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
 				F9ABA64C1791917400A02626 /* StageLayer.h */,
 				F9ABA64D1791917400A02626 /* StageLayer.m */,
+				F9052E6C17A56D170078EE9C /* GameResultLayer.h */,
+				F9052E6D17A56D170078EE9C /* GameResultLayer.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1477,6 +1482,7 @@
 				F9A4690717A05035002BAFB7 /* StandardBlock.m in Sources */,
 				F9052E6817A432720078EE9C /* Page5.m in Sources */,
 				F9052E6B17A432840078EE9C /* Page6.m in Sources */,
+				F9052E6E17A56D170078EE9C /* GameResultLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

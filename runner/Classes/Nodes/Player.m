@@ -223,6 +223,7 @@ const int INIT_PLAYER_X = 200;
     deadParticle.position = self.position;
     [[GameScene sharedInstance].effectLayer addChild:deadParticle];
     [self removeFromParentAndCleanup:NO];
+    [[GameScene sharedInstance] finishGame];
 }
 
 - (CGRect)getRect {

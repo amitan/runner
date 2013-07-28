@@ -146,6 +146,9 @@
             <filename>../sprites/hud/play_btn.png</filename>
             <filename>../sprites/hud/speed_up.png</filename>
             <filename>../sprites/hud/stop_btn.png</filename>
+            <filename>../sprites/hud/black.png</filename>
+            <filename>../sprites/hud/btn_next.png</filename>
+            <filename>../sprites/hud/base_window.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

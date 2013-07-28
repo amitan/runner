@@ -41,4 +41,7 @@
 - (void)start;
 - (void)stop;
 
+// ゲームを終了する
+- (void)finishGame;
+
 @end

@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "GameUtil.h"
+#import "GameResultLayer.h"
 
 @interface GameScene ()
 @property (nonatomic, readwrite)int _stageId;
@@ -136,6 +137,14 @@ static GameScene *_scene = nil;
     [self.mapController stop];
     [self.hudController stop];
     [self.playerController stop];
+}
+
+- (void)finishGame {
+    [self stop];
+    
+    // ゲーム結果ウィンドウを表示
+    GameResultLayer *gameResultLayer = [GameResultLayer node];
+    [self.backgroundLayer addChild:gameResultLayer];
 }
 
 @end
