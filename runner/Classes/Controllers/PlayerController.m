@@ -18,7 +18,7 @@
 - (id)init {
     self = [super init];
 	if (self) {
-        self._player = [Player createPlayer:1]; // TODO:: キャラ指定実装
+        self._player = [Player createPlayer:0]; // TODO:: キャラ指定実装
     }
     return self;
 }

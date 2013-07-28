@@ -12,7 +12,7 @@
 @implementation PlayerAnimation
 
 + (id)getWalkAction:(int)monsterId {
-    return [CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"monster%d_right", monsterId] frameNum:3];
+    return [CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"monster%d_right", monsterId] frameNum:2];
 }
 
 + (CCParticleSystem*)getDeadParticle {

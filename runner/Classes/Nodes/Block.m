@@ -10,8 +10,6 @@
 #import "PointUtil.h"
 #import "GameScene.h"
 #import "StandardBlock.h"
-#import "HatenaBlock.h"
-#import "PipeBlock.h"
 
 @interface Block ()
 @end
@@ -20,14 +18,6 @@
 
 + (Block*)createBlock:(int)blockId {
     return [[[StandardBlock alloc] initWithBlockId:blockId] autorelease];
-}
-
-+ (Block*)createHatena:(int)blockId {
-    return [[[HatenaBlock alloc] initWithBlockId:blockId] autorelease];
-}
-
-+ (Block*)createPipe:(int)blockId {
-    return [[[PipeBlock alloc] initWithBlockId:blockId] autorelease];
 }
 
 - (id) initWithBlockId:(int)blockId {

@@ -152,8 +152,8 @@ const int INIT_PAGE_NUM = 3;
         if (!self._isRandom) {
             [self addPage:[[GameScene sharedInstance].pageController getPage:[self _getFixedPageIndex:self._currentPageIndex]]];
             self._currentPageIndex++;
-        } else if (self._pageNum % 10 == 0) { // TODO:: スピードアップ間隔の調整
-            [self addPage:[[GameScene sharedInstance].pageController getPage:SPEED_UP_PAGE]];
+//        } else if (self._pageNum % 10 == 0) { // TODO:: スピードアップ間隔の調整
+//            [self addPage:[[GameScene sharedInstance].pageController getPage:SPEED_UP_PAGE]];
         } else {
             [self addPage:[[GameScene sharedInstance].pageController getPage]];
         }

@@ -42,20 +42,20 @@
         Block *block25 = [Block createBlock:101];
         Block *block26 = [Block createBlock:101];
         
-        block1.position = [PointUtil getPosition:300 y:-720];
-        block2.position = [PointUtil getPosition:300 y:-640];
-        block3.position = [PointUtil getPosition:380 y:-720];
-        block4.position = [PointUtil getPosition:380 y:-640];
-        block11.position = [PointUtil getPosition:636 y:-720];
-        block12.position = [PointUtil getPosition:636 y:-640];
-        block13.position = [PointUtil getPosition:716 y:-720];
-        block14.position = [PointUtil getPosition:716 y:-640];
-        block21.position = [PointUtil getPosition:972 y:-720];
-        block22.position = [PointUtil getPosition:972 y:-640];
-        block23.position = [PointUtil getPosition:972 y:-560];
-        block24.position = [PointUtil getPosition:1052 y:-720];
-        block25.position = [PointUtil getPosition:1052 y:-640];
-        block26.position = [PointUtil getPosition:1052 y:-560];
+        block1.position = [PointUtil getPosition:300 y:-728];
+        block2.position = [PointUtil getPosition:300 y:-664];
+        block3.position = [PointUtil getPosition:364 y:-728];
+        block4.position = [PointUtil getPosition:364 y:-664];
+        block11.position = [PointUtil getPosition:636 y:-728];
+        block12.position = [PointUtil getPosition:636 y:-664];
+        block13.position = [PointUtil getPosition:700 y:-728];
+        block14.position = [PointUtil getPosition:700 y:-664];
+        block21.position = [PointUtil getPosition:972 y:-728];
+        block22.position = [PointUtil getPosition:972 y:-664];
+        block23.position = [PointUtil getPosition:972 y:-600];
+        block24.position = [PointUtil getPosition:1036 y:-728];
+        block25.position = [PointUtil getPosition:1036 y:-664];
+        block26.position = [PointUtil getPosition:1036 y:-600];
 
         [self._blocks addObject:block1];
         [self._blocks addObject:block2];
@@ -101,12 +101,12 @@
         coin4.position = [PointUtil getPosition:250 y:-500];
         
         // ブロックの上
-        coin11.position = [PointUtil getPosition:300 y:-572];
-        coin12.position = [PointUtil getPosition:380 y:-572];
-        coin13.position = [PointUtil getPosition:636 y:-572];
-        coin14.position = [PointUtil getPosition:716 y:-572];
-        coin15.position = [PointUtil getPosition:972 y:-492];
-        coin16.position = [PointUtil getPosition:1052 y:-492];
+        coin11.position = [PointUtil getPosition:300 y:-596];
+        coin12.position = [PointUtil getPosition:364 y:-596];
+        coin13.position = [PointUtil getPosition:636 y:-596];
+        coin14.position = [PointUtil getPosition:700 y:-596];
+        coin15.position = [PointUtil getPosition:972 y:-532];
+        coin16.position = [PointUtil getPosition:1036 y:-532];
         
         coin21.position = [PointUtil getPosition:450 y:-450];
         coin22.position = [PointUtil getPosition:500 y:-400];

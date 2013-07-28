@@ -17,12 +17,6 @@
 // 指定したブロックを生成する
 + (Block*)createBlock:(int)blockId;
 
-// 指定したブロックを生成する
-+ (Block*)createHatena:(int)blockId;
-
-// 指定したブロックを生成する
-+ (Block*)createPipe:(int)blockId;
-
 // ブロックを指定して初期化する
 -(id) initWithBlockId:(int)blockId;
 

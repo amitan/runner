@@ -51,10 +51,10 @@
         Block *block5 = [Block createBlock:101];
 
         block1.position = [PointUtil getPosition:792 y:-600];
-        block2.position = [PointUtil getPosition:872 y:-600];
-        block3.position = [PointUtil getPosition:952 y:-600];
-        block4.position = [PointUtil getPosition:1032 y:-600];
-        block5.position = [PointUtil getPosition:1112 y:-600];
+        block2.position = [PointUtil getPosition:856 y:-600];
+        block3.position = [PointUtil getPosition:920 y:-600];
+        block4.position = [PointUtil getPosition:984 y:-600];
+        block5.position = [PointUtil getPosition:1048 y:-600];
 
         [self._blocks addObject:block1];
         [self._blocks addObject:block2];

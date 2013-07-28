@@ -148,7 +148,7 @@
             <filename>../sprites/gameparts/hatena2.png</filename>
             <filename>../sprites/gameparts/hatena1.png</filename>
             <filename>../sprites/gameparts/block201.png</filename>
-            <filename>../sprites/gameparts/pipe1.png</filename>
+            <filename>../sprites/gameparts/block202.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

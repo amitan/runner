@@ -156,6 +156,8 @@
             <filename>../sprites/monster/monster5_right1.png</filename>
             <filename>../sprites/monster/monster5_right2.png</filename>
             <filename>../sprites/monster/monster5_right3.png</filename>
+            <filename>../sprites/monster/monster0_right1.png</filename>
+            <filename>../sprites/monster/monster0_right2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

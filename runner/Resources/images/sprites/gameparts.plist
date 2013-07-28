@@ -20,20 +20,20 @@
             <key>block101.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{647,3},{80,80}}</string>
+                <string>{{647,3},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{80,80}}</string>
+                <string>{{0,0},{64,64}}</string>
                 <key>sourceSize</key>
-                <string>{80,80}</string>
+                <string>{64,64}</string>
             </dict>
             <key>block201.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{731,3},{160,80}}</string>
+                <string>{{715,3},{160,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -43,10 +43,23 @@
                 <key>sourceSize</key>
                 <string>{180,80}</string>
             </dict>
+            <key>block202.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,107},{180,80}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{180,80}}</string>
+                <key>sourceSize</key>
+                <string>{180,80}</string>
+            </dict>
             <key>coin1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{895,3},{30,49}}</string>
+                <string>{{187,107},{30,49}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>coin2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{929,3},{30,49}}</string>
+                <string>{{221,107},{30,49}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +85,7 @@
             <key>hatena1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,107},{80,80}}</string>
+                <string>{{255,107},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +98,7 @@
             <key>hatena2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{87,107},{80,80}}</string>
+                <string>{{339,107},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -94,19 +107,6 @@
                 <string>{{0,0},{80,80}}</string>
                 <key>sourceSize</key>
                 <string>{80,80}</string>
-            </dict>
-            <key>pipe1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{171,107},{180,80}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{180,80}}</string>
-                <key>sourceSize</key>
-                <string>{180,80}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -118,7 +118,7 @@
             <key>size</key>
             <string>{1024,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d4f89ff480c2860d1391b8d0bb831ce4$</string>
+            <string>$TexturePacker:SmartUpdate:07bd812b9744b6b5a1315f9c9559ece6$</string>
             <key>textureFileName</key>
             <string>gameparts.png</string>
         </dict>

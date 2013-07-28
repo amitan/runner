@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F9052E5417A1636C0078EE9C /* PipeBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E5317A1636C0078EE9C /* PipeBlock.m */; };
-		F9052E5717A164A40078EE9C /* Page102.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E5617A164A40078EE9C /* Page102.m */; };
-		F9052E5A17A1696A0078EE9C /* Page103.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E5917A1696A0078EE9C /* Page103.m */; };
 		F9052E5D17A179580078EE9C /* land.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9052E5B17A179570078EE9C /* land.plist */; };
 		F9052E5E17A179580078EE9C /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = F9052E5C17A179570078EE9C /* land.png */; };
-		F9052E6117A187850078EE9C /* Page104.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6017A187850078EE9C /* Page104.m */; };
+		F9052E6817A432720078EE9C /* Page5.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6717A432720078EE9C /* Page5.m */; };
+		F9052E6B17A432840078EE9C /* Page6.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6A17A432840078EE9C /* Page6.m */; };
 		F93DF4D6178AB447007AD085 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D5178AB447007AD085 /* QuartzCore.framework */; };
 		F93DF4D8178AB447007AD085 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D7178AB447007AD085 /* OpenGLES.framework */; };
 		F93DF4DA178AB447007AD085 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D9178AB447007AD085 /* OpenAL.framework */; };
@@ -183,11 +181,9 @@
 		F9A468EF179BDD6A002BAFB7 /* Page900.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468EE179BDD69002BAFB7 /* Page900.m */; };
 		F9A468F6179EC199002BAFB7 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468F5179EC199002BAFB7 /* Counter.m */; };
 		F9A468F9179EC30D002BAFB7 /* Pause.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468F8179EC30D002BAFB7 /* Pause.m */; };
-		F9A468FD17A0331C002BAFB7 /* Page101.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468FC17A0331C002BAFB7 /* Page101.m */; };
 		F9A4690317A04420002BAFB7 /* hud.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A4690117A04420002BAFB7 /* hud.plist */; };
 		F9A4690417A04420002BAFB7 /* hud.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A4690217A04420002BAFB7 /* hud.png */; };
 		F9A4690717A05035002BAFB7 /* StandardBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4690617A05031002BAFB7 /* StandardBlock.m */; };
-		F9A4690A17A15271002BAFB7 /* HatenaBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4690917A1526F002BAFB7 /* HatenaBlock.m */; };
 		F9ABA62A178C456300A02626 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA629178C456300A02626 /* Block.m */; };
 		F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA62F178E84C300A02626 /* TitleLayer.m */; };
 		F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA636178E971700A02626 /* misaki_gothic.ttf */; };
@@ -205,16 +201,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F9052E5217A1636C0078EE9C /* PipeBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipeBlock.h; sourceTree = "<group>"; };
-		F9052E5317A1636C0078EE9C /* PipeBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeBlock.m; sourceTree = "<group>"; };
-		F9052E5517A164A40078EE9C /* Page102.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page102.h; sourceTree = "<group>"; };
-		F9052E5617A164A40078EE9C /* Page102.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page102.m; sourceTree = "<group>"; };
-		F9052E5817A1696A0078EE9C /* Page103.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page103.h; sourceTree = "<group>"; };
-		F9052E5917A1696A0078EE9C /* Page103.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page103.m; sourceTree = "<group>"; };
 		F9052E5B17A179570078EE9C /* land.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = land.plist; sourceTree = "<group>"; };
 		F9052E5C17A179570078EE9C /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
-		F9052E5F17A187840078EE9C /* Page104.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page104.h; sourceTree = "<group>"; };
-		F9052E6017A187850078EE9C /* Page104.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page104.m; sourceTree = "<group>"; };
+		F9052E6617A432710078EE9C /* Page5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page5.h; sourceTree = "<group>"; };
+		F9052E6717A432720078EE9C /* Page5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page5.m; sourceTree = "<group>"; };
+		F9052E6917A432830078EE9C /* Page6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page6.h; sourceTree = "<group>"; };
+		F9052E6A17A432840078EE9C /* Page6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page6.m; sourceTree = "<group>"; };
 		F93DF4D2178AB447007AD085 /* runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93DF4D5178AB447007AD085 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F93DF4D7178AB447007AD085 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -556,14 +548,10 @@
 		F9A468F5179EC199002BAFB7 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		F9A468F7179EC30D002BAFB7 /* Pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pause.h; sourceTree = "<group>"; };
 		F9A468F8179EC30D002BAFB7 /* Pause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pause.m; sourceTree = "<group>"; };
-		F9A468FB17A0331C002BAFB7 /* Page101.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page101.h; sourceTree = "<group>"; };
-		F9A468FC17A0331C002BAFB7 /* Page101.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page101.m; sourceTree = "<group>"; };
 		F9A4690117A04420002BAFB7 /* hud.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hud.plist; sourceTree = "<group>"; };
 		F9A4690217A04420002BAFB7 /* hud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud.png; sourceTree = "<group>"; };
 		F9A4690517A0502E002BAFB7 /* StandardBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardBlock.h; sourceTree = "<group>"; };
 		F9A4690617A05031002BAFB7 /* StandardBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardBlock.m; sourceTree = "<group>"; };
-		F9A4690817A1526E002BAFB7 /* HatenaBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaBlock.h; sourceTree = "<group>"; };
-		F9A4690917A1526F002BAFB7 /* HatenaBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaBlock.m; sourceTree = "<group>"; };
 		F9ABA628178C456300A02626 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F9ABA629178C456300A02626 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 		F9ABA62E178E84C300A02626 /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
@@ -1104,10 +1092,6 @@
 				F9A468CD1799CC54002BAFB7 /* Enemy.m */,
 				F9A4690517A0502E002BAFB7 /* StandardBlock.h */,
 				F9A4690617A05031002BAFB7 /* StandardBlock.m */,
-				F9A4690817A1526E002BAFB7 /* HatenaBlock.h */,
-				F9A4690917A1526F002BAFB7 /* HatenaBlock.m */,
-				F9052E5217A1636C0078EE9C /* PipeBlock.h */,
-				F9052E5317A1636C0078EE9C /* PipeBlock.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -1191,7 +1175,6 @@
 		F9A468B617954513002BAFB7 /* pages */ = {
 			isa = PBXGroup;
 			children = (
-				F9A468FA17A02B85002BAFB7 /* stage1 */,
 				F9A468BA179545A3002BAFB7 /* Page.h */,
 				F9A468BB179545A3002BAFB7 /* Page.m */,
 				F9A468B71795451E002BAFB7 /* Page0.h */,
@@ -1204,6 +1187,10 @@
 				F9A468CA1799CA7F002BAFB7 /* Page3.m */,
 				F9A468EA179BB27D002BAFB7 /* Page4.h */,
 				F9A468EB179BB27F002BAFB7 /* Page4.m */,
+				F9052E6617A432710078EE9C /* Page5.h */,
+				F9052E6717A432720078EE9C /* Page5.m */,
+				F9052E6917A432830078EE9C /* Page6.h */,
+				F9052E6A17A432840078EE9C /* Page6.m */,
 				F9A468ED179BDD67002BAFB7 /* Page900.h */,
 				F9A468EE179BDD69002BAFB7 /* Page900.m */,
 			);
@@ -1228,21 +1215,6 @@
 				F9A468F8179EC30D002BAFB7 /* Pause.m */,
 			);
 			path = hud;
-			sourceTree = "<group>";
-		};
-		F9A468FA17A02B85002BAFB7 /* stage1 */ = {
-			isa = PBXGroup;
-			children = (
-				F9A468FB17A0331C002BAFB7 /* Page101.h */,
-				F9A468FC17A0331C002BAFB7 /* Page101.m */,
-				F9052E5517A164A40078EE9C /* Page102.h */,
-				F9052E5617A164A40078EE9C /* Page102.m */,
-				F9052E5817A1696A0078EE9C /* Page103.h */,
-				F9052E5917A1696A0078EE9C /* Page103.m */,
-				F9052E5F17A187840078EE9C /* Page104.h */,
-				F9052E6017A187850078EE9C /* Page104.m */,
-			);
-			path = stage1;
 			sourceTree = "<group>";
 		};
 		F9ABA635178E971700A02626 /* font */ = {
@@ -1502,13 +1474,9 @@
 				F9A468EF179BDD6A002BAFB7 /* Page900.m in Sources */,
 				F9A468F6179EC199002BAFB7 /* Counter.m in Sources */,
 				F9A468F9179EC30D002BAFB7 /* Pause.m in Sources */,
-				F9A468FD17A0331C002BAFB7 /* Page101.m in Sources */,
 				F9A4690717A05035002BAFB7 /* StandardBlock.m in Sources */,
-				F9A4690A17A15271002BAFB7 /* HatenaBlock.m in Sources */,
-				F9052E5417A1636C0078EE9C /* PipeBlock.m in Sources */,
-				F9052E5717A164A40078EE9C /* Page102.m in Sources */,
-				F9052E5A17A1696A0078EE9C /* Page103.m in Sources */,
-				F9052E6117A187850078EE9C /* Page104.m in Sources */,
+				F9052E6817A432720078EE9C /* Page5.m in Sources */,
+				F9052E6B17A432840078EE9C /* Page6.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

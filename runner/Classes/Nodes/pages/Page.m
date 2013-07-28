@@ -12,14 +12,12 @@
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "Page0.h"
-#import "Page101.h"
-#import "Page102.h"
-#import "Page103.h"
-
 #import "Page1.h"
 #import "Page2.h"
 #import "Page3.h"
 #import "Page4.h"
+#import "Page5.h"
+#import "Page6.h"
 #import "Page900.h"
 
 @interface Page ()
@@ -47,9 +45,8 @@
         case 2: return [Page2 node];
         case 3: return [Page3 node];
         case 4: return [Page4 node];
-        case 101: return [Page101 node];
-        case 102: return [Page102 node];
-        case 103: return [Page103 node];
+        case 5: return [Page5 node];
+        case 6: return [Page6 node];
         case 900: return [Page900 node];
         default: return [Page0 node];
     }

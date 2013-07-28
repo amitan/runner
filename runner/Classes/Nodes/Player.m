@@ -30,7 +30,7 @@
 const int GRAVITY = 70;
 const int JUMP_SPEED = 1500;
 const int MAX_SPEED_STEP = 3;
-const int INIT_SCROLL_SPEED = 300;
+const int INIT_SCROLL_SPEED = 485;
 const int INIT_PLAYER_X = 200;
 
 + (Player*)createPlayer:(int)monsterId {
