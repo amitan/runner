@@ -18,6 +18,8 @@
 #import "Page4.h"
 #import "Page5.h"
 #import "Page6.h"
+#import "Page7.h"
+#import "Page8.h"
 #import "Page900.h"
 
 @interface Page ()
@@ -47,6 +49,8 @@
         case 4: return [Page4 node];
         case 5: return [Page5 node];
         case 6: return [Page6 node];
+        case 7: return [Page7 node];
+        case 8: return [Page8 node];
         case 900: return [Page900 node];
         default: return [Page0 node];
     }
@@ -119,6 +123,14 @@
         if ([block isHit:point]) return block;
     }
     if ([self._land isHit:point]) return self._land;
+    return NULL;
+}
+
+- (Block*)getHitBlockByRect:(CGRect)rect {
+    for (Block *block in self._blocks) {
+        if ([block isHitByRect:rect]) return block;
+    }
+    if ([self._land isHitByRect:rect]) return self._land;
     return NULL;
 }
 

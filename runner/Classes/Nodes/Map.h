@@ -32,6 +32,7 @@
 
 // 座標が含まれるブロックを返す
 - (Block*)getHitBlock:(CGPoint)point;
+- (Block*)getHitBlockByRect:(CGRect)rect;
 
 // コインを取得しているかチェックする
 - (BOOL)takeCoinsIfCollided:(CGRect)rect;

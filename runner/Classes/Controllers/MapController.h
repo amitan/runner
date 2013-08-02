@@ -22,6 +22,7 @@
 
 // 衝突しているブロック/エネミーを取得する
 - (Block*)getHitBlock:(CGPoint)point;
+- (Block*)getHitBlockByRect:(CGRect)rect;
 
 // コイン/敵に衝突しているかチェックする
 - (BOOL)takeCoinsIfCollided:(CGRect)rect;

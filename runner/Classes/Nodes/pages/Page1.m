@@ -27,18 +27,18 @@
         [self._land stageOn:self];
         
         // コインを追加
-        Coin *coin1 = [Coin node];
-        Coin *coin2 = [Coin node];
-        Coin *coin3 = [Coin node];
-        Coin *coin4 = [Coin node];
-        Coin *coin5 = [Coin node];
-        Coin *coin6 = [Coin node];        
-        Coin *coin11 = [Coin node];
-        Coin *coin12 = [Coin node];
-        Coin *coin13 = [Coin node];
-        Coin *coin14 = [Coin node];
-        Coin *coin15 = [Coin node];
-        Coin *coin16 = [Coin node];
+        Coin *coin1 = [Coin createCoin:1];
+        Coin *coin2 = [Coin createCoin:1];
+        Coin *coin3 = [Coin createCoin:1];
+        Coin *coin4 = [Coin createCoin:1];
+        Coin *coin5 = [Coin createCoin:1];
+        Coin *coin6 = [Coin createCoin:1];
+        Coin *coin11 = [Coin createCoin:1];
+        Coin *coin12 = [Coin createCoin:1];
+        Coin *coin13 = [Coin createCoin:1];
+        Coin *coin14 = [Coin createCoin:1];
+        Coin *coin15 = [Coin createCoin:1];
+        Coin *coin16 = [Coin createCoin:1];
         self._lastCoin = coin16;
 
         coin1.position = [PointUtil getPosition:100 y:-720];

@@ -15,6 +15,7 @@
 @property (nonatomic, retain)Block *_land3;
 @end
 
+// 崖とコイン
 @implementation Page4
 
 - (id)init {
@@ -40,14 +41,14 @@
         [self._land3 stageOn:self];
         
         // コインを追加
-        Coin *coin1 = [Coin node];
-        Coin *coin2 = [Coin node];
-        Coin *coin3 = [Coin node];
-        Coin *coin4 = [Coin node];
-        Coin *coin5 = [Coin node];
-        Coin *coin6 = [Coin node];
-        Coin *coin7 = [Coin node];
-        Coin *coin8 = [Coin node];
+        Coin *coin1 = [Coin createCoin:1];
+        Coin *coin2 = [Coin createCoin:1];
+        Coin *coin3 = [Coin createCoin:1];
+        Coin *coin4 = [Coin createCoin:1];
+        Coin *coin5 = [Coin createCoin:1];
+        Coin *coin6 = [Coin createCoin:1];
+        Coin *coin7 = [Coin createCoin:1];
+        Coin *coin8 = [Coin createCoin:1];
         self._lastCoin = coin8;
         
         coin1.position = [PointUtil getPosition:375 y:-500];

@@ -36,6 +36,7 @@
 - (CGPoint)getCenterBottomPosition;
 - (CGPoint)getCenterTopPosition;
 - (CGPoint)getCenterRightPosition;
+- (CGPoint)getCenterLeftPosition;
 - (CGPoint)getTopLeftPosition;
 - (CGPoint)getTopRightPosition;
 - (CGPoint)getBottomLeftPosition;

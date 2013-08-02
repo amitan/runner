@@ -58,6 +58,10 @@
     return block;
 }
 
+- (Block*)getHitBlockByRect:(CGRect)rect {
+    return [self._map getHitBlockByRect:rect];
+}
+
 - (BOOL)takeCoinsIfCollided:(CGRect)rect {
     return [self._map takeCoinsIfCollided:rect];
 }

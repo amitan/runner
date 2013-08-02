@@ -98,6 +98,14 @@ const int INIT_PAGE_NUM = 3;
     return (block) ? block : NULL;
 }
 
+- (Block*)getHitBlockByRect:(CGRect)rect {
+    
+    CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
+    Page *currentPage = [self getCurrentPage:point];    
+    Block *block = [currentPage getHitBlockByRect:rect];
+    return (block) ? block : NULL;
+}
+
 - (BOOL)takeCoinsIfCollided:(CGRect)rect {
     CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
     Page *currentPage = [self getCurrentPage:point];

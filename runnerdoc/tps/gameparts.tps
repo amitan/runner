@@ -142,13 +142,25 @@
         <key>fileList</key>
         <array>
             <filename>../sprites/gameparts/black_belt.png</filename>
-            <filename>../sprites/gameparts/coin1.png</filename>
-            <filename>../sprites/gameparts/coin2.png</filename>
             <filename>../sprites/gameparts/block101.png</filename>
             <filename>../sprites/gameparts/hatena2.png</filename>
             <filename>../sprites/gameparts/hatena1.png</filename>
             <filename>../sprites/gameparts/block201.png</filename>
             <filename>../sprites/gameparts/block202.png</filename>
+            <filename>../sprites/gameparts/block102.png</filename>
+            <filename>../sprites/gameparts/coin1_1.png</filename>
+            <filename>../sprites/gameparts/coin1_2.png</filename>
+            <filename>../sprites/gameparts/coin2_1.png</filename>
+            <filename>../sprites/gameparts/coin2_2.png</filename>
+            <filename>../sprites/gameparts/coin3_1.png</filename>
+            <filename>../sprites/gameparts/coin3_2.png</filename>
+            <filename>../sprites/gameparts/block301.png</filename>
+            <filename>../sprites/gameparts/block302.png</filename>
+            <filename>../sprites/gameparts/block103.png</filename>
+            <filename>../sprites/gameparts/block104.png</filename>
+            <filename>../sprites/gameparts/block105.png</filename>
+            <filename>../sprites/gameparts/block303.png</filename>
+            <filename>../sprites/gameparts/block304.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

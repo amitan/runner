@@ -9,30 +9,46 @@
 #import "Coin.h"
 #import "CommonAnimation.h"
 #import "GameScene.h"
+#import "StandardCoin.h"
+#import "BigCoin.h"
+#import "DroppingCoin.h"
 
 @interface Coin ()
 @property (nonatomic, retain)CCSprite *_coinSprite;
-@property (nonatomic, readwrite)BOOL _isStaged;
 @end
 
 @implementation Coin
 
-- (id)init {
++ (Coin*)createCoin:(int)coinId {
+    switch (coinId) {
+        case 1:
+            return [[[StandardCoin alloc] initWithCoinId:coinId] autorelease];
+        case 2:
+            return [[[BigCoin alloc] initWithCoinId:coinId] autorelease];
+        case 3:
+            return [[[DroppingCoin alloc] initWithCoinId:coinId] autorelease];
+        default:
+            return [[[StandardCoin alloc] initWithCoinId:coinId] autorelease];
+    }
+}
+
+- (id)initWithCoinId:(int)coinId {
     self = [super init];
-	if (self) {
+    if (self) {
         
         // 初期設定
         self._isStaged = false;
+        self._coinId = coinId;
         
         // アニメーションの最初のコマを読み込む
-        self._coinSprite = [CCSprite spriteWithSpriteFrameName:@"coin1.png"];
+        self._coinSprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"coin%d_1.png", self._coinId]];
         [self addChild:self._coinSprite];
     }
     return self;
 }
 
 - (void)start {
-    [self._coinSprite runAction:[CommonAnimation getFrameRepeatAction:@"coin" frameNum:2]];
+    [self._coinSprite runAction:[CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"coin%d_", self._coinId] frameNum:2]];
 }
 
 - (void)stop {
@@ -74,6 +90,17 @@
 
 - (BOOL)hasTaken {
     return !self._isStaged;
+}
+
+- (void)drop {
+}
+
+- (float)getWidth {
+    return self._coinSprite.contentSize.width;
+}
+
+- (float)getHeight {
+    return self._coinSprite.contentSize.height;
 }
 
 @end

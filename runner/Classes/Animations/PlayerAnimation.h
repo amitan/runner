@@ -12,7 +12,7 @@
 @interface PlayerAnimation : NSObject
 
 // 歩行アニメーションを取得
-+ (id)getWalkAction:(int)monsterId;
++ (id)getWalkAction:(int)monsterId isReverse:(BOOL)isReverse;
 
 // 死亡演出を取得
 + (CCParticleSystem*)getDeadParticle;

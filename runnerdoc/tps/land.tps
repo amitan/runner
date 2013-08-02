@@ -54,7 +54,7 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>2048</int>
+            <int>4096</int>
             <key>height</key>
             <int>2048</int>
         </QSize>
@@ -145,6 +145,7 @@
             <filename>../sprites/land/block2.png</filename>
             <filename>../sprites/land/block3.png</filename>
             <filename>../sprites/land/block4.png</filename>
+            <filename>../sprites/land/block5.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

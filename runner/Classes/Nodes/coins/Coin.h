@@ -12,6 +12,14 @@
 @interface Coin : CCNode {
     
 }
+@property (nonatomic, readwrite)int _coinId;
+@property (nonatomic, readwrite)BOOL _isStaged;
+
+// 指定したブロックを生成する
++ (Coin*)createCoin:(int)coinId;
+
+// ブロックを指定して初期化する
+-(id)initWithCoinId:(int)coinId;
 
 // コインアニメーションを開始/停止する
 - (void)start;
@@ -26,5 +34,12 @@
 
 // コインを取得済みか
 - (BOOL)hasTaken;
+
+// コインを降らせる
+- (void)drop;
+
+// 幅・高さを取得する
+- (float)getWidth;
+- (float)getHeight;
 
 @end

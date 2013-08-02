@@ -19,10 +19,10 @@
 @property (nonatomic, readwrite)BOOL _isStaged;
 @property (nonatomic, readwrite)int _jumpNum, _currentJumpNum, _jumpSpeed;
 @property (nonatomic, retain)CCSprite *_playerSprite;
-@property (nonatomic, readwrite)BOOL _onGround, _isAdjusting;
+@property (nonatomic, readwrite)BOOL _onGround, _isAdjusting, _isReverse;
 @property (nonatomic, readwrite)float _vx, _vy;
 @property (nonatomic, readwrite)float _properPositionX;
-@property (nonatomic, readwrite)float _limitX, _limitY;
+@property (nonatomic, readwrite)float _limitLeftX, _limitRightX, _limitY;
 @property (nonatomic, readwrite)int _speedStep;
 @end
 
@@ -30,8 +30,9 @@
 const int GRAVITY = 70;
 const int JUMP_SPEED = 1500;
 const int MAX_SPEED_STEP = 3;
-const int INIT_SCROLL_SPEED = 485;
-const int INIT_PLAYER_X = 200;
+const int INIT_SCROLL_SPEED = 430;
+const int INIT_PLAYER_X = 250;
+const int BLOCK_TOP_REFLECTION = -10;
 
 + (Player*)createPlayer:(int)monsterId {
     return [[[self alloc] initWithMonsterId:monsterId] autorelease];
@@ -49,7 +50,9 @@ const int INIT_PLAYER_X = 200;
         self._onGround = true;
         self._vx = [PointUtil getPoint:INIT_SCROLL_SPEED];
         self._isAdjusting = false;
-        self._limitX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
+        self._isReverse = false;
+        self._limitLeftX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
+        self._limitRightX = winSize.width / 2 + [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
         self._jumpSpeed = [PointUtil getPoint:JUMP_SPEED];
         
@@ -73,7 +76,7 @@ const int INIT_PLAYER_X = 200;
 }
 
 - (void)start {
-    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId]];
+    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:false]];
     [self scheduleUpdate];
 }
 
@@ -108,7 +111,7 @@ const int INIT_PLAYER_X = 200;
     MapController *mapController = [GameScene sharedInstance].mapController;
     
     // 圧死判定
-    if (self.position.x < self._limitX) {
+    if (self.position.x < self._limitLeftX || self.position.x > self._limitRightX) {
         [self dead];
         return;
     }
@@ -143,12 +146,34 @@ const int INIT_PLAYER_X = 200;
     // 横軸の判定
     ///////////////////////////////////////////////////////////////
     CGPoint nextRightXPosition = ccpAdd([self getCenterRightPosition], ccp(dx, 0));
+    BOOL isXHit = false;
+    BOOL currentReverse = self._isReverse;
     
     // ブロックに衝突している場合はプレイヤーも一緒に移動
-    Block *blockX = [mapController getHitBlock:nextRightXPosition];
-    if (blockX) {
-        x = [blockX getLeftPoint] - self._playerSprite.contentSize.width / 2;
+    if (!currentReverse) {
+        Block *blockX = [mapController getHitBlock:nextRightXPosition]; // 右端判定
+        if (blockX) {
+            if (blockX.isLeftReverse) {
+                [self changeDirection:true];
+            } else {
+                x = [blockX getLeftPoint] - self._playerSprite.contentSize.width / 2;
+                isXHit = true;
+            }
+        }
     } else {
+        CGPoint nextLeftXPosition = ccpAdd([self getCenterLeftPosition], ccp(-dx, 0));
+        Block *blockX = [mapController getHitBlock:nextLeftXPosition]; // 左端判定
+        if (blockX) {
+            if (blockX.isRightReverse) {
+                [self changeDirection:false];
+            } else {
+                x = [blockX getRightPoint] + self._playerSprite.contentSize.width / 2;
+                isXHit = true;
+            }
+        }
+    }
+    
+    if (!isXHit) {
         if (self._isAdjusting) { // 場所調整中
             if (self._properPositionX <= self.position.x) {
                 self._isAdjusting = false;
@@ -164,6 +189,7 @@ const int INIT_PLAYER_X = 200;
     }
     
     // マップスクロール
+    if (self._isReverse) dx *= -1;
     [mapController scroll:dx];
     
     ///////////////////////////////////////////////////////////////
@@ -181,9 +207,10 @@ const int INIT_PLAYER_X = 200;
     
         // 着地判定
         Block *blockY = [mapController getHitBlock:nextCenterBottomYPosition];
-        if (!blockY) blockY = [mapController getHitBlock:ccpAdd(nextCenterBottomYPosition, ccp(-[self getWidth] / 2, 0))];
+        float dw = (currentReverse) ? [self getWidth] / 2 : -[self getWidth] / 2;
+        if (!blockY) blockY = [mapController getHitBlock:ccpAdd(nextCenterBottomYPosition, ccp(dw, 0))];
         if (blockY) {
-            if (self._vy <= 0) {
+            if (self._vy < 0) {
                 self._onGround = true;
                 y = [blockY getLandPoint] + self._playerSprite.contentSize.height / 2;
                 self._vy = 0;
@@ -196,6 +223,7 @@ const int INIT_PLAYER_X = 200;
             CGPoint nextCenterTopYPosition = ccpAdd([self getCenterTopPosition], ccp(0, dy));
             Block *topBlock = [mapController getHitBlock:nextCenterTopYPosition];
             if (topBlock) {
+                y = [topBlock getBottomPoint] - self._playerSprite.contentSize.height / 2;
                 self._vy = 0;
             } else {
                 y += dy;
@@ -214,6 +242,12 @@ const int INIT_PLAYER_X = 200;
     if ([mapController checkSpeedUp:self.position]) {
         [self speedUp];
     }
+}
+
+- (void)changeDirection:(BOOL)isReverse {
+    [self._playerSprite stopAllActions];
+    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:isReverse]];
+    self._isReverse = isReverse;
 }
 
 - (void)dead {
@@ -238,6 +272,9 @@ const int INIT_PLAYER_X = 200;
 }
 - (CGPoint)getCenterRightPosition {
     return ccp(self.position.x + [self getWidth] / 2, self.position.y);
+}
+- (CGPoint)getCenterLeftPosition {
+    return ccp(self.position.x - [self getWidth] / 2, self.position.y);
 }
 - (CGPoint)getTopLeftPosition {
     return ccp(self.position.x - [self getWidth] / 2, self.position.y + [self getHeight] / 2);

@@ -11,6 +11,7 @@
 #import "PointUtil.h"
 #import "Coin.h"
 
+// ブロック縦に3つ並んでいて、間にコイン
 @implementation Page2
 
 - (id)init {
@@ -42,20 +43,20 @@
         Block *block25 = [Block createBlock:101];
         Block *block26 = [Block createBlock:101];
         
-        block1.position = [PointUtil getPosition:300 y:-728];
-        block2.position = [PointUtil getPosition:300 y:-664];
-        block3.position = [PointUtil getPosition:364 y:-728];
-        block4.position = [PointUtil getPosition:364 y:-664];
-        block11.position = [PointUtil getPosition:636 y:-728];
-        block12.position = [PointUtil getPosition:636 y:-664];
-        block13.position = [PointUtil getPosition:700 y:-728];
-        block14.position = [PointUtil getPosition:700 y:-664];
-        block21.position = [PointUtil getPosition:972 y:-728];
-        block22.position = [PointUtil getPosition:972 y:-664];
-        block23.position = [PointUtil getPosition:972 y:-600];
-        block24.position = [PointUtil getPosition:1036 y:-728];
-        block25.position = [PointUtil getPosition:1036 y:-664];
-        block26.position = [PointUtil getPosition:1036 y:-600];
+        block1.position = [PointUtil getPosition:300 y:-730];
+        block2.position = [PointUtil getPosition:300 y:-670];
+        block3.position = [PointUtil getPosition:360 y:-730];
+        block4.position = [PointUtil getPosition:360 y:-670];
+        block11.position = [PointUtil getPosition:640 y:-730];
+        block12.position = [PointUtil getPosition:640 y:-670];
+        block13.position = [PointUtil getPosition:700 y:-730];
+        block14.position = [PointUtil getPosition:700 y:-670];
+        block21.position = [PointUtil getPosition:970 y:-730];
+        block22.position = [PointUtil getPosition:970 y:-670];
+        block23.position = [PointUtil getPosition:970 y:-610];
+        block24.position = [PointUtil getPosition:1030 y:-730];
+        block25.position = [PointUtil getPosition:1030 y:-670];
+        block26.position = [PointUtil getPosition:1030 y:-610];
 
         [self._blocks addObject:block1];
         [self._blocks addObject:block2];
@@ -77,22 +78,22 @@
         }
         
         // コインを追加
-        Coin *coin1 = [Coin node];
-        Coin *coin2 = [Coin node];
-        Coin *coin3 = [Coin node];
-        Coin *coin4 = [Coin node];
-        Coin *coin11 = [Coin node];
-        Coin *coin12 = [Coin node];
-        Coin *coin13 = [Coin node];
-        Coin *coin14 = [Coin node];
-        Coin *coin15 = [Coin node];
-        Coin *coin16 = [Coin node];
-        Coin *coin21 = [Coin node];
-        Coin *coin22 = [Coin node];
-        Coin *coin23 = [Coin node];
-        Coin *coin24 = [Coin node];
-        Coin *coin25 = [Coin node];
-        Coin *coin26 = [Coin node];
+        Coin *coin1 = [Coin createCoin:1];
+        Coin *coin2 = [Coin createCoin:1];
+        Coin *coin3 = [Coin createCoin:1];
+        Coin *coin4 = [Coin createCoin:1];
+        Coin *coin11 = [Coin createCoin:1];
+        Coin *coin12 = [Coin createCoin:1];
+        Coin *coin13 = [Coin createCoin:1];
+        Coin *coin14 = [Coin createCoin:1];
+        Coin *coin15 = [Coin createCoin:1];
+        Coin *coin16 = [Coin createCoin:1];
+        Coin *coin21 = [Coin createCoin:1];
+        Coin *coin22 = [Coin createCoin:1];
+        Coin *coin23 = [Coin createCoin:1];
+        Coin *coin24 = [Coin createCoin:1];
+        Coin *coin25 = [Coin createCoin:1];
+        Coin *coin26 = [Coin createCoin:1];
         self._lastCoin = coin16;
 
         coin1.position = [PointUtil getPosition:100 y:-600];
@@ -102,11 +103,11 @@
         
         // ブロックの上
         coin11.position = [PointUtil getPosition:300 y:-596];
-        coin12.position = [PointUtil getPosition:364 y:-596];
-        coin13.position = [PointUtil getPosition:636 y:-596];
+        coin12.position = [PointUtil getPosition:360 y:-596];
+        coin13.position = [PointUtil getPosition:640 y:-596];
         coin14.position = [PointUtil getPosition:700 y:-596];
-        coin15.position = [PointUtil getPosition:972 y:-532];
-        coin16.position = [PointUtil getPosition:1036 y:-532];
+        coin15.position = [PointUtil getPosition:970 y:-532];
+        coin16.position = [PointUtil getPosition:1030 y:-532];
         
         coin21.position = [PointUtil getPosition:450 y:-450];
         coin22.position = [PointUtil getPosition:500 y:-400];

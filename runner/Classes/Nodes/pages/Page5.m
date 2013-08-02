@@ -14,6 +14,7 @@
 @property (nonatomic, retain)Block *_land3;
 @end
 
+// 土管->ブロック2段と崖
 @implementation Page5
 const int PAGE5_INTERVAL1 = 100;
 const int PAGE5_INTERVAL2 = 150;
@@ -23,7 +24,7 @@ const int PAGE5_INTERVAL2 = 150;
 	if (self) {
         
         // 初期設定
-        self._blocks = [NSMutableArray arrayWithCapacity:7];
+        self._blocks = [NSMutableArray arrayWithCapacity:11];
         self._coins = [NSMutableArray arrayWithCapacity:11];
         
         // 地面を追加
@@ -47,32 +48,24 @@ const int PAGE5_INTERVAL2 = 150;
         Block *block13 = [Block createBlock:101];
         Block *block14 = [Block createBlock:101];
         Block *block15 = [Block createBlock:101];
-        Block *block21 = [Block createBlock:101];
+        Block *block21 = [Block createBlock:102];
         Block *block22 = [Block createBlock:101];
-        Block *block23 = [Block createBlock:101];
-        Block *block24 = [Block createBlock:101];
-        Block *block25 = [Block createBlock:101];
-        Block *block26 = [Block createBlock:101];
         Block *block31 = [Block createBlock:101];
         Block *block32 = [Block createBlock:101];
         Block *block33 = [Block createBlock:101];
         Block *block34 = [Block createBlock:101];
 
-        block1.position = [PointUtil getPosition:100 y:-640];
-        block2.position = [PointUtil getPosition:100 y:-720];
+        block1.position = [PointUtil getPosition:100 y:-670];
+        block2.position = [PointUtil getPosition:100 y:-730];
         block13.position = [PointUtil getPosition:1460 y:-570];
-        block14.position = [PointUtil getPosition:1524 y:-570];
-        block15.position = [PointUtil getPosition:1588 y:-570];
-        block21.position = [PointUtil getPosition:1652 y:-350];
-        block22.position = [PointUtil getPosition:1716 y:-350];
-        block23.position = [PointUtil getPosition:1780 y:-350];
-        block24.position = [PointUtil getPosition:1844 y:-350];
-        block25.position = [PointUtil getPosition:1908 y:-350];
-        block26.position = [PointUtil getPosition:1972 y:-350];
-        block31.position = [PointUtil getPosition:2226 y:-350];
-        block32.position = [PointUtil getPosition:2290 y:-350];
-        block33.position = [PointUtil getPosition:2354 y:-350];
-        block34.position = [PointUtil getPosition:2354 y:-570];
+        block14.position = [PointUtil getPosition:1520 y:-570];
+        block15.position = [PointUtil getPosition:1580 y:-570];
+        block21.position = [PointUtil getPosition:1820 y:-350];
+        block22.position = [PointUtil getPosition:2000 y:-350];
+        block31.position = [PointUtil getPosition:2180 y:-350];
+        block32.position = [PointUtil getPosition:2240 y:-350];
+        block33.position = [PointUtil getPosition:2300 y:-350];
+        block34.position = [PointUtil getPosition:2300 y:-570];
         
         [self._blocks addObject:block1];
         [self._blocks addObject:block2];
@@ -81,10 +74,6 @@ const int PAGE5_INTERVAL2 = 150;
         [self._blocks addObject:block15];
         [self._blocks addObject:block21];
         [self._blocks addObject:block22];
-        [self._blocks addObject:block23];
-        [self._blocks addObject:block24];
-        [self._blocks addObject:block25];
-        [self._blocks addObject:block26];
         [self._blocks addObject:block31];
         [self._blocks addObject:block32];
         [self._blocks addObject:block33];
@@ -95,46 +84,30 @@ const int PAGE5_INTERVAL2 = 150;
         }
         
         // コインを追加
-        Coin *coin1 = [Coin node];
-        Coin *coin2 = [Coin node];
-        Coin *coin13 = [Coin node];
-        Coin *coin14 = [Coin node];
-        Coin *coin15 = [Coin node];
-        Coin *coin21 = [Coin node];
-        Coin *coin22 = [Coin node];
-        Coin *coin23 = [Coin node];
-        Coin *coin24 = [Coin node];
-        Coin *coin25 = [Coin node];
-        Coin *coin26 = [Coin node];
+        Coin *coin1 = [Coin createCoin:1];
+        Coin *coin2 = [Coin createCoin:1];
+        Coin *coin13 = [Coin createCoin:1];
+        Coin *coin14 = [Coin createCoin:1];
+        Coin *coin15 = [Coin createCoin:1];
+        Coin *coin21 = [Coin createCoin:1];
+        Coin *coin22 = [Coin createCoin:1];
+        Coin *coin23 = [Coin createCoin:1];
+        Coin *coin24 = [Coin createCoin:1];
+        Coin *coin25 = [Coin createCoin:1];
+        Coin *coin26 = [Coin createCoin:1];
         self._lastCoin = coin26;
-        
-        block1.position = [PointUtil getPosition:100 y:-640];
-        block2.position = [PointUtil getPosition:100 y:-720];
-        block13.position = [PointUtil getPosition:1460 y:-570];
-        block14.position = [PointUtil getPosition:1524 y:-570];
-        block15.position = [PointUtil getPosition:1588 y:-570];
-        block21.position = [PointUtil getPosition:1652 y:-350];
-        block22.position = [PointUtil getPosition:1716 y:-350];
-        block23.position = [PointUtil getPosition:1780 y:-350];
-        block24.position = [PointUtil getPosition:1844 y:-350];
-        block25.position = [PointUtil getPosition:1908 y:-350];
-        block26.position = [PointUtil getPosition:1972 y:-350];
-        block31.position = [PointUtil getPosition:2226 y:-350];
-        block32.position = [PointUtil getPosition:2290 y:-350];
-        block33.position = [PointUtil getPosition:2354 y:-350];
-        block34.position = [PointUtil getPosition:2354 y:-570];
 
         coin1.position = [PointUtil getPosition:75 y:-572];
         coin2.position = [PointUtil getPosition:125 y:-572];
         coin13.position = [PointUtil getPosition:1460 y:-502];
-        coin14.position = [PointUtil getPosition:1524 y:-502];
-        coin15.position = [PointUtil getPosition:1588 y:-502];
-        coin21.position = [PointUtil getPosition:1652 y:-282];
-        coin22.position = [PointUtil getPosition:1716 y:-282];
-        coin23.position = [PointUtil getPosition:1780 y:-282];
-        coin24.position = [PointUtil getPosition:1844 y:-282];
-        coin25.position = [PointUtil getPosition:1908 y:-282];
-        coin26.position = [PointUtil getPosition:1972 y:-282];
+        coin14.position = [PointUtil getPosition:1520 y:-502];
+        coin15.position = [PointUtil getPosition:1580 y:-502];
+        coin21.position = [PointUtil getPosition:1700 y:-282];
+        coin22.position = [PointUtil getPosition:1760 y:-282];
+        coin23.position = [PointUtil getPosition:1820 y:-282];
+        coin24.position = [PointUtil getPosition:1880 y:-282];
+        coin25.position = [PointUtil getPosition:1940 y:-282];
+        coin26.position = [PointUtil getPosition:2000 y:-282];
         
         [self._coins addObject:coin1];
         [self._coins addObject:coin2];

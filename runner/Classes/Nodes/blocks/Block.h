@@ -34,9 +34,17 @@
 
 // 座標がブロックに含まれているか判定する
 - (BOOL)isHit:(CGPoint)point;
+- (BOOL)isHitByRect:(CGRect)rect;
 
 // レイヤーベースの接地点座標を取得する
 - (float)getLandPoint;
+- (float)getBottomPoint;
 - (float)getLeftPoint;
+- (float)getRightPoint;
+
+// 反転判定
+- (BOOL)isLeftReverse;
+- (BOOL)isRightReverse;
+
 
 @end

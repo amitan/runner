@@ -33,7 +33,7 @@
             <key>block3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,207},{1920,200}}</string>
+                <string>{{1611,3},{1920,200}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>block4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,411},{640,200}}</string>
+                <string>{{3,207},{640,200}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -56,6 +56,19 @@
                 <key>sourceSize</key>
                 <string>{640,200}</string>
             </dict>
+            <key>block5.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{647,207},{2560,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{2560,200}}</string>
+                <key>sourceSize</key>
+                <string>{2560,200}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -64,9 +77,9 @@
             <key>realTextureFileName</key>
             <string>land.png</string>
             <key>size</key>
-            <string>{2048,1024}</string>
+            <string>{4096,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:010be2dc61d1aaf0acc1a649028d36ba$</string>
+            <string>$TexturePacker:SmartUpdate:97e86389fabf250d0246f494caffed57$</string>
             <key>textureFileName</key>
             <string>land.png</string>
         </dict>
