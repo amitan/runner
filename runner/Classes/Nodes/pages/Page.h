@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "Block.h"
 #import "Coin.h"
+#import "Switch.h"
 
 @interface Page : CCNode {
     
@@ -21,6 +22,7 @@
 @property (nonatomic, retain)NSMutableArray *_blocks;
 @property (nonatomic, retain)NSMutableArray *_coins;
 @property (nonatomic, retain)NSMutableArray *_enemies;
+@property (nonatomic, retain)Switch *_coinSwitch;
 
 // 指定したページを生成する
 + (Page*)create:(int)pageId;
@@ -44,6 +46,7 @@
 
 // コインを取得したか判定する
 - (BOOL)takeCoinsIfCollided:(CGRect)rect;
+- (BOOL)pressSwitchesIfCollided:(CGRect)rect;
 
 // 敵判定
 - (BOOL)attackEnemyIfCollided:(CGPoint)point;

@@ -111,7 +111,7 @@ const int BLOCK_TOP_REFLECTION = -10;
     MapController *mapController = [GameScene sharedInstance].mapController;
     
     // 圧死判定
-    if (self.position.x < self._limitLeftX || self.position.x > self._limitRightX) {
+    if ([self getCenterRightPosition].x < self._limitLeftX || [self getCenterLeftPosition].x > self._limitRightX) {
         [self dead];
         return;
     }
@@ -140,7 +140,7 @@ const int BLOCK_TOP_REFLECTION = -10;
     ///////////////////////////////////////////////////////////////
     // コイン/アイテム判定
     ///////////////////////////////////////////////////////////////
-    [mapController takeCoinsIfCollided:[self getRect]];
+    [mapController takeItemsIfCollided:[self getRect]];
 
     ///////////////////////////////////////////////////////////////
     // 横軸の判定

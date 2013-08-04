@@ -52,7 +52,7 @@
         Block *block21 = [Block createBlock:105];
         Block *block22 = [Block createBlock:105];
         Block *block23 = [Block createBlock:102];
-        Block *block24 = [Block createBlock:104];
+        Block *block24 = [Block createBlock:102];
         Block *block25 = [Block createBlock:102];
         Block *block31 = [Block createBlock:103];
         Block *block32 = [Block createBlock:103];
@@ -90,12 +90,12 @@
         block21.position = [PointUtil getPosition:890 y:0];
         block22.position = [PointUtil getPosition:890 y:-300];
         block23.position = [PointUtil getPosition:1010 y:-420];
-        block24.position = [PointUtil getPosition:1190 y:-480];
-        block25.position = [PointUtil getPosition:1370 y:-540];
-        block31.position = [PointUtil getPosition:1790 y:-730];
-        block32.position = [PointUtil getPosition:1790 y:-670];
-        block33.position = [PointUtil getPosition:2000 y:-490];
-        block34.position = [PointUtil getPosition:2120 y:-370];
+        block24.position = [PointUtil getPosition:1310 y:-480];
+        block25.position = [PointUtil getPosition:1610 y:-540];
+        block31.position = [PointUtil getPosition:2000 y:-730];
+        block32.position = [PointUtil getPosition:2000 y:-670];
+        block33.position = [PointUtil getPosition:2300 y:-490];
+        block34.position = [PointUtil getPosition:2420 y:-370];
         
         [self._blocks addObject:block1];
         [self._blocks addObject:block2];

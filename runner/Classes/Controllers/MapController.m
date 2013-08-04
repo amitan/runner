@@ -62,8 +62,8 @@
     return [self._map getHitBlockByRect:rect];
 }
 
-- (BOOL)takeCoinsIfCollided:(CGRect)rect {
-    return [self._map takeCoinsIfCollided:rect];
+- (void)takeItemsIfCollided:(CGRect)rect {
+    return [self._map takeItemsIfCollided:rect];
 }
 
 - (BOOL)attackEnemyIfCollided:(CGPoint)point {

@@ -12,6 +12,7 @@
 #import "StandardCoin.h"
 #import "BigCoin.h"
 #import "DroppingCoin.h"
+#import "SwitchCoin.h"
 
 @interface Coin ()
 @property (nonatomic, retain)CCSprite *_coinSprite;
@@ -27,6 +28,8 @@
             return [[[BigCoin alloc] initWithCoinId:coinId] autorelease];
         case 3:
             return [[[DroppingCoin alloc] initWithCoinId:coinId] autorelease];
+        case 4:
+            return [[[SwitchCoin alloc] initWithCoinId:coinId] autorelease];
         default:
             return [[[StandardCoin alloc] initWithCoinId:coinId] autorelease];
     }
@@ -93,6 +96,9 @@
 }
 
 - (void)drop {
+}
+
+- (void)appear {
 }
 
 - (float)getWidth {

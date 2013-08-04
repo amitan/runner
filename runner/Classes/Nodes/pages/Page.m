@@ -7,8 +7,8 @@
 //
 
 #import "Page.h"
-#import "Coin.h"
 #import "Enemy.h"
+#import "Switch.h"
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "Page0.h"
@@ -20,6 +20,7 @@
 #import "Page6.h"
 #import "Page7.h"
 #import "Page8.h"
+#import "Page9.h"
 #import "Page900.h"
 
 @interface Page ()
@@ -51,6 +52,7 @@
         case 6: return [Page6 node];
         case 7: return [Page7 node];
         case 8: return [Page8 node];
+        case 9: return [Page9 node];
         case 900: return [Page900 node];
         default: return [Page0 node];
     }
@@ -79,6 +81,7 @@
     for (Enemy *enemy in self._enemies) {
         [enemy start];
     }
+    if (self._coinSwitch) [self._coinSwitch start];
 }
 
 - (void)stop {
@@ -92,6 +95,7 @@
     for (Enemy *enemy in self._enemies) {
         [enemy stop];
     }
+    if (self._coinSwitch) [self._coinSwitch stop];
 }
 
 - (void)reset {
@@ -108,6 +112,7 @@
         [enemy reset];
         [enemy stageOn:self];
     }
+    if (self._coinSwitch) [self._coinSwitch reset];
 }
 
 - (float)getWidth {
@@ -151,6 +156,17 @@
         if (bonus) {
             [[GameScene sharedInstance].hudController addCoinBonus:self._coins.count];
         }
+    }
+    return result;
+}
+
+- (BOOL)pressSwitchesIfCollided:(CGRect)rect {
+    BOOL result = false;
+    if (self._coinSwitch && [self._coinSwitch pressIfCollided:rect]) {
+        result = true;
+        for (Coin *coin in self._coins) {
+            [coin appear];
+        }        
     }
     return result;
 }

@@ -161,6 +161,11 @@
             <filename>../sprites/gameparts/block105.png</filename>
             <filename>../sprites/gameparts/block303.png</filename>
             <filename>../sprites/gameparts/block304.png</filename>
+            <filename>../sprites/gameparts/block106.png</filename>
+            <filename>../sprites/gameparts/switch1_1.png</filename>
+            <filename>../sprites/gameparts/switch1_2.png</filename>
+            <filename>../sprites/gameparts/coin4_1.png</filename>
+            <filename>../sprites/gameparts/coin4_2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

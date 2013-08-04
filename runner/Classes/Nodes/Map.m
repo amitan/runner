@@ -106,12 +106,13 @@ const int INIT_PAGE_NUM = 3;
     return (block) ? block : NULL;
 }
 
-- (BOOL)takeCoinsIfCollided:(CGRect)rect {
+- (void)takeItemsIfCollided:(CGRect)rect {
     CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
     Page *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
     CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
-    return [currentPage takeCoinsIfCollided:worldRect];
+    [currentPage takeCoinsIfCollided:worldRect];
+    [currentPage pressSwitchesIfCollided:worldRect];
 }
 
 - (BOOL)attackEnemyIfCollided:(CGPoint)point {

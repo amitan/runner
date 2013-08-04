@@ -15,10 +15,10 @@
 @property (nonatomic, readwrite)int _coinId;
 @property (nonatomic, readwrite)BOOL _isStaged;
 
-// 指定したブロックを生成する
+// 指定したコインを生成する
 + (Coin*)createCoin:(int)coinId;
 
-// ブロックを指定して初期化する
+// コインを指定して初期化する
 -(id)initWithCoinId:(int)coinId;
 
 // コインアニメーションを開始/停止する
@@ -34,6 +34,9 @@
 
 // コインを取得済みか
 - (BOOL)hasTaken;
+
+// コインを表示する
+- (void)appear;
 
 // コインを降らせる
 - (void)drop;
