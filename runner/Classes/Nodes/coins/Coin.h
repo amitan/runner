@@ -13,13 +13,16 @@
     
 }
 @property (nonatomic, readwrite)int _coinId;
+@property (nonatomic, readwrite)int _groupId;
 @property (nonatomic, readwrite)BOOL _isStaged;
+@property (nonatomic, readwrite)int _value;
 
 // 指定したコインを生成する
 + (Coin*)createCoin:(int)coinId;
++ (Coin*)createCoin:(int)coinId groupId:(int)groupId;
 
 // コインを指定して初期化する
--(id)initWithCoinId:(int)coinId;
+-(id)initWithCoinId:(int)coinId groupId:(int)groupId;
 
 // コインアニメーションを開始/停止する
 - (void)start;
@@ -36,7 +39,7 @@
 - (BOOL)hasTaken;
 
 // コインを表示する
-- (void)appear;
+- (void)appear:(int)groupId;
 
 // コインを降らせる
 - (void)drop;

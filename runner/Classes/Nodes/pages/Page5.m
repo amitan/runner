@@ -14,7 +14,7 @@
 @property (nonatomic, retain)Block *_land3;
 @end
 
-// 土管->ブロック2段と崖
+// 土管->ブロック2段と穴
 @implementation Page5
 const int PAGE5_INTERVAL1 = 100;
 const int PAGE5_INTERVAL2 = 150;

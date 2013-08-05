@@ -17,8 +17,8 @@
 const int INIT_DROPPING_COIN_X = 300;
 const int INIT_DROPPING_COIN_Y = 100;
 
-- (id)initWithCoinId:(int)coinId {
-    self = [super initWithCoinId:coinId];
+- (id)initWithCoinId:(int)coinId groupId:(int)groupId {
+    self = [super initWithCoinId:coinId groupId:groupId];
     if (self) {
         self._coins = [NSMutableArray arrayWithCapacity:20];
         Coin *coin1 = [Coin createCoin:3];

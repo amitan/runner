@@ -12,6 +12,7 @@
 #import "StandardBlock.h"
 #import "LeftReverseBlock.h"
 #import "RightReverseBlock.h"
+#import "HatenaBlock.h"
 
 @interface Block ()
 @end
@@ -26,6 +27,8 @@
         case 302:
         case 304:
             return [[[RightReverseBlock alloc] initWithBlockId:blockId] autorelease];
+        case 401:
+            return [[[HatenaBlock alloc] initWithBlockId:blockId] autorelease];
         default:
             return [[[StandardBlock alloc] initWithBlockId:blockId] autorelease];
     }

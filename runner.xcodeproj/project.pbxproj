@@ -210,6 +210,11 @@
 		F9B0DA9517AE3A17009A08B1 /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9417AE3A17009A08B1 /* Switch.m */; };
 		F9B0DA9817AE3A2F009A08B1 /* CoinSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9717AE3A2F009A08B1 /* CoinSwitch.m */; };
 		F9B0DA9B17AE8675009A08B1 /* SwitchCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9A17AE8675009A08B1 /* SwitchCoin.m */; };
+		F9B0DA9E17AEC0CF009A08B1 /* Page10.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9D17AEC0CE009A08B1 /* Page10.m */; };
+		F9B0DAA117AF85DF009A08B1 /* block.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DA9F17AF85DF009A08B1 /* block.plist */; };
+		F9B0DAA217AF85DF009A08B1 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAA017AF85DF009A08B1 /* block.png */; };
+		F9B0DAA517AFE23B009A08B1 /* HatenaBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DAA417AFE23B009A08B1 /* HatenaBlock.m */; };
+		F9B0DAA817AFF85A009A08B1 /* Page11.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DAA717AFF858009A08B1 /* Page11.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -610,6 +615,14 @@
 		F9B0DA9717AE3A2F009A08B1 /* CoinSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinSwitch.m; sourceTree = "<group>"; };
 		F9B0DA9917AE8675009A08B1 /* SwitchCoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCoin.h; sourceTree = "<group>"; };
 		F9B0DA9A17AE8675009A08B1 /* SwitchCoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCoin.m; sourceTree = "<group>"; };
+		F9B0DA9C17AEC0CD009A08B1 /* Page10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10.h; sourceTree = "<group>"; };
+		F9B0DA9D17AEC0CE009A08B1 /* Page10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10.m; sourceTree = "<group>"; };
+		F9B0DA9F17AF85DF009A08B1 /* block.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = block.plist; sourceTree = "<group>"; };
+		F9B0DAA017AF85DF009A08B1 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
+		F9B0DAA317AFE23A009A08B1 /* HatenaBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaBlock.h; sourceTree = "<group>"; };
+		F9B0DAA417AFE23B009A08B1 /* HatenaBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaBlock.m; sourceTree = "<group>"; };
+		F9B0DAA617AFF857009A08B1 /* Page11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page11.h; sourceTree = "<group>"; };
+		F9B0DAA717AFF858009A08B1 /* Page11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page11.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1189,6 +1202,8 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F9B0DA9F17AF85DF009A08B1 /* block.plist */,
+				F9B0DAA017AF85DF009A08B1 /* block.png */,
 				F9052E5B17A179570078EE9C /* land.plist */,
 				F9052E5C17A179570078EE9C /* land.png */,
 				F9A4690117A04420002BAFB7 /* hud.plist */,
@@ -1218,6 +1233,8 @@
 				F94136AB17AB8A5E00EFC308 /* LeftReverseBlock.m */,
 				F94136AD17AB8AD200EFC308 /* RightReverseBlock.h */,
 				F94136AE17AB8AD200EFC308 /* RightReverseBlock.m */,
+				F9B0DAA317AFE23A009A08B1 /* HatenaBlock.h */,
+				F9B0DAA417AFE23B009A08B1 /* HatenaBlock.m */,
 			);
 			path = blocks;
 			sourceTree = "<group>";
@@ -1264,6 +1281,10 @@
 				F941369417AA555E00EFC308 /* Page8.m */,
 				F9B0DA8817AC0F8B009A08B1 /* Page9.h */,
 				F9B0DA8917AC0F8B009A08B1 /* Page9.m */,
+				F9B0DA9C17AEC0CD009A08B1 /* Page10.h */,
+				F9B0DA9D17AEC0CE009A08B1 /* Page10.m */,
+				F9B0DAA617AFF857009A08B1 /* Page11.h */,
+				F9B0DAA717AFF858009A08B1 /* Page11.m */,
 				F9A468ED179BDD67002BAFB7 /* Page900.h */,
 				F9A468EE179BDD69002BAFB7 /* Page900.m */,
 			);
@@ -1406,6 +1427,8 @@
 				F9A4690417A04420002BAFB7 /* hud.png in Resources */,
 				F9052E5D17A179580078EE9C /* land.plist in Resources */,
 				F9052E5E17A179580078EE9C /* land.png in Resources */,
+				F9B0DAA117AF85DF009A08B1 /* block.plist in Resources */,
+				F9B0DAA217AF85DF009A08B1 /* block.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1573,6 +1596,9 @@
 				F9B0DA9517AE3A17009A08B1 /* Switch.m in Sources */,
 				F9B0DA9817AE3A2F009A08B1 /* CoinSwitch.m in Sources */,
 				F9B0DA9B17AE8675009A08B1 /* SwitchCoin.m in Sources */,
+				F9B0DA9E17AEC0CF009A08B1 /* Page10.m in Sources */,
+				F9B0DAA517AFE23B009A08B1 /* HatenaBlock.m in Sources */,
+				F9B0DAA817AFF85A009A08B1 /* Page11.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

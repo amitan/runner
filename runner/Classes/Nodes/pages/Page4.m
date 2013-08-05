@@ -15,7 +15,7 @@
 @property (nonatomic, retain)Block *_land3;
 @end
 
-// 崖とコイン
+// 穴とコイン
 @implementation Page4
 
 - (id)init {

@@ -16,12 +16,14 @@
 @property (nonatomic, retain)CCSprite *_spriteOn;
 @property (nonatomic, readwrite)BOOL _isPressed;
 @property (nonatomic, readwrite)int _switchId;
+@property (nonatomic, readwrite)int groupId;
 
 // 指定したスイッチを生成する
 + (Switch*)createSwitch:(int)switchId;
++ (Switch*)createSwitch:(int)switchId groupId:(int)groupId;
 
 // スイッチを指定して初期化する
--(id)initWithSwitchId:(int)switchId;
+-(id)initWithSwitchId:(int)switchId groupId:(int)groupId;
 
 // ページに追加する
 - (void)stageOn:(CCNode*)page;

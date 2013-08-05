@@ -12,19 +12,24 @@
 @implementation Switch
 
 + (Switch*)createSwitch:(int)switchId {
+    return [Switch createSwitch:switchId groupId:0];
+}
+
++ (Switch*)createSwitch:(int)switchId groupId:(int)groupId {
     switch (switchId) {
         default:
-            return [[[CoinSwitch alloc] initWithSwitchId:switchId] autorelease];
+            return [[[CoinSwitch alloc] initWithSwitchId:switchId groupId:groupId] autorelease];
     }
 }
 
-- (id)initWithSwitchId:(int)switchId {
+- (id)initWithSwitchId:(int)switchId groupId:(int)gid {
     self = [super init];
     if (self) {
         
         // 初期設定
         self._isPressed = false;
         self._switchId = switchId;
+        self.groupId = gid;
         
         // 画像を読み込む
         self._sprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"switch%d_1.png", self._switchId]];

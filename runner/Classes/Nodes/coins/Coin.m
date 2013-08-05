@@ -21,27 +21,33 @@
 @implementation Coin
 
 + (Coin*)createCoin:(int)coinId {
+    return [Coin createCoin:coinId groupId:0];
+}
+
++ (Coin*)createCoin:(int)coinId groupId:(int)groupId {
     switch (coinId) {
         case 1:
-            return [[[StandardCoin alloc] initWithCoinId:coinId] autorelease];
+            return [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
         case 2:
-            return [[[BigCoin alloc] initWithCoinId:coinId] autorelease];
+            return [[[BigCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
         case 3:
-            return [[[DroppingCoin alloc] initWithCoinId:coinId] autorelease];
+            return [[[DroppingCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
         case 4:
-            return [[[SwitchCoin alloc] initWithCoinId:coinId] autorelease];
+            return [[[SwitchCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
         default:
-            return [[[StandardCoin alloc] initWithCoinId:coinId] autorelease];
+            return [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
     }
 }
 
-- (id)initWithCoinId:(int)coinId {
+- (id)initWithCoinId:(int)coinId groupId:(int)groupId {
     self = [super init];
     if (self) {
         
         // 初期設定
         self._isStaged = false;
         self._coinId = coinId;
+        self._groupId = groupId;
+        self._value = 1;
         
         // アニメーションの最初のコマを読み込む
         self._coinSprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"coin%d_1.png", self._coinId]];
@@ -85,7 +91,7 @@
         [self removeFromParentAndCleanup:NO];
         
         HudController *header = [GameScene sharedInstance].hudController;
-        [header addCoin:1];
+        [header addCoin:self._value];
         return true;
     }
     return false;
@@ -98,7 +104,7 @@
 - (void)drop {
 }
 
-- (void)appear {
+- (void)appear:(int)groupId {
 }
 
 - (float)getWidth {

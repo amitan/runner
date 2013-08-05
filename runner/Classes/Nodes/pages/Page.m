@@ -21,6 +21,8 @@
 #import "Page7.h"
 #import "Page8.h"
 #import "Page9.h"
+#import "Page10.h"
+#import "Page11.h"
 #import "Page900.h"
 
 @interface Page ()
@@ -53,6 +55,8 @@
         case 7: return [Page7 node];
         case 8: return [Page8 node];
         case 9: return [Page9 node];
+        case 10: return [Page10 node];
+        case 11: return [Page11 node];
         case 900: return [Page900 node];
         default: return [Page0 node];
     }
@@ -81,7 +85,9 @@
     for (Enemy *enemy in self._enemies) {
         [enemy start];
     }
-    if (self._coinSwitch) [self._coinSwitch start];
+    for (Switch *sw in self._switches) {
+        [sw start];
+    }
 }
 
 - (void)stop {
@@ -95,7 +101,9 @@
     for (Enemy *enemy in self._enemies) {
         [enemy stop];
     }
-    if (self._coinSwitch) [self._coinSwitch stop];
+    for (Switch *sw in self._switches) {
+        [sw stop];
+    }
 }
 
 - (void)reset {
@@ -112,7 +120,9 @@
         [enemy reset];
         [enemy stageOn:self];
     }
-    if (self._coinSwitch) [self._coinSwitch reset];
+    for (Switch *sw in self._switches) {
+        [sw reset];
+    }
 }
 
 - (float)getWidth {
@@ -162,11 +172,14 @@
 
 - (BOOL)pressSwitchesIfCollided:(CGRect)rect {
     BOOL result = false;
-    if (self._coinSwitch && [self._coinSwitch pressIfCollided:rect]) {
-        result = true;
-        for (Coin *coin in self._coins) {
-            [coin appear];
-        }        
+    for (Switch *sw in self._switches) {
+        if ([sw pressIfCollided:rect]) {
+            result = true;
+            int groupId = sw.groupId;
+            for (Coin *coin in self._coins) {
+                [coin appear:groupId];
+            }
+        }
     }
     return result;
 }

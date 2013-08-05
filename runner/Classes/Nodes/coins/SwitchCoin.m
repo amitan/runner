@@ -11,8 +11,8 @@
 
 @implementation SwitchCoin
 
-- (id)initWithCoinId:(int)coinId {
-    self = [super initWithCoinId:coinId];
+- (id)initWithCoinId:(int)coinId groupId:(int)groupId {
+    self = [super initWithCoinId:coinId groupId:groupId];
     if (self) {
         self.visible = NO;
     }
@@ -26,9 +26,11 @@
     return false;
 }
 
-- (void)appear {
-    [super appear];
-    self.visible = YES;
+- (void)appear:(int)groupId {
+    [super appear:groupId];
+    if (groupId == self._groupId) {
+        self.visible = YES;
+    }
 }
 
 - (void)reset {

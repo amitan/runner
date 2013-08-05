@@ -20,6 +20,7 @@
         // 初期設定
         self._blocks = [NSMutableArray arrayWithCapacity:31];
         self._coins = [NSMutableArray arrayWithCapacity:30];
+        self._switches = [NSMutableArray arrayWithCapacity:1];
         
         // 地面を追加
         self._land = [Block createBlock:5];
@@ -99,9 +100,12 @@
         }
         
         // スイッチ
-        self._coinSwitch = [Switch createSwitch:1];
-        self._coinSwitch.position = [PointUtil getPosition:718 y:-150];
-        [self._coinSwitch stageOn:self];
+        Switch *switch1 = [Switch createSwitch:101];
+        switch1.position = [PointUtil getPosition:718 y:-150];
+        [self._switches addObject:switch1];
+        for (Switch *sw in self._switches) {
+            [sw stageOn:self];
+        }
         
         // コイン
         Coin *coin1 = [Coin createCoin:4];

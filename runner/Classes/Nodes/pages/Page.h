@@ -22,7 +22,7 @@
 @property (nonatomic, retain)NSMutableArray *_blocks;
 @property (nonatomic, retain)NSMutableArray *_coins;
 @property (nonatomic, retain)NSMutableArray *_enemies;
-@property (nonatomic, retain)Switch *_coinSwitch;
+@property (nonatomic, retain)NSMutableArray *_switches;
 
 // 指定したページを生成する
 + (Page*)create:(int)pageId;

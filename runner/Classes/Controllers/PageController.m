@@ -24,7 +24,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPage:(int)pageId {
-    pageId = pageId == 0 ? pageId : 9; // TODO:
+    pageId = pageId == 0 ? pageId : 11; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;
@@ -34,7 +34,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 
 - (Page*)getPage {
     // TODO: ページ取得実装
-    int pageId = floor(CCRANDOM_0_1()*9+1);
+    int pageId = floor(CCRANDOM_0_1()*11+1);
     return [self getPage:pageId];
 }
 
