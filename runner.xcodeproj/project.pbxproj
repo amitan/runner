@@ -203,8 +203,6 @@
 		F9ABA6491791080800A02626 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA6481791080700A02626 /* AdSupport.framework */; };
 		F9ABA64B1791081000A02626 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA64A1791081000A02626 /* Security.framework */; };
 		F9ABA64E1791917500A02626 /* StageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA64D1791917400A02626 /* StageLayer.m */; };
-		F9ABA6511791D9CC00A02626 /* stage_bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA64F1791D9CC00A02626 /* stage_bg-568h@2x.png */; };
-		F9ABA6521791D9CC00A02626 /* stage_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA6501791D9CC00A02626 /* stage_bg.png */; };
 		F9ABA655179208FA00A02626 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA654179208FA00A02626 /* Map.m */; };
 		F9B0DA8A17AC0F8B009A08B1 /* Page9.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA8917AC0F8B009A08B1 /* Page9.m */; };
 		F9B0DA9517AE3A17009A08B1 /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9417AE3A17009A08B1 /* Switch.m */; };
@@ -214,7 +212,8 @@
 		F9B0DAA117AF85DF009A08B1 /* block.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DA9F17AF85DF009A08B1 /* block.plist */; };
 		F9B0DAA217AF85DF009A08B1 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAA017AF85DF009A08B1 /* block.png */; };
 		F9B0DAA517AFE23B009A08B1 /* HatenaBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DAA417AFE23B009A08B1 /* HatenaBlock.m */; };
-		F9B0DAA817AFF85A009A08B1 /* Page11.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DAA717AFF858009A08B1 /* Page11.m */; };
+		F9B0DAB917B3D91D009A08B1 /* home_bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAB717B3D91D009A08B1 /* home_bg-568h@2x.png */; };
+		F9B0DABA17B3D91D009A08B1 /* home_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAB817B3D91D009A08B1 /* home_bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -603,8 +602,6 @@
 		F9ABA64A1791081000A02626 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F9ABA64C1791917400A02626 /* StageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageLayer.h; sourceTree = "<group>"; };
 		F9ABA64D1791917400A02626 /* StageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageLayer.m; sourceTree = "<group>"; };
-		F9ABA64F1791D9CC00A02626 /* stage_bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stage_bg-568h@2x.png"; sourceTree = "<group>"; };
-		F9ABA6501791D9CC00A02626 /* stage_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stage_bg.png; sourceTree = "<group>"; };
 		F9ABA653179208FA00A02626 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		F9ABA654179208FA00A02626 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 		F9B0DA8817AC0F8B009A08B1 /* Page9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page9.h; sourceTree = "<group>"; };
@@ -621,8 +618,8 @@
 		F9B0DAA017AF85DF009A08B1 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
 		F9B0DAA317AFE23A009A08B1 /* HatenaBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaBlock.h; sourceTree = "<group>"; };
 		F9B0DAA417AFE23B009A08B1 /* HatenaBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaBlock.m; sourceTree = "<group>"; };
-		F9B0DAA617AFF857009A08B1 /* Page11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page11.h; sourceTree = "<group>"; };
-		F9B0DAA717AFF858009A08B1 /* Page11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page11.m; sourceTree = "<group>"; };
+		F9B0DAB717B3D91D009A08B1 /* home_bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_bg-568h@2x.png"; sourceTree = "<group>"; };
+		F9B0DAB817B3D91D009A08B1 /* home_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_bg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1190,8 +1187,8 @@
 		F93DF698178AEEBB007AD085 /* bg */ = {
 			isa = PBXGroup;
 			children = (
-				F9ABA64F1791D9CC00A02626 /* stage_bg-568h@2x.png */,
-				F9ABA6501791D9CC00A02626 /* stage_bg.png */,
+				F9B0DAB717B3D91D009A08B1 /* home_bg-568h@2x.png */,
+				F9B0DAB817B3D91D009A08B1 /* home_bg.png */,
 				F9ABA638178F05BE00A02626 /* title_bg.png */,
 				F93DF699178AEEBB007AD085 /* game_bg-568h@2x.png */,
 				F93DF69A178AEEBB007AD085 /* game_bg.png */,
@@ -1283,8 +1280,6 @@
 				F9B0DA8917AC0F8B009A08B1 /* Page9.m */,
 				F9B0DA9C17AEC0CD009A08B1 /* Page10.h */,
 				F9B0DA9D17AEC0CE009A08B1 /* Page10.m */,
-				F9B0DAA617AFF857009A08B1 /* Page11.h */,
-				F9B0DAA717AFF858009A08B1 /* Page11.m */,
 				F9A468ED179BDD67002BAFB7 /* Page900.h */,
 				F9A468EE179BDD69002BAFB7 /* Page900.m */,
 			);
@@ -1411,8 +1406,6 @@
 				F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */,
 				F9ABA639178F05BE00A02626 /* title_bg.png in Resources */,
 				F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */,
-				F9ABA6511791D9CC00A02626 /* stage_bg-568h@2x.png in Resources */,
-				F9ABA6521791D9CC00A02626 /* stage_bg.png in Resources */,
 				F9A468D11799D0E2002BAFB7 /* monster.plist in Resources */,
 				F9A468D21799D0E2002BAFB7 /* monster.png in Resources */,
 				F9A468D51799D606002BAFB7 /* chara.plist in Resources */,
@@ -1429,6 +1422,8 @@
 				F9052E5E17A179580078EE9C /* land.png in Resources */,
 				F9B0DAA117AF85DF009A08B1 /* block.plist in Resources */,
 				F9B0DAA217AF85DF009A08B1 /* block.png in Resources */,
+				F9B0DAB917B3D91D009A08B1 /* home_bg-568h@2x.png in Resources */,
+				F9B0DABA17B3D91D009A08B1 /* home_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1598,7 +1593,6 @@
 				F9B0DA9B17AE8675009A08B1 /* SwitchCoin.m in Sources */,
 				F9B0DA9E17AEC0CF009A08B1 /* Page10.m in Sources */,
 				F9B0DAA517AFE23B009A08B1 /* HatenaBlock.m in Sources */,
-				F9B0DAA817AFF85A009A08B1 /* Page11.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

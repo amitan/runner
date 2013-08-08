@@ -12,11 +12,21 @@
 #import "GameScene.h"
 
 @interface DroppingCoin ()
-@property (nonatomic, readwrite)float _initVy, _vy;
+@property (nonatomic, readwrite)float _vy;
+@property (nonatomic, readwrite)float _boundsFactor;
 @end
 
 @implementation DroppingCoin
 const int COIN_GRAVITY = 100;
+const int INIT_BOUNDS_FACTOR = 3000;
+
+- (id)initWithCoinId:(int)coinId groupId:(int)groupId {
+    self = [super initWithCoinId:coinId groupId:groupId];
+    if (self) {
+        self._boundsFactor = INIT_BOUNDS_FACTOR;
+    }
+    return self;
+}
 
 - (void)drop {
     [self scheduleUpdate];
@@ -32,7 +42,7 @@ const int COIN_GRAVITY = 100;
 - (void)reset {
     [super reset];
     self._vy = 0;
-    self._initVy = 0;
+    self._boundsFactor = INIT_BOUNDS_FACTOR;
 }
 
 - (void)update:(ccTime)dt {
@@ -61,15 +71,13 @@ const int COIN_GRAVITY = 100;
         if (self._vy <= 0) {
             y = [blockY getLandPoint] - [[self parent] parent].position.y - [self parent].position.y + [self getHeight] / 2;
             isHit = true;
-            int jumpFactor = floor(CCRANDOM_0_1()*2000 + 1000);
-            if (self._initVy == 0 || self._initVy > jumpFactor) {
-                self._initVy = jumpFactor;
-                self._vy = [PointUtil getPoint:jumpFactor];
-                y += self._vy * dt;
+            if (self._boundsFactor > 0) {
+                self._boundsFactor = self._boundsFactor - floor(CCRANDOM_0_1() * self._boundsFactor) * 0.6;
+                self._vy = [PointUtil getPoint:self._boundsFactor];
             } else {
                 self._vy = 0;
-                [self unscheduleUpdate];
             }
+            y += self._vy * dt;
         }
     }
     if (!isHit) {

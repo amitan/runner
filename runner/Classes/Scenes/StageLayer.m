@@ -59,7 +59,7 @@ const int INIT_AREA_ID = 101;
         
         // 背景の追加
         CGSize winSize = [[CCDirector sharedDirector] winSize];
-        NSString *bgName = [GameUtil getBgSpriteName:@"stage_bg" ext:@"png"];
+        NSString *bgName = [GameUtil getBgSpriteName:@"home_bg" ext:@"png"];
         CCSprite *background = [CCSprite spriteWithFile:bgName];
         background.position = ccp(winSize.width / 2, winSize.height / 2);
         [self addChild:background];
