@@ -20,6 +20,7 @@
 @property (nonatomic, readwrite)int _jumpNum, _currentJumpNum, _jumpSpeed;
 @property (nonatomic, retain)CCSprite *_playerSprite;
 @property (nonatomic, readwrite)BOOL _onGround, _isAdjusting, _isReverse;
+@property (nonatomic, readwrite)BOOL _onTopBlock, _jumpCancelAvailable;
 @property (nonatomic, readwrite)float _vx, _vy;
 @property (nonatomic, readwrite)float _properPositionX;
 @property (nonatomic, readwrite)float _limitLeftX, _limitRightX, _limitY;
@@ -55,6 +56,8 @@ const int BLOCK_TOP_REFLECTION = -10;
         self._limitRightX = winSize.width / 2 + [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
         self._jumpSpeed = [PointUtil getPoint:JUMP_SPEED];
+        self._jumpCancelAvailable = false;
+        self._onTopBlock = false;
         
         // アニメーションの最初のコマを読み込む
         NSString* fileName = [NSString stringWithFormat:@"monster%d_right1.png", self._monsterId];
@@ -76,7 +79,7 @@ const int BLOCK_TOP_REFLECTION = -10;
 }
 
 - (void)start {
-    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:false]];
+    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
     [self scheduleUpdate];
 }
 
@@ -87,9 +90,27 @@ const int BLOCK_TOP_REFLECTION = -10;
 
 - (void)jump {
     if ((self._currentJumpNum == 0 && self._onGround) || (self._currentJumpNum != 0 && self._currentJumpNum < self._jumpNum)) {
+        self._jumpCancelAvailable = true;
         self._currentJumpNum++;
         self._vy += self._jumpSpeed;
     }
+}
+
+- (void)cancelJump {
+    if (!self._onGround && self._jumpCancelAvailable) {
+        self._vy = 0;
+    }
+}
+
+- (void)endJumpCancel {
+    self._jumpCancelAvailable = false;
+}
+
+- (void)attack {
+    [self._playerSprite stopAllActions];
+    [self._playerSprite runAction:[PlayerAnimation getAttackAction:self._monsterId isReverse:self._isReverse func:[CCCallBlock actionWithBlock:^{
+        [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
+    }]]];
 }
 
 - (void)speedUp {
@@ -222,11 +243,13 @@ const int BLOCK_TOP_REFLECTION = -10;
             // 上ブロック衝突判定
             CGPoint nextCenterTopYPosition = ccpAdd([self getCenterTopPosition], ccp(0, dy));
             Block *topBlock = [mapController getHitBlock:nextCenterTopYPosition];
-            if (topBlock) {
+            if (!self._onTopBlock && topBlock) {
                 y = [topBlock getBottomPoint] - self._playerSprite.contentSize.height / 2;
                 self._vy = 0;
+                self._onTopBlock = true;
             } else {
                 y += dy;
+                self._onTopBlock = false;
             }
         }
     }

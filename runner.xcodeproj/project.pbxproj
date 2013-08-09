@@ -202,7 +202,7 @@
 		F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA6441791079600A02626 /* NADView_readme.txt */; };
 		F9ABA6491791080800A02626 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA6481791080700A02626 /* AdSupport.framework */; };
 		F9ABA64B1791081000A02626 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA64A1791081000A02626 /* Security.framework */; };
-		F9ABA64E1791917500A02626 /* StageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA64D1791917400A02626 /* StageLayer.m */; };
+		F9ABA64E1791917500A02626 /* HomeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA64D1791917400A02626 /* HomeLayer.m */; };
 		F9ABA655179208FA00A02626 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA654179208FA00A02626 /* Map.m */; };
 		F9B0DA8A17AC0F8B009A08B1 /* Page9.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA8917AC0F8B009A08B1 /* Page9.m */; };
 		F9B0DA9517AE3A17009A08B1 /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9417AE3A17009A08B1 /* Switch.m */; };
@@ -600,8 +600,8 @@
 		F9ABA6441791079600A02626 /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
 		F9ABA6481791080700A02626 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F9ABA64A1791081000A02626 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F9ABA64C1791917400A02626 /* StageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageLayer.h; sourceTree = "<group>"; };
-		F9ABA64D1791917400A02626 /* StageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageLayer.m; sourceTree = "<group>"; };
+		F9ABA64C1791917400A02626 /* HomeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
+		F9ABA64D1791917400A02626 /* HomeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLayer.m; sourceTree = "<group>"; };
 		F9ABA653179208FA00A02626 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		F9ABA654179208FA00A02626 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 		F9B0DA8817AC0F8B009A08B1 /* Page9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page9.h; sourceTree = "<group>"; };
@@ -1148,8 +1148,8 @@
 				F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */,
 				F9ABA62E178E84C300A02626 /* TitleLayer.h */,
 				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
-				F9ABA64C1791917400A02626 /* StageLayer.h */,
-				F9ABA64D1791917400A02626 /* StageLayer.m */,
+				F9ABA64C1791917400A02626 /* HomeLayer.h */,
+				F9ABA64D1791917400A02626 /* HomeLayer.m */,
 				F9052E6C17A56D170078EE9C /* GameResultLayer.h */,
 				F9052E6D17A56D170078EE9C /* GameResultLayer.m */,
 			);
@@ -1559,7 +1559,7 @@
 				F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */,
 				F9ABA63C178F0E4700A02626 /* CCSpriteButton.m in Sources */,
 				F9ABA63F1791038A00A02626 /* AdController.m in Sources */,
-				F9ABA64E1791917500A02626 /* StageLayer.m in Sources */,
+				F9ABA64E1791917500A02626 /* HomeLayer.m in Sources */,
 				F9ABA655179208FA00A02626 /* Map.m in Sources */,
 				F9A468B91795451E002BAFB7 /* Page0.m in Sources */,
 				F9A468BC179545A3002BAFB7 /* Page.m in Sources */,

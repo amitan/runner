@@ -43,6 +43,18 @@
     [self._player jump];
 }
 
+- (void)cancelJump {
+    [self._player cancelJump];
+}
+
+- (void)endJumpCancel {
+    [self._player endJumpCancel];
+}
+
+- (void)attack {
+    [self._player attack];
+}
+
 - (void)speedUp {
     [self._player speedUp];
 }

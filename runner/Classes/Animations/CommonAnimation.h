@@ -14,6 +14,7 @@
 // フレームアニメーションを取得
 + (CCAnimation*)getFrameAnimation:(NSString*)name frameNum:(int)num;
 + (CCAnimation*)getFrameAnimation:(NSString*)name frameNum:(int)num duration:(float)duration;
++ (CCAnimation*)getSingleFrameAnimation:(NSString*)name frame:(int)frameNo duration:(float)duration;
 + (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num;
 + (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num duration:(float)duration;
 

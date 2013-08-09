@@ -25,6 +25,14 @@
     return [CCAnimation animationWithSpriteFrames:frames delay:duration];
 }
 
++ (CCAnimation*)getSingleFrameAnimation:(NSString*)name frame:(int)frameNo duration:(float)duration {
+    NSMutableArray *frames = [NSMutableArray arrayWithCapacity:1];
+    NSString *fileName = [NSString stringWithFormat:@"%@%d.png", name, frameNo];
+    CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:fileName];
+    [frames addObject:frame];
+    return [CCAnimation animationWithSpriteFrames:frames delay:duration];
+}
+
 + (id)getFrameRepeatAction:(NSString *)name frameNum:(int)num {
     return [self getFrameRepeatAction:name frameNum:num duration:0.5f];
 }

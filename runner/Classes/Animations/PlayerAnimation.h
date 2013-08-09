@@ -14,6 +14,9 @@
 // 歩行アニメーションを取得
 + (id)getWalkAction:(int)monsterId isReverse:(BOOL)isReverse;
 
+// 攻撃アニメーションを取得
++ (id)getAttackAction:(int)monsterId isReverse:(BOOL)isReverse func:(id)func;
+
 // 死亡演出を取得
 + (CCParticleSystem*)getDeadParticle;
 

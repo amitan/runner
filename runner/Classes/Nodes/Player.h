@@ -26,8 +26,11 @@
 - (void)start;
 - (void)stop;
 
-// ジャンプ
+// プレイヤーアクション
 - (void)jump;
+- (void)cancelJump;
+- (void)endJumpCancel;
+- (void)attack;
 
 // スピードアップ
 - (void)speedUp;

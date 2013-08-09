@@ -18,8 +18,11 @@
 - (void)start;
 - (void)stop;
 
-// ジャンプ
+// アクション
 - (void)jump;
+- (void)cancelJump;
+- (void)endJumpCancel;
+- (void)attack;
 
 // スピードアップ
 - (void)speedUp;

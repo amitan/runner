@@ -160,6 +160,12 @@
             <filename>../sprites/monster/monster0_right2.png</filename>
             <filename>../sprites/monster/monster0_left1.png</filename>
             <filename>../sprites/monster/monster0_left2.png</filename>
+            <filename>../sprites/monster/monster0_left_attack1.png</filename>
+            <filename>../sprites/monster/monster0_left_attack2.png</filename>
+            <filename>../sprites/monster/monster0_left_attack3.png</filename>
+            <filename>../sprites/monster/monster0_right_attack1.png</filename>
+            <filename>../sprites/monster/monster0_right_attack2.png</filename>
+            <filename>../sprites/monster/monster0_right_attack3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

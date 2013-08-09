@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "GameScene.h"
 #import "TitleLayer.h"
-#import "StageLayer.h"
+#import "HomeLayer.h"
 
 @implementation MyNavigationController
 @synthesize adController;
