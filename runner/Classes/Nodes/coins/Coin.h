@@ -20,6 +20,8 @@
 // 指定したコインを生成する
 + (Coin*)createCoin:(int)coinId;
 + (Coin*)createCoin:(int)coinId groupId:(int)groupId;
++ (Coin*)createCoin:(int)coinId x:(float)x y:(float)y;
++ (Coin*)createCoin:(int)coinId groupId:(int)groupId x:(float)x y:(float)y;
 
 // コインを指定して初期化する
 -(id)initWithCoinId:(int)coinId groupId:(int)groupId;

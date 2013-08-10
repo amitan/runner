@@ -156,6 +156,7 @@
             <filename>../sprites/gameparts/switch102_2.png</filename>
             <filename>../sprites/gameparts/coin5_1.png</filename>
             <filename>../sprites/gameparts/coin5_2.png</filename>
+            <filename>../sprites/gameparts/trampoline1_1.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

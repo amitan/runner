@@ -16,6 +16,7 @@
 
 // 指定したブロックを生成する
 + (Block*)createBlock:(int)blockId;
++ (Block*)createBlock:(int)blockId x:(float)x y:(float)y;
 
 // ブロックを指定して初期化する
 -(id) initWithBlockId:(int)blockId;

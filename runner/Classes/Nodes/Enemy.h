@@ -15,6 +15,7 @@
 
 // 指定した敵を生成する
 + (Enemy*)createEnemy:(int)charaId;
++ (Enemy*)createEnemy:(int)charaId x:(float)x y:(float)y;
 
 // キャラを指定して初期化する
 - (id)initWithCharaId:(int)charaId;

@@ -13,6 +13,7 @@
 #import "BigCoin.h"
 #import "DroppingCoin.h"
 #import "SwitchCoin.h"
+#import "PointUtil.h"
 
 @interface Coin ()
 @property (nonatomic, retain)CCSprite *_coinSprite;
@@ -25,18 +26,33 @@
 }
 
 + (Coin*)createCoin:(int)coinId groupId:(int)groupId {
+    return [Coin createCoin:coinId groupId:groupId x:0 y:0];
+}
+
++ (Coin*)createCoin:(int)coinId x:(float)x y:(float)y {
+    return [Coin createCoin:coinId groupId:0 x:x y:y];
+}
+
++ (Coin*)createCoin:(int)coinId groupId:(int)groupId x:(float)x y:(float)y {
+    Coin *coin;
     switch (coinId) {
         case 1:
-            return [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            coin = [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            break;
         case 2:
-            return [[[BigCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            coin = [[[BigCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            break;
         case 3:
-            return [[[DroppingCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            coin = [[[DroppingCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            break;
         case 4:
-            return [[[SwitchCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            coin = [[[SwitchCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            break;
         default:
-            return [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
+            coin = [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
     }
+    coin.position = [PointUtil getPosition:x y:y];
+    return coin;
 }
 
 - (id)initWithCoinId:(int)coinId groupId:(int)groupId {

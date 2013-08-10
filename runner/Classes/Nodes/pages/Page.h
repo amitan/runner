@@ -23,6 +23,7 @@
 @property (nonatomic, retain)NSMutableArray *_coins;
 @property (nonatomic, retain)NSMutableArray *_enemies;
 @property (nonatomic, retain)NSMutableArray *_switches;
+@property (nonatomic, retain)NSMutableArray *_trampolines;
 
 // 指定したページを生成する
 + (Page*)create:(int)pageId;

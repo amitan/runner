@@ -21,6 +21,8 @@
 // 指定したスイッチを生成する
 + (Switch*)createSwitch:(int)switchId;
 + (Switch*)createSwitch:(int)switchId groupId:(int)groupId;
++ (Switch*)createSwitch:(int)switchId x:(float)x y:(float)y;
++ (Switch*)createSwitch:(int)switchId groupId:(int)groupId x:(float)x y:(float)y;
 
 // スイッチを指定して初期化する
 -(id)initWithSwitchId:(int)switchId groupId:(int)groupId;

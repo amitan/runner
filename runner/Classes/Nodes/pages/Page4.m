@@ -22,9 +22,6 @@
     self = [super init];
 	if (self) {
         
-        // 初期設定
-        self._coins = [NSMutableArray arrayWithCapacity:8];
-
         // 地面を追加
         self._land = [Block createBlock:2];
         self._land.position = [self getLandPosition:self._land];
@@ -41,34 +38,17 @@
         [self._land3 stageOn:self];
         
         // コインを追加
-        Coin *coin1 = [Coin createCoin:1];
-        Coin *coin2 = [Coin createCoin:1];
-        Coin *coin3 = [Coin createCoin:1];
-        Coin *coin4 = [Coin createCoin:1];
-        Coin *coin5 = [Coin createCoin:1];
-        Coin *coin6 = [Coin createCoin:1];
-        Coin *coin7 = [Coin createCoin:1];
-        Coin *coin8 = [Coin createCoin:1];
-        self._lastCoin = coin8;
-        
-        coin1.position = [PointUtil getPosition:375 y:-500];
-        coin2.position = [PointUtil getPosition:425 y:-500];
-        coin3.position = [PointUtil getPosition:565 y:-735];
-        coin4.position = [PointUtil getPosition:615 y:-735];
-        coin5.position = [PointUtil getPosition:665 y:-735];
-        coin6.position = [PointUtil getPosition:715 y:-735];
-        coin7.position = [PointUtil getPosition:855 y:-500];
-        coin8.position = [PointUtil getPosition:905 y:-500];
-        
-        [self._coins addObject:coin1];
-        [self._coins addObject:coin2];
-        [self._coins addObject:coin3];
-        [self._coins addObject:coin4];
-        [self._coins addObject:coin5];
-        [self._coins addObject:coin6];
-        [self._coins addObject:coin7];
-        [self._coins addObject:coin8];
-        
+        self._coins = [NSArray arrayWithObjects:
+                       [Coin createCoin:1 x:375 y:-500],
+                       [Coin createCoin:1 x:425 y:-500],
+                       [Coin createCoin:1 x:565 y:-735],
+                       [Coin createCoin:1 x:615 y:-735],
+                       [Coin createCoin:1 x:665 y:-735],
+                       [Coin createCoin:1 x:715 y:-735],
+                       [Coin createCoin:1 x:855 y:-500],
+                       [Coin createCoin:1 x:905 y:-500],
+                       nil];
+        self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }

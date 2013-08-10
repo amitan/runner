@@ -9,6 +9,8 @@
 #import "HomeLayer.h"
 #import "PointUtil.h"
 #import "GameUtil.h"
+#import "CCSpriteButton.h"
+#import "GameScene.h"
 
 @implementation HomeLayer
 
@@ -31,8 +33,19 @@
         CCSprite *background = [CCSprite spriteWithFile:bgName];
         background.position = ccp(winSize.width / 2, winSize.height / 2);
         [self addChild:background];
+        
+        // ボタンの追加
+        CCSpriteButton *doorButton = [CCSpriteButton spriteWithSpriteFrameName:@"door.png"];
+        [PointUtil setTLPosition:doorButton x:450 y:184];
+        [doorButton addClickListner:self selector:@selector(clickDoorButton:)];
+        [self addChild:doorButton];
 
     }
     return self;
 }
+
+- (void)clickDoorButton:(id)sender {
+    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1 isRandom:true]];
+}
+
 @end

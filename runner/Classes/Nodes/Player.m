@@ -96,23 +96,6 @@ const int BLOCK_TOP_REFLECTION = -10;
     }
 }
 
-- (void)cancelJump {
-    if (!self._onGround && self._jumpCancelAvailable) {
-        self._vy = 0;
-    }
-}
-
-- (void)endJumpCancel {
-    self._jumpCancelAvailable = false;
-}
-
-- (void)attack {
-    [self._playerSprite stopAllActions];
-    [self._playerSprite runAction:[PlayerAnimation getAttackAction:self._monsterId isReverse:self._isReverse func:[CCCallBlock actionWithBlock:^{
-        [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
-    }]]];
-}
-
 - (void)speedUp {
     if (self._speedStep < MAX_SPEED_STEP) {
         [[GameScene sharedInstance].hudController showSpeedUpEffect];

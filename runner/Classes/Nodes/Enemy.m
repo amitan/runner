@@ -8,6 +8,7 @@
 
 #import "Enemy.h"
 #import "EnemyAnimation.h"
+#import "PointUtil.h"
 
 @interface Enemy ()
 @property (nonatomic, readwrite)int _charaId;
@@ -18,7 +19,13 @@
 @implementation Enemy
 
 + (Enemy*)createEnemy:(int)charaId {
-    return [[[self alloc] initWithCharaId:charaId] autorelease];
+    return [Enemy createEnemy:charaId x:0 y:0];
+}
+
++ (Enemy*)createEnemy:(int)charaId x:(float)x y:(float)y {
+    Enemy *enemy = [[[self alloc] initWithCharaId:charaId] autorelease];
+    enemy.position = [PointUtil getPosition:x y:y];
+    return enemy;
 }
 
 - (id)initWithCharaId:(int)charaId {

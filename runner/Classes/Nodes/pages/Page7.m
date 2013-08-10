@@ -17,37 +17,25 @@
     self = [super init];
 	if (self) {
         
-        // 初期設定
-        self._blocks = [NSMutableArray arrayWithCapacity:3];
-        self._coins = [NSMutableArray arrayWithCapacity:1];
-        
         // 地面を追加
         self._land = [Block createBlock:3];
         self._land.position = [self getLandPosition:self._land];
         [self._land stageOn:self];
         
         // ブロック追加
-        Block *block1 = [Block createBlock:101];
-        Block *block2 = [Block createBlock:101];
-        Block *block3 = [Block createBlock:101];
-        
-        block1.position = [PointUtil getPosition:300 y:-730];
-        block2.position = [PointUtil getPosition:300 y:-670];
-        block3.position = [PointUtil getPosition:300 y:-610];
-        
-        [self._blocks addObject:block1];
-        [self._blocks addObject:block2];
-        [self._blocks addObject:block3];
-        
+        self._blocks = [NSArray arrayWithObjects:
+                        [Block createBlock:101 x:300 y:-730],
+                        [Block createBlock:101 x:300 y:-670],
+                        [Block createBlock:101 x:300 y:-610],
+                        nil];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
         
         // コインを追加
-        Coin *coin1 = [Coin createCoin:2];
-        coin1.position = [PointUtil getPosition:500 y:-300];
-        [self._coins addObject:coin1];
-        
+        self._coins = [NSArray arrayWithObjects:
+                       [Coin createCoin:2 x:500 y:-300],
+                       nil];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }

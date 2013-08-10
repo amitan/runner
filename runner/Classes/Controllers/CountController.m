@@ -61,8 +61,7 @@
     [self._counter next];
 }
 
-- (void)addEndListner:(id)target selector:(SEL)selector;
-{
+- (void)addEndListner:(id)target selector:(SEL)selector {
 	if (target && selector) {
 		NSMethodSignature *signature = [[target class] instanceMethodSignatureForSelector:selector];
 		self._endListener = [NSInvocation invocationWithMethodSignature:signature];

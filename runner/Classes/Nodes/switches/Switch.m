@@ -8,6 +8,7 @@
 
 #import "Switch.h"
 #import "CoinSwitch.h"
+#import "PointUtil.h"
 
 @implementation Switch
 
@@ -16,10 +17,21 @@
 }
 
 + (Switch*)createSwitch:(int)switchId groupId:(int)groupId {
+    return [Switch createSwitch:switchId groupId:groupId x:0 y:0];
+}
+
++ (Switch*)createSwitch:(int)switchId x:(float)x y:(float)y {
+    return [Switch createSwitch:switchId groupId:0 x:x y:y];
+}
+
++ (Switch*)createSwitch:(int)switchId groupId:(int)groupId x:(float)x y:(float)y {
+    Switch *sw;
     switch (switchId) {
         default:
-            return [[[CoinSwitch alloc] initWithSwitchId:switchId groupId:groupId] autorelease];
+            sw = [[[CoinSwitch alloc] initWithSwitchId:switchId groupId:groupId] autorelease];
     }
+    sw.position = [PointUtil getPosition:x y:y];
+    return sw;
 }
 
 - (id)initWithSwitchId:(int)switchId groupId:(int)gid {

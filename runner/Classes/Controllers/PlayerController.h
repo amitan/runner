@@ -20,9 +20,6 @@
 
 // アクション
 - (void)jump;
-- (void)cancelJump;
-- (void)endJumpCancel;
-- (void)attack;
 
 // スピードアップ
 - (void)speedUp;

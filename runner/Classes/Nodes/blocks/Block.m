@@ -20,18 +20,28 @@
 @implementation Block
 
 + (Block*)createBlock:(int)blockId {
+    return [Block createBlock:blockId x:0 y:0];
+}
+
++ (Block*)createBlock:(int)blockId x:(float)x y:(float)y {
+    Block *block;
     switch (blockId) {
         case 301:
         case 303:
-            return [[[LeftReverseBlock alloc] initWithBlockId:blockId] autorelease];
+            block = [[[LeftReverseBlock alloc] initWithBlockId:blockId] autorelease];
+            break;
         case 302:
         case 304:
-            return [[[RightReverseBlock alloc] initWithBlockId:blockId] autorelease];
+            block = [[[RightReverseBlock alloc] initWithBlockId:blockId] autorelease];
+            break;
         case 401:
-            return [[[HatenaBlock alloc] initWithBlockId:blockId] autorelease];
+            block = [[[HatenaBlock alloc] initWithBlockId:blockId] autorelease];
+            break;
         default:
-            return [[[StandardBlock alloc] initWithBlockId:blockId] autorelease];
+            block = [[[StandardBlock alloc] initWithBlockId:blockId] autorelease];
     }
+    block.position = [PointUtil getPosition:x y:y];
+    return block;
 }
 
 - (id)initWithBlockId:(int)blockId {

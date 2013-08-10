@@ -199,6 +199,19 @@
                 <key>sourceSize</key>
                 <string>{60,46}</string>
             </dict>
+            <key>trampoline1_1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{373,107},{56,35}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{56,35}}</string>
+                <key>sourceSize</key>
+                <string>{56,35}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -209,7 +222,7 @@
             <key>size</key>
             <string>{1024,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:73d54e15ece8d2f9d0dec44e733a43c5$</string>
+            <string>$TexturePacker:SmartUpdate:6b6788a30c64534a6cc929a49b0efa7c$</string>
             <key>textureFileName</key>
             <string>gameparts.png</string>
         </dict>
