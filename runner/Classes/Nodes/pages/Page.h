@@ -45,9 +45,10 @@
 - (Block*)getHitBlock:(CGPoint)point;
 - (Block*)getHitBlockByRect:(CGRect)rect;
 
-// コインを取得したか判定する
+// ギミック衝突判定
 - (BOOL)takeCoinsIfCollided:(CGRect)rect;
 - (BOOL)pressSwitchesIfCollided:(CGRect)rect;
+- (BOOL)jumpIfCollided:(CGRect)rect;
 
 // 敵判定
 - (BOOL)attackEnemyIfCollided:(CGPoint)point;

@@ -20,6 +20,7 @@
 
 // アクション
 - (void)jump;
+- (void)trampoline;
 
 // スピードアップ
 - (void)speedUp;

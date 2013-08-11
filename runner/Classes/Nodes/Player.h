@@ -28,6 +28,7 @@
 
 // プレイヤーアクション
 - (void)jump;
+- (void)trampoline;
 
 // スピードアップ
 - (void)speedUp;

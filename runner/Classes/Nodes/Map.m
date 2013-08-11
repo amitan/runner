@@ -115,6 +115,14 @@ const int INIT_PAGE_NUM = 3;
     [currentPage pressSwitchesIfCollided:worldRect];
 }
 
+- (BOOL)jumpIfCollided:(CGRect)rect {
+    CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
+    Page *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
+    return [currentPage jumpIfCollided:worldRect];
+}
+
 - (BOOL)attackEnemyIfCollided:(CGPoint)point {
     Page *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);

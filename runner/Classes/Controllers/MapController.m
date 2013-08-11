@@ -66,6 +66,10 @@
     return [self._map takeItemsIfCollided:rect];
 }
 
+- (BOOL)jumpIfCollided:(CGRect)rect {
+    return [self._map jumpIfCollided:rect];
+}
+
 - (BOOL)attackEnemyIfCollided:(CGPoint)point {
     return [self._map attackEnemyIfCollided:point];
 }

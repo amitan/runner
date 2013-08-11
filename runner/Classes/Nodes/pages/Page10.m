@@ -21,11 +21,6 @@
     self = [super init];
 	if (self) {
         
-        // 初期設定
-        self._blocks = [NSMutableArray arrayWithCapacity:10];
-        self._coins = [NSMutableArray arrayWithCapacity:10];
-        self._switches = [NSMutableArray arrayWithCapacity:2];
-        
         // 地面を追加
         self._land = [Block createBlock:5];
         self._land.position = [self getLandPosition:self._land];

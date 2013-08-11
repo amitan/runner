@@ -43,6 +43,10 @@
     [self._player jump];
 }
 
+- (void)trampoline {
+    [self._player trampoline];
+}
+
 - (void)speedUp {
     [self._player speedUp];
 }

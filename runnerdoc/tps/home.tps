@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../runner/Resources/images/sprites/block.png</filename>
+        <filename>../../runner/Resources/images/sprites/home.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -70,7 +70,7 @@
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
-            <enum type="AlgorithmSettings::AlgorithmId">Basic</enum>
+            <enum type="AlgorithmSettings::AlgorithmId">MaxRects</enum>
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>block.java</filename>
+            <filename>home.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../runner/Resources/images/sprites/block.plist</filename>
+        <filename>../../runner/Resources/images/sprites/home.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
@@ -141,23 +141,7 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/block/block101.png</filename>
-            <filename>../sprites/block/block102.png</filename>
-            <filename>../sprites/block/block103.png</filename>
-            <filename>../sprites/block/block104.png</filename>
-            <filename>../sprites/block/block105.png</filename>
-            <filename>../sprites/block/block106.png</filename>
-            <filename>../sprites/block/block107.png</filename>
-            <filename>../sprites/block/block108.png</filename>
-            <filename>../sprites/block/block201.png</filename>
-            <filename>../sprites/block/block202.png</filename>
-            <filename>../sprites/block/block301.png</filename>
-            <filename>../sprites/block/block302.png</filename>
-            <filename>../sprites/block/block303.png</filename>
-            <filename>../sprites/block/block304.png</filename>
-            <filename>../sprites/block/block109.png</filename>
-            <filename>../sprites/block/block401.png</filename>
-            <filename>../sprites/block/block110.png</filename>
+            <filename>../sprites/home/door.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

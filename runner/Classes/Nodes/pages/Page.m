@@ -9,6 +9,7 @@
 #import "Page.h"
 #import "Enemy.h"
 #import "Switch.h"
+#import "Trampoline.h"
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "Page0.h"
@@ -88,6 +89,9 @@
     for (Switch *sw in self._switches) {
         [sw start];
     }
+    for (Trampoline *trampoline in self._trampolines) {
+        [trampoline start];
+    }
 }
 
 - (void)stop {
@@ -103,6 +107,9 @@
     }
     for (Switch *sw in self._switches) {
         [sw stop];
+    }
+    for (Trampoline *trampoline in self._trampolines) {
+        [trampoline stop];
     }
 }
 
@@ -122,6 +129,9 @@
     }
     for (Switch *sw in self._switches) {
         [sw reset];
+    }
+    for (Trampoline *trampoline in self._trampolines) {
+        [trampoline reset];
     }
 }
 
@@ -182,6 +192,15 @@
         }
     }
     return result;
+}
+
+- (BOOL)jumpIfCollided:(CGRect)rect {
+    for (Trampoline *trampoline in self._trampolines) {
+        if ([trampoline jumpIfCollided:rect]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 - (BOOL)attackEnemyIfCollided:(CGPoint)point {

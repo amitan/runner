@@ -36,6 +36,7 @@
 
 // コインを取得しているかチェックする
 - (void)takeItemsIfCollided:(CGRect)rect;
+- (BOOL)jumpIfCollided:(CGRect)rect;
 
 // 敵チェック
 - (BOOL)attackEnemyIfCollided:(CGPoint)point;

@@ -20,7 +20,7 @@
 @property (nonatomic, readwrite)int _jumpNum, _currentJumpNum, _jumpSpeed;
 @property (nonatomic, retain)CCSprite *_playerSprite;
 @property (nonatomic, readwrite)BOOL _onGround, _isAdjusting, _isReverse;
-@property (nonatomic, readwrite)BOOL _onTopBlock, _jumpCancelAvailable;
+@property (nonatomic, readwrite)BOOL _onTopBlock;
 @property (nonatomic, readwrite)float _vx, _vy;
 @property (nonatomic, readwrite)float _properPositionX;
 @property (nonatomic, readwrite)float _limitLeftX, _limitRightX, _limitY;
@@ -34,6 +34,7 @@ const int MAX_SPEED_STEP = 3;
 const int INIT_SCROLL_SPEED = 430;
 const int INIT_PLAYER_X = 250;
 const int BLOCK_TOP_REFLECTION = -10;
+
 
 + (Player*)createPlayer:(int)monsterId {
     return [[[self alloc] initWithMonsterId:monsterId] autorelease];
@@ -56,7 +57,6 @@ const int BLOCK_TOP_REFLECTION = -10;
         self._limitRightX = winSize.width / 2 + [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
         self._jumpSpeed = [PointUtil getPoint:JUMP_SPEED];
-        self._jumpCancelAvailable = false;
         self._onTopBlock = false;
         
         // アニメーションの最初のコマを読み込む
@@ -90,7 +90,6 @@ const int BLOCK_TOP_REFLECTION = -10;
 
 - (void)jump {
     if ((self._currentJumpNum == 0 && self._onGround) || (self._currentJumpNum != 0 && self._currentJumpNum < self._jumpNum)) {
-        self._jumpCancelAvailable = true;
         self._currentJumpNum++;
         self._vy += self._jumpSpeed;
     }
@@ -102,6 +101,10 @@ const int BLOCK_TOP_REFLECTION = -10;
         self._vx *= 1.3;
         self._speedStep++;
     }
+}
+
+- (void)trampoline {
+    self._vy = self._jumpSpeed * 1.5;
 }
 
 - (void)update:(ccTime)dt {
@@ -145,6 +148,9 @@ const int BLOCK_TOP_REFLECTION = -10;
     // コイン/アイテム判定
     ///////////////////////////////////////////////////////////////
     [mapController takeItemsIfCollided:[self getRect]];
+    if ([mapController jumpIfCollided:[self getRect]]) {
+        return;
+    }
 
     ///////////////////////////////////////////////////////////////
     // 横軸の判定

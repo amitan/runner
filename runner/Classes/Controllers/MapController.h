@@ -28,6 +28,7 @@
 - (void)takeItemsIfCollided:(CGRect)rect;
 - (BOOL)attackEnemyIfCollided:(CGPoint)point;
 - (BOOL)isHit:(CGPoint)point;
+- (BOOL)jumpIfCollided:(CGRect)rect;
 
 // スピードアップするか判定する
 - (BOOL)checkSpeedUp:(CGPoint)point;
