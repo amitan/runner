@@ -39,8 +39,4 @@
 // コインを降らせる
 - (void)drop;
 
-// 幅・高さを取得する
-- (float)getWidth;
-- (float)getHeight;
-
 @end

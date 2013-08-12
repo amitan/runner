@@ -17,6 +17,20 @@
     }
 }
 
+- (CGRect)getLayerBasedBox {
+    return CGRectMake(self.position.x + [self parent].position.x - [self getWidth] / 2,
+                      self.position.y + [self parent].position.y - [self getHeight] / 2,
+                      [self getWidth], [self getHeight]);
+}
+
+- (float)getWidth {
+    return self._sprite.contentSize.width;
+}
+
+- (float)getHeight {
+    return self._sprite.contentSize.height;
+}
+
 - (void)start {
 }
 

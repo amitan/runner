@@ -12,10 +12,17 @@
 @interface Gimmick : CCNode {
     
 }
+@property (nonatomic, retain)CCSprite *_sprite;
 
+// ギミック配置
 - (void)stageOn:(CCNode*)page;
 - (void)start;
 - (void)stop;
 - (void)reset;
+
+// プロパティ取得
+- (CGRect)getLayerBasedBox;
+- (float)getWidth;
+- (float)getHeight;
 
 @end

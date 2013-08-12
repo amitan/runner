@@ -75,18 +75,12 @@
     if (self._isPressed) return false;
     
     // 当たり判定チェック
-    if (CGRectIntersectsRect([self _getLayerBasedBox], rect)) {
+    if (CGRectIntersectsRect([self getLayerBasedBox], rect)) {
         self._isPressed = true;
         [self sync];
         return true;
     }
     return false;
-}
-
-- (CGRect)_getLayerBasedBox {
-    return CGRectMake(self.position.x + [self parent].position.x - self._sprite.contentSize.width / 2,
-                      self.position.y + [self parent].position.y - self._sprite.contentSize.height / 2,
-                      self._sprite.contentSize.width, self._sprite.contentSize.height);
 }
 
 @end

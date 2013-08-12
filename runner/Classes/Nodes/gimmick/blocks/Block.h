@@ -13,7 +13,6 @@
 @interface Block : Gimmick {
     
 }
-@property (nonatomic, retain)CCSprite *_sprite;
 
 // 指定したブロックを生成する
 + (Block*)createBlock:(int)blockId;
@@ -21,10 +20,6 @@
 
 // ブロックを指定して初期化する
 -(id) initWithBlockId:(int)blockId;
-
-// ブロックの幅/高さを取得する
-- (float)getWidth;
-- (float)getHeight;
 
 // 座標がブロックに含まれているか判定する
 - (BOOL)isHit:(CGPoint)point;

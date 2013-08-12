@@ -57,32 +57,18 @@
     [super dealloc];
 }
 
-- (float)getWidth {
-    return self._sprite.contentSize.width;
-}
-
-- (float)getHeight {
-    return self._sprite.contentSize.height;
-}
-
 - (BOOL)isHit:(CGPoint)point {
-    if (CGRectContainsPoint([self _getLayerBasedBox], point)) {
+    if (CGRectContainsPoint([self getLayerBasedBox], point)) {
         return true;
     }
     return false;
 }
 
 - (BOOL)isHitByRect:(CGRect)rect {
-    if (CGRectIntersectsRect([self _getLayerBasedBox], rect)) {
+    if (CGRectIntersectsRect([self getLayerBasedBox], rect)) {
         return true;
     }
     return false;
-}
-
-- (CGRect)_getLayerBasedBox {
-    return CGRectMake(self.position.x + [self parent].position.x - [self getWidth] / 2,
-                      self.position.y + [self parent].position.y - [self getHeight] / 2,
-                      [self getWidth], [self getHeight]);
 }
 
 - (float)getLandPoint {

@@ -56,12 +56,6 @@ const float TRAMPOLINE_SCALE = 2.0;
     return false;
 }
 
-- (CGRect)_getLayerBasedBox {
-    return CGRectMake(self.position.x + [self parent].position.x - self._sprite.contentSize.width / 2,
-                      self.position.y + [self parent].position.y - self._sprite.contentSize.height / 2,
-                      self._sprite.contentSize.width, self._sprite.contentSize.height);
-}
-
 - (CGPoint)_getLayerPoint {
     return ccp(self.position.x + [self parent].position.x, self.position.y + [self parent].position.y);
 }

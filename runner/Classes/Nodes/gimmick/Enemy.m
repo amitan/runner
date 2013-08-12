@@ -12,7 +12,6 @@
 
 @interface Enemy ()
 @property (nonatomic, readwrite)int _charaId;
-@property (nonatomic, retain)CCSprite *_enemySprite;
 @property (nonatomic, readwrite)BOOL _isStaged;
 @end
 
@@ -38,8 +37,8 @@
         
         // アニメーションの最初のコマを読み込む
         NSString* fileName = [NSString stringWithFormat:@"chara%d_left1.png", self._charaId];
-        self._enemySprite = [CCSprite spriteWithSpriteFrameName:fileName];
-        [self addChild:self._enemySprite];
+        self._sprite = [CCSprite spriteWithSpriteFrameName:fileName];
+        [self addChild:self._sprite];
 
     }
     return self;
@@ -52,23 +51,23 @@
 
 - (void)start {
     [super start];
-    [self._enemySprite runAction:[EnemyAnimation getWalkAction:self._charaId]];
+    [self._sprite runAction:[EnemyAnimation getWalkAction:self._charaId]];
 }
 
 - (void)stop {
     [super stop];
-    [self._enemySprite stopAllActions];
+    [self._sprite stopAllActions];
 }
 
 - (void)reset {
     [super reset];
-    self._enemySprite.position = ccp(0, 0);
+    self._sprite.position = ccp(0, 0);
 }
 
 - (BOOL)isHit:(CGPoint)point {
     if (!self._isStaged) return false;
     
-    if (CGRectContainsPoint([self _getLayerBasedBox], point)) {
+    if (CGRectContainsPoint([self getLayerBasedBox], point)) {
         self._isStaged = false;
         return true;
     }
@@ -78,23 +77,9 @@
 - (BOOL)deadIfCollided:(CGPoint)point {
     BOOL result = [self isHit:point];
     if (result) {
-        [self._enemySprite runAction:[EnemyAnimation getDeadAction]];
+        [self._sprite runAction:[EnemyAnimation getDeadAction]];
     }
     return result;
-}
-
-- (CGRect)_getLayerBasedBox {
-    return CGRectMake(self.position.x + [self parent].position.x - [self getWidth] / 2,
-                      self.position.y + [self parent].position.y - [self getHeight] / 2,
-                      [self getWidth], [self getHeight]);
-}
-
-- (float)getWidth {
-    return self._enemySprite.contentSize.width;
-}
-
-- (float)getHeight {
-    return self._enemySprite.contentSize.height;
 }
 
 @end

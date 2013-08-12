@@ -1352,10 +1352,10 @@
 		F9C9812F17B8C86200DDCE95 /* coins */ = {
 			isa = PBXGroup;
 			children = (
-				F9C9813017B8C86200DDCE95 /* BigCoin.h */,
-				F9C9813117B8C86200DDCE95 /* BigCoin.m */,
 				F9C9813217B8C86200DDCE95 /* Coin.h */,
 				F9C9813317B8C86200DDCE95 /* Coin.m */,
+				F9C9813017B8C86200DDCE95 /* BigCoin.h */,
+				F9C9813117B8C86200DDCE95 /* BigCoin.m */,
 				F9C9813417B8C86200DDCE95 /* DroppingCoin.h */,
 				F9C9813517B8C86200DDCE95 /* DroppingCoin.m */,
 				F9C9813617B8C86200DDCE95 /* StandardCoin.h */,
@@ -1369,10 +1369,10 @@
 		F9C9814017B8C86200DDCE95 /* switches */ = {
 			isa = PBXGroup;
 			children = (
-				F9C9814117B8C86200DDCE95 /* CoinSwitch.h */,
-				F9C9814217B8C86200DDCE95 /* CoinSwitch.m */,
 				F9C9814317B8C86200DDCE95 /* Switch.h */,
 				F9C9814417B8C86200DDCE95 /* Switch.m */,
+				F9C9814117B8C86200DDCE95 /* CoinSwitch.h */,
+				F9C9814217B8C86200DDCE95 /* CoinSwitch.m */,
 			);
 			path = switches;
 			sourceTree = "<group>";
