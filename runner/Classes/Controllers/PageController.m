@@ -24,7 +24,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPage:(int)pageId {
-//    pageId = pageId == 0 ? pageId : 12; // TODO:
+    pageId = pageId == 0 ? pageId : 12; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;

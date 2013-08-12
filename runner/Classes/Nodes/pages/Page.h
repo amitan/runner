@@ -11,6 +11,7 @@
 #import "Block.h"
 #import "Coin.h"
 #import "Switch.h"
+#import "Rail.h"
 
 @interface Page : CCNode {
     
@@ -45,6 +46,7 @@
 // 衝突したブロックを取得する
 - (Block*)getHitBlock:(CGPoint)point;
 - (Block*)getHitBlockByRect:(CGRect)rect;
+- (Rail*)getHitRail:(CGPoint)point;
 
 // ギミック衝突判定
 - (BOOL)takeCoinsIfCollided:(CGRect)rect;

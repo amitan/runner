@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "Block.h"
 #import "Page.h"
+#import "Rail.h"
 
 @interface Map : CCNode {
     
@@ -33,6 +34,7 @@
 // 座標が含まれるブロックを返す
 - (Block*)getHitBlock:(CGPoint)point;
 - (Block*)getHitBlockByRect:(CGRect)rect;
+- (Rail*)getHitRail:(CGPoint)point;
 
 // コインを取得しているかチェックする
 - (void)takeItemsIfCollided:(CGRect)rect;

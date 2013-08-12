@@ -10,10 +10,12 @@
 #import "cocos2d.h"
 #import "Block.h"
 #import "Player.h"
+#import "Map.h"
 
 @interface MapController : CCNode {
     
 }
+@property (nonatomic, retain)Map *map;
 
 // 動作を開始/停止する
 - (void)setup:(int)stageId isRandom:(BOOL)isRandom;
@@ -22,16 +24,6 @@
 
 // 衝突しているブロック/エネミーを取得する
 - (Block*)getHitBlock:(CGPoint)point;
-- (Block*)getHitBlockByRect:(CGRect)rect;
-
-// コイン/敵に衝突しているかチェックする
-- (void)takeItemsIfCollided:(CGRect)rect;
-- (BOOL)attackEnemyIfCollided:(CGPoint)point;
-- (BOOL)isHit:(CGPoint)point;
-- (BOOL)jumpIfCollided:(CGRect)rect;
-
-// スピードアップするか判定する
-- (BOOL)checkSpeedUp:(CGPoint)point;
 
 // マップをスクロールする
 - (void)scroll:(float)dx;

@@ -17,10 +17,14 @@
 @property (nonatomic, readwrite)int _railId;
 
 // 指定したレールを生成する
-+ (Rail*)createRail:(int)railId;
-+ (Rail*)createRail:(int)railId x:(float)x y:(float)y;
++ (Rail*)createRail:(int)railId rotation:(float)rotation;
++ (Rail*)createRail:(int)railId rotation:(float)rotation x:(float)x y:(float)y;
 
 // レールを指定して初期化する
--(id)initWithRailId:(int)railId;
+-(id)initWithRailId:(int)railId rotation:(float)rotation;
+
+// 衝突判定
+- (BOOL)isHit:(CGPoint)point;
+- (float)getLandPoint:(float)x;
 
 @end

@@ -1324,10 +1324,10 @@
 				F9C9814017B8C86200DDCE95 /* switches */,
 				F9C9813A17B8C86200DDCE95 /* Enemy.h */,
 				F9C9813B17B8C86200DDCE95 /* Enemy.m */,
-				F9C9813E17B8C86200DDCE95 /* Rail.h */,
-				F9C9813F17B8C86200DDCE95 /* Rail.m */,
 				F9C9814517B8C86200DDCE95 /* Trampoline.h */,
 				F9C9814617B8C86200DDCE95 /* Trampoline.m */,
+				F9C9813E17B8C86200DDCE95 /* Rail.h */,
+				F9C9813F17B8C86200DDCE95 /* Rail.m */,
 			);
 			path = gimmick;
 			sourceTree = "<group>";

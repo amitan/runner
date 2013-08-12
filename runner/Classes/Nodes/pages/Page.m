@@ -171,6 +171,14 @@
     return NULL;
 }
 
+- (Rail*)getHitRail:(CGPoint)point {
+    for (Rail *rail in self._rails) {
+        if ([rail isHit:point]) return rail;
+    }
+    return NULL;
+}
+
+
 - (BOOL)takeCoinsIfCollided:(CGRect)rect {
     
     // コイン取得チェック

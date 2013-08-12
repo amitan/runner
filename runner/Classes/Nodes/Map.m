@@ -93,17 +93,20 @@ const int INIT_PAGE_NUM = 3;
 - (Block*)getHitBlock:(CGPoint)point {
     Page *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
-    
-    Block *block = [currentPage getHitBlock:location];
-    return (block) ? block : NULL;
+    return [currentPage getHitBlock:location];
 }
 
 - (Block*)getHitBlockByRect:(CGRect)rect {
     
     CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
     Page *currentPage = [self getCurrentPage:point];    
-    Block *block = [currentPage getHitBlockByRect:rect];
-    return (block) ? block : NULL;
+    return [currentPage getHitBlockByRect:rect];
+}
+
+- (Rail*)getHitRail:(CGPoint)point {
+    Page *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    return [currentPage getHitRail:location];
 }
 
 - (void)takeItemsIfCollided:(CGRect)rect {

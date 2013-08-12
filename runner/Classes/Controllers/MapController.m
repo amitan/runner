@@ -16,10 +16,6 @@
 #import "Page3.h"
 #import "Page4.h"
 
-@interface MapController ()
-@property (nonatomic, retain)Map *_map;
-@end
-
 @implementation MapController
 
 - (id)init {
@@ -35,57 +31,33 @@
 }
 
 - (void)setup:(int)stageId isRandom:(BOOL)isRandom {
-    self._map = [Map createMap:stageId isRandom:isRandom];
-    [PointUtil setTLPosition:self._map x:0 y:0];
-    [[GameScene sharedInstance].gameLayer addChild:self._map];
+    self.map = [Map createMap:stageId isRandom:isRandom];
+    [PointUtil setTLPosition:self.map x:0 y:0];
+    [[GameScene sharedInstance].gameLayer addChild:self.map];
 }
 
 - (void)start {
-    [self._map start];
+    [self.map start];
 }
 
 - (void)stop {
-    [self._map stop];
+    [self.map stop];
 }
 
 - (Block*)getHitBlock:(CGPoint)point {
 
     // 境界線は含む
-    Block *block = [self._map getHitBlock:ccpAdd(point, ccp(1, 1))];
+    Block *block = [self.map getHitBlock:ccpAdd(point, ccp(1, 1))];
     if (block) return block;
 
-    block = [self._map getHitBlock:ccpAdd(point, ccp(-1, -1))];
+    block = [self.map getHitBlock:ccpAdd(point, ccp(-1, -1))];
     return block;
 }
 
-- (Block*)getHitBlockByRect:(CGRect)rect {
-    return [self._map getHitBlockByRect:rect];
-}
-
-- (void)takeItemsIfCollided:(CGRect)rect {
-    return [self._map takeItemsIfCollided:rect];
-}
-
-- (BOOL)jumpIfCollided:(CGRect)rect {
-    return [self._map jumpIfCollided:rect];
-}
-
-- (BOOL)attackEnemyIfCollided:(CGPoint)point {
-    return [self._map attackEnemyIfCollided:point];
-}
-
-- (BOOL)isHit:(CGPoint)point {
-    return [self._map isHit:point];
-}
-
-- (BOOL)checkSpeedUp:(CGPoint)point {
-    return [self._map checkSpeedUp:point];
-}
-
 - (void)scroll:(float)dx {
-    self._map.position = ccp(self._map.position.x - dx, self._map.position.y);
+    self.map.position = ccp(self.map.position.x - dx, self.map.position.y);
     [[GameScene sharedInstance].hudController addDistance:dx];
-    [self._map refillIfNeeded];
+    [self.map refillIfNeeded];
 }
 
 @end
