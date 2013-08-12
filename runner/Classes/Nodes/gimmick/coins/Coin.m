@@ -73,21 +73,18 @@
 }
 
 - (void)start {
+    [super start];
     [self._coinSprite runAction:[CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"coin%d_", self._coinId] frameNum:2]];
 }
 
 - (void)stop {
+    [super stop];
     [self._coinSprite stopAllActions];
 }
 
-- (void)reset {
-}
-
 - (void)stageOn:(CCNode*)page {
+    [super stageOn:page];
     self._isStaged = true;
-    if (![self parent]) {
-        [page addChild:self];
-    }
 }
 
 - (CGRect)_getLayerBasedBox {

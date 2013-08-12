@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Gimmick.h"
 
-@interface Enemy : CCNode {
+@interface Enemy : Gimmick {
     
 }
 
@@ -19,14 +20,6 @@
 
 // キャラを指定して初期化する
 - (id)initWithCharaId:(int)charaId;
-
-// 敵をページに追加する
-- (void)stageOn:(CCNode*)page;
-
-// アニメーションを開始/停止する
-- (void)start;
-- (void)stop;
-- (void)reset;
 
 // 座標が敵に含まれているか判定する
 - (BOOL)isHit:(CGPoint)point;

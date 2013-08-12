@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Gimmick.h"
 
-@interface Switch : CCNode {
+@interface Switch : Gimmick {
     
 }
 @property (nonatomic, retain)CCSprite *_sprite;
@@ -27,15 +28,7 @@
 // スイッチを指定して初期化する
 -(id)initWithSwitchId:(int)switchId groupId:(int)groupId;
 
-// ページに追加する
-- (void)stageOn:(CCNode*)page;
-
 // 座標がスイッチに含まれているか判定する
 - (BOOL)pressIfCollided:(CGRect)rect;
-
-// アニメーションを開始/停止する
-- (void)start;
-- (void)stop;
-- (void)reset;
 
 @end

@@ -40,12 +40,6 @@ const float TRAMPOLINE_SCALE = 2.0;
     return self;
 }
 
-- (void)stageOn:(CCNode*)page {
-    if (![self parent]) {
-        [page addChild:self];
-    }
-}
-
 - (BOOL)jumpIfCollided:(CGRect)rect {
     
     // ジャンプ済の場合はfalse
@@ -72,13 +66,8 @@ const float TRAMPOLINE_SCALE = 2.0;
     return ccp(self.position.x + [self parent].position.x, self.position.y + [self parent].position.y);
 }
 
-- (void)start {
-}
-
-- (void)stop {
-}
-
 - (void)reset {
+    [super reset];
     self._isJumped = false;
     self._isScaled = false;
     [self sync];

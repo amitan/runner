@@ -57,27 +57,12 @@
     [super dealloc];
 }
 
-- (void)start {
-}
-
-- (void)stop {
-}
-
-- (void)reset {
-}
-
 - (float)getWidth {
     return self._sprite.contentSize.width;
 }
 
 - (float)getHeight {
     return self._sprite.contentSize.height;
-}
-
-- (void)stageOn:(CCNode*)page {
-    if (![self parent]) {
-        [page addChild:self];
-    }
 }
 
 - (BOOL)isHit:(CGPoint)point {

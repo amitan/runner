@@ -46,21 +46,22 @@
 }
 
 - (void)stageOn:(CCNode*)page {
+    [super stageOn:page];
     self._isStaged = true;
-    if (![self parent]) {
-        [page addChild:self];
-    }
 }
 
 - (void)start {
+    [super start];
     [self._enemySprite runAction:[EnemyAnimation getWalkAction:self._charaId]];
 }
 
 - (void)stop {
+    [super stop];
     [self._enemySprite stopAllActions];
 }
 
 - (void)reset {
+    [super reset];
     self._enemySprite.position = ccp(0, 0);
 }
 

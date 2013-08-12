@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Gimmick.h"
 
-@interface Trampoline : CCNode {
+@interface Trampoline : Gimmick {
     
 }
 @property (nonatomic, retain)CCSprite *_sprite;
@@ -25,15 +26,7 @@
 // トランポリンを指定して初期化する
 -(id)initWithTrampolineId:(int)trampolineId;
 
-// アニメーションを開始/停止する
-- (void)start;
-- (void)stop;
-- (void)reset;
-
 // 衝突判定
 - (BOOL)jumpIfCollided:(CGRect)rect;
-
-// ページに追加する
-- (void)stageOn:(CCNode*)page;
 
 @end

@@ -10,6 +10,7 @@
 #import "Enemy.h"
 #import "Switch.h"
 #import "Trampoline.h"
+#import "Rail.h"
 #import "GameScene.h"
 #import "PointUtil.h"
 #import "Page0.h"
@@ -24,6 +25,7 @@
 #import "Page9.h"
 #import "Page10.h"
 #import "Page11.h"
+#import "Page12.h"
 #import "Page900.h"
 
 @interface Page ()
@@ -58,6 +60,7 @@
         case 9: return [Page9 node];
         case 10: return [Page10 node];
         case 11: return [Page11 node];
+        case 12: return [Page12 node];
         case 900: return [Page900 node];
         default: return [Page0 node];
     }
@@ -92,6 +95,9 @@
     for (Trampoline *trampoline in self._trampolines) {
         [trampoline start];
     }
+    for (Rail *rail in self._rails) {
+        [rail start];
+    }
 }
 
 - (void)stop {
@@ -110,6 +116,9 @@
     }
     for (Trampoline *trampoline in self._trampolines) {
         [trampoline stop];
+    }
+    for (Rail *rail in self._rails) {
+        [rail stop];
     }
 }
 
@@ -132,6 +141,9 @@
     }
     for (Trampoline *trampoline in self._trampolines) {
         [trampoline reset];
+    }
+    for (Rail *rail in self._rails) {
+        [rail reset];
     }
 }
 

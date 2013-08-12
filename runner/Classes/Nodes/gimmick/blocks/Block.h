@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Gimmick.h"
 
-@interface Block : CCNode {
+@interface Block : Gimmick {
     
 }
 @property (nonatomic, retain)CCSprite *_sprite;
@@ -21,17 +22,9 @@
 // ブロックを指定して初期化する
 -(id) initWithBlockId:(int)blockId;
 
-// ブロックアニメーションを開始/停止する
-- (void)start;
-- (void)stop;
-- (void)reset;
-
 // ブロックの幅/高さを取得する
 - (float)getWidth;
 - (float)getHeight;
-
-// ブロックをページに追加する
-- (void)stageOn:(CCNode*)page;
 
 // 座標がブロックに含まれているか判定する
 - (BOOL)isHit:(CGPoint)point;

@@ -53,19 +53,8 @@
     return self;
 }
 
-- (void)stageOn:(CCNode*)page {
-    if (![self parent]) {
-        [page addChild:self];
-    }
-}
-
-- (void)start {
-}
-
-- (void)stop {
-}
-
 - (void)reset {
+    [super reset];
     self._isPressed = false;
     [self sync];
 }

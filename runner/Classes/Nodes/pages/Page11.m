@@ -10,6 +10,7 @@
 #import "Trampoline.h"
 #import "PointUtil.h"
 
+// ジャンプ台（縦）とブロック/コイン
 @implementation Page11
 
 - (id)init {

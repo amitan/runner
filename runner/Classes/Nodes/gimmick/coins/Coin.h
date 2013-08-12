@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Gimmick.h"
 
-@interface Coin : CCNode {
+@interface Coin : Gimmick {
     
 }
 @property (nonatomic, readwrite)int _coinId;
@@ -25,14 +26,6 @@
 
 // コインを指定して初期化する
 -(id)initWithCoinId:(int)coinId groupId:(int)groupId;
-
-// コインアニメーションを開始/停止する
-- (void)start;
-- (void)stop;
-- (void)reset;
-
-// コインをページに追加する
-- (void)stageOn:(CCNode*)page;
 
 // 座標がコインに含まれているか判定する
 - (BOOL)takenIfCollided:(CGRect)rect;
