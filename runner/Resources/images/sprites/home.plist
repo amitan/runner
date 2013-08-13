@@ -17,6 +17,19 @@
                 <key>sourceSize</key>
                 <string>{144,124}</string>
             </dict>
+            <key>talk_base.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{151,3},{550,260}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{2,2},{550,260}}</string>
+                <key>sourceSize</key>
+                <string>{554,264}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -25,9 +38,9 @@
             <key>realTextureFileName</key>
             <string>home.png</string>
             <key>size</key>
-            <string>{256,256}</string>
+            <string>{1024,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:fd75887884365819c17cdbcec3e06233$</string>
+            <string>$TexturePacker:SmartUpdate:3e69fd132a120f3e2891f7be576a32e2$</string>
             <key>textureFileName</key>
             <string>home.png</string>
         </dict>

@@ -14,6 +14,7 @@
 @property (nonatomic, retain)Block *_land2;
 @end
 
+// レールとコイン
 @implementation Page12
 const int PAGE12_INTERVAL1 = 1920;
 
@@ -27,7 +28,7 @@ const int PAGE12_INTERVAL1 = 1920;
         [self._land stageOn:self];
         
         float rightX = self._land.position.x + [self._land getWidth] / 2;
-        self._land2 = [Block createBlock:1];
+        self._land2 = [Block createBlock:2];
         self._land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:PAGE12_INTERVAL1], 0), [self getLandPosition:self._land2]);
         [self._land2 stageOn:self];
         

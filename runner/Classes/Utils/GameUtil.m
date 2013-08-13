@@ -32,4 +32,19 @@
     [[CCDirector sharedDirector] replaceScene:transition];
 }
 
++ (NSString*)getDirectionStr:(DIRECTION)direction {
+    switch (direction) {
+        case LEFT:
+            return @"left";
+        case RIGHT:
+            return @"right";
+        case TOP:
+            return @"top";
+        case BOTTOM:
+            return @"bottom";
+        default:
+            return nil;
+    }
+}
+
 @end

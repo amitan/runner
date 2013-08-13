@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../runner/Resources/images/sprites/home.png</filename>
+        <filename>../../runner/Resources/images/sprites/towner.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>home.java</filename>
+            <filename>towner.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../runner/Resources/images/sprites/home.plist</filename>
+        <filename>../../runner/Resources/images/sprites/towner.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
@@ -141,8 +141,17 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/home/door.png</filename>
-            <filename>../sprites/home/talk_base.png</filename>
+            <filename>../sprites/towner/carpenter1_bottom1.png</filename>
+            <filename>../sprites/towner/carpenter1_bottom2.png</filename>
+            <filename>../sprites/towner/carpenter1_left1.png</filename>
+            <filename>../sprites/towner/carpenter1_left2.png</filename>
+            <filename>../sprites/towner/carpenter1_right1.png</filename>
+            <filename>../sprites/towner/carpenter1_right2.png</filename>
+            <filename>../sprites/towner/carpenter1_top1.png</filename>
+            <filename>../sprites/towner/carpenter1_top2.png</filename>
+            <filename>../sprites/towner/carpenter1_win1.png</filename>
+            <filename>../sprites/towner/carpenter1_win2.png</filename>
+            <filename>../sprites/towner/carpenter1_win3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

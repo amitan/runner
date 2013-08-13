@@ -13,4 +13,5 @@
 
 + (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size;
 + (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size dimensions:(CGSize)dimensions alignment:(CCTextAlignment)alignment;
++ (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size dimensions:(CGSize)dimensions hAlignment:(CCTextAlignment)hAlignment vAlignment:(CCVerticalTextAlignment)vAlignment;
 @end

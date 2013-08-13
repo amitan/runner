@@ -26,6 +26,7 @@
 #import "Page10.h"
 #import "Page11.h"
 #import "Page12.h"
+#import "Page13.h"
 #import "Page900.h"
 
 @interface Page ()
@@ -61,6 +62,7 @@
         case 10: return [Page10 node];
         case 11: return [Page11 node];
         case 12: return [Page12 node];
+        case 13: return [Page13 node];
         case 900: return [Page900 node];
         default: return [Page0 node];
     }

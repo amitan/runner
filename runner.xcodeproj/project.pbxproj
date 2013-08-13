@@ -12,6 +12,10 @@
 		F9052E6817A432720078EE9C /* Page5.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6717A432720078EE9C /* Page5.m */; };
 		F9052E6B17A432840078EE9C /* Page6.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6A17A432840078EE9C /* Page6.m */; };
 		F9052E6E17A56D170078EE9C /* GameResultLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6D17A56D170078EE9C /* GameResultLayer.m */; };
+		F9363E1D17BA579100F832C0 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1C17BA579100F832C0 /* Door.m */; };
+		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
+		F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2217BA5D3600F832C0 /* Carpenter.m */; };
+		F9363E2617BA6C9C00F832C0 /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */; };
 		F93DF4D6178AB447007AD085 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D5178AB447007AD085 /* QuartzCore.framework */; };
 		F93DF4D8178AB447007AD085 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D7178AB447007AD085 /* OpenGLES.framework */; };
 		F93DF4DA178AB447007AD085 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D9178AB447007AD085 /* OpenAL.framework */; };
@@ -160,6 +164,12 @@
 		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
 		F941368F17A96E5E00EFC308 /* Page7.m in Sources */ = {isa = PBXBuildFile; fileRef = F941368E17A96E5E00EFC308 /* Page7.m */; };
 		F941369517AA555F00EFC308 /* Page8.m in Sources */ = {isa = PBXBuildFile; fileRef = F941369417AA555E00EFC308 /* Page8.m */; };
+		F99DFA9817B915C2001E1EA8 /* Page13.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFA9717B915C2001E1EA8 /* Page13.m */; };
+		F99DFA9E17B93707001E1EA8 /* towner.plist in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9C17B93707001E1EA8 /* towner.plist */; };
+		F99DFA9F17B93707001E1EA8 /* towner.png in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9D17B93707001E1EA8 /* towner.png */; };
+		F99DFAA217B9466C001E1EA8 /* HomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA117B9466C001E1EA8 /* HomeScene.m */; };
+		F99DFAA517B94781001E1EA8 /* HomeInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */; };
+		F99DFAA817BA3765001E1EA8 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA717BA3765001E1EA8 /* HomeController.m */; };
 		F9A468B91795451E002BAFB7 /* Page0.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468B81795451E002BAFB7 /* Page0.m */; };
 		F9A468BC179545A3002BAFB7 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468BB179545A3002BAFB7 /* Page.m */; };
 		F9A468BF1795518A002BAFB7 /* Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468BE1795518A002BAFB7 /* Page1.m */; };
@@ -193,7 +203,6 @@
 		F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA6441791079600A02626 /* NADView_readme.txt */; };
 		F9ABA6491791080800A02626 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA6481791080700A02626 /* AdSupport.framework */; };
 		F9ABA64B1791081000A02626 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA64A1791081000A02626 /* Security.framework */; };
-		F9ABA64E1791917500A02626 /* HomeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA64D1791917400A02626 /* HomeLayer.m */; };
 		F9ABA655179208FA00A02626 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA654179208FA00A02626 /* Map.m */; };
 		F9B0DA8A17AC0F8B009A08B1 /* Page9.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA8917AC0F8B009A08B1 /* Page9.m */; };
 		F9B0DA9E17AEC0CF009A08B1 /* Page10.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9D17AEC0CE009A08B1 /* Page10.m */; };
@@ -232,6 +241,14 @@
 		F9052E6A17A432840078EE9C /* Page6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page6.m; sourceTree = "<group>"; };
 		F9052E6C17A56D170078EE9C /* GameResultLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultLayer.h; sourceTree = "<group>"; };
 		F9052E6D17A56D170078EE9C /* GameResultLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultLayer.m; sourceTree = "<group>"; };
+		F9363E1B17BA579100F832C0 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
+		F9363E1C17BA579100F832C0 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
+		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
+		F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNodeButton.m; sourceTree = "<group>"; };
+		F9363E2117BA5D3600F832C0 /* Carpenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carpenter.h; sourceTree = "<group>"; };
+		F9363E2217BA5D3600F832C0 /* Carpenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carpenter.m; sourceTree = "<group>"; };
+		F9363E2417BA6C9C00F832C0 /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
+		F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
 		F93DF4D2178AB447007AD085 /* runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93DF4D5178AB447007AD085 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F93DF4D7178AB447007AD085 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -539,6 +556,16 @@
 		F941368E17A96E5E00EFC308 /* Page7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page7.m; sourceTree = "<group>"; };
 		F941369317AA555D00EFC308 /* Page8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page8.h; sourceTree = "<group>"; };
 		F941369417AA555E00EFC308 /* Page8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page8.m; sourceTree = "<group>"; };
+		F99DFA9617B915C2001E1EA8 /* Page13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page13.h; sourceTree = "<group>"; };
+		F99DFA9717B915C2001E1EA8 /* Page13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page13.m; sourceTree = "<group>"; };
+		F99DFA9C17B93707001E1EA8 /* towner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = towner.plist; sourceTree = "<group>"; };
+		F99DFA9D17B93707001E1EA8 /* towner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = towner.png; sourceTree = "<group>"; };
+		F99DFAA017B9466C001E1EA8 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScene.h; sourceTree = "<group>"; };
+		F99DFAA117B9466C001E1EA8 /* HomeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScene.m; sourceTree = "<group>"; };
+		F99DFAA317B94780001E1EA8 /* HomeInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeInterfaceLayer.h; sourceTree = "<group>"; };
+		F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeInterfaceLayer.m; sourceTree = "<group>"; };
+		F99DFAA617BA3765001E1EA8 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		F99DFAA717BA3765001E1EA8 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		F9A468B71795451E002BAFB7 /* Page0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page0.h; sourceTree = "<group>"; };
 		F9A468B81795451E002BAFB7 /* Page0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page0.m; sourceTree = "<group>"; };
 		F9A468BA179545A3002BAFB7 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
@@ -589,8 +616,6 @@
 		F9ABA6441791079600A02626 /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
 		F9ABA6481791080700A02626 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F9ABA64A1791081000A02626 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F9ABA64C1791917400A02626 /* HomeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
-		F9ABA64D1791917400A02626 /* HomeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLayer.m; sourceTree = "<group>"; };
 		F9ABA653179208FA00A02626 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		F9ABA654179208FA00A02626 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 		F9B0DA8817AC0F8B009A08B1 /* Page9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page9.h; sourceTree = "<group>"; };
@@ -665,6 +690,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9363E1A17BA578400F832C0 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				F9363E1B17BA579100F832C0 /* Door.h */,
+				F9363E1C17BA579100F832C0 /* Door.m */,
+				F9363E2117BA5D3600F832C0 /* Carpenter.h */,
+				F9363E2217BA5D3600F832C0 /* Carpenter.m */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		F93DF4C9178AB447007AD085 = {
 			isa = PBXGroup;
 			children = (
@@ -1136,6 +1172,8 @@
 				F9A468C41795E2B1002BAFB7 /* HudController.m */,
 				F9A468E7179B7102002BAFB7 /* PageController.h */,
 				F9A468E8179B7102002BAFB7 /* PageController.m */,
+				F99DFAA617BA3765001E1EA8 /* HomeController.h */,
+				F99DFAA717BA3765001E1EA8 /* HomeController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1143,6 +1181,7 @@
 		F93DF68B178AB5BF007AD085 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				F9363E1A17BA578400F832C0 /* home */,
 				F9C9812317B8C86200DDCE95 /* gimmick */,
 				F9A468F3179EC198002BAFB7 /* hud */,
 				F9A468B617954513002BAFB7 /* pages */,
@@ -1157,14 +1196,18 @@
 		F93DF68C178AB5BF007AD085 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABA62E178E84C300A02626 /* TitleLayer.h */,
+				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
+				F99DFAA017B9466C001E1EA8 /* HomeScene.h */,
+				F99DFAA117B9466C001E1EA8 /* HomeScene.m */,
+				F99DFAA317B94780001E1EA8 /* HomeInterfaceLayer.h */,
+				F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */,
+				F9363E2417BA6C9C00F832C0 /* ConversationLayer.h */,
+				F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */,
 				F93DF68E178AB5D8007AD085 /* GameScene.h */,
 				F93DF68F178AB5D8007AD085 /* GameScene.m */,
 				F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */,
 				F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */,
-				F9ABA62E178E84C300A02626 /* TitleLayer.h */,
-				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
-				F9ABA64C1791917400A02626 /* HomeLayer.h */,
-				F9ABA64D1791917400A02626 /* HomeLayer.m */,
 				F9052E6C17A56D170078EE9C /* GameResultLayer.h */,
 				F9052E6D17A56D170078EE9C /* GameResultLayer.m */,
 			);
@@ -1184,6 +1227,8 @@
 				F93DF6BD178B085B007AD085 /* ColorUtil.m */,
 				F9ABA63A178F0E4700A02626 /* CCSpriteButton.h */,
 				F9ABA63B178F0E4700A02626 /* CCSpriteButton.m */,
+				F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */,
+				F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1214,6 +1259,8 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F99DFA9C17B93707001E1EA8 /* towner.plist */,
+				F99DFA9D17B93707001E1EA8 /* towner.png */,
 				F9B0DABD17B4C3B6009A08B1 /* home.plist */,
 				F9B0DABE17B4C3B6009A08B1 /* home.png */,
 				F9B0DA9F17AF85DF009A08B1 /* block.plist */,
@@ -1267,6 +1314,8 @@
 				F9B0DAC217B5E4AC009A08B1 /* Page11.m */,
 				F9B0DAC917B89C6C009A08B1 /* Page12.h */,
 				F9B0DACA17B89C71009A08B1 /* Page12.m */,
+				F99DFA9617B915C2001E1EA8 /* Page13.h */,
+				F99DFA9717B915C2001E1EA8 /* Page13.m */,
 				F9A468ED179BDD67002BAFB7 /* Page900.h */,
 				F9A468EE179BDD69002BAFB7 /* Page900.m */,
 			);
@@ -1465,6 +1514,8 @@
 				F9B0DABA17B3D91D009A08B1 /* home_bg.png in Resources */,
 				F9B0DABF17B4C3B6009A08B1 /* home.plist in Resources */,
 				F9B0DAC017B4C3B6009A08B1 /* home.png in Resources */,
+				F99DFA9E17B93707001E1EA8 /* towner.plist in Resources */,
+				F99DFA9F17B93707001E1EA8 /* towner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1600,7 +1651,6 @@
 				F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */,
 				F9ABA63C178F0E4700A02626 /* CCSpriteButton.m in Sources */,
 				F9ABA63F1791038A00A02626 /* AdController.m in Sources */,
-				F9ABA64E1791917500A02626 /* HomeLayer.m in Sources */,
 				F9ABA655179208FA00A02626 /* Map.m in Sources */,
 				F9A468B91795451E002BAFB7 /* Page0.m in Sources */,
 				F9A468BC179545A3002BAFB7 /* Page.m in Sources */,
@@ -1639,6 +1689,14 @@
 				F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */,
 				F9C9815517B8C86200DDCE95 /* Switch.m in Sources */,
 				F9C9815617B8C86200DDCE95 /* Trampoline.m in Sources */,
+				F99DFA9817B915C2001E1EA8 /* Page13.m in Sources */,
+				F99DFAA217B9466C001E1EA8 /* HomeScene.m in Sources */,
+				F99DFAA517B94781001E1EA8 /* HomeInterfaceLayer.m in Sources */,
+				F99DFAA817BA3765001E1EA8 /* HomeController.m in Sources */,
+				F9363E1D17BA579100F832C0 /* Door.m in Sources */,
+				F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */,
+				F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */,
+				F9363E2617BA6C9C00F832C0 /* ConversationLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,15 @@ typedef enum {
     POPUP_PRIORITY = -10,
 } TOUCH_PRIORITY;
 
+// 方向
+typedef enum {
+    NONE = 0,
+    RIGHT = 1,
+    LEFT = 2,
+    TOP = 3,
+    BOTTOM = 4
+} DIRECTION;
+
 // ファイル名をもとに端末に応じた画像名を返す
 + (NSString*) getBgSpriteName:(NSString *)fileName ext:(NSString *)ext ;
 
@@ -27,4 +36,6 @@ typedef enum {
 // 指定した画面に遷移する
 + (void)replaceScene:(CCScene*)scene;
 
+// 方向の文字列を取得する
++ (NSString*)getDirectionStr:(DIRECTION)direction;
 @end

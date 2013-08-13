@@ -24,10 +24,14 @@
 }
 
 + (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size dimensions:(CGSize)dimensions alignment:(CCTextAlignment)alignment {
+    return [LabelUtil createLabel:labelWithString fontSize:size dimensions:dimensions hAlignment:alignment vAlignment:kCCVerticalTextAlignmentCenter];
+}
+
++ (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size dimensions:(CGSize)dimensions hAlignment:(CCTextAlignment)hAlignment vAlignment:(CCVerticalTextAlignment)vAlignment {
     int fontSize = size / [[UIScreen mainScreen] scale];
     CGSize newDimensions = CGSizeMake([PointUtil getPoint:dimensions.width], [PointUtil getPoint:dimensions.height]);
     CCLabelTTF *label = [CCLabelTTF labelWithString:labelWithString fontName:@"MisakiGothic" fontSize:fontSize
-                                         dimensions:newDimensions hAlignment:alignment vAlignment:kCCVerticalTextAlignmentCenter];
+                                         dimensions:newDimensions hAlignment:hAlignment vAlignment:vAlignment];
     label.color = [ColorUtil getDefaultFontColor];
     return label;
 }
