@@ -13,7 +13,6 @@
 @interface Trampoline : Gimmick {
     
 }
-@property (nonatomic, retain)CCSprite *_sprite;
 @property (nonatomic, retain)CCSprite *_spriteOn;
 @property (nonatomic, readwrite)int _trampolineId;
 @property (nonatomic, readwrite)BOOL _isJumped;

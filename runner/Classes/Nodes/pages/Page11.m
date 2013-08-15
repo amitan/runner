@@ -27,8 +27,8 @@
 
         // ブロック追加
         self._blocks = [NSArray arrayWithObjects:
-                        [Block createBlock:110 x:160 y:-730],
-                        [Block createBlock:110 x:220 y:-730], // ジャンプ台
+                        [Block createBlock:101 x:160 y:-730],
+                        [Block createBlock:101 x:220 y:-730], // ジャンプ台ブロック
                         [Block createBlock:101 x:500 y:-260],
                         [Block createBlock:101 x:560 y:-260],
                         [Block createBlock:101 x:620 y:-260],
@@ -47,7 +47,7 @@
         
         // ジャンプ台
         self._trampolines = [NSArray arrayWithObjects:
-                             [Trampoline createTrampoline:1 x:190 y:-685],
+                             [Trampoline createTrampoline:1 x:190 y:-670],
                              nil];
         for (Trampoline *trampoline in self._trampolines) {
             [trampoline stageOn:self];

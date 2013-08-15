@@ -13,8 +13,8 @@
 @interface Rail : Gimmick {
     
 }
-@property (nonatomic, retain)CCSprite *_sprite;
 @property (nonatomic, readwrite)int _railId;
+@property (nonatomic, readwrite)BOOL isSwitched;
 
 // 指定したレールを生成する
 + (Rail*)createRail:(int)railId rotation:(float)rotation;
@@ -24,7 +24,10 @@
 -(id)initWithRailId:(int)railId rotation:(float)rotation;
 
 // 衝突判定
-- (BOOL)isHit:(CGPoint)point;
-- (float)getLandPoint:(float)x;
+- (BOOL)isHit:(CGRect)rect;
+
+// ロープ移動
+- (BOOL)isRopeMovable;
+- (CGPoint)moveRope:(float)dx;
 
 @end

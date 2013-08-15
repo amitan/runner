@@ -23,6 +23,12 @@
                       [self getWidth], [self getHeight]);
 }
 
+- (CGRect)getLayerBasedBox:(CCSprite*)sprite {
+    return CGRectMake(self.position.x + [self parent].position.x + sprite.position.x - sprite.contentSize.width / 2,
+                      self.position.y + [self parent].position.y + sprite.position.y - sprite.contentSize.height / 2,
+                      sprite.contentSize.width, sprite.contentSize.height);
+}
+
 - (float)getWidth {
     return self._sprite.contentSize.width;
 }

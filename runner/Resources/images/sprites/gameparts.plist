@@ -173,10 +173,23 @@
                 <key>sourceSize</key>
                 <string>{320,18}</string>
             </dict>
+            <key>rope.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{327,191},{10,180}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{10,180}}</string>
+                <key>sourceSize</key>
+                <string>{10,180}</string>
+            </dict>
             <key>switch101_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{327,191},{46,60}}</string>
+                <string>{{341,191},{46,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +202,7 @@
             <key>switch101_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{377,191},{20,60}}</string>
+                <string>{{391,191},{20,60}}</string>
                 <key>offset</key>
                 <string>{13,0}</string>
                 <key>rotated</key>
@@ -202,7 +215,7 @@
             <key>switch102_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{401,191},{60,46}}</string>
+                <string>{{415,191},{60,46}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +228,7 @@
             <key>switch102_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{465,191},{60,20}}</string>
+                <string>{{479,191},{60,20}}</string>
                 <key>offset</key>
                 <string>{0,13}</string>
                 <key>rotated</key>
@@ -228,7 +241,7 @@
             <key>trampoline1_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{529,191},{106,28}}</string>
+                <string>{{543,191},{106,28}}</string>
                 <key>offset</key>
                 <string>{1,-16}</string>
                 <key>rotated</key>
@@ -241,7 +254,7 @@
             <key>trampoline1_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{639,191},{114,60}}</string>
+                <string>{{653,191},{114,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -259,9 +272,9 @@
             <key>realTextureFileName</key>
             <string>gameparts.png</string>
             <key>size</key>
-            <string>{1024,256}</string>
+            <string>{1024,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2d65d6fc0d2eab4aaaa03df10255981b$</string>
+            <string>$TexturePacker:SmartUpdate:ff84fbca2432d0dbd8df1dcb0e020fb5$</string>
             <key>textureFileName</key>
             <string>gameparts.png</string>
         </dict>

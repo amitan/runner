@@ -165,17 +165,9 @@
     return NULL;
 }
 
-- (Block*)getHitBlockByRect:(CGRect)rect {
-    for (Block *block in self._blocks) {
-        if ([block isHitByRect:rect]) return block;
-    }
-    if ([self._land isHitByRect:rect]) return self._land;
-    return NULL;
-}
-
-- (Rail*)getHitRail:(CGPoint)point {
+- (Rail*)getHitRail:(CGRect)rect {
     for (Rail *rail in self._rails) {
-        if ([rail isHit:point]) return rail;
+        if ([rail isHit:rect]) return rail;
     }
     return NULL;
 }

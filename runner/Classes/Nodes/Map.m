@@ -96,17 +96,12 @@ const int INIT_PAGE_NUM = 3;
     return [currentPage getHitBlock:location];
 }
 
-- (Block*)getHitBlockByRect:(CGRect)rect {
-    
+- (Rail*)getHitRail:(CGRect)rect {
     CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
-    Page *currentPage = [self getCurrentPage:point];    
-    return [currentPage getHitBlockByRect:rect];
-}
-
-- (Rail*)getHitRail:(CGPoint)point {
     Page *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
-    return [currentPage getHitRail:location];
+    CGRect newRect = CGRectMake(location.x - rect.size.width / 6, location.y - rect.size.height / 6, rect.size.width / 3, rect.size.height / 3);
+    return [currentPage getHitRail:newRect];
 }
 
 - (void)takeItemsIfCollided:(CGRect)rect {
@@ -179,5 +174,4 @@ const int INIT_PAGE_NUM = 3;
         }
     }
 }
-
 @end

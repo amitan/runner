@@ -22,6 +22,7 @@
 
 // プロパティ取得
 - (CGRect)getLayerBasedBox;
+- (CGRect)getLayerBasedBox:(CCSprite*)sprite;
 - (float)getWidth;
 - (float)getHeight;
 

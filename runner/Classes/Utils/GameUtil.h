@@ -11,6 +11,7 @@
 
 @interface GameUtil : NSObject
 extern const int INIT_PLAYER_X;
+extern const int GRAVITY;
 
 // タッチ優先度
 typedef enum {

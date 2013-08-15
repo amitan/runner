@@ -45,8 +45,7 @@
 
 // 衝突したブロックを取得する
 - (Block*)getHitBlock:(CGPoint)point;
-- (Block*)getHitBlockByRect:(CGRect)rect;
-- (Rail*)getHitRail:(CGPoint)point;
+- (Rail*)getHitRail:(CGRect)rect;
 
 // ギミック衝突判定
 - (BOOL)takeCoinsIfCollided:(CGRect)rect;
