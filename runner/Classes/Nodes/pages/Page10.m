@@ -34,8 +34,7 @@
         self._blocks = [NSArray arrayWithObjects:
                         [Block createBlock:104 x:100 y:-670],
                         [Block createBlock:101 x:100 y:-550],
-                        [Block createBlock:104 x:160 y:-670],
-                        [Block createBlock:105 x:160 y:-430],
+                        [Block createBlock:105 x:160 y:-610],
                         [Block createBlock:304 x:220 y:-610],
                         [Block createBlock:107 x:520 y:-340],
                         [Block createBlock:107 x:820 y:-340],

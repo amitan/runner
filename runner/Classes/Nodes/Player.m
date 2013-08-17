@@ -23,15 +23,12 @@
 @property (nonatomic, readwrite)float _vx, _vy;
 @property (nonatomic, readwrite)float _properPositionX;
 @property (nonatomic, readwrite)float _limitLeftX, _limitRightX, _limitY;
-@property (nonatomic, readwrite)int _speedStep;
 @property (nonatomic, retain)Rail *_currentRail;
 @end
 
 @implementation Player
 const int JUMP_SPEED = 1500;
-const int MAX_SPEED_STEP = 3;
 const int INIT_SCROLL_SPEED = 430;
-const int INIT_PLAYER_X = 250;
 const int BLOCK_TOP_REFLECTION = -10;
 
 
@@ -60,7 +57,7 @@ const int BLOCK_TOP_REFLECTION = -10;
         self._onRailed = false;
         
         // アニメーションの最初のコマを読み込む
-        NSString* fileName = [NSString stringWithFormat:@"monster%d_right1.png", self._monsterId];
+        NSString* fileName = [NSString stringWithFormat:@"player%d_right1.png", self._monsterId];
         self._playerSprite = [CCSprite spriteWithSpriteFrameName:fileName];
         [self addChild:self._playerSprite];
     }
@@ -92,6 +89,7 @@ const int BLOCK_TOP_REFLECTION = -10;
     if (self._onRailed) {
         self._vy = self._jumpSpeed * 0.8;
         self._onRailed = false;
+        [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
         
     } else if ((self._currentJumpNum == 0 && self._onGround) || (self._currentJumpNum != 0 && self._currentJumpNum < self._jumpNum)) {
         self._currentJumpNum++;
@@ -100,11 +98,8 @@ const int BLOCK_TOP_REFLECTION = -10;
 }
 
 - (void)speedUp {
-    if (self._speedStep < MAX_SPEED_STEP) {
-        [[GameScene sharedInstance].hudController showSpeedUpEffect];
-        self._vx *= 1.3;
-        self._speedStep++;
-    }
+    [[GameScene sharedInstance].hudController showSpeedUpEffect];
+    self._vx *= 1.2;
 }
 
 - (void)trampoline {
@@ -218,6 +213,7 @@ const int BLOCK_TOP_REFLECTION = -10;
         if (![self._currentRail isRopeMovable]) {
             self._onRailed = false;
             self._currentRail = nil;
+            [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
         } else {
             CGPoint diff = [self._currentRail moveRope:dx];
             if (self._onRailed) {
@@ -274,10 +270,6 @@ const int BLOCK_TOP_REFLECTION = -10;
             [self._playerSprite stopAllActions];
         }
     }
-//    if (self._onRailed) {
-//        self._onRailed = false;
-//        [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
-//    }
     
     // 上ブロック衝突判定
     CGPoint nextCenterTopYPosition = ccpAdd([self getCenterTopPosition], ccp(0, dy));

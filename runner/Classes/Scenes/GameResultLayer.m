@@ -9,6 +9,7 @@
 #import "GameResultLayer.h"
 #import "CCSpriteButton.h"
 #import "GameUtil.h"
+#import "HomeScene.h"
 #import "TitleLayer.h"
 
 @interface GameResultLayer ()
@@ -56,7 +57,7 @@
 
 - (void)clickRetryButton:(id)sender {
     [self removeFromParentAndCleanup:YES];
-    [GameUtil replaceScene:[TitleLayer scene]];
+    [GameUtil replaceScene:[HomeScene createInstance]];
 }
 
 @end

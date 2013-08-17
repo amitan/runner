@@ -9,7 +9,10 @@
 #import "GameUtil.h"
 
 @implementation GameUtil
+const int INIT_PLAYER_ID = 1001001;
+const int INIT_PLAYER_X = 250;
 const int GRAVITY = 70;
+const int SPEED_UP_PAGE = 900;
 
 + (NSString*) getBgSpriteName:(NSString *)fileName ext:(NSString *)ext {
     if ([GameUtil is4inchDevice]) {

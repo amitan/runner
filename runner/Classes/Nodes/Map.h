@@ -16,12 +16,13 @@
     
 }
 @property (nonatomic, readwrite)BOOL isPlaying;
+@property (nonatomic, readwrite)int speed;
 
 // 指定したマップを生成する
-+ (Map*)createMap:(int)stageId isRandom:(BOOL)isRandom;
++ (Map*)createMap:(int)stageId;
 
 // ステージを指定してマップを初期化する
-- (id)initWithStageId:(int)stageId isRandom:(BOOL)isRandom;
+- (id)initWithStageId:(int)stageId;
 
 // アニメーションを開始/停止する
 - (void)start;

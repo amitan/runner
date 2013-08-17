@@ -7,9 +7,12 @@
 //
 
 #import "PageController.h"
+#import "GameScene.h"
+#import "GameUtil.h"
 
 @interface PageController ()
 @property (nonatomic, retain)NSMutableDictionary *_dictionary;
+@property (nonatomic, retain)NSMutableDictionary *_pageDictionary;
 @end
 
 @implementation PageController
@@ -19,12 +22,28 @@ const int INIT_ARRAY_CAPACITY = 5;
     self = [super init];
 	if (self) {
         self._dictionary = [NSMutableDictionary dictionary];
+        self._pageDictionary = [NSMutableDictionary dictionary];
+        [self._pageDictionary setObject:[NSArray arrayWithObjects:
+                                        @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10",
+                                         @"11", @"12", nil] forKey:@"1"];
+        [self._pageDictionary setObject:[NSArray arrayWithObjects:
+                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10",
+                                         @"11", @"12", nil] forKey:@"2"];
+        [self._pageDictionary setObject:[NSArray arrayWithObjects:
+                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9",
+                                         @"11", @"12", nil] forKey:@"3"];
+        [self._pageDictionary setObject:[NSArray arrayWithObjects:
+                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9",
+                                         @"11", @"12", nil] forKey:@"4"];
+        [self._pageDictionary setObject:[NSArray arrayWithObjects:
+                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9",
+                                         @"11", @"12", nil] forKey:@"5"];
     }
     return self;
 }
 
-- (Page*)getPage:(int)pageId {
-    pageId = pageId == 0 ? pageId : 12; // TODO:
+- (Page*)getPageBy:(int)pageId {
+    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE) ? pageId : 11; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;
@@ -33,9 +52,11 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPage {
-    // TODO: ページ取得実装
-    int pageId = floor(CCRANDOM_0_1()*13+1);
-    return [self getPage:pageId];
+    int currentSpeed = [GameScene sharedInstance].mapController.map.speed;
+    NSArray *array = [self._pageDictionary objectForKey:[NSString stringWithFormat:@"%d", currentSpeed]];
+    int pageIndex = floor(CCRANDOM_0_1()*array.count);
+    int pageId = [[array objectAtIndex:pageIndex] intValue];
+    return [self getPageBy:pageId];
 }
 
 - (Page*)_createPage:(int)pageId {

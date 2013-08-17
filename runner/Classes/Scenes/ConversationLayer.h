@@ -14,6 +14,6 @@
 }
 
 - (void)setTexts:(NSArray *)texts;
-- (void)addClickListner:(id)target selector:(SEL)selector;
+- (void)addCompleteListner:(id)target selector:(SEL)selector;
 
 @end

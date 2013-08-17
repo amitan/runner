@@ -30,8 +30,8 @@
     [super dealloc];
 }
 
-- (void)setup:(int)stageId isRandom:(BOOL)isRandom {
-    self.map = [Map createMap:stageId isRandom:isRandom];
+- (void)setup:(int)stageId {
+    self.map = [Map createMap:stageId];
     [PointUtil setTLPosition:self.map x:0 y:0];
     [[GameScene sharedInstance].gameLayer addChild:self.map];
 }

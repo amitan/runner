@@ -15,7 +15,7 @@
 }
 
 // ページを取得する
-- (Page*)getPage:(int)pageId;
 - (Page*)getPage;
+- (Page*)getPageBy:(int)pageId;
 
 @end

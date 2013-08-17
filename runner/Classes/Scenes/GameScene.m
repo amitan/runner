@@ -13,7 +13,6 @@
 
 @interface GameScene ()
 @property (nonatomic, readwrite)int _stageId;
-@property (nonatomic, readwrite)BOOL _isRandom;
 @property (nonatomic, readwrite)BOOL _isSetup;
 @end
 
@@ -45,7 +44,6 @@ static GameScene *_scene = nil;
         // 初期値を追加
         self._isSetup = false;
         self._stageId = stageId;
-        self._isRandom = isRandom;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         
         // 背景を設定
@@ -117,7 +115,7 @@ static GameScene *_scene = nil;
 
 - (void)setup {
     [self.countController setup];
-    [self.mapController setup:self._stageId isRandom:self._isRandom];
+    [self.mapController setup:self._stageId];
     [self.hudController setup];
     [self.playerController setup];
 }

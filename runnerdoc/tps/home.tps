@@ -143,6 +143,9 @@
         <array>
             <filename>../sprites/home/door.png</filename>
             <filename>../sprites/home/talk_base.png</filename>
+            <filename>../sprites/home/popup_large.png</filename>
+            <filename>../sprites/home/player_base_middle.png</filename>
+            <filename>../sprites/home/player_base_small.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

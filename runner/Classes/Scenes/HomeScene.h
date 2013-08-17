@@ -31,7 +31,4 @@
 - (void)start;
 - (void)stop;
 
-// 会話を表示する
-- (void)showConversation:(NSArray*)texts;
-
 @end

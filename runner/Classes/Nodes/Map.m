@@ -10,49 +10,48 @@
 #import "PointUtil.h"
 #import "Page1.h"
 #import "GameScene.h"
+#import "GameUtil.h"
 
 @interface Map ()
 @property (nonatomic, readwrite)int _stageId;
-@property (nonatomic, readwrite)int _isRandom;
-@property (nonatomic, readwrite)int _currentPageIndex;
 @property (nonatomic, readwrite)float _currentRight;
 @property (nonatomic, retain)NSMutableArray *_pages;
 @property (nonatomic, readwrite)int _pageNum;
 @end
 
 @implementation Map
-const int SPEED_UP_PAGE = 900;
-const int INIT_PAGE_NUM = 3;
+const int MAX_SPEED_STEP = 5;
+const int MIN_PAGE_STOCK_NUM = 3;
+const int INIT_PAGE_NUM = 1;
+
 @synthesize isPlaying;
 
-+ (Map*)createMap:(int)stageId isRandom:(BOOL)isRandom {
-    return [[[self alloc] initWithStageId:stageId isRandom:isRandom] autorelease];
++ (Map*)createMap:(int)stageId {
+    return [[[self alloc] initWithStageId:stageId] autorelease];
 }
 
-- (id)initWithStageId:(int)stageId isRandom:(BOOL)isRandom {
+- (id)initWithStageId:(int)stageId {
     self = [super init];
 	if (self) {
 
         // 初期設定
         self._stageId = stageId;
-        self._isRandom = isRandom;
         self._pages = [NSMutableArray arrayWithCapacity:5];
+        self.speed = 1;
         self.isPlaying = false;
         
         // 初期ページを追加
         PageController *pageController = [GameScene sharedInstance].pageController;
-        for (int i = 0; i < INIT_PAGE_NUM; i++) {
-            int pageIndex = (!isRandom) ? [self _getFixedPageIndex:self._currentPageIndex] : i;
-            [self addPage:[pageController getPage:pageIndex]];
-            self._currentPageIndex++;
+        for (int i = 0; i <= INIT_PAGE_NUM; i++) {
+            [self addPage:[pageController getPageBy:i]];
         }
+//        // スピードアップページ（デバッグ用）
+//        int debugSpeed = 3;
+//        for (int i = 0; i < debugSpeed; i++) {
+//            [self addPage:[pageController getPageBy:SPEED_UP_PAGE]];
+//        }
     }
     return self;
-}
-
-- (int)_getFixedPageIndex:(int)index {
-    if (index == 0) return index;
-    return self._stageId * 100 + index;
 }
 
 - (void)start {
@@ -153,25 +152,38 @@ const int INIT_PAGE_NUM = 3;
 }
 
 - (void)refillIfNeeded {
+    
+    int nextSpeed = [self _getSpeed:[[GameScene sharedInstance].hudController getDistance]];
+    if (self.speed != nextSpeed) {
+        self.speed = nextSpeed;
+        [self addPage:[[GameScene sharedInstance].pageController getPageBy:SPEED_UP_PAGE]];
+    }
+    
     BOOL result = false;
     for (Page *page in self._pages) {
         if ([page isOut]) {
             result = true;
+            break;
         }
     }
     if (result) {
         Page *page = [self._pages objectAtIndex:0];
         [page stageOff];
-        [self._pages removeObject:page];
-        
-        if (!self._isRandom) {
-            [self addPage:[[GameScene sharedInstance].pageController getPage:[self _getFixedPageIndex:self._currentPageIndex]]];
-            self._currentPageIndex++;
-//        } else if (self._pageNum % 10 == 0) { // TODO:: スピードアップ間隔の調整
-//            [self addPage:[[GameScene sharedInstance].pageController getPage:SPEED_UP_PAGE]];
-        } else {
-            [self addPage:[[GameScene sharedInstance].pageController getPage]];
-        }
+        [self._pages removeObject:page];        
+    }
+    if (self._pages.count < MIN_PAGE_STOCK_NUM) {
+        [self addPage:[[GameScene sharedInstance].pageController getPage]];
     }
 }
+
+- (int)_getSpeed:(int)distance {
+    if (self.speed >= MAX_SPEED_STEP) {
+        return self.speed;
+    }
+    if (distance > 1000) return 4;
+    if (distance > 400) return 3;
+    if (distance > 100) return 2;
+    return 1;
+}
+
 @end

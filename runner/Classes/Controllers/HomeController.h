@@ -20,4 +20,8 @@
 - (void)suspend;
 - (void)resume;
 
+// 会話を表示する
+- (void)showConversation:(NSArray*)texts;
+
+
 @end

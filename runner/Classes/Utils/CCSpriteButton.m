@@ -112,11 +112,19 @@
 }
 
 - (void)onPress {
-    if (self._label) self._label.color = [ColorUtil getTouchedFontColor];
+    if (self._label) {
+        self._label.color = [ColorUtil getTouchedFontColor];
+    } else {
+        self.color = [ColorUtil getTouchedFontColor];
+    }
 }
 
 - (void)onRelease {
-    if (self._label) self._label.color = [ColorUtil getDefaultFontColor];
+    if (self._label) {
+        self._label.color = [ColorUtil getDefaultFontColor];
+    } else {
+        self.color = [ColorUtil getDefaultFontColor];
+    }
 }
 
 - (void)addLabel:(CCLabelTTF *)label {

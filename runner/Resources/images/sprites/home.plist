@@ -17,10 +17,49 @@
                 <key>sourceSize</key>
                 <string>{144,124}</string>
             </dict>
+            <key>player_base_middle.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{151,3},{510,250}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{510,250}}</string>
+                <key>sourceSize</key>
+                <string>{510,250}</string>
+            </dict>
+            <key>player_base_small.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,257},{510,114}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{510,114}}</string>
+                <key>sourceSize</key>
+                <string>{510,114}</string>
+            </dict>
+            <key>popup_large.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,375},{550,810}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,810}}</string>
+                <key>sourceSize</key>
+                <string>{550,810}</string>
+            </dict>
             <key>talk_base.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{151,3},{550,260}}</string>
+                <string>{{3,1189},{550,260}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -38,9 +77,9 @@
             <key>realTextureFileName</key>
             <string>home.png</string>
             <key>size</key>
-            <string>{1024,512}</string>
+            <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:3e69fd132a120f3e2891f7be576a32e2$</string>
+            <string>$TexturePacker:SmartUpdate:7717673a7660f014b275dc826976e5ab$</string>
             <key>textureFileName</key>
             <string>home.png</string>
         </dict>

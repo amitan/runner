@@ -40,10 +40,10 @@
 }
 
 - (void)clickButton:(id)sender {
-    [[HomeScene sharedInstance] showConversation:
+    [[HomeScene sharedInstance].homeController showConversation:
      [NSArray arrayWithObjects:
-      @"*「おれは大工のケンってんだ。\nぐうぜんこのあたりをとおりがかった\nんだが、ここいらはさみしくていけねぇ。」",
-      @"*「よっしゃ。おれが1000Gでいいもの\nをつくってやるよ。いいよな？」", nil]];
+      @"*「おれは大工のケンってんだ。ここに冒険者のためのでっけぇ宿をつくりてぇんだが、ゴールドが足りなくてよ。」",
+      @"*「1000G もあればいいものがつくれるんだが・・」", nil]];
 }
 
 - (void)start {

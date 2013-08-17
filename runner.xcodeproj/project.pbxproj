@@ -176,8 +176,6 @@
 		F9A468C51795E2B2002BAFB7 /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C41795E2B1002BAFB7 /* HudController.m */; };
 		F9A468C81799AE7D002BAFB7 /* Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C71799AE7C002BAFB7 /* Page2.m */; };
 		F9A468CB1799CA80002BAFB7 /* Page3.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468CA1799CA7F002BAFB7 /* Page3.m */; };
-		F9A468D11799D0E2002BAFB7 /* monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468CF1799D0E2002BAFB7 /* monster.plist */; };
-		F9A468D21799D0E2002BAFB7 /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D01799D0E2002BAFB7 /* monster.png */; };
 		F9A468D51799D606002BAFB7 /* chara.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D31799D606002BAFB7 /* chara.plist */; };
 		F9A468D61799D606002BAFB7 /* chara.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D41799D606002BAFB7 /* chara.png */; };
 		F9A468DA179A7E9A002BAFB7 /* dead.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D8179A7E9A002BAFB7 /* dead.plist */; };
@@ -230,6 +228,12 @@
 		F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814217B8C86200DDCE95 /* CoinSwitch.m */; };
 		F9C9815517B8C86200DDCE95 /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814417B8C86200DDCE95 /* Switch.m */; };
 		F9C9815617B8C86200DDCE95 /* Trampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814617B8C86200DDCE95 /* Trampoline.m */; };
+		F9DAF99417BF417400422467 /* player.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99217BF417400422467 /* player.plist */; };
+		F9DAF99517BF417400422467 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99317BF417400422467 /* player.png */; };
+		F9DAF99817BF4C7900422467 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99717BF4C7900422467 /* Team.m */; };
+		F9DAF99B17BF572700422467 /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99917BF572700422467 /* team.plist */; };
+		F9DAF99C17BF572700422467 /* team.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99A17BF572700422467 /* team.png */; };
+		F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99E17BFAB7700422467 /* TeamLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -578,8 +582,6 @@
 		F9A468C71799AE7C002BAFB7 /* Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2.m; sourceTree = "<group>"; };
 		F9A468C91799CA7F002BAFB7 /* Page3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page3.h; sourceTree = "<group>"; };
 		F9A468CA1799CA7F002BAFB7 /* Page3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page3.m; sourceTree = "<group>"; };
-		F9A468CF1799D0E2002BAFB7 /* monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = monster.plist; sourceTree = "<group>"; };
-		F9A468D01799D0E2002BAFB7 /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
 		F9A468D31799D606002BAFB7 /* chara.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chara.plist; sourceTree = "<group>"; };
 		F9A468D41799D606002BAFB7 /* chara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chara.png; sourceTree = "<group>"; };
 		F9A468D8179A7E9A002BAFB7 /* dead.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dead.plist; sourceTree = "<group>"; };
@@ -664,6 +666,14 @@
 		F9C9814417B8C86200DDCE95 /* Switch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Switch.m; sourceTree = "<group>"; };
 		F9C9814517B8C86200DDCE95 /* Trampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trampoline.h; sourceTree = "<group>"; };
 		F9C9814617B8C86200DDCE95 /* Trampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trampoline.m; sourceTree = "<group>"; };
+		F9DAF99217BF417400422467 /* player.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = player.plist; sourceTree = "<group>"; };
+		F9DAF99317BF417400422467 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		F9DAF99617BF4C7800422467 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		F9DAF99717BF4C7900422467 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		F9DAF99917BF572700422467 /* team.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team.plist; sourceTree = "<group>"; };
+		F9DAF99A17BF572700422467 /* team.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team.png; sourceTree = "<group>"; };
+		F9DAF99D17BFAB7500422467 /* TeamLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamLayer.h; sourceTree = "<group>"; };
+		F9DAF99E17BFAB7700422467 /* TeamLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -697,6 +707,8 @@
 				F9363E1C17BA579100F832C0 /* Door.m */,
 				F9363E2117BA5D3600F832C0 /* Carpenter.h */,
 				F9363E2217BA5D3600F832C0 /* Carpenter.m */,
+				F9DAF99617BF4C7800422467 /* Team.h */,
+				F9DAF99717BF4C7900422467 /* Team.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1204,6 +1216,8 @@
 				F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */,
 				F9363E2417BA6C9C00F832C0 /* ConversationLayer.h */,
 				F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */,
+				F9DAF99D17BFAB7500422467 /* TeamLayer.h */,
+				F9DAF99E17BFAB7700422467 /* TeamLayer.m */,
 				F93DF68E178AB5D8007AD085 /* GameScene.h */,
 				F93DF68F178AB5D8007AD085 /* GameScene.m */,
 				F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */,
@@ -1259,6 +1273,10 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F9DAF99917BF572700422467 /* team.plist */,
+				F9DAF99A17BF572700422467 /* team.png */,
+				F9DAF99217BF417400422467 /* player.plist */,
+				F9DAF99317BF417400422467 /* player.png */,
 				F99DFA9C17B93707001E1EA8 /* towner.plist */,
 				F99DFA9D17B93707001E1EA8 /* towner.png */,
 				F9B0DABD17B4C3B6009A08B1 /* home.plist */,
@@ -1275,8 +1293,6 @@
 				F9A468E2179B4D70002BAFB7 /* title.png */,
 				F9A468D31799D606002BAFB7 /* chara.plist */,
 				F9A468D41799D606002BAFB7 /* chara.png */,
-				F9A468CF1799D0E2002BAFB7 /* monster.plist */,
-				F9A468D01799D0E2002BAFB7 /* monster.png */,
 				F93DF6AF178AF9F0007AD085 /* gameparts.plist */,
 				F93DF6B0178AF9F0007AD085 /* gameparts.png */,
 			);
@@ -1494,8 +1510,6 @@
 				F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */,
 				F9ABA639178F05BE00A02626 /* title_bg.png in Resources */,
 				F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */,
-				F9A468D11799D0E2002BAFB7 /* monster.plist in Resources */,
-				F9A468D21799D0E2002BAFB7 /* monster.png in Resources */,
 				F9A468D51799D606002BAFB7 /* chara.plist in Resources */,
 				F9A468D61799D606002BAFB7 /* chara.png in Resources */,
 				F9A468DA179A7E9A002BAFB7 /* dead.plist in Resources */,
@@ -1516,6 +1530,10 @@
 				F9B0DAC017B4C3B6009A08B1 /* home.png in Resources */,
 				F99DFA9E17B93707001E1EA8 /* towner.plist in Resources */,
 				F99DFA9F17B93707001E1EA8 /* towner.png in Resources */,
+				F9DAF99417BF417400422467 /* player.plist in Resources */,
+				F9DAF99517BF417400422467 /* player.png in Resources */,
+				F9DAF99B17BF572700422467 /* team.plist in Resources */,
+				F9DAF99C17BF572700422467 /* team.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1697,6 +1715,8 @@
 				F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */,
 				F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */,
 				F9363E2617BA6C9C00F832C0 /* ConversationLayer.m in Sources */,
+				F9DAF99817BF4C7900422467 /* Team.m in Sources */,
+				F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

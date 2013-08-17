@@ -14,10 +14,14 @@
 #import "GameScene.h"
 #import "Door.h"
 #import "Carpenter.h"
+#import "Team.h"
+#import "ConversationLayer.h"
 
 @interface HomeController ()
 @property (nonatomic, retain)Door *_door;
 @property (nonatomic, retain)Carpenter *_carpenter;
+@property (nonatomic, retain)Team *_team;
+@property (nonatomic, retain)ConversationLayer *_conversationLayer;
 @end
 
 @implementation HomeController
@@ -41,7 +45,29 @@
     self._carpenter = [Carpenter create:1];
     [PointUtil setTLPosition:self._carpenter x:150 y:650];
     [[HomeScene sharedInstance].mainLayer addChild:self._carpenter];
+    
+    // チームウィンドウ追加
+    self._team = [Team node];
+    [PointUtil setTLPosition:self._team x:65 y:840];
+    [[HomeScene sharedInstance].mainLayer addChild:self._team];
+    
+    // 共通会話レイヤーの初期化
+    self._conversationLayer = [ConversationLayer node];
 }
+
+// 会話を表示
+- (void)showConversation:(NSArray *)texts {
+    [self._conversationLayer setTexts:texts];
+    [self._conversationLayer addCompleteListner:self selector:@selector(onConversationClose:)];
+    [self suspend];
+    [[HomeScene sharedInstance].popupLayer addChild:self._conversationLayer z:100];
+}
+
+// 会話終了時
+- (void)onConversationClose:(id)sender {
+    [self resume];
+}
+
 
 - (void)start {
     [self._carpenter start];

@@ -8,6 +8,7 @@
 
 #import "CCNodeButton.h"
 #import "GameUtil.h"
+#import "ColorUtil.h"
 
 @interface CCNodeButton ()
 @property (nonatomic, readwrite)BOOL _isTouch;
@@ -104,9 +105,11 @@
 }
 
 - (void)onPress {
+    if (self._sprite) self._sprite.color = [ColorUtil getTouchedFontColor];
 }
 
 - (void)onRelease {
+    if (self._sprite) self._sprite.color = [ColorUtil getDefaultFontColor];
 }
 
 @end

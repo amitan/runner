@@ -27,6 +27,8 @@
 
         // ブロック追加
         self._blocks = [NSArray arrayWithObjects:
+                        [Block createBlock:101 x:40 y:-730],
+                        [Block createBlock:101 x:100 y:-730],
                         [Block createBlock:101 x:160 y:-730],
                         [Block createBlock:101 x:220 y:-730], // ジャンプ台ブロック
                         [Block createBlock:101 x:500 y:-260],

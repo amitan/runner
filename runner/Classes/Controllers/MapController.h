@@ -18,7 +18,7 @@
 @property (nonatomic, retain)Map *map;
 
 // 動作を開始/停止する
-- (void)setup:(int)stageId isRandom:(BOOL)isRandom;
+- (void)setup:(int)stageId;
 - (void)start;
 - (void)stop;
 

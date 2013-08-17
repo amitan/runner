@@ -13,7 +13,6 @@
 
 @interface HomeScene ()
 @property (nonatomic, readwrite)BOOL _isSetup;
-@property (nonatomic, retain)ConversationLayer *_conversationLayer;
 @end
 
 @implementation HomeScene
@@ -67,8 +66,6 @@ static HomeScene *_scene = nil;
         self.homeController = [HomeController node];
         [self addChild:self.homeController z:-1];
         
-        // ポップアップレイヤーの初期化
-        self._conversationLayer = [ConversationLayer node];
     }
     return self;
 }
@@ -104,17 +101,5 @@ static HomeScene *_scene = nil;
 - (void)stop {
     [self.homeController stop];
 }
-
-- (void)showConversation:(NSArray *)texts {
-    [self._conversationLayer setTexts:texts];
-    [self._conversationLayer addClickListner:self selector:@selector(onConversationClose:)];
-    [self.homeController suspend];
-    [self.popupLayer addChild:self._conversationLayer z:100];
-}
-
-- (void)onConversationClose:(id)sender {
-    [self.homeController resume];
-}
-
 
 @end
