@@ -20,12 +20,12 @@
 @property (nonatomic, readwrite)BOOL isSpeedUp;
 @property (nonatomic, retain)Block *_land;
 @property (nonatomic, retain)Coin *_lastCoin;
-@property (nonatomic, retain)NSMutableArray *_blocks;
-@property (nonatomic, retain)NSMutableArray *_coins;
-@property (nonatomic, retain)NSMutableArray *_enemies;
-@property (nonatomic, retain)NSMutableArray *_switches;
-@property (nonatomic, retain)NSMutableArray *_trampolines;
-@property (nonatomic, retain)NSMutableArray *_rails;
+@property (nonatomic, retain)NSArray *_blocks;
+@property (nonatomic, retain)NSArray *_coins;
+@property (nonatomic, retain)NSArray *_enemies;
+@property (nonatomic, retain)NSArray *_switches;
+@property (nonatomic, retain)NSArray *_trampolines;
+@property (nonatomic, retain)NSArray *_rails;
 
 // 指定したページを生成する
 + (Page*)create:(int)pageId;

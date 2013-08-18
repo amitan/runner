@@ -12,6 +12,7 @@
 #import "GameScene.h"
 #import "TitleLayer.h"
 #import "GameUtil.h"
+#import "UserPlayer.h"
 
 @implementation MyNavigationController
 @synthesize adController;
@@ -65,15 +66,24 @@
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"towner.plist"];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"team.plist"];
 
-        // 初期値設定
+        // シーケンス値設定
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
-        [defaults setObject:[NSNumber numberWithInt:INIT_PLAYER_ID] forKey:@"player1"];
+        int sequenceId = 1;
+        [defaults setObject:[NSNumber numberWithInt:sequenceId] forKey:@"userPlayerSequence"];
+
+        // ユーザーの初期所持キャラ定義
+        NSMutableDictionary *userPlayer = [UserPlayer createUserPlayer:INIT_PLAYER_ID sequenceId:sequenceId];
+        NSMutableArray *userPlayers = [NSMutableArray arrayWithObjects:userPlayer, nil];
+        [defaults setObject:userPlayers forKey:@"userPlayers"];
+        
+        // ユーザーの初期編成キャラ定義
+        [defaults setObject:[NSNumber numberWithInt:sequenceId] forKey:@"player1"];
+        
         [userDefaults registerDefaults:defaults];
         [userDefaults synchronize];
-        
-		// Add the first scene to the stack. The director will draw it immediately into the framebuffer. (Animation is started automatically when the view is displayed.)
-		// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
+
+        // ゲーム開始
 		[director runWithScene: [TitleLayer scene]];
 	}
 }

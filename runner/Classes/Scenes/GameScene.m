@@ -14,6 +14,7 @@
 @interface GameScene ()
 @property (nonatomic, readwrite)int _stageId;
 @property (nonatomic, readwrite)BOOL _isSetup;
+@property (nonatomic, readwrite)int _playerNo;
 @end
 
 @implementation GameScene
@@ -44,6 +45,7 @@ static GameScene *_scene = nil;
         // 初期値を追加
         self._isSetup = false;
         self._stageId = stageId;
+        self._playerNo = 1;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         
         // 背景を設定
@@ -142,7 +144,16 @@ static GameScene *_scene = nil;
     
     // ゲーム結果ウィンドウを表示
     GameResultLayer *gameResultLayer = [GameResultLayer node];
+    [gameResultLayer setDistance:[self.hudController getDistance]];
+    int coin1 = [self.hudController getPlayer1Coin];
+    int coin2 = [self.hudController getPlayer2Coin];
+    int coin3 = [self.hudController getPlayer3Coin];
+    [gameResultLayer setCoin:coin1 player2Coin:coin2 player3Coin:coin3];
     [self.backgroundLayer addChild:gameResultLayer];
+}
+
+- (int)getPlayerNo {
+    return self._playerNo;
 }
 
 @end

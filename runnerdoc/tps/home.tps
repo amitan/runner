@@ -146,6 +146,9 @@
             <filename>../sprites/home/popup_large.png</filename>
             <filename>../sprites/home/player_base_middle.png</filename>
             <filename>../sprites/home/player_base_small.png</filename>
+            <filename>../sprites/home/popup_square_large.png</filename>
+            <filename>../sprites/home/popup_square_small.png</filename>
+            <filename>../sprites/home/popup_command.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -16,6 +16,7 @@
     int property;
 }
 @property (nonatomic, readwrite)BOOL isEnabled;
+@property (nonatomic, readwrite)BOOL changeColor;
 @property (nonatomic, readwrite)int property;
 
 - (void)addClickListner:(id)target selector:(SEL)selector;

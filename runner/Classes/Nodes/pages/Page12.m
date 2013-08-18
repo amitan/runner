@@ -33,28 +33,23 @@ const int PAGE12_INTERVAL1 = 2100;
         [self._land2 stageOn:self];
         
         // ブロック追加
-        self._blocks = [NSArray arrayWithObjects:
-                        [Block createBlock:102 x:170 y:-730],
+        self._blocks = @[[Block createBlock:102 x:170 y:-730],
                         [Block createBlock:102 x:170 y:-670],
-                        [Block createBlock:102 x:170 y:-610],
-                        nil];
+                        [Block createBlock:102 x:170 y:-610]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
         
         // レール追加
-        self._rails = [NSArray arrayWithObjects:
-                       [Rail createRail:1 rotation:6 x:800 y:-230],
+        self._rails = @[[Rail createRail:1 rotation:6 x:800 y:-230],
                        [Rail createRail:1 rotation:0 x:1600 y:-200],
-                       [Rail createRail:1 rotation:45 x:2200 y:-280],
-                        nil];
+                       [Rail createRail:1 rotation:45 x:2200 y:-280]];
         for (Rail *rail in self._rails) {
             [rail stageOn:self];
         }
         
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:1 x:350 y:-430],
+        self._coins = @[[Coin createCoin:1 x:350 y:-430],
                        [Coin createCoin:1 x:380 y:-370],
                        [Coin createCoin:1 x:410 y:-310],
                        [Coin createCoin:1 x:1190 y:-220],
@@ -74,8 +69,7 @@ const int PAGE12_INTERVAL1 = 2100;
                        [Coin createCoin:1 x:2330 y:-520],
                        [Coin createCoin:1 x:2360 y:-550],
                        [Coin createCoin:1 x:2390 y:-580],
-                       [Coin createCoin:1 x:2420 y:-610],
-                       nil];
+                       [Coin createCoin:1 x:2420 y:-610]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

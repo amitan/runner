@@ -105,11 +105,11 @@
 }
 
 - (void)onPress {
-    if (self._sprite) self._sprite.color = [ColorUtil getTouchedFontColor];
+    if (self._sprite) self._sprite.color = [ColorUtil getTouchedColor];
 }
 
 - (void)onRelease {
-    if (self._sprite) self._sprite.color = [ColorUtil getDefaultFontColor];
+    if (self._sprite) self._sprite.color = [ColorUtil getDefaultColor];
 }
 
 @end

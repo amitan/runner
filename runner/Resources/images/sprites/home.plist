@@ -33,33 +33,72 @@
             <key>player_base_small.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,257},{510,114}}</string>
+                <string>{{3,257},{510,70}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{510,114}}</string>
+                <string>{{0,0},{510,70}}</string>
                 <key>sourceSize</key>
-                <string>{510,114}</string>
+                <string>{510,70}</string>
+            </dict>
+            <key>popup_command.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{517,257},{230,90}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{230,90}}</string>
+                <key>sourceSize</key>
+                <string>{230,90}</string>
             </dict>
             <key>popup_large.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,375},{550,810}}</string>
+                <string>{{3,351},{520,760}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{550,810}}</string>
+                <string>{{0,0},{520,760}}</string>
                 <key>sourceSize</key>
-                <string>{550,810}</string>
+                <string>{520,760}</string>
+            </dict>
+            <key>popup_square_large.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,1115},{550,550}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,550}}</string>
+                <key>sourceSize</key>
+                <string>{550,550}</string>
+            </dict>
+            <key>popup_square_small.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{557,1115},{110,110}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{110,110}}</string>
+                <key>sourceSize</key>
+                <string>{110,110}</string>
             </dict>
             <key>talk_base.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,1189},{550,260}}</string>
+                <string>{{3,1669},{550,260}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -79,7 +118,7 @@
             <key>size</key>
             <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:7717673a7660f014b275dc826976e5ab$</string>
+            <string>$TexturePacker:SmartUpdate:561ee8759867af0afd1285ed4cff4b96$</string>
             <key>textureFileName</key>
             <string>home.png</string>
         </dict>

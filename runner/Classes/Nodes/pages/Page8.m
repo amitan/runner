@@ -22,8 +22,7 @@
         [self._land stageOn:self];
         
         // ブロック追加
-        self._blocks = [NSArray arrayWithObjects:
-                        [Block createBlock:102 x:170 y:-730],
+        self._blocks = @[[Block createBlock:102 x:170 y:-730],
                         [Block createBlock:102 x:470 y:-730],
                         [Block createBlock:102 x:230 y:-670],
                         [Block createBlock:102 x:290 y:-610],
@@ -53,16 +52,13 @@
                         [Block createBlock:103 x:2000 y:-730],
                         [Block createBlock:103 x:2000 y:-670],
                         [Block createBlock:103 x:2300 y:-490],
-                        [Block createBlock:303 x:2420 y:-370], // ここまで棚
-                        nil];        
+                        [Block createBlock:303 x:2420 y:-370]];        
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
         
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:2 x:1100 y:-250],
-                       nil];
+        self._coins = @[[Coin createCoin:2 x:1100 y:-250]];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }

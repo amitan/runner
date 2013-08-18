@@ -19,6 +19,7 @@ extern const int SPEED_UP_PAGE;
 typedef enum {
     BUTTON_PRIORITY = -1,
     POPUP_PRIORITY = -10,
+    UPPER_POPUP_PRIORITY = -20,
 } TOUCH_PRIORITY;
 
 // 方向

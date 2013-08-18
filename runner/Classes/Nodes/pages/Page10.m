@@ -31,8 +31,7 @@
         [self._land2 stageOn:self];
         
         // ブロック追加
-        self._blocks = [NSArray arrayWithObjects:
-                        [Block createBlock:104 x:100 y:-670],
+        self._blocks = @[[Block createBlock:104 x:100 y:-670],
                         [Block createBlock:101 x:100 y:-550],
                         [Block createBlock:105 x:160 y:-610],
                         [Block createBlock:304 x:220 y:-610],
@@ -69,24 +68,20 @@
                         [Block createBlock:102 x:3970 y:-160],
                         [Block createBlock:103 x:4210 y:-220],
                         [Block createBlock:103 x:4210 y:-160],
-                        [Block createBlock:101 x:3100 y:-430], // ここまでスイッチ2
-                        nil];
+                        [Block createBlock:101 x:3100 y:-430]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
 
         // スイッチ
-        self._switches = [NSArray arrayWithObjects:
-                          [Switch createSwitch:102 groupId:1 x:1030 y:-543],
-                          [Switch createSwitch:102 groupId:2 x:3100 y:-483],
-                          nil];
+        self._switches = @[[Switch createSwitch:102 groupId:1 x:1030 y:-543],
+                          [Switch createSwitch:102 groupId:2 x:3100 y:-483]];
         for (Switch *sw in self._switches) {
             [sw stageOn:self];
         }
 
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:4 groupId:1 x:1120 y:-730],
+        self._coins = @[[Coin createCoin:4 groupId:1 x:1120 y:-730],
                        [Coin createCoin:4 groupId:1 x:1180 y:-730],
                        [Coin createCoin:4 groupId:1 x:1240 y:-730],
                        [Coin createCoin:4 groupId:1 x:1300 y:-730],
@@ -146,8 +141,7 @@
                        [Coin createCoin:4 groupId:2 x:4540 y:-730],
                        [Coin createCoin:4 groupId:2 x:4600 y:-730],
                        [Coin createCoin:4 groupId:2 x:4660 y:-730],
-                       [Coin createCoin:5 groupId:2 x:2350 y:-580],
-                       nil];
+                       [Coin createCoin:5 groupId:2 x:2350 y:-580]];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }

@@ -39,8 +39,7 @@ const int PAGE5_INTERVAL2 = 150;
         [self._land3 stageOn:self];
 
         // ブロック追加
-        self._blocks = [NSArray arrayWithObjects:
-                        [Block createBlock:202 x:100 y:-670],
+        self._blocks = @[[Block createBlock:202 x:100 y:-670],
                         [Block createBlock:201 x:100 y:-730],
                         [Block createBlock:101 x:1460 y:-570],
                         [Block createBlock:101 x:1520 y:-570],
@@ -50,15 +49,13 @@ const int PAGE5_INTERVAL2 = 150;
                         [Block createBlock:101 x:2180 y:-350],
                         [Block createBlock:101 x:2240 y:-350],
                         [Block createBlock:101 x:2300 y:-350],
-                        [Block createBlock:101 x:2300 y:-570],
-                        nil];
+                        [Block createBlock:101 x:2300 y:-570]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
         
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:1 x:75 y:-572],
+        self._coins = @[[Coin createCoin:1 x:75 y:-572],
                        [Coin createCoin:1 x:125 y:-572],
                        [Coin createCoin:1 x:1460 y:-502],
                        [Coin createCoin:1 x:1520 y:-502],
@@ -68,8 +65,7 @@ const int PAGE5_INTERVAL2 = 150;
                        [Coin createCoin:1 x:1820 y:-282],
                        [Coin createCoin:1 x:1880 y:-282],
                        [Coin createCoin:1 x:1940 y:-282],
-                       [Coin createCoin:1 x:2000 y:-282],
-                       nil];
+                       [Coin createCoin:1 x:2000 y:-282]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

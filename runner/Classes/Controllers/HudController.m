@@ -16,7 +16,7 @@
 #import "Pause.h"
 
 @interface HudController ()
-@property (nonatomic, readwrite)int _coinNum;
+@property (nonatomic, readwrite)int _totalCoinNum, _player1CoinNum, _player2CoinNum, _player3CoinNum;
 @property (nonatomic, readwrite)float _dx;
 @property (nonatomic, readwrite)int _currentDistance;
 @property (nonatomic, retain)CCLabelTTF *_coinNumLabel;
@@ -69,7 +69,7 @@
     self._coinBonus = [CCSprite spriteWithSpriteFrameName:@"coin_bonus.png"];
     [PointUtil setTLPosition:self._coinBonus x:BASE_WIDTH y:174];
     self._coinBonusLabel = [LabelUtil createLabel:@"" fontSize:42 dimensions:CGSizeMake(100, 30) alignment:kCCTextAlignmentLeft];
-    self._coinBonusLabel.color = [ColorUtil getEffectOrangeFontColor];
+    self._coinBonusLabel.color = [ColorUtil getEffectOrangeColor];
     self._coinBonusLabel.position = [PointUtil getPosition:235 y:16];
     [self._coinBonus addChild:self._coinBonusLabel];
     self._coinBonus.visible = NO;
@@ -100,7 +100,7 @@
 }
 
 - (void)sync {
-    [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", self._coinNum]];
+    [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", self._totalCoinNum]];
     [self._distanceLabel setString:[NSString stringWithFormat:@"%dM", self._currentDistance]];
     if (self._isPausing) {
         self._stopSprite.visible = NO;
@@ -116,15 +116,45 @@
 }
 
 - (void)addCoin:(int)num {
-    self._coinNum += num;
+    [self addCoin:num playerNo:[[GameScene sharedInstance] getPlayerNo]];
+}
+
+- (void)addCoin:(int)num playerNo:(int)playerNo {
+    self._totalCoinNum += num;
+    switch (playerNo) {
+        case 1:
+            self._player1CoinNum += num;
+            break;
+        case 2:
+            self._player2CoinNum += num;
+            break;
+        case 3:
+            self._player3CoinNum += num;
+            break;
+    }
     [self sync];
 }
 
 - (void)addCoinBonus:(int)num {
+    [self addCoinBonus:num playerNo:[[GameScene sharedInstance] getPlayerNo]];
+}
+
+- (void)addCoinBonus:(int)num playerNo:(int)playerNo {
     self._coinBonus.visible = YES;
     [self._coinBonusLabel setString:[NSString stringWithFormat:@"+%d", num]];
     [self._coinBonus runAction:[CommonAnimation getEffectAppearAction]];
-    self._coinNum += num;
+    self._totalCoinNum += num;
+    switch (playerNo) {
+        case 1:
+            self._player1CoinNum += num;
+            break;
+        case 2:
+            self._player2CoinNum += num;
+            break;
+        case 3:
+            self._player3CoinNum += num;
+            break;
+    }
     [self sync];
 }
 
@@ -139,6 +169,16 @@
 
 - (int)getDistance {
     return self._dx / 128.0f;
+}
+
+- (int)getPlayer1Coin {
+    return self._player1CoinNum;
+}
+- (int)getPlayer2Coin {
+    return self._player2CoinNum;
+}
+- (int)getPlayer3Coin {
+    return self._player3CoinNum;
 }
 
 - (void)showSpeedUpEffect {

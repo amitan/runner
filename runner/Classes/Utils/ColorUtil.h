@@ -11,13 +11,16 @@
 
 @interface ColorUtil : NSObject
 
-// デフォルトの文字色を返す
-+ (ccColor3B)getDefaultFontColor;
+// デフォルトの色を返す
++ (ccColor3B)getDefaultColor;
 
-// タッチ時の文字色を返す
-+ (ccColor3B)getTouchedFontColor;
+// タッチ時の色を返す
++ (ccColor3B)getTouchedColor;
 
-// エフェクトの文字色を返す
-+ (ccColor3B)getEffectOrangeFontColor;
+// エフェクトの色を返す
++ (ccColor3B)getEffectOrangeColor;
+
+// 警告時の色を返す
++ (ccColor3B)getWarningRedColor;
 
 @end

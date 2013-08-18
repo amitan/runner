@@ -27,8 +27,9 @@
 - (id)initWithSpriteFrame:(CCSpriteFrame *)spriteFrame {
     self = [super initWithSpriteFrame:spriteFrame];
     if (self) {
-        property = BUTTON_PRIORITY;
-        isEnabled = YES;
+        self.property = BUTTON_PRIORITY;
+        self.isEnabled = YES;
+        self.changeColor = YES;
     }
     return self;
 }
@@ -41,7 +42,7 @@
 - (void)setIsEnabled:(BOOL)_isEnabled {
     isEnabled = _isEnabled;
     if (isEnabled) {
-        self.color = [ColorUtil getDefaultFontColor];
+        self.color = [ColorUtil getDefaultColor];
     } else {
 //        [GameUtil disabled:self];
     }
@@ -112,18 +113,20 @@
 }
 
 - (void)onPress {
+    if (!self.changeColor) return;
     if (self._label) {
-        self._label.color = [ColorUtil getTouchedFontColor];
+        self._label.color = [ColorUtil getTouchedColor];
     } else {
-        self.color = [ColorUtil getTouchedFontColor];
+        self.color = [ColorUtil getTouchedColor];
     }
 }
 
 - (void)onRelease {
+    if (!self.changeColor) return;
     if (self._label) {
-        self._label.color = [ColorUtil getDefaultFontColor];
+        self._label.color = [ColorUtil getDefaultColor];
     } else {
-        self.color = [ColorUtil getDefaultFontColor];
+        self.color = [ColorUtil getDefaultColor];
     }
 }
 

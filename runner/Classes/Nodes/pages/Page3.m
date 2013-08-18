@@ -26,38 +26,32 @@
         [self._land stageOn:self];
         
         // 敵を追加
-        self._enemies = [NSArray arrayWithObjects:
-                         [Enemy createEnemy:1 x:184 y:-715],
+        self._enemies = @[[Enemy createEnemy:1 x:184 y:-715],
                          [Enemy createEnemy:1 x:268 y:-715],
-                         [Enemy createEnemy:1 x:352 y:-715],
-                         nil];
+                         [Enemy createEnemy:1 x:352 y:-715]];
         for (Enemy *enemy in self._enemies) {
             [enemy stageOn:self];
         }
         
         // ブロック追加
-        self._blocks = [NSArray arrayWithObjects:
-                        [Block createBlock:101 x:792 y:-600],
+        self._blocks = @[[Block createBlock:101 x:792 y:-600],
                         [Block createBlock:101 x:852 y:-600],
                         [Block createBlock:101 x:912 y:-600],
                         [Block createBlock:101 x:972 y:-600],
-                        [Block createBlock:101 x:1032 y:-600],
-                        nil];
+                        [Block createBlock:101 x:1032 y:-600]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
         
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:1 x:600 y:-735],
+        self._coins = @[[Coin createCoin:1 x:600 y:-735],
                        [Coin createCoin:1 x:664 y:-735],
                        [Coin createCoin:1 x:728 y:-735],
                        [Coin createCoin:1 x:792 y:-735],
                        [Coin createCoin:1 x:852 y:-735],
                        [Coin createCoin:1 x:912 y:-735],
                        [Coin createCoin:1 x:972 y:-735],
-                       [Coin createCoin:1 x:1032 y:-735],
-                       nil];
+                       [Coin createCoin:1 x:1032 y:-735]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

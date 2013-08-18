@@ -1,20 +1,19 @@
 //
-//  ConversationLayer.h
+//  PlayerSelectLayer.h
 //  runner
 //
-//  Created by Ayumi Otomo on 2013/08/13.
+//  Created by Ayumi Otomo on 2013/08/18.
 //  Copyright 2013年 Ayumi Otomo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface ConversationLayer : CCLayer {
+@interface PlayerSelectLayer : CCLayer {
     
 }
+@property (nonatomic, readwrite)int orderNo;
 
-- (void)setTexts:(NSArray *)texts;
 - (void)addCompleteListner:(id)target selector:(SEL)selector;
-- (void)setConfirmCommand:(int)step;
 
 @end

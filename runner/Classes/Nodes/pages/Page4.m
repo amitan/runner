@@ -38,16 +38,14 @@
         [self._land3 stageOn:self];
         
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:1 x:375 y:-500],
+        self._coins = @[[Coin createCoin:1 x:375 y:-500],
                        [Coin createCoin:1 x:425 y:-500],
                        [Coin createCoin:1 x:565 y:-735],
                        [Coin createCoin:1 x:615 y:-735],
                        [Coin createCoin:1 x:665 y:-735],
                        [Coin createCoin:1 x:715 y:-735],
                        [Coin createCoin:1 x:855 y:-500],
-                       [Coin createCoin:1 x:905 y:-500],
-                       nil];
+                       [Coin createCoin:1 x:905 y:-500]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

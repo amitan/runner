@@ -44,4 +44,7 @@
 // ゲームを終了する
 - (void)finishGame;
 
+// プレイヤー番号を取得する
+- (int)getPlayerNo;
+
 @end

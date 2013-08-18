@@ -33,8 +33,7 @@
         }
         
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:1 x:50 y:-660],
+        self._coins = @[[Coin createCoin:1 x:50 y:-660],
                        [Coin createCoin:1 x:110 y:-660],
                        [Coin createCoin:1 x:170 y:-660],
                        [Coin createCoin:1 x:230 y:-660],
@@ -53,8 +52,7 @@
                        [Coin createCoin:1 x:1190 y:-180],
                        [Coin createCoin:1 x:1250 y:-180],
                        [Coin createCoin:1 x:1310 y:-180],
-                       [Coin createCoin:1 x:1370 y:-180],
-                       nil];
+                       [Coin createCoin:1 x:1370 y:-180]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

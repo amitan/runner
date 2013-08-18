@@ -10,16 +10,20 @@
 
 @implementation ColorUtil
 
-+ (ccColor3B)getDefaultFontColor {
++ (ccColor3B)getDefaultColor {
     return ccc3(255, 255, 255);
 }
 
-+ (ccColor3B)getTouchedFontColor {
++ (ccColor3B)getTouchedColor {
     return ccc3(255, 255, 0);
 }
 
-+ (ccColor3B)getEffectOrangeFontColor {
++ (ccColor3B)getEffectOrangeColor {
     return ccc3(255, 140, 0);
+}
+
++ (ccColor3B)getWarningRedColor {
+    return ccc3(255, 0, 0);
 }
 
 @end

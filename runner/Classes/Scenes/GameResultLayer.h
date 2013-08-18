@@ -13,4 +13,6 @@
     
 }
 
+- (void)setDistance:(int)distance;
+- (void)setCoin:(int)coin1 player2Coin:(int)coin2 player3Coin:(int)coin3;
 @end

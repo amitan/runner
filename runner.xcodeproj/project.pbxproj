@@ -234,6 +234,9 @@
 		F9DAF99B17BF572700422467 /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99917BF572700422467 /* team.plist */; };
 		F9DAF99C17BF572700422467 /* team.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99A17BF572700422467 /* team.png */; };
 		F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99E17BFAB7700422467 /* TeamLayer.m */; };
+		F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */; };
+		F9DAF9B617C0B23600422467 /* UserPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9B517C0B23600422467 /* UserPlayer.m */; };
+		F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9B817C0B28A00422467 /* PlayerMaster.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -674,6 +677,12 @@
 		F9DAF99A17BF572700422467 /* team.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team.png; sourceTree = "<group>"; };
 		F9DAF99D17BFAB7500422467 /* TeamLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamLayer.h; sourceTree = "<group>"; };
 		F9DAF99E17BFAB7700422467 /* TeamLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamLayer.m; sourceTree = "<group>"; };
+		F9DAF9A017C054AE00422467 /* PlayerSelectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectLayer.h; sourceTree = "<group>"; };
+		F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectLayer.m; sourceTree = "<group>"; };
+		F9DAF9B417C0B23600422467 /* UserPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPlayer.h; sourceTree = "<group>"; };
+		F9DAF9B517C0B23600422467 /* UserPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPlayer.m; sourceTree = "<group>"; };
+		F9DAF9B717C0B28900422467 /* PlayerMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMaster.h; sourceTree = "<group>"; };
+		F9DAF9B817C0B28A00422467 /* PlayerMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMaster.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1147,6 +1156,7 @@
 		F93DF688178AB5BF007AD085 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F9DAF9B317C0B23400422467 /* Models */,
 				F93DF689178AB5BF007AD085 /* Animations */,
 				F93DF68A178AB5BF007AD085 /* Controllers */,
 				F93DF68B178AB5BF007AD085 /* Nodes */,
@@ -1218,6 +1228,8 @@
 				F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */,
 				F9DAF99D17BFAB7500422467 /* TeamLayer.h */,
 				F9DAF99E17BFAB7700422467 /* TeamLayer.m */,
+				F9DAF9A017C054AE00422467 /* PlayerSelectLayer.h */,
+				F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */,
 				F93DF68E178AB5D8007AD085 /* GameScene.h */,
 				F93DF68F178AB5D8007AD085 /* GameScene.m */,
 				F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */,
@@ -1440,6 +1452,17 @@
 				F9C9814217B8C86200DDCE95 /* CoinSwitch.m */,
 			);
 			path = switches;
+			sourceTree = "<group>";
+		};
+		F9DAF9B317C0B23400422467 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9DAF9B417C0B23600422467 /* UserPlayer.h */,
+				F9DAF9B517C0B23600422467 /* UserPlayer.m */,
+				F9DAF9B717C0B28900422467 /* PlayerMaster.h */,
+				F9DAF9B817C0B28A00422467 /* PlayerMaster.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1717,6 +1740,9 @@
 				F9363E2617BA6C9C00F832C0 /* ConversationLayer.m in Sources */,
 				F9DAF99817BF4C7900422467 /* Team.m in Sources */,
 				F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */,
+				F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */,
+				F9DAF9B617C0B23600422467 /* UserPlayer.m in Sources */,
+				F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

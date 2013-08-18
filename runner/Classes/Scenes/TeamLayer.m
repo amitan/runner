@@ -12,10 +12,14 @@
 #import "CCSpriteButton.h"
 #import "ColorUtil.h"
 #import "LabelUtil.h"
+#import "PlayerSelectLayer.h"
+#import "HomeScene.h"
+#import "UserPlayer.h"
+#import "PlayerMaster.h"
 
 @interface TeamLayer ()
 @property (nonatomic, retain)NSInvocation* _listener;
-@property (nonatomic, retain)CCSpriteButton *_player1Button, *_player2Button, *_player3Button;
+@property (nonatomic, retain)PlayerSelectLayer *_playerSelectLayer;
 @end
 
 @implementation TeamLayer
@@ -33,71 +37,84 @@
         
         // ベースウィンドウ追加
         CCSprite *popupBaseSprite = [CCSprite spriteWithSpriteFrameName:@"popup_large.png"];
-        [PointUtil setTLPosition:popupBaseSprite x:45 y:120];
+        [PointUtil setTLPosition:popupBaseSprite x:60 y:154];
         [self addChild:popupBaseSprite];
         
+        // パーティ情報取得
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        int playerId1 = [[userDefaults objectForKey:@"player1"] intValue];
-        int playerId2 = [[userDefaults objectForKey:@"player2"] intValue];
-        int playerId3 = [[userDefaults objectForKey:@"player3"] intValue];
-
-        // プレイヤー1
-        CCSpriteButton *base1Button = [CCSpriteButton spriteWithSpriteFrameName:@"player_base_middle.png"];
-        base1Button.position = [PointUtil getPosition:276 y:660];
-        [base1Button addClickListner:self selector:@selector(clickPlayerButton:)];
-        [popupBaseSprite addChild:base1Button];
-        self._player1Button = base1Button;
+        PlayerMaster *master = [PlayerMaster create];
         
-        CCSprite *player1 = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"player%d_stand.png", playerId1]];
-        player1.position = [PointUtil getPosition:62 y:188];
-        [base1Button addChild:player1];
+        for (int i = 0; i < 3; i++) {
+            
+            // ベース画像設定
+            CCSpriteButton *baseButton = [CCSpriteButton spriteWithSpriteFrameName:@"player_base_middle.png"];
+            baseButton.position = [PointUtil getPosition:260 y:630 - i * 250];
+            [baseButton addClickListner:self selector:@selector(clickPlayerButton:)];
+            [popupBaseSprite addChild:baseButton];
+            baseButton.tag = i + 1;
+            baseButton.property = POPUP_PRIORITY - 1;
 
-        CCLabelTTF *player1Name = [LabelUtil createLabel:@"ゆうしゃ Lv: 1/99" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
-        player1Name.position = [PointUtil getPosition:307 y:200];
-        [base1Button addChild:player1Name];
+            // プレイヤー情報取得
+            int playerSequenceId = [[userDefaults objectForKey:[NSString stringWithFormat:@"player%d", i + 1]] intValue];
+            NSMutableDictionary *userPlayer = [UserPlayer getUserPlayer:playerSequenceId];
+            
+            if (userPlayer) {
+                
+                // プレイヤー画像
+                int playerId = [userPlayer[@"playerId"] intValue];
+                CCSprite *playerImage = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"player%d_stand.png", playerId]];
+                playerImage.position = [PointUtil getPosition:62 y:188];
+                [baseButton addChild:playerImage];
 
-        CCLabelTTF *nextLevel1 = [LabelUtil createLabel:@"次のレベルまであと 100 G" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
-        nextLevel1.position = ccpAdd(player1Name.position, [PointUtil getPosition:0 y:-42]);
-        [base1Button addChild:nextLevel1];
+                // プレイヤー名とレベル
+                NSString *name = [master getName:playerId];
+                int level = [userPlayer[@"level"] intValue];
+                int maxLevel = [master getMaxLevel:playerId];
+                NSString *playerName = [NSString stringWithFormat:@"%@ Lv: %d/%d", name, level, maxLevel];
+                CCLabelTTF *playerNameLabel = [LabelUtil createLabel:playerName fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
+                playerNameLabel.position = [PointUtil getPosition:307 y:200];
+                [baseButton addChild:playerNameLabel];
 
-        CCLabelTTF *gold1 = [LabelUtil createLabel:@"ゴールドボーナス: +1%" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
-        gold1.position = [PointUtil getPosition:213 y:106];;
-        [base1Button addChild:gold1];
+                // 次のレベルまでのゴールド
+                NSString *nextGold = [NSString stringWithFormat:@"次のレベルまであと %d G", [master getNextGold:playerId currentLevel:level]];
+                CCLabelTTF *nextLevelLabel = [LabelUtil createLabel:nextGold fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
+                nextLevelLabel.position = ccpAdd(playerNameLabel.position, [PointUtil getPosition:0 y:-42]);
+                [baseButton addChild:nextLevelLabel];
 
-        CCLabelTTF *item1 = [LabelUtil createLabel:@"アイテムボーナス: 特になし" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
-        item1.position = ccpAdd(gold1.position, [PointUtil getPosition:0 y:-32]);
-        [base1Button addChild:item1];
+                // ゴールドボーナス
+                NSString *goldBonus = [NSString stringWithFormat:@"ゴールドボーナス: +%d%@", [master getGoldBonus:playerId currentLevel:level], @"%"];
+                CCLabelTTF *goldBonusLabel = [LabelUtil createLabel:goldBonus fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
+                goldBonusLabel.position = [PointUtil getPosition:213 y:106];;
+                [baseButton addChild:goldBonusLabel];
 
-        CCLabelTTF *special1 = [LabelUtil createLabel:@"とくぎ: 特になし" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
-        special1.position = ccpAdd(item1.position, [PointUtil getPosition:0 y:-32]);
-        [base1Button addChild:special1];
+                CCLabelTTF *item1 = [LabelUtil createLabel:@"アイテムボーナス: 特になし" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
+                item1.position = ccpAdd(goldBonusLabel.position, [PointUtil getPosition:0 y:-32]);
+                [baseButton addChild:item1];
 
-        // プレイヤー2
-        CCSpriteButton *base2Button = [CCSpriteButton spriteWithSpriteFrameName:@"player_base_middle.png"];
-        base2Button.position = [PointUtil getPosition:276 y:406];
-        [base2Button addClickListner:self selector:@selector(clickPlayerButton:)];
-        [popupBaseSprite addChild:base2Button];
-        self._player2Button = base2Button;
-
-        // プレイヤー3
-        CCSpriteButton *base3Button = [CCSpriteButton spriteWithSpriteFrameName:@"player_base_middle.png"];
-        base3Button.position = [PointUtil getPosition:276 y:152];
-        [base3Button addClickListner:self selector:@selector(clickPlayerButton:)];
-        [popupBaseSprite addChild:base3Button];
-        self._player3Button = base3Button;
-
-        // ボタンの優先度を調整
-        int popupButtonPriority = POPUP_PRIORITY - 1;
-        base1Button.property = popupButtonPriority;
-        base2Button.property = popupButtonPriority;
-        base3Button.property = popupButtonPriority;
-
+                CCLabelTTF *special1 = [LabelUtil createLabel:@"とくぎ: 特になし" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
+                special1.position = ccpAdd(item1.position, [PointUtil getPosition:0 y:-32]);
+                [baseButton addChild:special1];
+            }
+        }
+        
+        // ポップアップレイヤーの初期化
+        self._playerSelectLayer = [PlayerSelectLayer node];
     }
     return self;
 }
 
 - (void)clickPlayerButton:(id)sender {
+    CCSpriteButton *senderButoom = (CCSpriteButton*)sender;
+    self._playerSelectLayer.orderNo = senderButoom.tag;
+    [self._playerSelectLayer addCompleteListner:self selector:@selector(onConversationClose:)];
+    [[HomeScene sharedInstance].homeController suspend];
+    [[HomeScene sharedInstance].popupLayer addChild:self._playerSelectLayer z:100];
 }
+
+- (void)onConversationClose:(id)sender {
+    [[HomeScene sharedInstance].homeController resume];
+}
+
 
 - (void)dealloc {
     [super dealloc];

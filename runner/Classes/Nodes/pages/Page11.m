@@ -26,8 +26,7 @@
         [self._land stageOn:self];
 
         // ブロック追加
-        self._blocks = [NSArray arrayWithObjects:
-                        [Block createBlock:101 x:40 y:-730],
+        self._blocks = @[[Block createBlock:101 x:40 y:-730],
                         [Block createBlock:101 x:100 y:-730],
                         [Block createBlock:101 x:160 y:-730],
                         [Block createBlock:101 x:220 y:-730], // ジャンプ台ブロック
@@ -41,8 +40,7 @@
                         [Block createBlock:101 x:920 y:-260],
                         [Block createBlock:101 x:980 y:-260],
                         [Block createBlock:101 x:1040 y:-260],
-                        [Block createBlock:101 x:1100 y:-260],
-                        nil];
+                        [Block createBlock:101 x:1100 y:-260]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
@@ -56,8 +54,7 @@
         }
         
         // コインを追加
-        self._coins = [NSArray arrayWithObjects:
-                       [Coin createCoin:1 x:190 y:-600],
+        self._coins = @[[Coin createCoin:1 x:190 y:-600],
                        [Coin createCoin:1 x:190 y:-550],
                        [Coin createCoin:1 x:190 y:-500],
                        [Coin createCoin:1 x:240 y:-450],
@@ -76,8 +73,7 @@
                        [Coin createCoin:1 x:920 y:-200],
                        [Coin createCoin:1 x:980 y:-200],
                        [Coin createCoin:1 x:1040 y:-200],
-                       [Coin createCoin:1 x:1100 y:-200],
-                       nil];
+                       [Coin createCoin:1 x:1100 y:-200]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "ConversationLayer.h"
 
 @interface HomeController : CCNode {
     
@@ -20,8 +21,6 @@
 - (void)suspend;
 - (void)resume;
 
-// 会話を表示する
-- (void)showConversation:(NSArray*)texts;
-
-
+// 会話レイヤーを取得する
+- (ConversationLayer*)getConversationLayer;
 @end

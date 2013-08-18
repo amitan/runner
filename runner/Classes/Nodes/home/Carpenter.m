@@ -40,12 +40,26 @@
 }
 
 - (void)clickButton:(id)sender {
-    [[HomeScene sharedInstance].homeController showConversation:
-     [NSArray arrayWithObjects:
-      @"*「おれは大工のケンってんだ。ここに冒険者のためのでっけぇ宿をつくりてぇんだが、ゴールドが足りなくてよ。」",
-      @"*「1000G もあればいいものがつくれるんだが・・」", nil]];
+    HomeController *homeController = [HomeScene sharedInstance].homeController;
+    ConversationLayer *conversationLayer = [homeController getConversationLayer];
+    
+    // 会話設定
+    [conversationLayer setTexts:[NSArray arrayWithObjects:
+                                 @"*「おれは大工のケンってんだ。ここに冒険者のためのでっけぇ宿をつくりてぇんだが、ゴールドが足りなくてよ。」",
+                                 @"*「1000G もあればいいものがつくれるんだが・・」",
+                                 @"*「そうか、つまんねぇこと言ってすまなかったな。気が変わったらまた声かけてくれや。」", nil]];
+    [conversationLayer addCompleteListner:self selector:@selector(onConversationClose:)];
+    [conversationLayer setConfirmCommand:2];
+    
+    // 会話レイヤー表示
+    [homeController suspend];
+    [[HomeScene sharedInstance].popupLayer addChild:conversationLayer z:100];
 }
 
+// 会話終了時
+- (void)onConversationClose:(id)sender {
+    [[HomeScene sharedInstance].homeController resume];
+}
 - (void)start {
     NSString *fileName = [NSString stringWithFormat:@"carpenter%d_%@", self._nodeId, [GameUtil getDirectionStr:self._direction]];
     [self._sprite runAction:[CommonAnimation getFrameRepeatAction:fileName frameNum:2 duration:0.5f]];

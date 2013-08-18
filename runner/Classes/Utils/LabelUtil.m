@@ -13,7 +13,7 @@
 @implementation LabelUtil
 
 + (CCLabelTTF *)createLabel:(NSString*)labelWithString fontSize:(int)size {
-    return [LabelUtil _createLabel:labelWithString fontSize:size color:[ColorUtil getDefaultFontColor]];
+    return [LabelUtil _createLabel:labelWithString fontSize:size color:[ColorUtil getDefaultColor]];
 }
 
 + (CCLabelTTF *)_createLabel:(NSString*)labelWithString fontSize:(int)size color:(ccColor3B)color {
@@ -32,7 +32,7 @@
     CGSize newDimensions = CGSizeMake([PointUtil getPoint:dimensions.width], [PointUtil getPoint:dimensions.height]);
     CCLabelTTF *label = [CCLabelTTF labelWithString:labelWithString fontName:@"MisakiGothic" fontSize:fontSize
                                          dimensions:newDimensions hAlignment:hAlignment vAlignment:vAlignment];
-    label.color = [ColorUtil getDefaultFontColor];
+    label.color = [ColorUtil getDefaultColor];
     return label;
 }
 
