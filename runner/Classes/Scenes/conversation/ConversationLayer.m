@@ -10,17 +10,12 @@
 #import "GameUtil.h"
 #import "PointUtil.h"
 #import "LabelUtil.h"
-#import "CCSpriteButton.h"
 
 @interface ConversationLayer ()
 @property (nonatomic, retain)CCSprite *_talkBaseSprite;
-@property (nonatomic, retain)CCLabelTTF *_talkLabel, *_coinNumLabel;
-@property (nonatomic, retain)NSArray *_texts;
 @property (nonatomic, readwrite)int _step, _confirmStep;
 @property (nonatomic, retain)NSInvocation* _listener;
-@property (nonatomic, retain)CCSpriteButton *_yesButton, *_noButton;
 @property (nonatomic, readwrite)BOOL _isLock;
-- (void)_showWindow;
 @end
 
 @implementation ConversationLayer
@@ -54,16 +49,16 @@
         self._yesButton.position = [PointUtil getPosition:150 y:70];
         [self._yesButton addClickListner:self selector:@selector(clickYesButton:)];
         [self._talkBaseSprite addChild:self._yesButton];
-        CCLabelTTF *yesLabel = [LabelUtil createLabel:@">> 払う" fontSize:34];
-        [self._yesButton addLabel:yesLabel];
+        self._yesLabel = [LabelUtil createLabel:@">> はい" fontSize:34];
+        [self._yesButton addLabel:self._yesLabel];
         
         self._noButton = [CCSpriteButton spriteWithSpriteFrameName:@"popup_command.png"];
         self._noButton.property = buttonProperty;
         self._noButton.position = [PointUtil getPosition:410 y:70];
         [self._noButton addClickListner:self selector:@selector(clickNoButton:)];
         [self._talkBaseSprite addChild:self._noButton];
-        CCLabelTTF *noLabel = [LabelUtil createLabel:@">> 払わない" fontSize:34];
-        [self._noButton addLabel:noLabel];
+        self._noLabel = [LabelUtil createLabel:@">> いいえ" fontSize:34];
+        [self._noButton addLabel:self._noLabel];
         
         // コイン表示追加
         CCSprite *coinBaseSprite = [CCSprite spriteWithSpriteFrameName:@"coin_base.png"];
@@ -90,10 +85,10 @@
     [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self
                                                               priority:POPUP_PRIORITY
                                                        swallowsTouches:YES];
-    [self _showWindow];
+    [self showWindow];
 }
 
-- (void)_showWindow {
+- (void)showWindow {
     self._step = 0;
     self._isLock = false;
     
@@ -101,7 +96,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     int gold = [[userDefaults objectForKey:@"gold"] intValue];
     [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", gold]];
-    [self _fowardConversation];
+    [self fowardConversation];
 }
 
 - (void)onExit {
@@ -109,12 +104,12 @@
     [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
 }
 
-- (void)setTexts:(NSArray *)texts {
+- (void)setTexts:(NSMutableArray *)texts {
     self._texts = texts;
 }
 
 - (void)addCompleteListner:(id)target selector:(SEL)selector {
-	if( target && selector ) {
+	if (target && selector) {
 		NSMethodSignature *signature = [[target class] instanceMethodSignatureForSelector:selector];
 		self._listener = [NSInvocation invocationWithMethodSignature:signature];
 		[self._listener setTarget:target];
@@ -127,15 +122,21 @@
     self._confirmStep = step;
 }
 
+- (void)setConfirmButtonName:(NSString*)yesName noName:(NSString*)noName {
+    [self._yesLabel setString:yesName];
+    [self._noLabel setString:noName];
+}
+
+
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     return YES;
 }
 
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
-    [self _fowardConversation];
+    [self fowardConversation];
 }
 
-- (void)_fowardConversation {
+- (void)fowardConversation {
 
     // 確認コマの場合はボタンを押すまで閉じない
     if (self._isLock) {
@@ -151,10 +152,7 @@
 
     // 会話を次に進める
     if (self._step >= self._texts.count) {
-        if (self._listener) {
-            [self._listener invoke];
-        }
-        [self removeFromParentAndCleanup:NO];
+        [self closeConversation];
     } else {
 
         [self._talkLabel setString:[self._texts objectAtIndex:self._step]];
@@ -172,11 +170,29 @@
 }
 
 - (void)clickYesButton:(id)sender {
+    self._isLock = false;
+    [self executeYes];
 }
 
 - (void)clickNoButton:(id)sender {
     self._isLock = false;
-    [self _fowardConversation];
+    [self executeNo];
 }
+
+
+- (void)executeYes {
+}
+
+- (void)executeNo {
+    [self fowardConversation];
+}
+
+- (void)closeConversation {
+    if (self._listener) {
+        [self._listener invoke];
+    }
+    [self removeFromParentAndCleanup:NO];
+}
+
 
 @end

@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 
 @interface GameUtil : NSObject
+extern const BOOL IS_SANDBOX;
 extern const int INIT_PLAYER_ID;
 extern const int INIT_PLAYER_X;
 extern const int GRAVITY;

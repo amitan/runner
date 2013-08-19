@@ -9,6 +9,7 @@
 #import "GameUtil.h"
 
 @implementation GameUtil
+const BOOL IS_SANDBOX = true;
 const int INIT_PLAYER_ID = 1001001;
 const int INIT_PLAYER_X = 250;
 const int GRAVITY = 70;

@@ -12,10 +12,12 @@
 		F9052E6817A432720078EE9C /* Page5.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6717A432720078EE9C /* Page5.m */; };
 		F9052E6B17A432840078EE9C /* Page6.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6A17A432840078EE9C /* Page6.m */; };
 		F9052E6E17A56D170078EE9C /* GameResultLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6D17A56D170078EE9C /* GameResultLayer.m */; };
+		F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61B17C22FD7007CF0CF /* ConversationLayer.m */; };
+		F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */; };
+		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
 		F9363E1D17BA579100F832C0 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1C17BA579100F832C0 /* Door.m */; };
 		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
 		F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2217BA5D3600F832C0 /* Carpenter.m */; };
-		F9363E2617BA6C9C00F832C0 /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */; };
 		F93DF4D6178AB447007AD085 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D5178AB447007AD085 /* QuartzCore.framework */; };
 		F93DF4D8178AB447007AD085 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D7178AB447007AD085 /* OpenGLES.framework */; };
 		F93DF4DA178AB447007AD085 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D9178AB447007AD085 /* OpenAL.framework */; };
@@ -249,14 +251,18 @@
 		F9052E6A17A432840078EE9C /* Page6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page6.m; sourceTree = "<group>"; };
 		F9052E6C17A56D170078EE9C /* GameResultLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultLayer.h; sourceTree = "<group>"; };
 		F9052E6D17A56D170078EE9C /* GameResultLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultLayer.m; sourceTree = "<group>"; };
+		F923F61A17C22FD7007CF0CF /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
+		F923F61B17C22FD7007CF0CF /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
+		F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpenterConversationLayer.h; sourceTree = "<group>"; };
+		F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarpenterConversationLayer.m; sourceTree = "<group>"; };
+		F923F62017C273A0007CF0CF /* HomeDebugLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDebugLayer.h; sourceTree = "<group>"; };
+		F923F62117C273A0007CF0CF /* HomeDebugLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDebugLayer.m; sourceTree = "<group>"; };
 		F9363E1B17BA579100F832C0 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		F9363E1C17BA579100F832C0 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
 		F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNodeButton.m; sourceTree = "<group>"; };
 		F9363E2117BA5D3600F832C0 /* Carpenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carpenter.h; sourceTree = "<group>"; };
 		F9363E2217BA5D3600F832C0 /* Carpenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carpenter.m; sourceTree = "<group>"; };
-		F9363E2417BA6C9C00F832C0 /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
-		F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
 		F93DF4D2178AB447007AD085 /* runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93DF4D5178AB447007AD085 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F93DF4D7178AB447007AD085 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -712,6 +718,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F923F61917C22FC6007CF0CF /* conversation */ = {
+			isa = PBXGroup;
+			children = (
+				F923F61A17C22FD7007CF0CF /* ConversationLayer.h */,
+				F923F61B17C22FD7007CF0CF /* ConversationLayer.m */,
+				F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */,
+				F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */,
+			);
+			path = conversation;
+			sourceTree = "<group>";
+		};
 		F9363E1A17BA578400F832C0 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1223,14 +1240,13 @@
 		F93DF68C178AB5BF007AD085 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F923F61917C22FC6007CF0CF /* conversation */,
 				F9ABA62E178E84C300A02626 /* TitleLayer.h */,
 				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
 				F99DFAA017B9466C001E1EA8 /* HomeScene.h */,
 				F99DFAA117B9466C001E1EA8 /* HomeScene.m */,
 				F99DFAA317B94780001E1EA8 /* HomeInterfaceLayer.h */,
 				F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */,
-				F9363E2417BA6C9C00F832C0 /* ConversationLayer.h */,
-				F9363E2517BA6C9C00F832C0 /* ConversationLayer.m */,
 				F9DAF99D17BFAB7500422467 /* TeamLayer.h */,
 				F9DAF99E17BFAB7700422467 /* TeamLayer.m */,
 				F9DAF9A017C054AE00422467 /* PlayerSelectLayer.h */,
@@ -1241,6 +1257,8 @@
 				F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */,
 				F9052E6C17A56D170078EE9C /* GameResultLayer.h */,
 				F9052E6D17A56D170078EE9C /* GameResultLayer.m */,
+				F923F62017C273A0007CF0CF /* HomeDebugLayer.h */,
+				F923F62117C273A0007CF0CF /* HomeDebugLayer.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1742,13 +1760,15 @@
 				F9363E1D17BA579100F832C0 /* Door.m in Sources */,
 				F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */,
 				F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */,
-				F9363E2617BA6C9C00F832C0 /* ConversationLayer.m in Sources */,
 				F9DAF99817BF4C7900422467 /* Team.m in Sources */,
 				F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */,
 				F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */,
 				F9DAF9B617C0B23600422467 /* UserPlayer.m in Sources */,
 				F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */,
 				F9D849CE17C13969004EC908 /* LevelupCounter.m in Sources */,
+				F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */,
+				F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */,
+				F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

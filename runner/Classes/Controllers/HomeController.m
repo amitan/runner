@@ -16,13 +16,15 @@
 #import "Carpenter.h"
 #import "Team.h"
 #import "LevelupCounter.h"
+#import "LabelUtil.h"
+#import "HomeDebugLayer.h"
 
 @interface HomeController ()
 @property (nonatomic, retain)Door *_door;
 @property (nonatomic, retain)Carpenter *_carpenter;
 @property (nonatomic, retain)Team *_team;
 @property (nonatomic, retain)LevelupCounter *_levelupCounter;
-@property (nonatomic, retain)ConversationLayer *_conversationLayer;
+@property (nonatomic, retain)HomeDebugLayer *_homeDebugLayer;
 @end
 
 @implementation HomeController
@@ -38,8 +40,8 @@
 - (void)setup {
     
     // 進捗を取得
-    NSUserDefaults *userDefautls = [NSUserDefaults standardUserDefaults];
-    int homeStep = [[userDefautls objectForKey:@"homeStep"] intValue];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    int homeStep = [[userDefaults objectForKey:@"homeStep"] intValue];
     
     // ドア追加
     self._door = [Door node];
@@ -67,12 +69,20 @@
         [[HomeScene sharedInstance].mainLayer addChild:self._levelupCounter];
     }
     
-    // 共通会話レイヤーの初期化
-    self._conversationLayer = [ConversationLayer node];
+    // デバッグボタン追加
+    if (IS_SANDBOX) {
+        CCSpriteButton *debugButton = [CCSpriteButton spriteWithSpriteFrameName:@"coin_base.png"];
+        CCLabelTTF *debugLabel = [LabelUtil createLabel:@"DEBUG" fontSize:30];
+        [debugButton addLabel:debugLabel];
+        [PointUtil setTLPosition:debugButton x:0 y:100];
+        [debugButton addClickListner:self selector:@selector(clickDebugButton:)];
+        [[HomeScene sharedInstance].mainLayer addChild:debugButton];
+        self._homeDebugLayer = [HomeDebugLayer node];
+    }
 }
 
-- (ConversationLayer*)getConversationLayer {
-    return self._conversationLayer;
+- (void)clickDebugButton:(id)sender {
+    [[HomeScene sharedInstance].popupLayer addChild:self._homeDebugLayer z:100];
 }
 
 - (void)start {

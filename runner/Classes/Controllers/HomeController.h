@@ -21,6 +21,4 @@
 - (void)suspend;
 - (void)resume;
 
-// 会話レイヤーを取得する
-- (ConversationLayer*)getConversationLayer;
 @end
