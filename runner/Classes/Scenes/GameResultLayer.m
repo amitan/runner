@@ -38,12 +38,6 @@
         self._popupBaseSprite = [CCSprite spriteWithSpriteFrameName:@"popup_large.png"];
         [PointUtil setTLPosition:self._popupBaseSprite x:60 y:154];
         [self addChild:self._popupBaseSprite];
-
-        // 次へボタン追加
-        CCSpriteButton *backButton = [CCSpriteButton spriteWithSpriteFrameName:@"btn_next.png"];
-        [backButton addClickListner:self selector:@selector(clickRetryButton:)];
-        backButton.position = ccp(self._popupBaseSprite.contentSize.width / 2,  2 * backButton.contentSize.height / 3);
-        [self._popupBaseSprite addChild:backButton];
     }
     return self;
 }
@@ -73,7 +67,7 @@
     // 距離
     NSString *distance = [NSString stringWithFormat:@"RESULT: %d M", self._distance];
     CCLabelTTF *distanceLabel = [LabelUtil createLabel:distance fontSize:48 dimensions:CGSizeMake(500, 80) alignment:kCCTextAlignmentCenter];
-    distanceLabel.position = [PointUtil getPosition:260 y:700];
+    distanceLabel.position = [PointUtil getPosition:260 y:600];
     [self._popupBaseSprite addChild:distanceLabel];
     PlayerMaster *master = [PlayerMaster create];
     
@@ -104,13 +98,13 @@
             // プレイヤー画像
             int playerId = [userPlayer[@"playerId"] intValue];
             CCSprite *playerImage = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"player%d_stand.png", playerId]];
-            playerImage.position = [PointUtil getPosition:90 y:600 - i * intervalY];
+            playerImage.position = [PointUtil getPosition:90 y:500 - i * intervalY];
             [self._popupBaseSprite addChild:playerImage];
 
             // 獲得コイン
             NSString *coinNumStr = [NSString stringWithFormat:@"COIN: %d G", coinNum];
             CCLabelTTF *coinLabel = [LabelUtil createLabel:coinNumStr fontSize:26 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
-            coinLabel.position = [PointUtil getPosition:360 y:630 - i * intervalY];
+            coinLabel.position = [PointUtil getPosition:360 y:530 - i * intervalY];
             [self._popupBaseSprite addChild:coinLabel];
 
             // コインボーナス
@@ -118,7 +112,7 @@
             int coinBonus = [master getGoldBonus:playerId currentLevel:level];
             NSString *coinBonusStr = [NSString stringWithFormat:@"BONUS +%d%@", coinBonus, @"%"];
             CCLabelTTF *coinBonusLabel = [LabelUtil createLabel:coinBonusStr fontSize:26 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
-            coinBonusLabel.position = [PointUtil getPosition:360 y:600 - i * intervalY];
+            coinBonusLabel.position = [PointUtil getPosition:360 y:500 - i * intervalY];
             [self._popupBaseSprite addChild:coinBonusLabel];
 
             // コイン合計
@@ -128,13 +122,13 @@
             
             NSString *playerTotalStr = [NSString stringWithFormat:@"TOTAL COIN: %d G", playerTotalCoin];
             CCLabelTTF *playerTotalLabel = [LabelUtil createLabel:playerTotalStr fontSize:30 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
-            playerTotalLabel.position = [PointUtil getPosition:360 y:560 - i * intervalY];
+            playerTotalLabel.position = [PointUtil getPosition:360 y:460 - i * intervalY];
             [self._popupBaseSprite addChild:playerTotalLabel];
         }
     }
     NSString *totalCoinStr = [NSString stringWithFormat:@"TOTAL: %d G", totalCoin];
     CCLabelTTF *totalCoinLabel = [LabelUtil createLabel:totalCoinStr fontSize:42 dimensions:CGSizeMake(500, 80) alignment:kCCTextAlignmentCenter];
-    totalCoinLabel.position = [PointUtil getPosition:260 y:220];
+    totalCoinLabel.position = [PointUtil getPosition:260 y:100];
     [self._popupBaseSprite addChild:totalCoinLabel];
     
     // ゴールド設定
@@ -150,12 +144,8 @@
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    return YES;
-}
-
-- (void)clickRetryButton:(id)sender {
-    [self removeFromParentAndCleanup:YES];
     [GameUtil replaceScene:[HomeScene createInstance]];
+    return YES;
 }
 
 @end

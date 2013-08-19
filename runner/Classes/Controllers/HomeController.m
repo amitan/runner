@@ -15,11 +15,13 @@
 #import "Door.h"
 #import "Carpenter.h"
 #import "Team.h"
+#import "LevelupCounter.h"
 
 @interface HomeController ()
 @property (nonatomic, retain)Door *_door;
 @property (nonatomic, retain)Carpenter *_carpenter;
 @property (nonatomic, retain)Team *_team;
+@property (nonatomic, retain)LevelupCounter *_levelupCounter;
 @property (nonatomic, retain)ConversationLayer *_conversationLayer;
 @end
 
@@ -35,20 +37,35 @@
 
 - (void)setup {
     
+    // 進捗を取得
+    NSUserDefaults *userDefautls = [NSUserDefaults standardUserDefaults];
+    int homeStep = [[userDefautls objectForKey:@"homeStep"] intValue];
+    
     // ドア追加
     self._door = [Door node];
-    [PointUtil setTLPosition:self._door x:400 y:184];
+    [PointUtil setTLPosition:self._door x:410 y:184];
     [[HomeScene sharedInstance].mainLayer addChild:self._door];
     
     // 大工追加
-    self._carpenter = [Carpenter create:1];
-    [PointUtil setTLPosition:self._carpenter x:150 y:650];
-    [[HomeScene sharedInstance].mainLayer addChild:self._carpenter];
+    if (homeStep <= 3) {
+        self._carpenter = [Carpenter create:homeStep];
+        [PointUtil setTLPosition:self._carpenter x:150 y:760];
+        [[HomeScene sharedInstance].mainLayer addChild:self._carpenter];
+    }
     
     // チームウィンドウ追加
-    self._team = [Team node];
-    [PointUtil setTLPosition:self._team x:65 y:880];
-    [[HomeScene sharedInstance].mainLayer addChild:self._team];
+    if (homeStep >= 2) {
+        self._team = [Team node];
+        [PointUtil setTLPosition:self._team x:80 y:190];
+        [[HomeScene sharedInstance].mainLayer addChild:self._team];
+    }
+    
+    // レベルアップカウンター追加
+    if (homeStep >= 1) {
+        self._levelupCounter = [LevelupCounter create:1];
+        [PointUtil setTLPosition:self._levelupCounter x:280 y:300];
+        [[HomeScene sharedInstance].mainLayer addChild:self._levelupCounter];
+    }
     
     // 共通会話レイヤーの初期化
     self._conversationLayer = [ConversationLayer node];
@@ -60,18 +77,20 @@
 
 - (void)start {
     [self._carpenter start];
+    [self._levelupCounter start];
 }
 
 - (void)stop {
     [self._carpenter stop];
+    [self._levelupCounter stop];
 }
 
 - (void)suspend {
-    [self._carpenter stop];
+    [self stop];
 }
 
 - (void)resume {
-    [self._carpenter start];
+    [self start];
 }
 
 

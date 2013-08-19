@@ -228,6 +228,7 @@
 		F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814217B8C86200DDCE95 /* CoinSwitch.m */; };
 		F9C9815517B8C86200DDCE95 /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814417B8C86200DDCE95 /* Switch.m */; };
 		F9C9815617B8C86200DDCE95 /* Trampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814617B8C86200DDCE95 /* Trampoline.m */; };
+		F9D849CE17C13969004EC908 /* LevelupCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D849CD17C13969004EC908 /* LevelupCounter.m */; };
 		F9DAF99417BF417400422467 /* player.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99217BF417400422467 /* player.plist */; };
 		F9DAF99517BF417400422467 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99317BF417400422467 /* player.png */; };
 		F9DAF99817BF4C7900422467 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99717BF4C7900422467 /* Team.m */; };
@@ -669,6 +670,8 @@
 		F9C9814417B8C86200DDCE95 /* Switch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Switch.m; sourceTree = "<group>"; };
 		F9C9814517B8C86200DDCE95 /* Trampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trampoline.h; sourceTree = "<group>"; };
 		F9C9814617B8C86200DDCE95 /* Trampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trampoline.m; sourceTree = "<group>"; };
+		F9D849CC17C13969004EC908 /* LevelupCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelupCounter.h; sourceTree = "<group>"; };
+		F9D849CD17C13969004EC908 /* LevelupCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelupCounter.m; sourceTree = "<group>"; };
 		F9DAF99217BF417400422467 /* player.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = player.plist; sourceTree = "<group>"; };
 		F9DAF99317BF417400422467 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		F9DAF99617BF4C7800422467 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
@@ -718,6 +721,8 @@
 				F9363E2217BA5D3600F832C0 /* Carpenter.m */,
 				F9DAF99617BF4C7800422467 /* Team.h */,
 				F9DAF99717BF4C7900422467 /* Team.m */,
+				F9D849CC17C13969004EC908 /* LevelupCounter.h */,
+				F9D849CD17C13969004EC908 /* LevelupCounter.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1743,6 +1748,7 @@
 				F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */,
 				F9DAF9B617C0B23600422467 /* UserPlayer.m in Sources */,
 				F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */,
+				F9D849CE17C13969004EC908 /* LevelupCounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

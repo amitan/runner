@@ -39,13 +39,13 @@
                 int playerId = [userPlayer[@"playerId"] intValue];
                 NSString *name = [master getName:playerId];
                 
-                CCLabelTTF *playerNameLabel = [LabelUtil createLabel:name fontSize:26 dimensions:CGSizeMake(200, 70) alignment:kCCTextAlignmentCenter];
-                playerNameLabel.position = [PointUtil getPosition:134 + i * 146 y:-28];
+                CCLabelTTF *playerNameLabel = [LabelUtil createLabel:name fontSize:18 dimensions:CGSizeMake(200, 70) alignment:kCCTextAlignmentCenter];
+                playerNameLabel.position = [PointUtil getPosition:60 + i * 96 y:-28];
                 [self addChild:playerNameLabel];
                 
                 NSString *level = [NSString stringWithFormat:@"Lv: %d", [userPlayer[@"level"] intValue]];
-                CCLabelTTF *playerLevel = [LabelUtil createLabel:level fontSize:30 dimensions:CGSizeMake(200, 70) alignment:kCCTextAlignmentCenter];
-                playerLevel.position = ccpAdd(playerNameLabel.position, [PointUtil getPosition:0 y:-30]);
+                CCLabelTTF *playerLevel = [LabelUtil createLabel:level fontSize:24 dimensions:CGSizeMake(200, 70) alignment:kCCTextAlignmentCenter];
+                playerLevel.position = ccpAdd(playerNameLabel.position, [PointUtil getPosition:0 y:-26]);
                 [self addChild:playerLevel];
             }
         }

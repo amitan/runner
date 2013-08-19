@@ -1,8 +1,8 @@
 //
-//  Carpenter.h
+//  LevelupCounter.h
 //  runner
 //
-//  Created by Ayumi Otomo on 2013/08/13.
+//  Created by Ayumi Otomo on 2013/08/19.
 //  Copyright 2013年 Ayumi Otomo. All rights reserved.
 //
 
@@ -10,12 +10,12 @@
 #import "cocos2d.h"
 #import "CCNodeButton.h"
 
-@interface Carpenter : CCNodeButton {
+@interface LevelupCounter : CCNodeButton {
     
 }
 
-+ (Carpenter*)create:(int)_homeStep;
-- (id)initWithHomeStep:(int)_homeStep;
++ (LevelupCounter*)create:(int)_nodeId;
+- (id)initWithNodeId:(int)_nodeId;
 
 // 動作を開始/停止する
 - (void)start;

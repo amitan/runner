@@ -48,7 +48,7 @@
             
             // ベース画像設定
             CCSpriteButton *baseButton = [CCSpriteButton spriteWithSpriteFrameName:@"player_base_middle.png"];
-            baseButton.position = [PointUtil getPosition:260 y:630 - i * 250];
+            baseButton.position = [PointUtil getPosition:260 y:580 - i * 230];
             [baseButton addClickListner:self selector:@selector(clickPlayerButton:)];
             [popupBaseSprite addChild:baseButton];
             baseButton.tag = i + 1;
@@ -63,7 +63,7 @@
                 // プレイヤー画像
                 int playerId = [userPlayer[@"playerId"] intValue];
                 CCSprite *playerImage = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"player%d_stand.png", playerId]];
-                playerImage.position = [PointUtil getPosition:62 y:188];
+                playerImage.position = [PointUtil getPosition:62 y:174];
                 [baseButton addChild:playerImage];
 
                 // プレイヤー名とレベル
@@ -72,7 +72,7 @@
                 int maxLevel = [master getMaxLevel:playerId];
                 NSString *playerName = [NSString stringWithFormat:@"%@ Lv: %d/%d", name, level, maxLevel];
                 CCLabelTTF *playerNameLabel = [LabelUtil createLabel:playerName fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
-                playerNameLabel.position = [PointUtil getPosition:307 y:200];
+                playerNameLabel.position = [PointUtil getPosition:307 y:190];
                 [baseButton addChild:playerNameLabel];
 
                 // 次のレベルまでのゴールド
@@ -84,7 +84,7 @@
                 // ゴールドボーナス
                 NSString *goldBonus = [NSString stringWithFormat:@"ゴールドボーナス: +%d%@", [master getGoldBonus:playerId currentLevel:level], @"%"];
                 CCLabelTTF *goldBonusLabel = [LabelUtil createLabel:goldBonus fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
-                goldBonusLabel.position = [PointUtil getPosition:213 y:106];;
+                goldBonusLabel.position = [PointUtil getPosition:213 y:100];;
                 [baseButton addChild:goldBonusLabel];
 
                 CCLabelTTF *item1 = [LabelUtil createLabel:@"アイテムボーナス: 特になし" fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];

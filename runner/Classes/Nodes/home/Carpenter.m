@@ -13,21 +13,22 @@
 #import "HomeScene.h"
 
 @interface Carpenter ()
-@property (nonatomic, readwrite)int _nodeId;
+@property (nonatomic, readwrite)int _homeStep, _nodeId;
 @property (nonatomic, readwrite)int _direction;
 @end
 @implementation Carpenter
 
-+ (Carpenter*)create:(int)nodeId {
-    return [[[self alloc] initWithNodeId:nodeId] autorelease];
++ (Carpenter*)create:(int)homeStep {
+    return [[[self alloc] initWithHomeStep:homeStep] autorelease];
 }
 
-- (id)initWithNodeId:(int)nodeId {
+- (id)initWithHomeStep:(int)homeStep {
     self = [super init];
 	if (self) {
         
         // 初期値設定
-        self._nodeId = nodeId;
+        self._homeStep = homeStep;
+        self._nodeId = 1;
         self._direction = BOTTOM;
         
         // アニメーションの最初のコマを読み込む
@@ -44,10 +45,10 @@
     ConversationLayer *conversationLayer = [homeController getConversationLayer];
     
     // 会話設定
-    [conversationLayer setTexts:[NSArray arrayWithObjects:
-                                 @"*「おれは大工のケンってんだ。ここに冒険者のためのでっけぇ宿をつくりてぇんだが、ゴールドが足りなくてよ。」",
-                                 @"*「1000G もあればいいものがつくれるんだが・・」",
-                                 @"*「そうか、つまんねぇこと言ってすまなかったな。気が変わったらまた声かけてくれや。」", nil]];
+    NSArray *conversationTexts = @[@"*「おれは大工のケンってんだ。ここに冒険者のためのでっけぇ宿をつくりてぇんだが、ゴールドが足りなくてよ。」",
+                                   @"*「1000G もあればいいものがつくれるんだが・・」",
+                                   @"*「そうか、つまんねぇこと言ってすまなかったな。気が変わったらまた声かけてくれや。」"];
+    [conversationLayer setTexts:conversationTexts];
     [conversationLayer addCompleteListner:self selector:@selector(onConversationClose:)];
     [conversationLayer setConfirmCommand:2];
     
