@@ -53,6 +53,12 @@
     return self;
 }
 
+- (void)dealloc {
+    self._sprite = nil;
+    self._spriteOn = nil;
+    [super dealloc];
+}
+
 - (void)reset {
     [super reset];
     self._isPressed = false;

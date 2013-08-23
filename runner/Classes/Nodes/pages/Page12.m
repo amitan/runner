@@ -78,6 +78,11 @@ const int PAGE12_INTERVAL1 = 2100;
     return self;
 }
 
+- (void)dealloc {
+    self._land2 = nil;
+    [super dealloc];
+}
+
 - (float)getWidth {
     return [self._land getWidth] + [self._land2 getWidth] + [PointUtil getPoint:PAGE12_INTERVAL1];
 }

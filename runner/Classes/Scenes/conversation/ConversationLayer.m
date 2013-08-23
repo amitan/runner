@@ -37,7 +37,7 @@
         [self addChild:self._talkBaseSprite];
 
         // 詳細ラベル
-        self._talkLabel = [LabelUtil createLabel:@"" fontSize:30 dimensions:CGSizeMake(524, 264) hAlignment:kCCTextAlignmentLeft vAlignment:kCCVerticalTextAlignmentTop];
+        self._talkLabel = [LabelUtil createLabel:@"" fontSize:28 dimensions:CGSizeMake(524, 264) hAlignment:kCCTextAlignmentLeft vAlignment:kCCVerticalTextAlignmentTop];
         self._talkLabel.anchorPoint = ccp(0, 0);
         self._talkLabel.position = [PointUtil getPosition:24 y:-24];
         [self._talkBaseSprite addChild:self._talkLabel];
@@ -61,22 +61,23 @@
         [self._noButton addLabel:self._noLabel];
         
         // コイン表示追加
-        CCSprite *coinBaseSprite = [CCSprite spriteWithSpriteFrameName:@"coin_base.png"];
-        [PointUtil setTLPosition:coinBaseSprite x:492 y:117];
-        [self addChild:coinBaseSprite];
-        
-        self._coinNumLabel = [LabelUtil createLabel:@"" fontSize:30 dimensions:CGSizeMake(138, 54) alignment:kCCTextAlignmentRight];
-        self._coinNumLabel.position = [PointUtil getPosition:40 y:22];
-        [coinBaseSprite addChild:self._coinNumLabel];
-        
-        CCLabelTTF *coinUnit = [LabelUtil createLabel:@"G" fontSize:28];
-        coinUnit.position = [PointUtil getPosition:122 y:20];
-        [coinBaseSprite addChild:coinUnit];
+        self._coinWindow = [CoinWindow node];
+        [PointUtil setTLPosition:self._coinWindow x:556 y:144];
+        [self addChild:self._coinWindow];
     }
     return self;
 }
 
 - (void)dealloc {
+    self._talkLabel = nil;
+    self._yesLabel = nil;
+    self._noLabel = nil;
+    self._yesButton = nil;
+    self._noButton = nil;
+    self._coinWindow = nil;
+    self._texts = nil;
+    self._talkBaseSprite = nil;
+    self._listener = nil;
     [super dealloc];
 }
 
@@ -93,9 +94,7 @@
     self._isLock = false;
     
     // コイン表示
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    int gold = [[userDefaults objectForKey:@"gold"] intValue];
-    [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", gold]];
+    [self._coinWindow sync];
     [self fowardConversation];
 }
 

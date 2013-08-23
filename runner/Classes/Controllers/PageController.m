@@ -23,27 +23,23 @@ const int INIT_ARRAY_CAPACITY = 5;
 	if (self) {
         self._dictionary = [NSMutableDictionary dictionary];
         self._pageDictionary = [NSMutableDictionary dictionary];
-        [self._pageDictionary setObject:[NSArray arrayWithObjects:
-                                        @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10",
-                                         @"11", @"12", nil] forKey:@"1"];
-        [self._pageDictionary setObject:[NSArray arrayWithObjects:
-                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10",
-                                         @"11", @"12", nil] forKey:@"2"];
-        [self._pageDictionary setObject:[NSArray arrayWithObjects:
-                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9",
-                                         @"11", @"12", nil] forKey:@"3"];
-        [self._pageDictionary setObject:[NSArray arrayWithObjects:
-                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9",
-                                         @"11", @"12", nil] forKey:@"4"];
-        [self._pageDictionary setObject:[NSArray arrayWithObjects:
-                                         @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9",
-                                         @"11", @"12", nil] forKey:@"5"];
+        [self._pageDictionary setObject:@[@1, @2, @3, @4, @6, @7] forKey:@"1"]; // 0 - 50M: シンプル
+        [self._pageDictionary setObject:@[@1, @3, @5, @9, @10, @11, @12] forKey:@"2"];
+        [self._pageDictionary setObject:@[@1, @2, @3, @4, @5, @6, @7, @8, @11, @12] forKey:@"3"];
+        [self._pageDictionary setObject:@[@1, @3, @4, @6, @11, @12] forKey:@"4"];
+        [self._pageDictionary setObject:@[@1, @3, @4, @6, @11, @12] forKey:@"5"];
     }
     return self;
 }
 
+- (void)dealloc {
+    self._dictionary = nil;
+    self._pageDictionary = nil;
+    [super dealloc];
+}
+
 - (Page*)getPageBy:(int)pageId {
-    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE) ? pageId : 11; // TODO:
+//    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE) ? pageId : 11; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;

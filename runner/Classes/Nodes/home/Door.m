@@ -17,10 +17,11 @@
 - (id)init {
     self = [super init];
 	if (self) {
-        self._sprite = [CCSprite spriteWithSpriteFrameName:@"door.png"];
-        self._sprite.position = ccp(self._sprite.contentSize.width / 2, - self._sprite.contentSize.height / 2);
-        [self addChild:self._sprite];
+        CCSprite *sprite = [CCSprite spriteWithSpriteFrameName:@"door.png"];
+        sprite.position = ccp(sprite.contentSize.width / 2, - sprite.contentSize.height / 2);
+        [self addChild:sprite];
         [self addClickListner:self selector:@selector(clickButton:)];
+        [self._sprites addObject:sprite];
     }
     return self;
 }

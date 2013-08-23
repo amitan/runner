@@ -27,7 +27,8 @@
 @end
 
 @implementation Player
-const int JUMP_SPEED = 1500;
+//const int JUMP_SPEED = 1500;
+const int JUMP_SPEED = 1400;
 const int INIT_SCROLL_SPEED = 430;
 const int BLOCK_TOP_REFLECTION = -10;
 
@@ -99,7 +100,7 @@ const int BLOCK_TOP_REFLECTION = -10;
 
 - (void)speedUp {
     [[GameScene sharedInstance].hudController showSpeedUpEffect];
-    self._vx *= 1.2;
+    self._vx *= 1.1;
 }
 
 - (void)trampoline {

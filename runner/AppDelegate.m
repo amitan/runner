@@ -12,7 +12,7 @@
 #import "GameScene.h"
 #import "TitleLayer.h"
 #import "GameUtil.h"
-#import "UserPlayer.h"
+#import "UserPlayerDao.h"
 
 @implementation MyNavigationController
 @synthesize adController;
@@ -73,9 +73,10 @@
         [defaults setObject:[NSNumber numberWithInt:sequenceId] forKey:@"userPlayerSequence"];
 
         // ユーザーの初期所持キャラ定義
-        NSMutableDictionary *userPlayer = [UserPlayer createUserPlayer:INIT_PLAYER_ID sequenceId:sequenceId];
+        NSMutableDictionary *userPlayer = [UserPlayerDao createUserPlayer:INIT_PLAYER_ID sequenceId:sequenceId];
         NSMutableArray *userPlayers = [NSMutableArray arrayWithObjects:userPlayer, nil];
-        [defaults setObject:userPlayers forKey:@"userPlayers"];
+        NSData *classData = [NSKeyedArchiver archivedDataWithRootObject:userPlayers];
+        [defaults setObject:classData forKey:@"userPlayers"];
         
         // ユーザーの初期編成キャラ定義
         [defaults setObject:[NSNumber numberWithInt:sequenceId] forKey:@"player1"];

@@ -13,5 +13,6 @@
 @interface Team : CCNodeButton {
     
 }
+- (void)sync;
 
 @end

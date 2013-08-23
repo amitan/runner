@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "CCSpriteButton.h"
+#import "CoinWindow.h"
 
 @interface ConversationLayer : CCLayer {
     
 }
 // 継承先で利用するため
-@property (nonatomic, retain)CCLabelTTF *_talkLabel, *_coinNumLabel, *_yesLabel, *_noLabel;
+@property (nonatomic, retain)CCLabelTTF *_talkLabel, *_yesLabel, *_noLabel;
 @property (nonatomic, retain)CCSpriteButton *_yesButton, *_noButton;
+@property (nonatomic, retain)CoinWindow *_coinWindow;
+
 @property (nonatomic, retain)NSMutableArray *_texts;
 
 // 会話を設定実行

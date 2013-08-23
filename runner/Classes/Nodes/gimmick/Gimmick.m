@@ -11,6 +11,11 @@
 
 @implementation Gimmick
 
+- (void)dealloc {
+    self._sprite = nil;
+    [super dealloc];
+}
+
 - (void)stageOn:(CCNode*)page {
     if (![self parent]) {
         [page addChild:self];

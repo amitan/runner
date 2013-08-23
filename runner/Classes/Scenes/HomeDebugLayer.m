@@ -11,6 +11,7 @@
 #import "PointUtil.h"
 #import "CCSpriteButton.h"
 #import "LabelUtil.h"
+#import "GameDao.h"
 
 @implementation HomeDebugLayer
 
@@ -117,18 +118,14 @@
 - (void)clickCoinButton:(id)sender {
     CCSpriteButton *button = (CCSpriteButton*)sender;
     int coin = button.tag;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:[NSNumber numberWithInt:coin] forKey:@"gold"];
-    [userDefaults synchronize];
+    [GameDao setGold:coin];
     [self closeWindow];
 }
 
 - (void)clickStepButton:(id)sender {
     CCSpriteButton *button = (CCSpriteButton*)sender;
     int step = button.tag;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:[NSNumber numberWithInt:step] forKey:@"homeStep"];
-    [userDefaults synchronize];
+    [GameDao setHoemStep:step];
     [self closeWindow];
 }
 

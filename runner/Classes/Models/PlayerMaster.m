@@ -13,9 +13,13 @@
 @end
 
 @implementation PlayerMaster
+static PlayerMaster *_master = nil;
 
-+ (PlayerMaster*)create {
-    return [[[self alloc] init] autorelease];
++ (PlayerMaster *)getInstance {
+    if (_master == nil) {
+        _master = [[[self alloc] init] autorelease];
+    }
+	return _master;
 }
 
 - (id)init {
@@ -25,6 +29,12 @@
         [self._dictionary setObject:@{ @"name": @"ゆうしゃ", @"maxLevel": @99, @"specialType": @0 } forKey:@"1001001"];
     }
     return self;
+}
+
+- (void)dealloc {
+    self._dictionary = nil;
+    _master = nil;
+    [super dealloc];
 }
 
 - (NSString*)getName:(int)playerId {

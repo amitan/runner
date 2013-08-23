@@ -24,6 +24,7 @@
 }
 
 - (void)dealloc {
+    self._player = nil;
     [super dealloc];
 }
 

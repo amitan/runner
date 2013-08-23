@@ -19,8 +19,7 @@
 @property (nonatomic, readwrite)int _totalCoinNum, _player1CoinNum, _player2CoinNum, _player3CoinNum;
 @property (nonatomic, readwrite)float _dx;
 @property (nonatomic, readwrite)int _currentDistance;
-@property (nonatomic, retain)CCLabelTTF *_coinNumLabel;
-@property (nonatomic, retain)CCLabelTTF *_distanceLabel;
+@property (nonatomic, retain)CCLabelTTF *_coinNumLabel, *_distanceLabel;
 @property (nonatomic, retain)CCSprite *_coinBonus;
 @property (nonatomic, retain)CCLabelTTF *_coinBonusLabel;
 @property (nonatomic, retain)CCSprite *_speedUp;
@@ -91,6 +90,18 @@
     
     // 同期
     [self sync];
+}
+
+- (void)dealloc {
+    self._coinNumLabel = nil;
+    self._distanceLabel = nil;
+    self._coinBonus = nil;
+    self._coinBonusLabel = nil;
+    self._speedUp = nil;
+    self._stopSprite = nil;
+    self._playSprite = nil;
+    self._pause = nil;
+    [super dealloc];
 }
 
 - (void)start {

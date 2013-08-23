@@ -40,6 +40,11 @@ const float TRAMPOLINE_SCALE = 2.0;
     return self;
 }
 
+- (void)dealloc {
+    self._spriteOn = nil;
+    [super dealloc];
+}
+
 - (BOOL)jumpIfCollided:(CGRect)rect {
     
     // ジャンプ済の場合はfalse

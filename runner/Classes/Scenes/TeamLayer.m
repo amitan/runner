@@ -14,12 +14,14 @@
 #import "LabelUtil.h"
 #import "PlayerSelectLayer.h"
 #import "HomeScene.h"
-#import "UserPlayer.h"
+#import "UserPlayerDao.h"
 #import "PlayerMaster.h"
+#import "UnitDao.h"
 
 @interface TeamLayer ()
 @property (nonatomic, retain)NSInvocation* _listener;
 @property (nonatomic, retain)PlayerSelectLayer *_playerSelectLayer;
+@property (nonatomic, retain)PlayerMaster *_playerMaster;
 @end
 
 @implementation TeamLayer
@@ -41,9 +43,6 @@
         [self addChild:popupBaseSprite];
         
         // パーティ情報取得
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        PlayerMaster *master = [PlayerMaster create];
-        
         for (int i = 0; i < 3; i++) {
             
             // ベース画像設定
@@ -55,8 +54,8 @@
             baseButton.property = POPUP_PRIORITY - 1;
 
             // プレイヤー情報取得
-            int playerSequenceId = [[userDefaults objectForKey:[NSString stringWithFormat:@"player%d", i + 1]] intValue];
-            NSMutableDictionary *userPlayer = [UserPlayer getUserPlayer:playerSequenceId];
+            int playerSequenceId = [UnitDao getUnitSequenceId:i + 1];
+            NSMutableDictionary *userPlayer = [UserPlayerDao getUserPlayer:playerSequenceId];
             
             if (userPlayer) {
                 
@@ -67,22 +66,22 @@
                 [baseButton addChild:playerImage];
 
                 // プレイヤー名とレベル
-                NSString *name = [master getName:playerId];
+                NSString *name = [self._playerMaster getName:playerId];
                 int level = [userPlayer[@"level"] intValue];
-                int maxLevel = [master getMaxLevel:playerId];
+                int maxLevel = [self._playerMaster getMaxLevel:playerId];
                 NSString *playerName = [NSString stringWithFormat:@"%@ Lv: %d/%d", name, level, maxLevel];
                 CCLabelTTF *playerNameLabel = [LabelUtil createLabel:playerName fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
                 playerNameLabel.position = [PointUtil getPosition:307 y:190];
                 [baseButton addChild:playerNameLabel];
 
                 // 次のレベルまでのゴールド
-                NSString *nextGold = [NSString stringWithFormat:@"次のレベルまであと %d G", [master getNextGold:playerId currentLevel:level]];
+                NSString *nextGold = [NSString stringWithFormat:@"次のレベルまであと %d G", [self._playerMaster getNextGold:playerId currentLevel:level]];
                 CCLabelTTF *nextLevelLabel = [LabelUtil createLabel:nextGold fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
                 nextLevelLabel.position = ccpAdd(playerNameLabel.position, [PointUtil getPosition:0 y:-42]);
                 [baseButton addChild:nextLevelLabel];
 
                 // ゴールドボーナス
-                NSString *goldBonus = [NSString stringWithFormat:@"ゴールドボーナス: +%d%@", [master getGoldBonus:playerId currentLevel:level], @"%"];
+                NSString *goldBonus = [NSString stringWithFormat:@"ゴールドボーナス: +%d%@", [self._playerMaster getGoldBonus:playerId currentLevel:level], @"%"];
                 CCLabelTTF *goldBonusLabel = [LabelUtil createLabel:goldBonus fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
                 goldBonusLabel.position = [PointUtil getPosition:213 y:100];;
                 [baseButton addChild:goldBonusLabel];
@@ -106,17 +105,21 @@
 - (void)clickPlayerButton:(id)sender {
     CCSpriteButton *senderButoom = (CCSpriteButton*)sender;
     self._playerSelectLayer.orderNo = senderButoom.tag;
-    [self._playerSelectLayer addCompleteListner:self selector:@selector(onConversationClose:)];
+    [self._playerSelectLayer addCompleteListner:self selector:@selector(onConversationClose:sequenceNumber:)];
     [[HomeScene sharedInstance].homeController suspend];
     [[HomeScene sharedInstance].popupLayer addChild:self._playerSelectLayer z:100];
 }
 
-- (void)onConversationClose:(id)sender {
+- (void)onConversationClose:(id)sender sequenceNumber:(NSNumber*)sequenceNumber {
     [[HomeScene sharedInstance].homeController resume];
+    // TODO: 編成処理
 }
 
 
 - (void)dealloc {
+    self._listener = nil;
+    self._playerSelectLayer = nil;
+    self._playerMaster = nil;
     [super dealloc];
 }
 

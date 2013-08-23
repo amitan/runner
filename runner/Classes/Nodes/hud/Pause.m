@@ -38,6 +38,7 @@
 }
 
 - (void)dealloc {
+    self._pauseLabel = nil;
     [super dealloc];
 }
 

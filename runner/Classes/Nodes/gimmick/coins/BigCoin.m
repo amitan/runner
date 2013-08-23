@@ -126,6 +126,11 @@ const int INIT_DROPPING_COIN_Y = 100;
     return self;
 }
 
+- (void)dealloc {
+    self._coins = nil;
+    [super dealloc];
+}
+
 - (void)stageOn:(CCNode*)page {
     [super stageOn:page];
     for (Coin *coin in self._coins) {

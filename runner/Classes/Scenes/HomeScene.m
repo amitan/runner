@@ -73,6 +73,11 @@ static HomeScene *_scene = nil;
 // TODO:: deallocの実装
 - (void)dealloc {
     [self stop];
+    self.backgroundLayer = nil;
+    self.mainLayer = nil;
+    self.popupLayer = nil;
+    self.interfaceLayer = nil;
+    self.homeController = nil;
     [super dealloc];
 }
 

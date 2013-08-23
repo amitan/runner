@@ -17,7 +17,7 @@
 }
 @property (nonatomic, readwrite)BOOL isEnabled;
 @property (nonatomic, readwrite)int property;
-@property (nonatomic, retain)CCSprite *_sprite;
+@property (nonatomic, retain)CCArray *_sprites;
 
 - (void)addClickListner:(id)target selector:(SEL)selector;
 @end

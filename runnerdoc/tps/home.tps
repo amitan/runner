@@ -150,6 +150,8 @@
             <filename>../sprites/home/popup_square_small.png</filename>
             <filename>../sprites/home/popup_command.png</filename>
             <filename>../sprites/home/levelup_counter.png</filename>
+            <filename>../sprites/home/table.png</filename>
+            <filename>../sprites/home/food1.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

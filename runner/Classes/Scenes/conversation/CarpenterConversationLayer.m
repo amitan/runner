@@ -7,6 +7,7 @@
 //
 
 #import "CarpenterConversationLayer.h"
+#import "GameDao.h"
 
 @implementation CarpenterConversationLayer
 
@@ -16,30 +17,26 @@
 }
 
 - (void)executeYes {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    int gold = [[userDefaults objectForKey:@"gold"] intValue];
+    int gold = [GameDao getGold];
     if (gold >= self.price) {
         
         // ゴールド・進捗更新
-        gold -= self.price;
-        [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", gold]];
-        [userDefaults setObject:[NSNumber numberWithInt:gold] forKey:@"gold"];
-        int nextStep = [[userDefaults objectForKey:@"homeStep"] intValue] + 1;
-        [userDefaults setObject:[NSNumber numberWithInt:nextStep] forKey:@"homeStep"];
-        [userDefaults synchronize];
+        [GameDao useGold:gold];
+        [GameDao incrementHoemStep];
+        [self._coinWindow sync];
         
         //　テキスト設定
-        [self._texts addObject:@"*「よっしゃ、まかせとけ。次きたときまでにつくっておくからよ！」"];
+        [self._texts addObject:@"大工「よっしゃ、まかせとけ。次きたときまでにつくっておくからよ！」"];
         self.isSuccessful = true;
         
     } else {
-        [self._texts addObject:@"*「おい、ゴールドがたりねぇみてぇだぞ。」"];
+        [self._texts addObject:@"大工「おい、ゴールドがたりねぇみてぇだぞ。」"];
     }
     [self fowardConversation];
 }
 
 - (void)executeNo {
-    [self._texts addObject:@"*「そうか、つまんねぇこと言ってすまなかったな。気が変わったらまた声かけてくれや。」"];
+    [self._texts addObject:@"大工「そうか、つまんねぇこと言ってすまなかったな。気が変わったらまた声かけてくれや。」"];
     [self fowardConversation];
 }
 @end

@@ -141,17 +141,14 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/towner/carpenter1_bottom1.png</filename>
-            <filename>../sprites/towner/carpenter1_bottom2.png</filename>
-            <filename>../sprites/towner/carpenter1_left1.png</filename>
-            <filename>../sprites/towner/carpenter1_left2.png</filename>
-            <filename>../sprites/towner/carpenter1_right1.png</filename>
-            <filename>../sprites/towner/carpenter1_right2.png</filename>
-            <filename>../sprites/towner/carpenter1_top1.png</filename>
-            <filename>../sprites/towner/carpenter1_top2.png</filename>
-            <filename>../sprites/towner/carpenter1_win1.png</filename>
-            <filename>../sprites/towner/carpenter1_win2.png</filename>
-            <filename>../sprites/towner/carpenter1_win3.png</filename>
+            <filename>../sprites/towner/towner1_bottom1.png</filename>
+            <filename>../sprites/towner/towner1_bottom2.png</filename>
+            <filename>../sprites/towner/towner1_left1.png</filename>
+            <filename>../sprites/towner/towner1_left2.png</filename>
+            <filename>../sprites/towner/towner2_bottom1.png</filename>
+            <filename>../sprites/towner/towner2_bottom2.png</filename>
+            <filename>../sprites/towner/towner3_left1.png</filename>
+            <filename>../sprites/towner/towner3_left2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

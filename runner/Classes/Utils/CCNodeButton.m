@@ -25,6 +25,7 @@
 - (id)init {
     self = [super init];
 	if (self) {
+        self._sprites = [CCArray arrayWithCapacity:1];
         property = BUTTON_PRIORITY;
         isEnabled = YES;
     }
@@ -33,6 +34,7 @@
 
 - (void)dealloc {
     self._listener = nil;
+    self._sprites = nil;
     [super dealloc];
 }
 
@@ -73,11 +75,13 @@
     
     // タッチ判定
     CGPoint localLocation = [self convertToNodeSpace:touchLocation];
-    if (CGRectContainsPoint(self._sprite.boundingBox, localLocation)) {
-        if (!self._isTouch) {
-            self._isTouch = YES;
-            [self onPress];
-            return YES;
+    for (CCSprite *sprite in self._sprites) {
+        if (CGRectContainsPoint(sprite.boundingBox, localLocation)) {
+            if (!self._isTouch) {
+                self._isTouch = YES;
+                [self onPress];
+                return YES;
+            }
         }
     }
     return NO;
@@ -95,21 +99,28 @@
         
         // タッチ判定
         CGPoint localLocation = [self convertToNodeSpace:touchLocation];
-        if (CGRectContainsPoint(self._sprite.boundingBox, localLocation)) {
-            if (self._listener) {
-                //                [[Audio sharedInstance] playEffect:@"button.mp3"]; TODO:: 効果音実装
-                [self._listener invoke];
+        for (CCSprite *sprite in self._sprites) {
+            if (CGRectContainsPoint(sprite.boundingBox, localLocation)) {
+                if (self._listener) {
+                    //                [[Audio sharedInstance] playEffect:@"button.mp3"]; TODO:: 効果音実装
+                    [self._listener invoke];
+                    return;
+                }
             }
         }
     }
 }
 
 - (void)onPress {
-    if (self._sprite) self._sprite.color = [ColorUtil getTouchedColor];
+    for (CCSprite *sprite in self._sprites) {
+        sprite.color = [ColorUtil getTouchedColor];
+    }
 }
 
 - (void)onRelease {
-    if (self._sprite) self._sprite.color = [ColorUtil getDefaultColor];
+    for (CCSprite *sprite in self._sprites) {
+        sprite.color = [ColorUtil getDefaultColor];
+    }
 }
 
 @end

@@ -41,6 +41,7 @@ const int MAX_COUNT = 3; // カウント最大値
 }
 
 - (void)dealloc {
+    self._countLabel = nil;
     [super dealloc];
 }
 

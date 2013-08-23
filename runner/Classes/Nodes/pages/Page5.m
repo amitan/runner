@@ -74,6 +74,12 @@ const int PAGE5_INTERVAL2 = 150;
     return self;
 }
 
+- (void)dealloc {
+    self._land2 = nil;
+    self._land3 = nil;
+    [super dealloc];
+}
+
 - (float)getWidth {
     return [self._land getWidth] + [self._land2 getWidth] + [self._land3 getWidth] +
         [PointUtil getPoint:PAGE5_INTERVAL1] + [PointUtil getPoint:PAGE5_INTERVAL2];

@@ -13,8 +13,10 @@
 #import "TitleLayer.h"
 #import "PointUtil.h"
 #import "LabelUtil.h"
-#import "UserPlayer.h"
+#import "UserPlayerDao.h"
 #import "PlayerMaster.h"
+#import "GameDao.h"
+#import "UnitDao.h"
 
 @interface GameResultLayer ()
 @property (nonatomic, retain)CCSprite* _popupBaseSprite;
@@ -42,6 +44,11 @@
     return self;
 }
 
+- (void)dealloc {
+    self._popupBaseSprite = nil;
+    [super dealloc];
+}
+
 - (void)setDistance:(int)distance {
     self._distance = distance;
 }
@@ -62,22 +69,19 @@
 
 - (void)_showWindow {
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
     // 距離
     NSString *distance = [NSString stringWithFormat:@"RESULT: %d M", self._distance];
     CCLabelTTF *distanceLabel = [LabelUtil createLabel:distance fontSize:48 dimensions:CGSizeMake(500, 80) alignment:kCCTextAlignmentCenter];
     distanceLabel.position = [PointUtil getPosition:260 y:600];
     [self._popupBaseSprite addChild:distanceLabel];
-    PlayerMaster *master = [PlayerMaster create];
     
     int intervalY = 130;
     int totalCoin = 0;
     for (int i = 0; i < 3; i++) {
         
         // プレイヤー情報取得
-        int playerSequenceId = [[userDefaults objectForKey:[NSString stringWithFormat:@"player%d", i + 1]] intValue];
-        NSMutableDictionary *userPlayer = [UserPlayer getUserPlayer:playerSequenceId];
+        int playerSequenceId = [UnitDao getUnitSequenceId:i + 1];
+        NSMutableDictionary *userPlayer = [UserPlayerDao getUserPlayer:playerSequenceId];
 
         // コイン数決定
         int coinNum;
@@ -109,7 +113,7 @@
 
             // コインボーナス
             int level = [userPlayer[@"level"] intValue];
-            int coinBonus = [master getGoldBonus:playerId currentLevel:level];
+            int coinBonus = [[PlayerMaster getInstance] getGoldBonus:playerId currentLevel:level];
             NSString *coinBonusStr = [NSString stringWithFormat:@"BONUS +%d%@", coinBonus, @"%"];
             CCLabelTTF *coinBonusLabel = [LabelUtil createLabel:coinBonusStr fontSize:26 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
             coinBonusLabel.position = [PointUtil getPosition:360 y:500 - i * intervalY];
@@ -132,10 +136,7 @@
     [self._popupBaseSprite addChild:totalCoinLabel];
     
     // ゴールド設定
-    int currentGold = [[userDefaults objectForKey:@"gold"] intValue];
-    currentGold += totalCoin;
-    [userDefaults setObject:[NSNumber numberWithInt:currentGold] forKey:@"gold"];
-    [userDefaults synchronize];
+    [GameDao addGold:totalCoin];
 }
 
 - (void)onExit {

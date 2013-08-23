@@ -15,6 +15,11 @@
 		F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61B17C22FD7007CF0CF /* ConversationLayer.m */; };
 		F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */; };
 		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
+		F923F62817C4EE18007CF0CF /* CoinWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62717C4EE18007CF0CF /* CoinWindow.m */; };
+		F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62B17C4F778007CF0CF /* UserPlayerDao.m */; };
+		F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63117C4FAC4007CF0CF /* GameDao.m */; };
+		F923F63517C500B1007CF0CF /* UnitDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63417C500B1007CF0CF /* UnitDao.m */; };
+		F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63717C5F6F3007CF0CF /* MonsterGifter.m */; };
 		F9363E1D17BA579100F832C0 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1C17BA579100F832C0 /* Door.m */; };
 		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
 		F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2217BA5D3600F832C0 /* Carpenter.m */; };
@@ -215,7 +220,6 @@
 		F9B0DAC317B5E4B0009A08B1 /* Page11.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DAC217B5E4AC009A08B1 /* Page11.m */; };
 		F9B0DACB17B89C77009A08B1 /* Page12.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DACA17B89C71009A08B1 /* Page12.m */; };
 		F9C9814717B8C86200DDCE95 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812617B8C86200DDCE95 /* Block.m */; };
-		F9C9814817B8C86200DDCE95 /* HatenaBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812817B8C86200DDCE95 /* HatenaBlock.m */; };
 		F9C9814917B8C86200DDCE95 /* LeftReverseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812A17B8C86200DDCE95 /* LeftReverseBlock.m */; };
 		F9C9814A17B8C86200DDCE95 /* RightReverseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812C17B8C86200DDCE95 /* RightReverseBlock.m */; };
 		F9C9814B17B8C86200DDCE95 /* StandardBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812E17B8C86200DDCE95 /* StandardBlock.m */; };
@@ -238,7 +242,6 @@
 		F9DAF99C17BF572700422467 /* team.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99A17BF572700422467 /* team.png */; };
 		F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99E17BFAB7700422467 /* TeamLayer.m */; };
 		F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */; };
-		F9DAF9B617C0B23600422467 /* UserPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9B517C0B23600422467 /* UserPlayer.m */; };
 		F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9B817C0B28A00422467 /* PlayerMaster.m */; };
 /* End PBXBuildFile section */
 
@@ -257,6 +260,16 @@
 		F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarpenterConversationLayer.m; sourceTree = "<group>"; };
 		F923F62017C273A0007CF0CF /* HomeDebugLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDebugLayer.h; sourceTree = "<group>"; };
 		F923F62117C273A0007CF0CF /* HomeDebugLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDebugLayer.m; sourceTree = "<group>"; };
+		F923F62617C4EE18007CF0CF /* CoinWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinWindow.h; sourceTree = "<group>"; };
+		F923F62717C4EE18007CF0CF /* CoinWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinWindow.m; sourceTree = "<group>"; };
+		F923F62A17C4F778007CF0CF /* UserPlayerDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPlayerDao.h; sourceTree = "<group>"; };
+		F923F62B17C4F778007CF0CF /* UserPlayerDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPlayerDao.m; sourceTree = "<group>"; };
+		F923F63017C4FAC4007CF0CF /* GameDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDao.h; sourceTree = "<group>"; };
+		F923F63117C4FAC4007CF0CF /* GameDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDao.m; sourceTree = "<group>"; };
+		F923F63317C500B0007CF0CF /* UnitDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitDao.h; sourceTree = "<group>"; };
+		F923F63417C500B1007CF0CF /* UnitDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDao.m; sourceTree = "<group>"; };
+		F923F63617C5F6F3007CF0CF /* MonsterGifter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterGifter.h; sourceTree = "<group>"; };
+		F923F63717C5F6F3007CF0CF /* MonsterGifter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterGifter.m; sourceTree = "<group>"; };
 		F9363E1B17BA579100F832C0 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		F9363E1C17BA579100F832C0 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
@@ -646,8 +659,6 @@
 		F9B0DACA17B89C71009A08B1 /* Page12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page12.m; sourceTree = "<group>"; };
 		F9C9812517B8C86200DDCE95 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F9C9812617B8C86200DDCE95 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
-		F9C9812717B8C86200DDCE95 /* HatenaBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaBlock.h; sourceTree = "<group>"; };
-		F9C9812817B8C86200DDCE95 /* HatenaBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaBlock.m; sourceTree = "<group>"; };
 		F9C9812917B8C86200DDCE95 /* LeftReverseBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftReverseBlock.h; sourceTree = "<group>"; };
 		F9C9812A17B8C86200DDCE95 /* LeftReverseBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftReverseBlock.m; sourceTree = "<group>"; };
 		F9C9812B17B8C86200DDCE95 /* RightReverseBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightReverseBlock.h; sourceTree = "<group>"; };
@@ -688,8 +699,6 @@
 		F9DAF99E17BFAB7700422467 /* TeamLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamLayer.m; sourceTree = "<group>"; };
 		F9DAF9A017C054AE00422467 /* PlayerSelectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectLayer.h; sourceTree = "<group>"; };
 		F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectLayer.m; sourceTree = "<group>"; };
-		F9DAF9B417C0B23600422467 /* UserPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPlayer.h; sourceTree = "<group>"; };
-		F9DAF9B517C0B23600422467 /* UserPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPlayer.m; sourceTree = "<group>"; };
 		F9DAF9B717C0B28900422467 /* PlayerMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMaster.h; sourceTree = "<group>"; };
 		F9DAF9B817C0B28A00422467 /* PlayerMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMaster.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -729,6 +738,19 @@
 			path = conversation;
 			sourceTree = "<group>";
 		};
+		F923F62917C4F755007CF0CF /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				F923F62A17C4F778007CF0CF /* UserPlayerDao.h */,
+				F923F62B17C4F778007CF0CF /* UserPlayerDao.m */,
+				F923F63017C4FAC4007CF0CF /* GameDao.h */,
+				F923F63117C4FAC4007CF0CF /* GameDao.m */,
+				F923F63317C500B0007CF0CF /* UnitDao.h */,
+				F923F63417C500B1007CF0CF /* UnitDao.m */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
 		F9363E1A17BA578400F832C0 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +762,10 @@
 				F9DAF99717BF4C7900422467 /* Team.m */,
 				F9D849CC17C13969004EC908 /* LevelupCounter.h */,
 				F9D849CD17C13969004EC908 /* LevelupCounter.m */,
+				F923F63617C5F6F3007CF0CF /* MonsterGifter.h */,
+				F923F63717C5F6F3007CF0CF /* MonsterGifter.m */,
+				F923F62617C4EE18007CF0CF /* CoinWindow.h */,
+				F923F62717C4EE18007CF0CF /* CoinWindow.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -1178,6 +1204,7 @@
 		F93DF688178AB5BF007AD085 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F923F62917C4F755007CF0CF /* Dao */,
 				F9DAF9B317C0B23400422467 /* Models */,
 				F93DF689178AB5BF007AD085 /* Animations */,
 				F93DF68A178AB5BF007AD085 /* Controllers */,
@@ -1437,8 +1464,6 @@
 			children = (
 				F9C9812517B8C86200DDCE95 /* Block.h */,
 				F9C9812617B8C86200DDCE95 /* Block.m */,
-				F9C9812717B8C86200DDCE95 /* HatenaBlock.h */,
-				F9C9812817B8C86200DDCE95 /* HatenaBlock.m */,
 				F9C9812917B8C86200DDCE95 /* LeftReverseBlock.h */,
 				F9C9812A17B8C86200DDCE95 /* LeftReverseBlock.m */,
 				F9C9812B17B8C86200DDCE95 /* RightReverseBlock.h */,
@@ -1480,8 +1505,6 @@
 		F9DAF9B317C0B23400422467 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F9DAF9B417C0B23600422467 /* UserPlayer.h */,
-				F9DAF9B517C0B23600422467 /* UserPlayer.m */,
 				F9DAF9B717C0B28900422467 /* PlayerMaster.h */,
 				F9DAF9B817C0B28A00422467 /* PlayerMaster.m */,
 			);
@@ -1738,7 +1761,6 @@
 				F9B0DAC317B5E4B0009A08B1 /* Page11.m in Sources */,
 				F9B0DACB17B89C77009A08B1 /* Page12.m in Sources */,
 				F9C9814717B8C86200DDCE95 /* Block.m in Sources */,
-				F9C9814817B8C86200DDCE95 /* HatenaBlock.m in Sources */,
 				F9C9814917B8C86200DDCE95 /* LeftReverseBlock.m in Sources */,
 				F9C9814A17B8C86200DDCE95 /* RightReverseBlock.m in Sources */,
 				F9C9814B17B8C86200DDCE95 /* StandardBlock.m in Sources */,
@@ -1763,12 +1785,16 @@
 				F9DAF99817BF4C7900422467 /* Team.m in Sources */,
 				F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */,
 				F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */,
-				F9DAF9B617C0B23600422467 /* UserPlayer.m in Sources */,
 				F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */,
 				F9D849CE17C13969004EC908 /* LevelupCounter.m in Sources */,
 				F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */,
 				F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */,
 				F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */,
+				F923F62817C4EE18007CF0CF /* CoinWindow.m in Sources */,
+				F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */,
+				F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */,
+				F923F63517C500B1007CF0CF /* UnitDao.m in Sources */,
+				F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

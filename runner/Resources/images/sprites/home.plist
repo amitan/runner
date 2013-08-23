@@ -17,10 +17,23 @@
                 <key>sourceSize</key>
                 <string>{144,124}</string>
             </dict>
+            <key>food1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{151,3},{91,51}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{91,51}}</string>
+                <key>sourceSize</key>
+                <string>{91,51}</string>
+            </dict>
             <key>levelup_counter.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{151,3},{224,119}}</string>
+                <string>{{246,3},{224,119}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>player_base_middle.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{379,3},{510,230}}</string>
+                <string>{{474,3},{510,230}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -108,6 +121,19 @@
                 <key>sourceSize</key>
                 <string>{110,110}</string>
             </dict>
+            <key>table.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{671,1035},{230,95}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{230,95}}</string>
+                <key>sourceSize</key>
+                <string>{230,95}</string>
+            </dict>
             <key>talk_base.png</key>
             <dict>
                 <key>frame</key>
@@ -131,7 +157,7 @@
             <key>size</key>
             <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:944e533728981c7fad5e6ec7d9a6635e$</string>
+            <string>$TexturePacker:SmartUpdate:b1c3de2ad655d525959b6b0822761462$</string>
             <key>textureFileName</key>
             <string>home.png</string>
         </dict>

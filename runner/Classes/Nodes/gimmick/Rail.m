@@ -49,6 +49,11 @@
     return self;
 }
 
+- (void)dealloc {
+    self._ropeSprite = nil;
+    [super dealloc];
+}
+
 - (BOOL)isHit:(CGRect)rect {
     
     if (CGRectIntersectsRect([self getLayerBasedBox:self._ropeSprite], rect)) {

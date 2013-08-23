@@ -150,6 +150,11 @@
     return self;
 }
 
+- (void)dealloc {
+    self._land2 = nil;
+    [super dealloc];
+}
+
 - (float)getWidth {
     return (self._land2.position.x + [self._land2 getWidth] / 2) - (self._land.position.x - [self._land getWidth] / 2);
 }

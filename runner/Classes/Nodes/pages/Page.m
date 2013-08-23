@@ -48,6 +48,18 @@
     return self;
 }
 
+- (void)dealloc {
+    self._land = nil;
+    self._lastCoin = nil;
+    self._blocks = nil;
+    self._coins = nil;
+    self._enemies = nil;
+    self._switches = nil;
+    self._trampolines = nil;
+    self._rails = nil;
+    [super dealloc];
+}
+
 + (Page*)create:(int)pageId {
     switch (pageId) {
         case 1: return [Page1 node];

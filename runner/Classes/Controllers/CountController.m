@@ -28,6 +28,8 @@
 
 - (void)dealloc {
     [self _stopTimer];
+    self._endListener = nil;
+    self._counter = nil;
     [super dealloc];
 }
 

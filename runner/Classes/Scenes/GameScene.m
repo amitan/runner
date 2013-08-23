@@ -98,6 +98,17 @@ static GameScene *_scene = nil;
 // TODO:: deallocの実装
 - (void)dealloc {
     [self stop];
+    self.backgroundLayer = nil;
+    self.mapLayer = nil;
+    self.gameLayer = nil;
+    self.hudLayer = nil;
+    self.effectLayer = nil;
+    self.interfaceLayer = nil;
+    self.countController = nil;
+    self.mapController = nil;
+    self.playerController = nil;
+    self.hudController = nil;
+    self.pageController = nil;
     [super dealloc];
 }
 

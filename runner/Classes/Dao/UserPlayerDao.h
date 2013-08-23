@@ -1,5 +1,5 @@
 //
-//  UserPlayer.h
+//  UserPlayerDao.h
 //  runner
 //
 //  Created by Ayumi Otomo on 2013/08/18.
@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserPlayer : NSObject
+@interface UserPlayerDao : NSObject
 
+// 所持キャラの操作
 + (NSMutableDictionary*)createUserPlayer:(int)playerId sequenceId:(int)sequenceId;
++ (void)registerUserPlayers:(NSMutableArray*)userPlayers;
 + (NSMutableDictionary*)getUserPlayer:(int)sequenceId;
++ (NSMutableArray*)getUserPlayers;
++ (void)updateUserPlayer:(NSMutableDictionary*)userPlayer;
 
 @end
