@@ -199,6 +199,7 @@
             <filename>../sprites/player/player2003003_right1.png</filename>
             <filename>../sprites/player/player2003003_right2.png</filename>
             <filename>../sprites/player/player2003003_right3.png</filename>
+            <filename>../sprites/player/player1001001_small.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

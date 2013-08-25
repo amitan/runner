@@ -17,10 +17,23 @@
                 <key>sourceSize</key>
                 <string>{640,100}</string>
             </dict>
+            <key>bubble.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{647,3},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
             <key>coin1_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{647,3},{30,44}}</string>
+                <string>{{701,3},{30,44}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>coin1_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{681,3},{30,44}}</string>
+                <string>{{735,3},{30,44}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +59,7 @@
             <key>coin2_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{715,3},{60,88}}</string>
+                <string>{{769,3},{60,88}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>coin2_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{779,3},{60,88}}</string>
+                <string>{{833,3},{60,88}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +85,7 @@
             <key>coin3_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{843,3},{30,31}}</string>
+                <string>{{897,3},{30,31}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +98,7 @@
             <key>coin3_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{877,3},{30,31}}</string>
+                <string>{{931,3},{30,31}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +111,7 @@
             <key>coin4_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{911,3},{30,44}}</string>
+                <string>{{965,3},{30,44}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +124,7 @@
             <key>coin4_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{945,3},{30,44}}</string>
+                <string>{{3,107},{30,44}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +137,7 @@
             <key>coin5_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,107},{80,80}}</string>
+                <string>{{37,107},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +150,7 @@
             <key>coin5_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{87,107},{80,80}}</string>
+                <string>{{121,107},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +163,7 @@
             <key>rail1_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{171,107},{640,18}}</string>
+                <string>{{205,107},{640,18}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -274,7 +287,7 @@
             <key>size</key>
             <string>{1024,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ff84fbca2432d0dbd8df1dcb0e020fb5$</string>
+            <string>$TexturePacker:SmartUpdate:d0fece5ce42ebcfef809649107bc5b96$</string>
             <key>textureFileName</key>
             <string>gameparts.png</string>
         </dict>

@@ -16,5 +16,8 @@
 - (int)getMaxLevel:(int)playerId;
 - (int)getNextGold:(int)playerId currentLevel:(int)level;
 - (int)getGoldBonus:(int)playerId currentLevel:(int)level;
-
+- (int)getFrameNum:(int)playerId;
+- (int)getSpecialType:(int)playerId;
+- (NSString*)getSpecialName:(int)typeId;
+- (int)getJumpNum:(int)playerId;
 @end

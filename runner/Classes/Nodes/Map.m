@@ -180,11 +180,12 @@ const int INIT_PAGE_NUM = 1;
     if (self.speed >= MAX_SPEED_STEP) {
         return self.speed;
     }
-    if (distance > 1000) return 5;
-    if (distance > 400) return 4;
-    if (distance > 100) return 3;
-    if (distance > 50) return 2;
-    return 1;
+//    if (distance > 1000) return 5;
+//    if (distance > 400) return 4;
+//    if (distance > 100) return 3;
+//    if (distance > 50) return 2;
+//    return 1;
+    return distance / 30 + 1;
 }
 
 @end

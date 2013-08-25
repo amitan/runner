@@ -13,6 +13,7 @@
 #import "Enemy.h"
 #import "PointUtil.h"
 #import "GameUtil.h"
+#import "PlayerMaster.h"
 
 @interface Player ()
 @property (nonatomic, readwrite)int _monsterId;
@@ -27,7 +28,6 @@
 @end
 
 @implementation Player
-//const int JUMP_SPEED = 1500;
 const int JUMP_SPEED = 1400;
 const int INIT_SCROLL_SPEED = 430;
 const int BLOCK_TOP_REFLECTION = -10;
@@ -45,7 +45,7 @@ const int BLOCK_TOP_REFLECTION = -10;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         self._monsterId = monsterId;
         self._isStaged = false;
-        self._jumpNum = 1;
+        self._jumpNum = [[PlayerMaster getInstance] getJumpNum:self._monsterId];
         self._onGround = true;
         self._vx = [PointUtil getPoint:INIT_SCROLL_SPEED];
         self._isAdjusting = false;
@@ -73,11 +73,11 @@ const int BLOCK_TOP_REFLECTION = -10;
     self._isStaged = true;
     [PointUtil setPosition:self x:INIT_PLAYER_X y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
     self._properPositionX = self.position.x;
-    [[GameScene sharedInstance].gameLayer addChild:self];
+    [[GameScene sharedInstance].gameLayer addChild:self z:INIT_PLAYER_Z];
 }
 
 - (void)start {
-    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
+    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse frameNum:self.frameNum]];
     [self scheduleUpdate];
 }
 
@@ -90,11 +90,11 @@ const int BLOCK_TOP_REFLECTION = -10;
     if (self._onRailed) {
         self._vy = self._jumpSpeed * 0.8;
         self._onRailed = false;
-        [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
+        [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse frameNum:self.frameNum]];
         
     } else if ((self._currentJumpNum == 0 && self._onGround) || (self._currentJumpNum != 0 && self._currentJumpNum < self._jumpNum)) {
         self._currentJumpNum++;
-        self._vy += self._jumpSpeed;
+        self._vy = self._jumpSpeed;
     }
 }
 
@@ -214,7 +214,7 @@ const int BLOCK_TOP_REFLECTION = -10;
         if (![self._currentRail isRopeMovable]) {
             self._onRailed = false;
             self._currentRail = nil;
-            [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse]];
+            [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse frameNum:self.frameNum]];
         } else {
             CGPoint diff = [self._currentRail moveRope:dx];
             if (self._onRailed) {
@@ -289,7 +289,7 @@ const int BLOCK_TOP_REFLECTION = -10;
 
 - (void)changeDirection:(BOOL)isReverse {
     [self._playerSprite stopAllActions];
-    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:isReverse]];
+    [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:isReverse frameNum:self.frameNum]];
     self._isReverse = isReverse;
 }
 

@@ -20,6 +20,7 @@
 		F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63117C4FAC4007CF0CF /* GameDao.m */; };
 		F923F63517C500B1007CF0CF /* UnitDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63417C500B1007CF0CF /* UnitDao.m */; };
 		F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63717C5F6F3007CF0CF /* MonsterGifter.m */; };
+		F923F63B17CA5486007CF0CF /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63A17CA5483007CF0CF /* Follower.m */; };
 		F9363E1D17BA579100F832C0 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1C17BA579100F832C0 /* Door.m */; };
 		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
 		F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2217BA5D3600F832C0 /* Carpenter.m */; };
@@ -270,6 +271,8 @@
 		F923F63417C500B1007CF0CF /* UnitDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDao.m; sourceTree = "<group>"; };
 		F923F63617C5F6F3007CF0CF /* MonsterGifter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterGifter.h; sourceTree = "<group>"; };
 		F923F63717C5F6F3007CF0CF /* MonsterGifter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterGifter.m; sourceTree = "<group>"; };
+		F923F63917CA5481007CF0CF /* Follower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Follower.h; sourceTree = "<group>"; };
+		F923F63A17CA5483007CF0CF /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
 		F9363E1B17BA579100F832C0 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		F9363E1C17BA579100F832C0 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
@@ -1260,6 +1263,8 @@
 				F93DF6B4178AFE2F007AD085 /* Player.m */,
 				F9ABA653179208FA00A02626 /* Map.h */,
 				F9ABA654179208FA00A02626 /* Map.m */,
+				F923F63917CA5481007CF0CF /* Follower.h */,
+				F923F63A17CA5483007CF0CF /* Follower.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -1795,6 +1800,7 @@
 				F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */,
 				F923F63517C500B1007CF0CF /* UnitDao.m in Sources */,
 				F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */,
+				F923F63B17CA5486007CF0CF /* Follower.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

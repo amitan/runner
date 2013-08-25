@@ -11,9 +11,9 @@
 
 @implementation PlayerAnimation
 
-+ (id)getWalkAction:(int)monsterId isReverse:(BOOL)isReverse {
++ (id)getWalkAction:(int)monsterId isReverse:(BOOL)isReverse frameNum:(int)frameNum {
     NSString *direction = isReverse ? @"left" : @"right";
-    return [CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"player%d_%@", monsterId, direction] frameNum:2 duration:0.2f];
+    return [CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"player%d_%@", monsterId, direction] frameNum:frameNum duration:0.2f];
 }
 
 + (CCParticleSystem*)getDeadParticle {

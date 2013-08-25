@@ -12,6 +12,7 @@
 @interface Player : CCNode {
     
 }
+@property (nonatomic, readwrite)int frameNum;
 
 // 指定したモンスターを生成する
 + (Player*)createPlayer:(int)monsterId;

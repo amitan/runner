@@ -56,10 +56,23 @@
                 <key>sourceSize</key>
                 <string>{78,90}</string>
             </dict>
+            <key>player1001001_small.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{343,3},{33,45}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{33,45}}</string>
+                <key>sourceSize</key>
+                <string>{33,45}</string>
+            </dict>
             <key>player2001001_left1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{343,3},{59,48}}</string>
+                <string>{{380,3},{59,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +85,7 @@
             <key>player2001001_left2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{406,3},{59,44}}</string>
+                <string>{{443,3},{59,44}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -768,7 +781,7 @@
             <key>size</key>
             <string>{512,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:77cccce5784b5c9963ef64aff1e7a455$</string>
+            <string>$TexturePacker:SmartUpdate:3f256ffead8bc6596258be07335e4c76$</string>
             <key>textureFileName</key>
             <string>player.png</string>
         </dict>

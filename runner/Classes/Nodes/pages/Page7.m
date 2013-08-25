@@ -31,10 +31,26 @@
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:2 x:500 y:-300]];
+        self._coins = @[[Coin createCoin:2 x:500 y:-300],
+                        [Coin createCoin:1 x:700 y:-735],
+                        [Coin createCoin:1 x:750 y:-735],
+                        [Coin createCoin:1 x:800 y:-735],
+                        [Coin createCoin:1 x:850 y:-735],
+                        [Coin createCoin:1 x:900 y:-735],
+                        [Coin createCoin:1 x:950 y:-735],
+                        [Coin createCoin:1 x:1000 y:-735],
+                        [Coin createCoin:1 x:1050 y:-735],
+                        [Coin createCoin:1 x:1100 y:-735],
+                        [Coin createCoin:1 x:1150 y:-735],
+                        [Coin createCoin:1 x:1200 y:-735],
+                        [Coin createCoin:1 x:1250 y:-735],
+                        [Coin createCoin:1 x:1300 y:-735],
+                        [Coin createCoin:1 x:1350 y:-735],
+                        [Coin createCoin:1 x:1400 y:-735],
+                        [Coin createCoin:1 x:1450 y:-735]];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
-        }
+        }        
     }
     return self;
 }

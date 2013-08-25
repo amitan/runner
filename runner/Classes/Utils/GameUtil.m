@@ -12,6 +12,7 @@
 const BOOL IS_SANDBOX = true;
 const int INIT_PLAYER_ID = 1001001;
 const int INIT_PLAYER_X = 250;
+const int INIT_PLAYER_Z = 200;
 const int GRAVITY = 70;
 const int SPEED_UP_PAGE = 900;
 
