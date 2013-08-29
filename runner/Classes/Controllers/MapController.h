@@ -10,12 +10,12 @@
 #import "cocos2d.h"
 #import "Block.h"
 #import "Player.h"
-#import "Map.h"
+#import "LandMap.h"
 
 @interface MapController : CCNode {
     
 }
-@property (nonatomic, retain)Map *map;
+@property (nonatomic, retain)LandMap *landMap;
 
 // 動作を開始/停止する
 - (void)setup:(int)stageId;
@@ -27,5 +27,7 @@
 
 // マップをスクロールする
 - (void)scroll:(float)dx;
+- (void)skyScroll:(float)dx;
+- (void)flyUp;
 
 @end

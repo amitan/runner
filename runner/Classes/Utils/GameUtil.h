@@ -16,6 +16,7 @@ extern const int INIT_PLAYER_X;
 extern const int INIT_PLAYER_Z;
 extern const int GRAVITY;
 extern const int SPEED_UP_PAGE;
+extern const int SKY_PAGE_BASE_ID;
 
 // タッチ優先度
 typedef enum {

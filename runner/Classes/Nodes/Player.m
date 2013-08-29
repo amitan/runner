@@ -29,7 +29,7 @@
 
 @implementation Player
 const int JUMP_SPEED = 1400;
-const int INIT_SCROLL_SPEED = 430;
+const int INIT_SCROLL_SPEED = 500;
 const int BLOCK_TOP_REFLECTION = -10;
 
 
@@ -71,9 +71,13 @@ const int BLOCK_TOP_REFLECTION = -10;
 
 - (void)stageOn {
     self._isStaged = true;
-    [PointUtil setPosition:self x:INIT_PLAYER_X y:760 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
+    [PointUtil setPosition:self x:INIT_PLAYER_X y:520 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
     self._properPositionX = self.position.x;
     [[GameScene sharedInstance].gameLayer addChild:self z:INIT_PLAYER_Z];
+}
+
+- (void)stageOff {
+    [self removeFromParentAndCleanup:NO];
 }
 
 - (void)start {
@@ -130,7 +134,7 @@ const int BLOCK_TOP_REFLECTION = -10;
     }
     
     // 敵との当たり判定
-    if ([mapController.map isHit:[self getCenterRightPosition]]) {
+    if ([mapController.landMap isHit:[self getCenterRightPosition]]) {
         [self dead];
         return;
     }
@@ -147,8 +151,8 @@ const int BLOCK_TOP_REFLECTION = -10;
     ///////////////////////////////////////////////////////////////
     // コイン/アイテム判定
     ///////////////////////////////////////////////////////////////
-    [mapController.map takeItemsIfCollided:[self getRect]];
-    if ([mapController.map jumpIfCollided:[self getRect]]) {
+    [mapController.landMap takeItemsIfCollided:[self getRect]];
+    if ([mapController.landMap jumpIfCollided:[self getRect]]) {
         return;
     }
 
@@ -227,7 +231,7 @@ const int BLOCK_TOP_REFLECTION = -10;
     ///////////////////////////////////////////////////////////////
     // スピードアップ判定
     ///////////////////////////////////////////////////////////////
-    if ([mapController.map checkSpeedUp:self.position]) {
+    if ([mapController.landMap checkSpeedUp:self.position]) {
         [self speedUp];
     }
 }
@@ -240,7 +244,8 @@ const int BLOCK_TOP_REFLECTION = -10;
     CGPoint nextCenterBottomYPosition = ccpAdd([self getCenterBottomPosition], ccp(0, dy));
     
     // 敵チェック
-    if ([mapController.map attackEnemyIfCollided:nextCenterBottomYPosition]) {
+    if ([mapController.landMap attackEnemyIfCollided:nextCenterBottomYPosition]) {
+        [[GameScene sharedInstance].hudController addExp:5];
         self._vy = self._jumpSpeed * 0.6;
         y += self._vy * dt;
         return y;
@@ -263,7 +268,7 @@ const int BLOCK_TOP_REFLECTION = -10;
 
     // レール判定
     if (!self._onRailed && !(self._currentRail.isSwitched && self._vy > 0)) {
-        Rail *rail = [mapController.map getHitRail:[self getRect]];
+        Rail *rail = [mapController.landMap getHitRail:[self getRect]];
         if (rail && [rail isRopeMovable]) {
             self._currentRail = rail;
             self._onRailed = true;

@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Page.h"
+#import "LandPage.h"
 
 @interface PageController : CCNode {
     
 }
 
 // ページを取得する
-- (Page*)getPage;
+- (LandPage*)getLandPage;
+- (Page*)getSkyPage;
 - (Page*)getPageBy:(int)pageId;
 
 @end

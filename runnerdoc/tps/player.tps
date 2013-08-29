@@ -141,10 +141,6 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/player/player1001001_left1.png</filename>
-            <filename>../sprites/player/player1001001_left2.png</filename>
-            <filename>../sprites/player/player1001001_right1.png</filename>
-            <filename>../sprites/player/player1001001_right2.png</filename>
             <filename>../sprites/player/player2001001_left1.png</filename>
             <filename>../sprites/player/player2001001_left2.png</filename>
             <filename>../sprites/player/player2001001_left3.png</filename>
@@ -199,7 +195,12 @@
             <filename>../sprites/player/player2003003_right1.png</filename>
             <filename>../sprites/player/player2003003_right2.png</filename>
             <filename>../sprites/player/player2003003_right3.png</filename>
-            <filename>../sprites/player/player1001001_small.png</filename>
+            <filename>../sprites/player/player2000001_left1.png</filename>
+            <filename>../sprites/player/player2000001_left2.png</filename>
+            <filename>../sprites/player/player2000001_left3.png</filename>
+            <filename>../sprites/player/player2000001_right1.png</filename>
+            <filename>../sprites/player/player2000001_right2.png</filename>
+            <filename>../sprites/player/player2000001_right3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

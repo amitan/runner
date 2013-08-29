@@ -35,6 +35,10 @@
 - (int)getPlayer2Coin;
 - (int)getPlayer3Coin;
 
+// EXPを加算/取得する
+- (void)addExp:(int)num;
+- (void)fever;
+
 // 演出を表示する
 - (void)showSpeedUpEffect;
 

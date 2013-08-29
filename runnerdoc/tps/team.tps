@@ -141,7 +141,6 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/team/player1001001_stand.png</filename>
             <filename>../sprites/team/player2001001_stand.png</filename>
             <filename>../sprites/team/player2001002_stand.png</filename>
             <filename>../sprites/team/player2001003_stand.png</filename>
@@ -151,6 +150,7 @@
             <filename>../sprites/team/player2003001_stand.png</filename>
             <filename>../sprites/team/player2003002_stand.png</filename>
             <filename>../sprites/team/player2003003_stand.png</filename>
+            <filename>../sprites/team/player2000001_stand.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

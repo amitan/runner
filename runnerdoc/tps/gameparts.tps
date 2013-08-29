@@ -162,6 +162,7 @@
             <filename>../sprites/gameparts/rail2_1.png</filename>
             <filename>../sprites/gameparts/rope.png</filename>
             <filename>../sprites/gameparts/bubble.png</filename>
+            <filename>../sprites/gameparts/plane.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

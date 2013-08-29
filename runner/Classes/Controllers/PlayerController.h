@@ -19,10 +19,14 @@
 - (void)stop;
 
 // アクション
-- (void)jump;
+- (void)touchBegan;
+- (void)touchEnd;
 - (void)trampoline;
-
-// スピードアップ
+- (void)ride;
 - (void)speedUp;
+- (void)fly;
+
+// 取得
+- (CGPoint)getPlayerFootPosition;
 
 @end

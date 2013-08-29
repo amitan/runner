@@ -22,6 +22,7 @@
 
 // 画面に表示する
 - (void)stageOn;
+- (void)stageOff;
 
 // 動作を開始/停止する
 - (void)start;

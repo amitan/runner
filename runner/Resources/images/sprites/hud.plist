@@ -4,49 +4,23 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>base_window.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{3,3},{540,538}}</string>
-                <key>offset</key>
-                <string>{0,-5}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{15,21},{540,538}}</string>
-                <key>sourceSize</key>
-                <string>{570,570}</string>
-            </dict>
             <key>black.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,545},{640,960}}</string>
+                <string>{{3,3},{1136,640}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{640,960}}</string>
+                <string>{{0,0},{1136,640}}</string>
                 <key>sourceSize</key>
-                <string>{640,960}</string>
-            </dict>
-            <key>btn_next.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{3,1509},{432,70}}</string>
-                <key>offset</key>
-                <string>{-1,1}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{8,1},{432,70}}</string>
-                <key>sourceSize</key>
-                <string>{450,74}</string>
+                <string>{1136,640}</string>
             </dict>
             <key>coin_base.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{439,1509},{138,54}}</string>
+                <string>{{1143,3},{138,54}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +33,7 @@
             <key>coin_bonus.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{581,1509},{178,40}}</string>
+                <string>{{1285,3},{178,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -69,10 +43,23 @@
                 <key>sourceSize</key>
                 <string>{178,40}</string>
             </dict>
+            <key>fever.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1467,3},{227,45}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{227,45}}</string>
+                <key>sourceSize</key>
+                <string>{227,45}</string>
+            </dict>
             <key>play_btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{763,1509},{66,68}}</string>
+                <string>{{1698,3},{66,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +72,7 @@
             <key>speed_up.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,1583},{282,58}}</string>
+                <string>{{3,647},{282,58}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +85,7 @@
             <key>stop_btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{289,1583},{66,68}}</string>
+                <string>{{289,647},{66,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -116,9 +103,9 @@
             <key>realTextureFileName</key>
             <string>hud.png</string>
             <key>size</key>
-            <string>{1024,2048}</string>
+            <string>{2048,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:64dae0bc21c0a93214a9398ef5891cc4$</string>
+            <string>$TexturePacker:SmartUpdate:defe84c119714afffbbf8358b88a3637$</string>
             <key>textureFileName</key>
             <string>hud.png</string>
         </dict>

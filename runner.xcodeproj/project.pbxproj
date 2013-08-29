@@ -9,9 +9,29 @@
 /* Begin PBXBuildFile section */
 		F9052E5D17A179580078EE9C /* land.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9052E5B17A179570078EE9C /* land.plist */; };
 		F9052E5E17A179580078EE9C /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = F9052E5C17A179570078EE9C /* land.png */; };
-		F9052E6817A432720078EE9C /* Page5.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6717A432720078EE9C /* Page5.m */; };
-		F9052E6B17A432840078EE9C /* Page6.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6A17A432840078EE9C /* Page6.m */; };
 		F9052E6E17A56D170078EE9C /* GameResultLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6D17A56D170078EE9C /* GameResultLayer.m */; };
+		F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F617CF7ACC005177A2 /* LandMap.m */; };
+		F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F817CF7ACC005177A2 /* SkyMap.m */; };
+		F922C8FD17CF7B00005177A2 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8FC17CF7B00005177A2 /* Map.m */; };
+		F922C91F17CF8099005177A2 /* LandPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90017CF8099005177A2 /* LandPage.m */; };
+		F922C92017CF8099005177A2 /* Page0.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90217CF8099005177A2 /* Page0.m */; };
+		F922C92117CF8099005177A2 /* Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90417CF8099005177A2 /* Page1.m */; };
+		F922C92217CF8099005177A2 /* Page10.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90617CF8099005177A2 /* Page10.m */; };
+		F922C92317CF8099005177A2 /* Page11.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90817CF8099005177A2 /* Page11.m */; };
+		F922C92417CF8099005177A2 /* Page12.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90A17CF8099005177A2 /* Page12.m */; };
+		F922C92517CF8099005177A2 /* Page13.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90C17CF8099005177A2 /* Page13.m */; };
+		F922C92617CF8099005177A2 /* Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90E17CF8099005177A2 /* Page2.m */; };
+		F922C92717CF8099005177A2 /* Page3.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91017CF8099005177A2 /* Page3.m */; };
+		F922C92817CF8099005177A2 /* Page4.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91217CF8099005177A2 /* Page4.m */; };
+		F922C92917CF8099005177A2 /* Page5.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91417CF8099005177A2 /* Page5.m */; };
+		F922C92A17CF8099005177A2 /* Page6.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91617CF8099005177A2 /* Page6.m */; };
+		F922C92B17CF8099005177A2 /* Page7.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91817CF8099005177A2 /* Page7.m */; };
+		F922C92C17CF8099005177A2 /* Page8.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91A17CF8099005177A2 /* Page8.m */; };
+		F922C92D17CF8099005177A2 /* Page9.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91C17CF8099005177A2 /* Page9.m */; };
+		F922C92E17CF8099005177A2 /* Page900.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91E17CF8099005177A2 /* Page900.m */; };
+		F922C93817CF839E005177A2 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93717CF839D005177A2 /* Page.m */; };
+		F922C93C17CF8689005177A2 /* SkyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93B17CF8689005177A2 /* SkyPage.m */; };
+		F922C93F17CF86EB005177A2 /* Page1000.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93E17CF86EB005177A2 /* Page1000.m */; };
 		F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61B17C22FD7007CF0CF /* ConversationLayer.m */; };
 		F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */; };
 		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
@@ -21,6 +41,7 @@
 		F923F63517C500B1007CF0CF /* UnitDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63417C500B1007CF0CF /* UnitDao.m */; };
 		F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63717C5F6F3007CF0CF /* MonsterGifter.m */; };
 		F923F63B17CA5486007CF0CF /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63A17CA5483007CF0CF /* Follower.m */; };
+		F923F63E17CD021C007CF0CF /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63D17CD021C007CF0CF /* Plane.m */; };
 		F9363E1D17BA579100F832C0 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1C17BA579100F832C0 /* Door.m */; };
 		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
 		F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2217BA5D3600F832C0 /* Carpenter.m */; };
@@ -170,20 +191,12 @@
 		F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */; };
 		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
 		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
-		F941368F17A96E5E00EFC308 /* Page7.m in Sources */ = {isa = PBXBuildFile; fileRef = F941368E17A96E5E00EFC308 /* Page7.m */; };
-		F941369517AA555F00EFC308 /* Page8.m in Sources */ = {isa = PBXBuildFile; fileRef = F941369417AA555E00EFC308 /* Page8.m */; };
-		F99DFA9817B915C2001E1EA8 /* Page13.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFA9717B915C2001E1EA8 /* Page13.m */; };
 		F99DFA9E17B93707001E1EA8 /* towner.plist in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9C17B93707001E1EA8 /* towner.plist */; };
 		F99DFA9F17B93707001E1EA8 /* towner.png in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9D17B93707001E1EA8 /* towner.png */; };
 		F99DFAA217B9466C001E1EA8 /* HomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA117B9466C001E1EA8 /* HomeScene.m */; };
 		F99DFAA517B94781001E1EA8 /* HomeInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */; };
 		F99DFAA817BA3765001E1EA8 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA717BA3765001E1EA8 /* HomeController.m */; };
-		F9A468B91795451E002BAFB7 /* Page0.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468B81795451E002BAFB7 /* Page0.m */; };
-		F9A468BC179545A3002BAFB7 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468BB179545A3002BAFB7 /* Page.m */; };
-		F9A468BF1795518A002BAFB7 /* Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468BE1795518A002BAFB7 /* Page1.m */; };
 		F9A468C51795E2B2002BAFB7 /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C41795E2B1002BAFB7 /* HudController.m */; };
-		F9A468C81799AE7D002BAFB7 /* Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C71799AE7C002BAFB7 /* Page2.m */; };
-		F9A468CB1799CA80002BAFB7 /* Page3.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468CA1799CA7F002BAFB7 /* Page3.m */; };
 		F9A468D51799D606002BAFB7 /* chara.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D31799D606002BAFB7 /* chara.plist */; };
 		F9A468D61799D606002BAFB7 /* chara.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D41799D606002BAFB7 /* chara.png */; };
 		F9A468DA179A7E9A002BAFB7 /* dead.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D8179A7E9A002BAFB7 /* dead.plist */; };
@@ -194,8 +207,6 @@
 		F9A468E5179B4D70002BAFB7 /* title.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468E1179B4D70002BAFB7 /* title.plist */; };
 		F9A468E6179B4D70002BAFB7 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468E2179B4D70002BAFB7 /* title.png */; };
 		F9A468E9179B7104002BAFB7 /* PageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468E8179B7102002BAFB7 /* PageController.m */; };
-		F9A468EC179BB281002BAFB7 /* Page4.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468EB179BB27F002BAFB7 /* Page4.m */; };
-		F9A468EF179BDD6A002BAFB7 /* Page900.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468EE179BDD69002BAFB7 /* Page900.m */; };
 		F9A468F6179EC199002BAFB7 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468F5179EC199002BAFB7 /* Counter.m */; };
 		F9A468F9179EC30D002BAFB7 /* Pause.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468F8179EC30D002BAFB7 /* Pause.m */; };
 		F9A4690317A04420002BAFB7 /* hud.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A4690117A04420002BAFB7 /* hud.plist */; };
@@ -209,17 +220,12 @@
 		F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9ABA6441791079600A02626 /* NADView_readme.txt */; };
 		F9ABA6491791080800A02626 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA6481791080700A02626 /* AdSupport.framework */; };
 		F9ABA64B1791081000A02626 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA64A1791081000A02626 /* Security.framework */; };
-		F9ABA655179208FA00A02626 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABA654179208FA00A02626 /* Map.m */; };
-		F9B0DA8A17AC0F8B009A08B1 /* Page9.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA8917AC0F8B009A08B1 /* Page9.m */; };
-		F9B0DA9E17AEC0CF009A08B1 /* Page10.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DA9D17AEC0CE009A08B1 /* Page10.m */; };
 		F9B0DAA117AF85DF009A08B1 /* block.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DA9F17AF85DF009A08B1 /* block.plist */; };
 		F9B0DAA217AF85DF009A08B1 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAA017AF85DF009A08B1 /* block.png */; };
 		F9B0DAB917B3D91D009A08B1 /* home_bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAB717B3D91D009A08B1 /* home_bg-568h@2x.png */; };
 		F9B0DABA17B3D91D009A08B1 /* home_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DAB817B3D91D009A08B1 /* home_bg.png */; };
 		F9B0DABF17B4C3B6009A08B1 /* home.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DABD17B4C3B6009A08B1 /* home.plist */; };
 		F9B0DAC017B4C3B6009A08B1 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B0DABE17B4C3B6009A08B1 /* home.png */; };
-		F9B0DAC317B5E4B0009A08B1 /* Page11.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DAC217B5E4AC009A08B1 /* Page11.m */; };
-		F9B0DACB17B89C77009A08B1 /* Page12.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B0DACA17B89C71009A08B1 /* Page12.m */; };
 		F9C9814717B8C86200DDCE95 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812617B8C86200DDCE95 /* Block.m */; };
 		F9C9814917B8C86200DDCE95 /* LeftReverseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812A17B8C86200DDCE95 /* LeftReverseBlock.m */; };
 		F9C9814A17B8C86200DDCE95 /* RightReverseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812C17B8C86200DDCE95 /* RightReverseBlock.m */; };
@@ -249,12 +255,52 @@
 /* Begin PBXFileReference section */
 		F9052E5B17A179570078EE9C /* land.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = land.plist; sourceTree = "<group>"; };
 		F9052E5C17A179570078EE9C /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
-		F9052E6617A432710078EE9C /* Page5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page5.h; sourceTree = "<group>"; };
-		F9052E6717A432720078EE9C /* Page5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page5.m; sourceTree = "<group>"; };
-		F9052E6917A432830078EE9C /* Page6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page6.h; sourceTree = "<group>"; };
-		F9052E6A17A432840078EE9C /* Page6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page6.m; sourceTree = "<group>"; };
 		F9052E6C17A56D170078EE9C /* GameResultLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultLayer.h; sourceTree = "<group>"; };
 		F9052E6D17A56D170078EE9C /* GameResultLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultLayer.m; sourceTree = "<group>"; };
+		F922C8F517CF7ACC005177A2 /* LandMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandMap.h; sourceTree = "<group>"; };
+		F922C8F617CF7ACC005177A2 /* LandMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandMap.m; sourceTree = "<group>"; };
+		F922C8F717CF7ACC005177A2 /* SkyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyMap.h; sourceTree = "<group>"; };
+		F922C8F817CF7ACC005177A2 /* SkyMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyMap.m; sourceTree = "<group>"; };
+		F922C8FB17CF7B00005177A2 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		F922C8FC17CF7B00005177A2 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
+		F922C8FF17CF8099005177A2 /* LandPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandPage.h; sourceTree = "<group>"; };
+		F922C90017CF8099005177A2 /* LandPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandPage.m; sourceTree = "<group>"; };
+		F922C90117CF8099005177A2 /* Page0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page0.h; sourceTree = "<group>"; };
+		F922C90217CF8099005177A2 /* Page0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page0.m; sourceTree = "<group>"; };
+		F922C90317CF8099005177A2 /* Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1.h; sourceTree = "<group>"; };
+		F922C90417CF8099005177A2 /* Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1.m; sourceTree = "<group>"; };
+		F922C90517CF8099005177A2 /* Page10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10.h; sourceTree = "<group>"; };
+		F922C90617CF8099005177A2 /* Page10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10.m; sourceTree = "<group>"; };
+		F922C90717CF8099005177A2 /* Page11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page11.h; sourceTree = "<group>"; };
+		F922C90817CF8099005177A2 /* Page11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page11.m; sourceTree = "<group>"; };
+		F922C90917CF8099005177A2 /* Page12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page12.h; sourceTree = "<group>"; };
+		F922C90A17CF8099005177A2 /* Page12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page12.m; sourceTree = "<group>"; };
+		F922C90B17CF8099005177A2 /* Page13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page13.h; sourceTree = "<group>"; };
+		F922C90C17CF8099005177A2 /* Page13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page13.m; sourceTree = "<group>"; };
+		F922C90D17CF8099005177A2 /* Page2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page2.h; sourceTree = "<group>"; };
+		F922C90E17CF8099005177A2 /* Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2.m; sourceTree = "<group>"; };
+		F922C90F17CF8099005177A2 /* Page3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page3.h; sourceTree = "<group>"; };
+		F922C91017CF8099005177A2 /* Page3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page3.m; sourceTree = "<group>"; };
+		F922C91117CF8099005177A2 /* Page4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page4.h; sourceTree = "<group>"; };
+		F922C91217CF8099005177A2 /* Page4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page4.m; sourceTree = "<group>"; };
+		F922C91317CF8099005177A2 /* Page5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page5.h; sourceTree = "<group>"; };
+		F922C91417CF8099005177A2 /* Page5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page5.m; sourceTree = "<group>"; };
+		F922C91517CF8099005177A2 /* Page6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page6.h; sourceTree = "<group>"; };
+		F922C91617CF8099005177A2 /* Page6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page6.m; sourceTree = "<group>"; };
+		F922C91717CF8099005177A2 /* Page7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page7.h; sourceTree = "<group>"; };
+		F922C91817CF8099005177A2 /* Page7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page7.m; sourceTree = "<group>"; };
+		F922C91917CF8099005177A2 /* Page8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page8.h; sourceTree = "<group>"; };
+		F922C91A17CF8099005177A2 /* Page8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page8.m; sourceTree = "<group>"; };
+		F922C91B17CF8099005177A2 /* Page9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page9.h; sourceTree = "<group>"; };
+		F922C91C17CF8099005177A2 /* Page9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page9.m; sourceTree = "<group>"; };
+		F922C91D17CF8099005177A2 /* Page900.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page900.h; sourceTree = "<group>"; };
+		F922C91E17CF8099005177A2 /* Page900.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page900.m; sourceTree = "<group>"; };
+		F922C93617CF839D005177A2 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		F922C93717CF839D005177A2 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		F922C93A17CF8689005177A2 /* SkyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyPage.h; sourceTree = "<group>"; };
+		F922C93B17CF8689005177A2 /* SkyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyPage.m; sourceTree = "<group>"; };
+		F922C93D17CF86EB005177A2 /* Page1000.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1000.h; sourceTree = "<group>"; };
+		F922C93E17CF86EB005177A2 /* Page1000.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1000.m; sourceTree = "<group>"; };
 		F923F61A17C22FD7007CF0CF /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
 		F923F61B17C22FD7007CF0CF /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
 		F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpenterConversationLayer.h; sourceTree = "<group>"; };
@@ -273,6 +319,8 @@
 		F923F63717C5F6F3007CF0CF /* MonsterGifter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterGifter.m; sourceTree = "<group>"; };
 		F923F63917CA5481007CF0CF /* Follower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Follower.h; sourceTree = "<group>"; };
 		F923F63A17CA5483007CF0CF /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
+		F923F63C17CD021C007CF0CF /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		F923F63D17CD021C007CF0CF /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
 		F9363E1B17BA579100F832C0 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		F9363E1C17BA579100F832C0 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
@@ -582,12 +630,6 @@
 		F93DF6C3178B1F54007AD085 /* CommonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAnimation.m; sourceTree = "<group>"; };
 		F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterfaceLayer.h; sourceTree = "<group>"; };
 		F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInterfaceLayer.m; sourceTree = "<group>"; };
-		F941368D17A96E5E00EFC308 /* Page7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page7.h; sourceTree = "<group>"; };
-		F941368E17A96E5E00EFC308 /* Page7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page7.m; sourceTree = "<group>"; };
-		F941369317AA555D00EFC308 /* Page8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page8.h; sourceTree = "<group>"; };
-		F941369417AA555E00EFC308 /* Page8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page8.m; sourceTree = "<group>"; };
-		F99DFA9617B915C2001E1EA8 /* Page13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page13.h; sourceTree = "<group>"; };
-		F99DFA9717B915C2001E1EA8 /* Page13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page13.m; sourceTree = "<group>"; };
 		F99DFA9C17B93707001E1EA8 /* towner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = towner.plist; sourceTree = "<group>"; };
 		F99DFA9D17B93707001E1EA8 /* towner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = towner.png; sourceTree = "<group>"; };
 		F99DFAA017B9466C001E1EA8 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScene.h; sourceTree = "<group>"; };
@@ -596,18 +638,8 @@
 		F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeInterfaceLayer.m; sourceTree = "<group>"; };
 		F99DFAA617BA3765001E1EA8 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		F99DFAA717BA3765001E1EA8 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
-		F9A468B71795451E002BAFB7 /* Page0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page0.h; sourceTree = "<group>"; };
-		F9A468B81795451E002BAFB7 /* Page0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page0.m; sourceTree = "<group>"; };
-		F9A468BA179545A3002BAFB7 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
-		F9A468BB179545A3002BAFB7 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
-		F9A468BD1795518A002BAFB7 /* Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1.h; sourceTree = "<group>"; };
-		F9A468BE1795518A002BAFB7 /* Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1.m; sourceTree = "<group>"; };
 		F9A468C31795E2B1002BAFB7 /* HudController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudController.h; sourceTree = "<group>"; };
 		F9A468C41795E2B1002BAFB7 /* HudController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudController.m; sourceTree = "<group>"; };
-		F9A468C61799AE7C002BAFB7 /* Page2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page2.h; sourceTree = "<group>"; };
-		F9A468C71799AE7C002BAFB7 /* Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2.m; sourceTree = "<group>"; };
-		F9A468C91799CA7F002BAFB7 /* Page3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page3.h; sourceTree = "<group>"; };
-		F9A468CA1799CA7F002BAFB7 /* Page3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page3.m; sourceTree = "<group>"; };
 		F9A468D31799D606002BAFB7 /* chara.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chara.plist; sourceTree = "<group>"; };
 		F9A468D41799D606002BAFB7 /* chara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chara.png; sourceTree = "<group>"; };
 		F9A468D8179A7E9A002BAFB7 /* dead.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dead.plist; sourceTree = "<group>"; };
@@ -620,10 +652,6 @@
 		F9A468E2179B4D70002BAFB7 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		F9A468E7179B7102002BAFB7 /* PageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageController.h; sourceTree = "<group>"; };
 		F9A468E8179B7102002BAFB7 /* PageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageController.m; sourceTree = "<group>"; };
-		F9A468EA179BB27D002BAFB7 /* Page4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page4.h; sourceTree = "<group>"; };
-		F9A468EB179BB27F002BAFB7 /* Page4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page4.m; sourceTree = "<group>"; };
-		F9A468ED179BDD67002BAFB7 /* Page900.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page900.h; sourceTree = "<group>"; };
-		F9A468EE179BDD69002BAFB7 /* Page900.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page900.m; sourceTree = "<group>"; };
 		F9A468F4179EC199002BAFB7 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
 		F9A468F5179EC199002BAFB7 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		F9A468F7179EC30D002BAFB7 /* Pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pause.h; sourceTree = "<group>"; };
@@ -644,22 +672,12 @@
 		F9ABA6441791079600A02626 /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
 		F9ABA6481791080700A02626 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F9ABA64A1791081000A02626 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F9ABA653179208FA00A02626 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
-		F9ABA654179208FA00A02626 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
-		F9B0DA8817AC0F8B009A08B1 /* Page9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page9.h; sourceTree = "<group>"; };
-		F9B0DA8917AC0F8B009A08B1 /* Page9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page9.m; sourceTree = "<group>"; };
-		F9B0DA9C17AEC0CD009A08B1 /* Page10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10.h; sourceTree = "<group>"; };
-		F9B0DA9D17AEC0CE009A08B1 /* Page10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10.m; sourceTree = "<group>"; };
 		F9B0DA9F17AF85DF009A08B1 /* block.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = block.plist; sourceTree = "<group>"; };
 		F9B0DAA017AF85DF009A08B1 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
 		F9B0DAB717B3D91D009A08B1 /* home_bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_bg-568h@2x.png"; sourceTree = "<group>"; };
 		F9B0DAB817B3D91D009A08B1 /* home_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_bg.png; sourceTree = "<group>"; };
 		F9B0DABD17B4C3B6009A08B1 /* home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = home.plist; sourceTree = "<group>"; };
 		F9B0DABE17B4C3B6009A08B1 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		F9B0DAC117B5E4A7009A08B1 /* Page11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page11.h; sourceTree = "<group>"; };
-		F9B0DAC217B5E4AC009A08B1 /* Page11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page11.m; sourceTree = "<group>"; };
-		F9B0DAC917B89C6C009A08B1 /* Page12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page12.h; sourceTree = "<group>"; };
-		F9B0DACA17B89C71009A08B1 /* Page12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page12.m; sourceTree = "<group>"; };
 		F9C9812517B8C86200DDCE95 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F9C9812617B8C86200DDCE95 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 		F9C9812917B8C86200DDCE95 /* LeftReverseBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftReverseBlock.h; sourceTree = "<group>"; };
@@ -730,6 +748,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F922C8F417CF7ACC005177A2 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				F922C8FB17CF7B00005177A2 /* Map.h */,
+				F922C8FC17CF7B00005177A2 /* Map.m */,
+				F922C8F517CF7ACC005177A2 /* LandMap.h */,
+				F922C8F617CF7ACC005177A2 /* LandMap.m */,
+				F922C8F717CF7ACC005177A2 /* SkyMap.h */,
+				F922C8F817CF7ACC005177A2 /* SkyMap.m */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		F922C8FE17CF8099005177A2 /* landPages */ = {
+			isa = PBXGroup;
+			children = (
+				F922C93617CF839D005177A2 /* Page.h */,
+				F922C93717CF839D005177A2 /* Page.m */,
+				F922C8FF17CF8099005177A2 /* LandPage.h */,
+				F922C90017CF8099005177A2 /* LandPage.m */,
+				F922C90117CF8099005177A2 /* Page0.h */,
+				F922C90217CF8099005177A2 /* Page0.m */,
+				F922C90317CF8099005177A2 /* Page1.h */,
+				F922C90417CF8099005177A2 /* Page1.m */,
+				F922C90517CF8099005177A2 /* Page10.h */,
+				F922C90617CF8099005177A2 /* Page10.m */,
+				F922C90717CF8099005177A2 /* Page11.h */,
+				F922C90817CF8099005177A2 /* Page11.m */,
+				F922C90917CF8099005177A2 /* Page12.h */,
+				F922C90A17CF8099005177A2 /* Page12.m */,
+				F922C90B17CF8099005177A2 /* Page13.h */,
+				F922C90C17CF8099005177A2 /* Page13.m */,
+				F922C90D17CF8099005177A2 /* Page2.h */,
+				F922C90E17CF8099005177A2 /* Page2.m */,
+				F922C90F17CF8099005177A2 /* Page3.h */,
+				F922C91017CF8099005177A2 /* Page3.m */,
+				F922C91117CF8099005177A2 /* Page4.h */,
+				F922C91217CF8099005177A2 /* Page4.m */,
+				F922C91317CF8099005177A2 /* Page5.h */,
+				F922C91417CF8099005177A2 /* Page5.m */,
+				F922C91517CF8099005177A2 /* Page6.h */,
+				F922C91617CF8099005177A2 /* Page6.m */,
+				F922C91717CF8099005177A2 /* Page7.h */,
+				F922C91817CF8099005177A2 /* Page7.m */,
+				F922C91917CF8099005177A2 /* Page8.h */,
+				F922C91A17CF8099005177A2 /* Page8.m */,
+				F922C91B17CF8099005177A2 /* Page9.h */,
+				F922C91C17CF8099005177A2 /* Page9.m */,
+				F922C91D17CF8099005177A2 /* Page900.h */,
+				F922C91E17CF8099005177A2 /* Page900.m */,
+			);
+			path = landPages;
+			sourceTree = "<group>";
+		};
+		F922C93917CF8679005177A2 /* skyPages */ = {
+			isa = PBXGroup;
+			children = (
+				F922C93A17CF8689005177A2 /* SkyPage.h */,
+				F922C93B17CF8689005177A2 /* SkyPage.m */,
+				F922C93D17CF86EB005177A2 /* Page1000.h */,
+				F922C93E17CF86EB005177A2 /* Page1000.m */,
+			);
+			path = skyPages;
+			sourceTree = "<group>";
+		};
 		F923F61917C22FC6007CF0CF /* conversation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1255,16 +1338,18 @@
 		F93DF68B178AB5BF007AD085 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				F922C8F417CF7ACC005177A2 /* map */,
 				F9363E1A17BA578400F832C0 /* home */,
 				F9C9812317B8C86200DDCE95 /* gimmick */,
 				F9A468F3179EC198002BAFB7 /* hud */,
-				F9A468B617954513002BAFB7 /* pages */,
+				F922C8FE17CF8099005177A2 /* landPages */,
+				F922C93917CF8679005177A2 /* skyPages */,
 				F93DF6B3178AFE2F007AD085 /* Player.h */,
 				F93DF6B4178AFE2F007AD085 /* Player.m */,
-				F9ABA653179208FA00A02626 /* Map.h */,
-				F9ABA654179208FA00A02626 /* Map.m */,
 				F923F63917CA5481007CF0CF /* Follower.h */,
 				F923F63A17CA5483007CF0CF /* Follower.m */,
+				F923F63C17CD021C007CF0CF /* Plane.h */,
+				F923F63D17CD021C007CF0CF /* Plane.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -1364,45 +1449,6 @@
 				F93DF6B0178AF9F0007AD085 /* gameparts.png */,
 			);
 			path = sprites;
-			sourceTree = "<group>";
-		};
-		F9A468B617954513002BAFB7 /* pages */ = {
-			isa = PBXGroup;
-			children = (
-				F9A468BA179545A3002BAFB7 /* Page.h */,
-				F9A468BB179545A3002BAFB7 /* Page.m */,
-				F9A468B71795451E002BAFB7 /* Page0.h */,
-				F9A468B81795451E002BAFB7 /* Page0.m */,
-				F9A468BD1795518A002BAFB7 /* Page1.h */,
-				F9A468BE1795518A002BAFB7 /* Page1.m */,
-				F9A468C61799AE7C002BAFB7 /* Page2.h */,
-				F9A468C71799AE7C002BAFB7 /* Page2.m */,
-				F9A468C91799CA7F002BAFB7 /* Page3.h */,
-				F9A468CA1799CA7F002BAFB7 /* Page3.m */,
-				F9A468EA179BB27D002BAFB7 /* Page4.h */,
-				F9A468EB179BB27F002BAFB7 /* Page4.m */,
-				F9052E6617A432710078EE9C /* Page5.h */,
-				F9052E6717A432720078EE9C /* Page5.m */,
-				F9052E6917A432830078EE9C /* Page6.h */,
-				F9052E6A17A432840078EE9C /* Page6.m */,
-				F941368D17A96E5E00EFC308 /* Page7.h */,
-				F941368E17A96E5E00EFC308 /* Page7.m */,
-				F941369317AA555D00EFC308 /* Page8.h */,
-				F941369417AA555E00EFC308 /* Page8.m */,
-				F9B0DA8817AC0F8B009A08B1 /* Page9.h */,
-				F9B0DA8917AC0F8B009A08B1 /* Page9.m */,
-				F9B0DA9C17AEC0CD009A08B1 /* Page10.h */,
-				F9B0DA9D17AEC0CE009A08B1 /* Page10.m */,
-				F9B0DAC117B5E4A7009A08B1 /* Page11.h */,
-				F9B0DAC217B5E4AC009A08B1 /* Page11.m */,
-				F9B0DAC917B89C6C009A08B1 /* Page12.h */,
-				F9B0DACA17B89C71009A08B1 /* Page12.m */,
-				F99DFA9617B915C2001E1EA8 /* Page13.h */,
-				F99DFA9717B915C2001E1EA8 /* Page13.m */,
-				F9A468ED179BDD67002BAFB7 /* Page900.h */,
-				F9A468EE179BDD69002BAFB7 /* Page900.m */,
-			);
-			path = pages;
 			sourceTree = "<group>";
 		};
 		F9A468D7179A7E9A002BAFB7 /* particles */ = {
@@ -1743,28 +1789,12 @@
 				F9ABA630178E84C300A02626 /* TitleLayer.m in Sources */,
 				F9ABA63C178F0E4700A02626 /* CCSpriteButton.m in Sources */,
 				F9ABA63F1791038A00A02626 /* AdController.m in Sources */,
-				F9ABA655179208FA00A02626 /* Map.m in Sources */,
-				F9A468B91795451E002BAFB7 /* Page0.m in Sources */,
-				F9A468BC179545A3002BAFB7 /* Page.m in Sources */,
-				F9A468BF1795518A002BAFB7 /* Page1.m in Sources */,
 				F9A468C51795E2B2002BAFB7 /* HudController.m in Sources */,
-				F9A468C81799AE7D002BAFB7 /* Page2.m in Sources */,
-				F9A468CB1799CA80002BAFB7 /* Page3.m in Sources */,
 				F9A468DE179A94F6002BAFB7 /* EnemyAnimation.m in Sources */,
 				F9A468E9179B7104002BAFB7 /* PageController.m in Sources */,
-				F9A468EC179BB281002BAFB7 /* Page4.m in Sources */,
-				F9A468EF179BDD6A002BAFB7 /* Page900.m in Sources */,
 				F9A468F6179EC199002BAFB7 /* Counter.m in Sources */,
 				F9A468F9179EC30D002BAFB7 /* Pause.m in Sources */,
-				F9052E6817A432720078EE9C /* Page5.m in Sources */,
-				F9052E6B17A432840078EE9C /* Page6.m in Sources */,
 				F9052E6E17A56D170078EE9C /* GameResultLayer.m in Sources */,
-				F941368F17A96E5E00EFC308 /* Page7.m in Sources */,
-				F941369517AA555F00EFC308 /* Page8.m in Sources */,
-				F9B0DA8A17AC0F8B009A08B1 /* Page9.m in Sources */,
-				F9B0DA9E17AEC0CF009A08B1 /* Page10.m in Sources */,
-				F9B0DAC317B5E4B0009A08B1 /* Page11.m in Sources */,
-				F9B0DACB17B89C77009A08B1 /* Page12.m in Sources */,
 				F9C9814717B8C86200DDCE95 /* Block.m in Sources */,
 				F9C9814917B8C86200DDCE95 /* LeftReverseBlock.m in Sources */,
 				F9C9814A17B8C86200DDCE95 /* RightReverseBlock.m in Sources */,
@@ -1780,7 +1810,6 @@
 				F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */,
 				F9C9815517B8C86200DDCE95 /* Switch.m in Sources */,
 				F9C9815617B8C86200DDCE95 /* Trampoline.m in Sources */,
-				F99DFA9817B915C2001E1EA8 /* Page13.m in Sources */,
 				F99DFAA217B9466C001E1EA8 /* HomeScene.m in Sources */,
 				F99DFAA517B94781001E1EA8 /* HomeInterfaceLayer.m in Sources */,
 				F99DFAA817BA3765001E1EA8 /* HomeController.m in Sources */,
@@ -1801,6 +1830,29 @@
 				F923F63517C500B1007CF0CF /* UnitDao.m in Sources */,
 				F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */,
 				F923F63B17CA5486007CF0CF /* Follower.m in Sources */,
+				F923F63E17CD021C007CF0CF /* Plane.m in Sources */,
+				F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */,
+				F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */,
+				F922C8FD17CF7B00005177A2 /* Map.m in Sources */,
+				F922C91F17CF8099005177A2 /* LandPage.m in Sources */,
+				F922C92017CF8099005177A2 /* Page0.m in Sources */,
+				F922C92117CF8099005177A2 /* Page1.m in Sources */,
+				F922C92217CF8099005177A2 /* Page10.m in Sources */,
+				F922C92317CF8099005177A2 /* Page11.m in Sources */,
+				F922C92417CF8099005177A2 /* Page12.m in Sources */,
+				F922C92517CF8099005177A2 /* Page13.m in Sources */,
+				F922C92617CF8099005177A2 /* Page2.m in Sources */,
+				F922C92717CF8099005177A2 /* Page3.m in Sources */,
+				F922C92817CF8099005177A2 /* Page4.m in Sources */,
+				F922C92917CF8099005177A2 /* Page5.m in Sources */,
+				F922C92A17CF8099005177A2 /* Page6.m in Sources */,
+				F922C92B17CF8099005177A2 /* Page7.m in Sources */,
+				F922C92C17CF8099005177A2 /* Page8.m in Sources */,
+				F922C92D17CF8099005177A2 /* Page9.m in Sources */,
+				F922C92E17CF8099005177A2 /* Page900.m in Sources */,
+				F922C93817CF839E005177A2 /* Page.m in Sources */,
+				F922C93C17CF8689005177A2 /* SkyPage.m in Sources */,
+				F922C93F17CF86EB005177A2 /* Page1000.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

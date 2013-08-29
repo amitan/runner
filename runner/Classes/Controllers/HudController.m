@@ -18,11 +18,11 @@
 @interface HudController ()
 @property (nonatomic, readwrite)int _totalCoinNum, _player1CoinNum, _player2CoinNum, _player3CoinNum;
 @property (nonatomic, readwrite)float _dx;
-@property (nonatomic, readwrite)int _currentDistance;
+@property (nonatomic, readwrite)int _currentDistance, _exp;
 @property (nonatomic, retain)CCLabelTTF *_coinNumLabel, *_distanceLabel;
 @property (nonatomic, retain)CCSprite *_coinBonus;
 @property (nonatomic, retain)CCLabelTTF *_coinBonusLabel;
-@property (nonatomic, retain)CCSprite *_speedUp;
+@property (nonatomic, retain)CCSprite *_speedUp, *_fever;
 @property (nonatomic, retain)CCSpriteButton *_stopSprite, *_playSprite;
 @property (nonatomic, readwrite)BOOL _isPausing;
 @property (nonatomic, retain)Pause *_pause;
@@ -42,12 +42,12 @@
     
     // 距離表示追加
     self._distanceLabel = [LabelUtil createLabel:@"" fontSize:50];
-    [PointUtil setPosition:self._distanceLabel x:320 y:156 offsetX:0 offsetY:0];
+    [PointUtil setPosition:self._distanceLabel x:480 y:66 offsetX:0 offsetY:0];
     [[GameScene sharedInstance].hudLayer addChild:self._distanceLabel];
     
     // コイン表示追加
     CCSprite *coinBaseSprite = [CCSprite spriteWithSpriteFrameName:@"coin_base.png"];
-    [PointUtil setTLPosition:coinBaseSprite x:492 y:117];
+    [PointUtil setTLPosition:coinBaseSprite x:802 y:27];
     [[GameScene sharedInstance].hudLayer addChild:coinBaseSprite];
     
     self._coinNumLabel = [LabelUtil createLabel:@"" fontSize:30 dimensions:CGSizeMake(138, 54) alignment:kCCTextAlignmentRight];
@@ -60,13 +60,19 @@
 
     // スピードアップエフェクト追加
     self._speedUp = [CCSprite spriteWithSpriteFrameName:@"speed_up.png"];
-    [PointUtil setTLPosition:self._speedUp x:179 y:174];
+    [PointUtil setTLPosition:self._speedUp x:339 y:84];
     self._speedUp.scale = 0;
     [[GameScene sharedInstance].hudLayer addChild:self._speedUp];
 
+    // フィーバーエフェクト追加
+    self._fever = [CCSprite spriteWithSpriteFrameName:@"fever.png"];
+    self._fever.visible = NO;
+    [PointUtil setTLPosition:self._fever x:106 y:34];
+    [[GameScene sharedInstance].hudLayer addChild:self._fever];
+
     // コインボーナスエフェクト追加
     self._coinBonus = [CCSprite spriteWithSpriteFrameName:@"coin_bonus.png"];
-    [PointUtil setTLPosition:self._coinBonus x:BASE_WIDTH y:174];
+    [PointUtil setTLPosition:self._coinBonus x:BASE_WIDTH y:84];
     self._coinBonusLabel = [LabelUtil createLabel:@"" fontSize:42 dimensions:CGSizeMake(100, 30) alignment:kCCTextAlignmentLeft];
     self._coinBonusLabel.color = [ColorUtil getEffectOrangeColor];
     self._coinBonusLabel.position = [PointUtil getPosition:235 y:16];
@@ -77,12 +83,12 @@
     // 停止/再生ボタン
     self._stopSprite = [CCSpriteButton spriteWithSpriteFrameName:@"stop_btn.png"];
     [self._stopSprite addClickListner:self selector:@selector(clickStopButton:)];
-    [PointUtil setTLPosition:self._stopSprite x:10 y:110];
+    [PointUtil setTLPosition:self._stopSprite x:20 y:20];
     [[GameScene sharedInstance].hudLayer addChild:self._stopSprite];    
 
     self._playSprite = [CCSpriteButton spriteWithSpriteFrameName:@"play_btn.png"];
     [self._playSprite addClickListner:self selector:@selector(clickPlayButton:)];
-    [PointUtil setTLPosition:self._playSprite x:10 y:110];
+    [PointUtil setTLPosition:self._playSprite x:20 y:20];
     [[GameScene sharedInstance].hudLayer addChild:self._playSprite];
 
     // 停止ビュー
@@ -98,6 +104,7 @@
     self._coinBonus = nil;
     self._coinBonusLabel = nil;
     self._speedUp = nil;
+    self._fever = nil;
     self._stopSprite = nil;
     self._playSprite = nil;
     self._pause = nil;
@@ -192,8 +199,20 @@
     return self._player3CoinNum;
 }
 
+- (void)addExp:(int)num {
+    self._exp += num;
+    if (self._exp > 0) { // TODO: 本当は100以上
+        self._exp = 0;
+        [[GameScene sharedInstance] fever];
+    }
+}
+
+- (void)fever {
+    [self._fever runAction:[CommonAnimation getBlinkAction]];
+}
+
 - (void)showSpeedUpEffect {
-    [self._speedUp runAction:[CommonAnimation getSpeedUpAction]];
+    [self._speedUp runAction:[CommonAnimation getNotificationAction]];
 }
 
 - (void)clickPlayButton:(id)sender {

@@ -27,7 +27,8 @@ const int INIT_ARRAY_CAPACITY = 5;
         [self._pageDictionary setObject:@[@1, @3, @5, @9, @10, @11, @12] forKey:@"2"];
         [self._pageDictionary setObject:@[@2, @4, @5, @6, @7,  @8,  @11, @12] forKey:@"3"];
         [self._pageDictionary setObject:@[@1, @3, @4, @6, @11, @12, @13] forKey:@"4"];
-        [self._pageDictionary setObject:@[@1, @3, @4, @6, @11, @12, @13] forKey:@"5"];
+        [self._pageDictionary setObject:@[@1, @3, @4, @6, @12, @13] forKey:@"5"];
+        [self._pageDictionary setObject:@[@1] forKey:@"1000"]; // 空
     }
     return self;
 }
@@ -39,7 +40,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPageBy:(int)pageId {
-    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE) ? pageId : 13; // TODO:
+    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 3; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;
@@ -47,9 +48,16 @@ const int INIT_ARRAY_CAPACITY = 5;
     return [self _createPage:pageId];
 }
 
-- (Page*)getPage {
-    int currentSpeed = [GameScene sharedInstance].mapController.map.speed;
+- (Page*)getLandPage {
+    int currentSpeed = [GameScene sharedInstance].mapController.landMap.speed;
     NSArray *array = [self._pageDictionary objectForKey:[NSString stringWithFormat:@"%d", currentSpeed]];
+    int pageIndex = floor(CCRANDOM_0_1()*array.count);
+    int pageId = [[array objectAtIndex:pageIndex] intValue];
+    return [self getPageBy:pageId];
+}
+
+- (Page*)getSkyPage {
+    NSArray *array = [self._pageDictionary objectForKey:[NSString stringWithFormat:@"%d", SKY_PAGE_BASE_ID]];
     int pageIndex = floor(CCRANDOM_0_1()*array.count);
     int pageId = [[array objectAtIndex:pageIndex] intValue];
     return [self getPageBy:pageId];
@@ -61,7 +69,8 @@ const int INIT_ARRAY_CAPACITY = 5;
     if (!array) {
         array = [NSMutableArray arrayWithCapacity:INIT_ARRAY_CAPACITY];
     }
-    Page *newPage = [Page create:pageId];
+    int type = (pageId < 1000) ? 1 : 2;
+    Page *newPage = [Page create:pageId type:type];
     [array addObject:newPage];
     [self._dictionary setObject:array forKey:key];
     return newPage;

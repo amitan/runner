@@ -24,10 +24,10 @@
 	
 	// iPhone only
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-		return UIInterfaceOrientationMaskPortrait;
+		return UIInterfaceOrientationMaskLandscape;
 	
 	// iPad only
-	return UIInterfaceOrientationMaskPortrait;
+	return UIInterfaceOrientationMaskLandscape;
 }
 
 // Supported orientations. Customize it for your own needs
@@ -36,11 +36,11 @@
 {
 	// iPhone only
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-		return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+		return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 	
 	// iPad only
 	// iPhone only
-	return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 // This is needed for iOS4 and iOS5 in order to ensure

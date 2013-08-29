@@ -28,10 +28,14 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
 
-    [[GameScene sharedInstance].playerController jump];
+    [[GameScene sharedInstance].playerController touchBegan];
     
     // タッチイベントをこのメソッドで終了させる（他レイヤーのデリゲートメソッドは呼ばない）
     return YES;
+}
+
+- (void)ccTouchEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[GameScene sharedInstance].playerController touchEnd];
 }
 
 @end

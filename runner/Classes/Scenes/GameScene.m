@@ -167,4 +167,9 @@ static GameScene *_scene = nil;
     return self._playerNo;
 }
 
+- (void)fever {
+    [self.hudController fever];
+    [self.playerController ride];
+}
+
 @end

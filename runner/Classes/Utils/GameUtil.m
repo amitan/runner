@@ -10,11 +10,12 @@
 
 @implementation GameUtil
 const BOOL IS_SANDBOX = true;
-const int INIT_PLAYER_ID = 1001001;
+const int INIT_PLAYER_ID = 2000001;
 const int INIT_PLAYER_X = 250;
 const int INIT_PLAYER_Z = 200;
 const int GRAVITY = 70;
 const int SPEED_UP_PAGE = 900;
+const int SKY_PAGE_BASE_ID = 1000;
 
 + (NSString*) getBgSpriteName:(NSString *)fileName ext:(NSString *)ext {
     if ([GameUtil is4inchDevice]) {

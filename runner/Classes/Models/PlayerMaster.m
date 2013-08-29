@@ -27,12 +27,14 @@ static PlayerMaster *_master = nil;
     self = [super init];
 	if (self) {
         self._masterDictionary = [NSMutableDictionary dictionary];
-        [self._masterDictionary setObject:@{ @"name": @"ゆうしゃ", @"maxLevel": @99, @"specialType": @0, @"frameNum": @2} forKey:@"1001001"];
-        [self._masterDictionary setObject:@{ @"name": @"スライム", @"maxLevel": @15, @"specialType": @1, @"frameNum": @3} forKey:@"2001001"];
+        [self._masterDictionary setObject:@{ @"name": @"ウルフ", @"maxLevel": @99, @"specialType": @1, @"frameNum": @2} forKey:@"2000001"];
+        [self._masterDictionary setObject:@{ @"name": @"スライム", @"maxLevel": @15, @"specialType": @0, @"frameNum": @3} forKey:@"2001001"];
         
         self._specialDictionary = [NSMutableDictionary dictionary];
         [self._specialDictionary setObject:@"特になし" forKey:@"0"];
         [self._specialDictionary setObject:@"2段ジャンプ" forKey:@"1"];
+        [self._specialDictionary setObject:@"長押しで滞空時間延長" forKey:@"2"];
+        [self._specialDictionary setObject:@"自動攻撃" forKey:@"3"];
     }
     return self;
 }

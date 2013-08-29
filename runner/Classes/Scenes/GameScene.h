@@ -47,4 +47,7 @@
 // プレイヤー番号を取得する
 - (int)getPlayerNo;
 
+// フィーバー
+- (void)fever;
+
 @end

@@ -35,7 +35,7 @@
         self._isRight = true;
 
         // 画像の設定
-        NSString* fileName = [NSString stringWithFormat:@"player%d_small.png", self._monsterId];
+        NSString* fileName = [NSString stringWithFormat:@"player%d_right1.png", self._monsterId];
         self._sprite = [CCSprite spriteWithSpriteFrameName:fileName];
         [self addChild:self._sprite];
         CCSprite *bubbleSprite = [CCSprite spriteWithSpriteFrameName:@"bubble.png"];

@@ -10,8 +10,8 @@
 
 @implementation PointUtil
 
-const float BASE_WIDTH = 640.0f;
-const float BASE_HEIGHT = 960.0f;
+const float BASE_WIDTH = 960.0f;
+const float BASE_HEIGHT = 640.0f;
 
 + (float)getScale {
     float scale = [PointUtil getScaleWithoutRetina];
@@ -22,7 +22,7 @@ const float BASE_HEIGHT = 960.0f;
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     float width = winSize.width;
     float height = winSize.height;
-    if (width > height) {
+    if (width < height) {
         width = winSize.height;
         height = winSize.width;
     }

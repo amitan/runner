@@ -57,7 +57,7 @@
     return [CCSequence actions:fadeIn, moveTo, delay, fadeOut, reset, nil];
 }
 
-+ (id)getSpeedUpAction {
++ (id)getNotificationAction {
     id scale1 = [CCScaleTo actionWithDuration:0 scale:1];
     id blink = [CCBlink actionWithDuration:2.0f blinks:2];
     id scale2 = [CCScaleTo actionWithDuration:0 scale:0];

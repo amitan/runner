@@ -4,23 +4,23 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>player1001001_stand.png</key>
+            <key>player2000001_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,3},{76,94}}</string>
+                <string>{{3,3},{82,90}}</string>
                 <key>offset</key>
-                <string>{-8,-5}</string>
+                <string>{4,-7}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{6,10},{76,94}}</string>
+                <string>{{15,14},{82,90}}</string>
                 <key>sourceSize</key>
                 <string>{104,104}</string>
             </dict>
             <key>player2001001_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{83,3},{60,44}}</string>
+                <string>{{89,3},{60,44}}</string>
                 <key>offset</key>
                 <string>{-1,-30}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>player2001002_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{147,3},{60,44}}</string>
+                <string>{{153,3},{60,44}}</string>
                 <key>offset</key>
                 <string>{-1,-30}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>player2001003_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,101},{60,44}}</string>
+                <string>{{3,97},{60,44}}</string>
                 <key>offset</key>
                 <string>{-1,-30}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>player2002001_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{67,101},{66,76}}</string>
+                <string>{{67,97},{66,76}}</string>
                 <key>offset</key>
                 <string>{1,-14}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>player2002002_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{137,101},{66,76}}</string>
+                <string>{{137,97},{66,76}}</string>
                 <key>offset</key>
                 <string>{1,-14}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>player2002003_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,181},{66,76}}</string>
+                <string>{{3,177},{66,76}}</string>
                 <key>offset</key>
                 <string>{1,-14}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>player2003001_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{73,181},{88,76}}</string>
+                <string>{{73,177},{88,76}}</string>
                 <key>offset</key>
                 <string>{2,-14}</string>
                 <key>rotated</key>
@@ -111,7 +111,7 @@
             <key>player2003002_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{165,181},{88,76}}</string>
+                <string>{{165,177},{88,76}}</string>
                 <key>offset</key>
                 <string>{2,-14}</string>
                 <key>rotated</key>
@@ -124,7 +124,7 @@
             <key>player2003003_stand.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,261},{88,80}}</string>
+                <string>{{3,257},{88,80}}</string>
                 <key>offset</key>
                 <string>{2,-12}</string>
                 <key>rotated</key>
@@ -144,7 +144,7 @@
             <key>size</key>
             <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:424b4fcd5ddd43b657fe50a031ed71f0$</string>
+            <string>$TexturePacker:SmartUpdate:d52498328cbfd870af0f342ec2124d68$</string>
             <key>textureFileName</key>
             <string>team.png</string>
         </dict>
