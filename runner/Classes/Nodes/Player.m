@@ -28,8 +28,7 @@
 @end
 
 @implementation Player
-const int JUMP_SPEED = 1400;
-const int INIT_SCROLL_SPEED = 500;
+const int INIT_SCROLL_SPEED = 600;
 const int BLOCK_TOP_REFLECTION = -10;
 
 
@@ -53,7 +52,7 @@ const int BLOCK_TOP_REFLECTION = -10;
         self._limitLeftX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitRightX = winSize.width / 2 + [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
-        self._jumpSpeed = [PointUtil getPoint:JUMP_SPEED];
+        self._jumpSpeed = [PointUtil getPoint:[[PlayerMaster getInstance] getJumpSpeed:self._monsterId]];
         self._onTopBlock = false;
         self._onRailed = false;
         

@@ -14,9 +14,7 @@
 }
 @property (nonatomic, readwrite)BOOL isPlaying;
 @property (nonatomic, readwrite)BOOL isStaged;
-
-// 指定したページを生成する
-+ (Page*)create:(int)pageId type:(int)type;
+@property (nonatomic, readwrite)int appearNum;
 
 // ページが画面外か
 - (BOOL)isOut;

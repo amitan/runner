@@ -59,15 +59,15 @@
             <key>play_btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1698,3},{66,68}}</string>
+                <string>{{1698,3},{78,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{66,68}}</string>
+                <string>{{0,0},{78,80}}</string>
                 <key>sourceSize</key>
-                <string>{66,68}</string>
+                <string>{78,80}</string>
             </dict>
             <key>speed_up.png</key>
             <dict>
@@ -85,15 +85,15 @@
             <key>stop_btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{289,647},{66,68}}</string>
+                <string>{{289,647},{78,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{66,68}}</string>
+                <string>{{0,0},{78,80}}</string>
                 <key>sourceSize</key>
-                <string>{66,68}</string>
+                <string>{78,80}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -105,7 +105,7 @@
             <key>size</key>
             <string>{2048,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:defe84c119714afffbbf8358b88a3637$</string>
+            <string>$TexturePacker:SmartUpdate:4e91f6218ef7fa11f97ebd98ec9ac6d8$</string>
             <key>textureFileName</key>
             <string>hud.png</string>
         </dict>

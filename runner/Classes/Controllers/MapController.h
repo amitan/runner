@@ -11,11 +11,13 @@
 #import "Block.h"
 #import "Player.h"
 #import "LandMap.h"
+#import "SkyMap.h"
 
 @interface MapController : CCNode {
     
 }
 @property (nonatomic, retain)LandMap *landMap;
+@property (nonatomic, retain)SkyMap *skyMap;
 
 // 動作を開始/停止する
 - (void)setup:(int)stageId;

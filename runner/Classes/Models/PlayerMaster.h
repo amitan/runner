@@ -20,4 +20,5 @@
 - (int)getSpecialType:(int)playerId;
 - (NSString*)getSpecialName:(int)typeId;
 - (int)getJumpNum:(int)playerId;
+- (int)getJumpSpeed:(int)playerId;
 @end

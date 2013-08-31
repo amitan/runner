@@ -20,4 +20,10 @@
 // ステージを指定してマップを初期化する
 - (id)initWithStageId:(int)stageId;
 
+// 必要に応じてページの追加/削除を行う
+- (void)refillIfNeeded;
+
+// コインを取得しているかチェックする
+- (void)takeItemsIfCollided:(CGRect)rect;
+
 @end

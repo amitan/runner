@@ -48,11 +48,11 @@ const int UPDOWN_SPEED = 500;
 }
 
 - (void)rotateUp {
-    [self runAction:[CCRotateTo actionWithDuration:0.3f angle:-15]];
+    [self runAction:[CCRotateTo actionWithDuration:0.3f angle:-10]];
 }
 
 - (void)rotateDown {
-    [self runAction:[CCRotateTo actionWithDuration:0.3f angle:15]];    
+    [self runAction:[CCRotateTo actionWithDuration:0.3f angle:10]];
 }
 
 - (void)start {
@@ -78,6 +78,12 @@ const int UPDOWN_SPEED = 500;
 }
 
 - (void)update:(ccTime)dt {
+
+    ///////////////////////////////////////////////////////////////
+    // 取得判定
+    ///////////////////////////////////////////////////////////////
+    MapController *mapController = [GameScene sharedInstance].mapController;
+    [mapController.skyMap takeItemsIfCollided:[self getRect]];
 
     ///////////////////////////////////////////////////////////////
     // 横軸判定
@@ -107,4 +113,9 @@ const int UPDOWN_SPEED = 500;
     return !self._isUp && self.position.y < - self._sprite.contentSize.height;
 }
 
+- (CGRect)getRect {
+    return CGRectMake(self.position.x - self.contentSize.width / 2,
+                      self.position.y - self.contentSize.height / 2,
+                      self.contentSize.width, self.contentSize.height);
+}
 @end

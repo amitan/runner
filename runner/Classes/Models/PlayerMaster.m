@@ -27,8 +27,10 @@ static PlayerMaster *_master = nil;
     self = [super init];
 	if (self) {
         self._masterDictionary = [NSMutableDictionary dictionary];
-        [self._masterDictionary setObject:@{ @"name": @"ウルフ", @"maxLevel": @99, @"specialType": @1, @"frameNum": @2} forKey:@"2000001"];
-        [self._masterDictionary setObject:@{ @"name": @"スライム", @"maxLevel": @15, @"specialType": @0, @"frameNum": @3} forKey:@"2001001"];
+        [self._masterDictionary setObject:
+         @{ @"name": @"ウルフ", @"maxLevel": @15, @"specialType": @1, @"frameNum": @3, @"jumpSpeed": @1200} forKey:@"2000001"];
+        [self._masterDictionary setObject:
+         @{ @"name": @"スライム", @"maxLevel": @15, @"specialType": @0, @"frameNum": @3, @"jumpSpeed": @1400} forKey:@"2001001"];
         
         self._specialDictionary = [NSMutableDictionary dictionary];
         [self._specialDictionary setObject:@"特になし" forKey:@"0"];
@@ -74,6 +76,11 @@ static PlayerMaster *_master = nil;
         default:
             return 1;
     }
+}
+
+- (int)getJumpSpeed:(int)playerId {
+    NSDictionary *player = self._masterDictionary[[NSString stringWithFormat:@"%d", playerId]];
+    return [player[@"jumpSpeed"] intValue];
 }
 
 - (NSString*)getSpecialName:(int)typeId {

@@ -32,6 +32,7 @@
 		F922C93817CF839E005177A2 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93717CF839D005177A2 /* Page.m */; };
 		F922C93C17CF8689005177A2 /* SkyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93B17CF8689005177A2 /* SkyPage.m */; };
 		F922C93F17CF86EB005177A2 /* Page1000.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93E17CF86EB005177A2 /* Page1000.m */; };
+		F922C94217CF9CF9005177A2 /* Page1001.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94117CF9CF9005177A2 /* Page1001.m */; };
 		F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61B17C22FD7007CF0CF /* ConversationLayer.m */; };
 		F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */; };
 		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
@@ -301,6 +302,8 @@
 		F922C93B17CF8689005177A2 /* SkyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyPage.m; sourceTree = "<group>"; };
 		F922C93D17CF86EB005177A2 /* Page1000.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1000.h; sourceTree = "<group>"; };
 		F922C93E17CF86EB005177A2 /* Page1000.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1000.m; sourceTree = "<group>"; };
+		F922C94017CF9CF9005177A2 /* Page1001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1001.h; sourceTree = "<group>"; };
+		F922C94117CF9CF9005177A2 /* Page1001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1001.m; sourceTree = "<group>"; };
 		F923F61A17C22FD7007CF0CF /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
 		F923F61B17C22FD7007CF0CF /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
 		F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpenterConversationLayer.h; sourceTree = "<group>"; };
@@ -809,6 +812,8 @@
 				F922C93B17CF8689005177A2 /* SkyPage.m */,
 				F922C93D17CF86EB005177A2 /* Page1000.h */,
 				F922C93E17CF86EB005177A2 /* Page1000.m */,
+				F922C94017CF9CF9005177A2 /* Page1001.h */,
+				F922C94117CF9CF9005177A2 /* Page1001.m */,
 			);
 			path = skyPages;
 			sourceTree = "<group>";
@@ -1853,6 +1858,7 @@
 				F922C93817CF839E005177A2 /* Page.m in Sources */,
 				F922C93C17CF8689005177A2 /* SkyPage.m in Sources */,
 				F922C93F17CF86EB005177A2 /* Page1000.m in Sources */,
+				F922C94217CF9CF9005177A2 /* Page1001.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

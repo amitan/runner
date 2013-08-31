@@ -40,6 +40,9 @@
     self.landMap = [LandMap createMap:stageId];
     [PointUtil setTLPosition:self.landMap x:0 y:0];
     [[GameScene sharedInstance].gameLayer addChild:self.landMap];
+    self.skyMap = [SkyMap createMap:stageId];
+    [PointUtil setTLPosition:self.skyMap x:0 y:-BASE_HEIGHT];
+    [[GameScene sharedInstance].gameLayer addChild:self.skyMap];
 }
 
 - (void)start {
@@ -67,12 +70,15 @@
 }
 
 - (void)skyScroll:(float)dx {
+    self.skyMap.position = ccp(self.skyMap.position.x - dx, self.skyMap.position.y);
     [[GameScene sharedInstance].hudController addDistance:dx];
+    [self.skyMap refillIfNeeded];
 }
 
 - (void)flyUp {
     self._tempPosition = self.landMap.position;
     self._isFlying = true;
+    [self.skyMap start];
     [self scheduleUpdate];
 }
 
@@ -81,11 +87,13 @@
         if (self.landMap.position.y < self._tempPosition.y - BASE_HEIGHT) {
             self._isFlying = false;
             [[GameScene sharedInstance].playerController fly];
+            [self.landMap stop];
             [self unscheduleUpdate];
         } else {
             float dx = [PointUtil getPoint:10];
             float dy = [PointUtil getPoint:10];
             self.landMap.position = ccp(self.landMap.position.x - dx, self.landMap.position.y - dy);
+            self.skyMap.position = ccp(self.skyMap.position.x - dx, self.skyMap.position.y - dy);
             [[GameScene sharedInstance].hudController addDistance:dx];
         }
     } else {

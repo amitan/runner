@@ -9,23 +9,16 @@
 #import "Page.h"
 #import "PointUtil.h"
 #import "LandPage.h"
+#import "SkyPage.h"
 
 @implementation Page
-
-+ (Page*)create:(int)pageId type:(int)type {
-    switch (type) {
-        case 1:
-            return [LandPage create:pageId];
-        default:
-            return NULL;
-    }
-}
 
 - (id)init {
     self = [super init];
 	if (self) {
         self.isPlaying = false;
         self.isStaged = false;
+        self.appearNum = 0;
     }
     return self;
 }
@@ -41,12 +34,15 @@
 }
 
 - (void)start {
+    self.isPlaying = true;
 }
 
 - (void)stop {
+    self.isPlaying = false;
 }
 
 - (void)reset {
+    self.appearNum++;
 }
 
 - (void)stageOn:(CCNode*)map {

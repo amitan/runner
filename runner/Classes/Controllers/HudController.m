@@ -203,7 +203,7 @@
     self._exp += num;
     if (self._exp > 0) { // TODO: 本当は100以上
         self._exp = 0;
-        [[GameScene sharedInstance] fever];
+//        [[GameScene sharedInstance] fever];
     }
 }
 

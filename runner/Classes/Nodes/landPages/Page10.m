@@ -53,7 +53,7 @@
                         [Block createBlock:108 x:3070 y:-460],
                         [Block createBlock:108 x:3190 y:-460],
                         [Block createBlock:108 x:2830 y:-220],
-                        [Block createBlock:108 x:3130 y:-160], // ここまで階段
+//                        [Block createBlock:108 x:3130 y:-160], // ここまで階段
                         [Block createBlock:303 x:3280 y:-370],
                         [Block createBlock:304 x:2740 y:-130], // ここまで反転ブロック
                         [Block createBlock:109 x:3460 y:-370],

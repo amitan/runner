@@ -9,6 +9,7 @@
 #import "SkyMap.h"
 #import "GameScene.h"
 #import "GameUtil.h"
+#import "SkyPage.h"
 
 @interface SkyMap ()
 @property (nonatomic, readwrite)int _stageId;
@@ -16,6 +17,7 @@
 @end
 @implementation SkyMap
 const int INIT_SKY_PAGE_NUM = 1;
+const int MIN_SKY_PAGE_STOCK_NUM = 3;
 
 + (SkyMap*)createMap:(int)stageId {
     return [[[self alloc] initWithStageId:stageId] autorelease];
@@ -38,6 +40,41 @@ const int INIT_SKY_PAGE_NUM = 1;
     return self;
 }
 
+- (void)takeItemsIfCollided:(CGRect)rect {
+    CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
+    SkyPage *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
+    [currentPage takeCoinsIfCollided:worldRect];
+}
 
+- (SkyPage*)getCurrentPage:(CGPoint)point {
+    CGPoint location = ccpSub(point, self.position);
+    for (SkyPage *page in self._pages) {
+        if (location.x >= page.position.x && location.x <= page.position.x + [page getWidth]) {
+            return page;
+        }
+    }
+    return NULL;
+}
+
+- (void)refillIfNeeded {
+    
+    BOOL result = false;
+    for (Page *page in self._pages) {
+        if ([page isOut]) {
+            result = true;
+            break;
+        }
+    }
+    if (result) {
+        Page *page = [self._pages objectAtIndex:0];
+        [page stageOff];
+        [self._pages removeObject:page];
+    }
+    if (self._pages.count < MIN_SKY_PAGE_STOCK_NUM) {
+        [self addPage:[[GameScene sharedInstance].pageController getSkyPage]];
+    }
+}
 
 @end

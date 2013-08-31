@@ -13,21 +13,6 @@
 #import "Rail.h"
 #import "GameScene.h"
 #import "PointUtil.h"
-#import "Page0.h"
-#import "Page1.h"
-#import "Page2.h"
-#import "Page3.h"
-#import "Page4.h"
-#import "Page5.h"
-#import "Page6.h"
-#import "Page7.h"
-#import "Page8.h"
-#import "Page9.h"
-#import "Page10.h"
-#import "Page11.h"
-#import "Page12.h"
-#import "Page13.h"
-#import "Page900.h"
 
 @interface LandPage ()
 @property (nonatomic, readwrite)BOOL _finishCoinBonus;
@@ -57,28 +42,8 @@
     [super dealloc];
 }
 
-+ (Page*)create:(int)pageId {
-    switch (pageId) {
-        case 1: return [Page1 node];
-        case 2: return [Page2 node];
-        case 3: return [Page3 node];
-        case 4: return [Page4 node];
-        case 5: return [Page5 node];
-        case 6: return [Page6 node];
-        case 7: return [Page7 node];
-        case 8: return [Page8 node];
-        case 9: return [Page9 node];
-        case 10: return [Page10 node];
-        case 11: return [Page11 node];
-        case 12: return [Page12 node];
-        case 13: return [Page13 node];
-        case 900: return [Page900 node];
-        default: return [Page0 node];
-    }
-}
-
 - (void)start {
-    self.isPlaying = true;
+    [super start];
     for (Block *block in self._blocks) {
         [block start];
     }
@@ -100,7 +65,7 @@
 }
 
 - (void)stop {
-    self.isPlaying = false;
+    [super stop];
     for (Block *block in self._blocks) {
         [block stop];
     }
@@ -122,6 +87,7 @@
 }
 
 - (void)reset {
+    [super reset];
     self._finishCoinBonus = false;
     for (Block *block in self._blocks) {
         [block reset];

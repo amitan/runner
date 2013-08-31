@@ -21,7 +21,7 @@
 
 @implementation LandMap
 const int MAX_SPEED_STEP = 5;
-const int MIN_PAGE_STOCK_NUM = 3;
+const int MIN_LAND_PAGE_STOCK_NUM = 3;
 const int INIT_PAGE_NUM = 1;
 
 @synthesize isPlaying;
@@ -137,7 +137,7 @@ const int INIT_PAGE_NUM = 1;
         [page stageOff];
         [self._pages removeObject:page];        
     }
-    if (self._pages.count < MIN_PAGE_STOCK_NUM) {
+    if (self._pages.count < MIN_LAND_PAGE_STOCK_NUM) {
         [self addPage:[[GameScene sharedInstance].pageController getLandPage]];
     }
 }
@@ -146,12 +146,11 @@ const int INIT_PAGE_NUM = 1;
     if (self.speed >= MAX_SPEED_STEP) {
         return self.speed;
     }
-//    if (distance > 1000) return 5;
-//    if (distance > 400) return 4;
-//    if (distance > 100) return 3;
-//    if (distance > 20) return 2;
-//    return 1;
-    return distance / 30 + 1;
+    if (distance > 200) return 5;
+    if (distance > 100) return 4;
+    if (distance > 50) return 3;
+    if (distance > 20) return 2;
+    return 1;
 }
 
 @end

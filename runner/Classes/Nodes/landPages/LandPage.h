@@ -27,9 +27,6 @@
 @property (nonatomic, retain)NSArray *_trampolines;
 @property (nonatomic, retain)NSArray *_rails;
 
-// 指定したページを生成する
-+ (LandPage*)create:(int)pageId;
-
 // ページ幅を取得
 - (CGPoint)getLandPosition:(Block*)block;
 
