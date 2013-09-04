@@ -11,18 +11,28 @@
 #import "Page1.h"
 #import "GameScene.h"
 #import "GameUtil.h"
+#import "Gun.h"
 
 @interface LandMap ()
 @property (nonatomic, readwrite)int _stageId;
 @property (nonatomic, readwrite)float _currentRight;
 @property (nonatomic, retain)NSMutableArray *_pages;
 @property (nonatomic, readwrite)int _pageNum;
+@property (nonatomic, readwrite)float _fireTime;
+@property (nonatomic, retain)Gun *_gun;
 @end
 
 @implementation LandMap
 const int MAX_SPEED_STEP = 5;
 const int MIN_LAND_PAGE_STOCK_NUM = 3;
 const int INIT_PAGE_NUM = 1;
+const int MIN_FIRE_SPEED = 3;
+const float MIN_FIRE_SECONDS = 20;
+const float MIN_FIRE_SECONDS2 = 10;
+const float MIN_FIRE_SECONDS3 = 5;
+//const float MIN_FIRE_SECONDS = 7;
+//const float MIN_FIRE_SECONDS2 = 5;
+//const float MIN_FIRE_SECONDS3 = 3;
 
 @synthesize isPlaying;
 
@@ -39,6 +49,8 @@ const int INIT_PAGE_NUM = 1;
         self._pages = [NSMutableArray arrayWithCapacity:5];
         self.speed = 1;
         self.isPlaying = false;
+        self._fireTime = MIN_FIRE_SECONDS;
+        self._gun = [Gun node];
         
         // 初期ページを追加
         PageController *pageController = [GameScene sharedInstance].pageController;
@@ -86,16 +98,16 @@ const int INIT_PAGE_NUM = 1;
     return [currentPage jumpIfCollided:worldRect];
 }
 
-- (BOOL)attackEnemyIfCollided:(CGPoint)point {
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point  direction:(DIRECTION)direction {
     LandPage *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
-    return [currentPage attackEnemyIfCollided:location];
+    return [currentPage attackEnemyIfCollided:location direction:direction];
 }
 
-- (BOOL)isHit:(CGPoint)point {
+- (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction {
     LandPage *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
-    return [currentPage isHit:location];
+    return [currentPage isEnemyHit:location direction:direction];
 }
 
 - (BOOL)checkSpeedUp:(CGPoint)point {
@@ -142,10 +154,56 @@ const int INIT_PAGE_NUM = 1;
     }
 }
 
+- (BOOL)checkFire:(ccTime)dt {
+    if (self.speed >= MIN_FIRE_SPEED) {
+        self._fireTime -= dt;
+        if (self._fireTime < 0) {
+            switch (self.speed) {
+                case MIN_FIRE_SPEED:
+                    self._fireTime = MIN_FIRE_SECONDS;
+                    break;
+                case MIN_FIRE_SPEED + 1:
+                    self._fireTime = MIN_FIRE_SECONDS2;
+                    break;
+                case MIN_FIRE_SPEED + 2:
+                    self._fireTime = MIN_FIRE_SECONDS3;
+                    break;
+                default:
+                    self._fireTime = MIN_FIRE_SECONDS;
+                    break;
+            }
+            return true;
+        }
+    }
+    return false;
+}
+
+- (void)fire {
+    if ([self._gun isReady]) {
+        [self._gun stageOn];
+        [self._gun start];
+    }
+}
+
+- (void)suspend {
+    [self._gun suspend];
+    [super suspend];
+}
+
+- (void)resume {
+    [super resume];
+    [self._gun resume];
+}
+
 - (int)_getSpeed:(int)distance {
     if (self.speed >= MAX_SPEED_STEP) {
         return self.speed;
     }
+    // TODO: 後で見直す
+//    if (distance > 1000) return 5;
+//    if (distance > 400) return 4;
+//    if (distance > 200) return 3;
+//    if (distance > 50) return 2;
     if (distance > 200) return 5;
     if (distance > 100) return 4;
     if (distance > 50) return 3;

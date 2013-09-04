@@ -38,14 +38,14 @@
         [self._land3 stageOn:self];
         
         // コインを追加
-        self._coins = @[[Coin createCoin:1 x:375 y:-300],
-                       [Coin createCoin:1 x:425 y:-300],
-                       [Coin createCoin:1 x:565 y:-495],
-                       [Coin createCoin:1 x:615 y:-495],
-                       [Coin createCoin:1 x:665 y:-495],
-                       [Coin createCoin:1 x:715 y:-495],
-                       [Coin createCoin:1 x:855 y:-300],
-                       [Coin createCoin:1 x:905 y:-300]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:375 y:-300],
+                       [Coin createCoin:C_STANDARD x:425 y:-300],
+                       [Coin createCoin:C_STANDARD x:565 y:-495],
+                       [Coin createCoin:C_STANDARD x:615 y:-495],
+                       [Coin createCoin:C_STANDARD x:665 y:-495],
+                       [Coin createCoin:C_STANDARD x:715 y:-495],
+                       [Coin createCoin:C_STANDARD x:855 y:-300],
+                       [Coin createCoin:C_STANDARD x:905 y:-300]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

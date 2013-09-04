@@ -8,13 +8,14 @@
 
 #import "Page5.h"
 #import "PointUtil.h"
+#import "Enemy.h"
 
 @interface Page5 ()
 @property (nonatomic, retain)Block *_land2;
 @property (nonatomic, retain)Block *_land3;
 @end
 
-// 土管->ブロック2段と穴
+// ブロック2段と穴
 @implementation Page5
 const int PAGE5_INTERVAL1 = 100;
 const int PAGE5_INTERVAL2 = 150;
@@ -39,9 +40,7 @@ const int PAGE5_INTERVAL2 = 150;
         [self._land3 stageOn:self];
 
         // ブロック追加
-        self._blocks = @[[Block createBlock:202 x:100 y:-430],
-                        [Block createBlock:201 x:100 y:-490],
-                        [Block createBlock:101 x:1460 y:-330],
+        self._blocks = @[[Block createBlock:101 x:1460 y:-330],
                         [Block createBlock:101 x:1520 y:-330],
                         [Block createBlock:101 x:1580 y:-330],
                         [Block createBlock:102 x:1820 y:-110],
@@ -55,17 +54,17 @@ const int PAGE5_INTERVAL2 = 150;
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:1 x:75 y:-332],
-                       [Coin createCoin:1 x:125 y:-332],
-                       [Coin createCoin:1 x:1460 y:-262],
-                       [Coin createCoin:1 x:1520 y:-262],
-                       [Coin createCoin:1 x:1580 y:-262],
-                       [Coin createCoin:1 x:1700 y:-42],
-                       [Coin createCoin:1 x:1760 y:-42],
-                       [Coin createCoin:1 x:1820 y:-42],
-                       [Coin createCoin:1 x:1880 y:-42],
-                       [Coin createCoin:1 x:1940 y:-42],
-                       [Coin createCoin:1 x:2000 y:-42]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:75 y:-332],
+                       [Coin createCoin:C_STANDARD x:125 y:-332],
+                       [Coin createCoin:C_STANDARD x:1460 y:-262],
+                       [Coin createCoin:C_STANDARD x:1520 y:-262],
+                       [Coin createCoin:C_STANDARD x:1580 y:-262],
+                       [Coin createCoin:C_STANDARD x:1700 y:-42],
+                       [Coin createCoin:C_STANDARD x:1760 y:-42],
+                       [Coin createCoin:C_STANDARD x:1820 y:-42],
+                       [Coin createCoin:C_STANDARD x:1880 y:-42],
+                       [Coin createCoin:C_STANDARD x:1940 y:-42],
+                       [Coin createCoin:C_STANDARD x:2000 y:-42]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
@@ -93,6 +92,28 @@ const int PAGE5_INTERVAL2 = 150;
     if ([self._land2 isHit:point]) return self._land2;
     if ([self._land3 isHit:point]) return self._land3;
     return NULL;
+}
+
+- (void)reset {
+    
+    if (self.appearNum == 1) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1520 y:-522]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1580 y:-522]];
+        self._enemies = extraEnemies;
+    
+    } else if (self.appearNum == 2) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_NEEDLE_HALF x:2240 y:-520]];
+        self._enemies = extraEnemies;
+
+    } else if (self.appearNum == 3) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_NEEDLE_HALF x:125 y:-520]];
+        self._enemies = extraEnemies;
+    }
+    
+    [super reset];
 }
 
 @end

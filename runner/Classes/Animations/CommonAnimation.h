@@ -17,12 +17,14 @@
 + (CCAnimation*)getSingleFrameAnimation:(NSString*)name frame:(int)frameNo duration:(float)duration;
 + (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num;
 + (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num duration:(float)duration;
++ (id)getFrameAction:(NSString*)name frameNum:(int)num duration:(float)duration count:(int)count func:(id)func;
+
 
 // 点滅アニメーションを取得
 + (id)getBlinkAction;
 
 // エフェクト出現アニメーションを取得
-+ (id)getEffectAppearAction;
++ (id)getEffectAppearAction:(float)dx;
 
 // 通知アニメーションを取得
 + (id)getNotificationAction;

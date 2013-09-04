@@ -22,27 +22,27 @@
         [self._land stageOn:self];
         
         // コインを追加
-        self._coins = @[[Coin createCoin:1 x:100 y:-735],
-                        [Coin createCoin:1 x:150 y:-735],
-                        [Coin createCoin:1 x:200 y:-735],
-                        [Coin createCoin:1 x:250 y:-735],
-                        [Coin createCoin:1 x:300 y:-735],
-                        [Coin createCoin:1 x:350 y:-735],
-                        [Coin createCoin:1 x:400 y:-735],
-                        [Coin createCoin:1 x:450 y:-735],
-                        [Coin createCoin:1 x:500 y:-735],
-                        [Coin createCoin:1 x:550 y:-735],
-                        [Coin createCoin:1 x:600 y:-735],
-                        [Coin createCoin:1 x:650 y:-735],
-                        [Coin createCoin:1 x:700 y:-735],
-                        [Coin createCoin:1 x:750 y:-735],
-                        [Coin createCoin:1 x:800 y:-735],
-                        [Coin createCoin:1 x:850 y:-735],
-                        [Coin createCoin:1 x:900 y:-735],
-                        [Coin createCoin:1 x:950 y:-735],
-                        [Coin createCoin:1 x:1000 y:-735],
-                        [Coin createCoin:1 x:1050 y:-735],
-                        [Coin createCoin:1 x:1100 y:-735]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:100 y:-495],
+                        [Coin createCoin:C_STANDARD x:150 y:-495],
+                        [Coin createCoin:C_STANDARD x:200 y:-495],
+                        [Coin createCoin:C_STANDARD x:250 y:-495],
+                        [Coin createCoin:C_STANDARD x:300 y:-495],
+                        [Coin createCoin:C_STANDARD x:350 y:-495],
+                        [Coin createCoin:C_STANDARD x:400 y:-495],
+                        [Coin createCoin:C_STANDARD x:450 y:-495],
+                        [Coin createCoin:C_STANDARD x:500 y:-495],
+                        [Coin createCoin:C_STANDARD x:550 y:-495],
+                        [Coin createCoin:C_STANDARD x:600 y:-495],
+                        [Coin createCoin:C_STANDARD x:650 y:-495],
+                        [Coin createCoin:C_STANDARD x:700 y:-495],
+                        [Coin createCoin:C_STANDARD x:750 y:-495],
+                        [Coin createCoin:C_STANDARD x:800 y:-495],
+                        [Coin createCoin:C_STANDARD x:850 y:-495],
+                        [Coin createCoin:C_STANDARD x:900 y:-495],
+                        [Coin createCoin:C_STANDARD x:950 y:-495],
+                        [Coin createCoin:C_STANDARD x:1000 y:-495],
+                        [Coin createCoin:C_STANDARD x:1050 y:-495],
+                        [Coin createCoin:C_STANDARD x:1100 y:-495]];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }

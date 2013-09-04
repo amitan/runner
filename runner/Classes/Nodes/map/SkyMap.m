@@ -40,12 +40,10 @@ const int MIN_SKY_PAGE_STOCK_NUM = 3;
     return self;
 }
 
-- (void)takeItemsIfCollided:(CGRect)rect {
-    CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
-    SkyPage *currentPage = [self getCurrentPage:point];
-    CGPoint location = ccpSub(point, self.position);
-    CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
-    [currentPage takeCoinsIfCollided:worldRect];
+- (void)takeItemsIfCollided:(CGPoint)center radius:(float)radius {
+    SkyPage *currentPage = [self getCurrentPage:center];
+    CGPoint location = ccpSub(center, self.position);
+    [currentPage takeCoinsIfCollided:location radius:radius];
 }
 
 - (SkyPage*)getCurrentPage:(CGPoint)point {

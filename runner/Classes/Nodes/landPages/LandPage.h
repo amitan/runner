@@ -13,6 +13,8 @@
 #import "Switch.h"
 #import "Rail.h"
 #import "Page.h"
+#import "GameUtil.h"
+#import "Enemy.h"
 
 @interface LandPage : Page {
     
@@ -40,7 +42,7 @@
 - (BOOL)jumpIfCollided:(CGRect)rect;
 
 // 敵判定
-- (BOOL)attackEnemyIfCollided:(CGPoint)point;
-- (BOOL)isHit:(CGPoint)point;
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point  direction:(DIRECTION)direction;
+- (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction;
 
 @end

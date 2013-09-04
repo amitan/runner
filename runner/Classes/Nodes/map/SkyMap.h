@@ -24,6 +24,6 @@
 - (void)refillIfNeeded;
 
 // コインを取得しているかチェックする
-- (void)takeItemsIfCollided:(CGRect)rect;
+- (void)takeItemsIfCollided:(CGPoint)center radius:(float)radius;
 
 @end

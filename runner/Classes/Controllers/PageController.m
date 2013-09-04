@@ -37,19 +37,19 @@ const int INIT_ARRAY_CAPACITY = 5;
 
 - (Page*)_getNewPage:(int)pageId {
     switch (pageId) {
-        case 1: return [Page1 node]; // 地面とコイン + 敵
-        case 2: return [Page2 node];
-        case 3: return [Page3 node];
-        case 4: return [Page4 node];
-        case 5: return [Page5 node];
-        case 6: return [Page6 node];
-        case 7: return [Page7 node];
-        case 8: return [Page8 node];
-        case 9: return [Page9 node];
-        case 10: return [Page10 node];
-        case 11: return [Page11 node];
-        case 12: return [Page12 node];
-        case 13: return [Page13 node];
+        case 1: return [Page1 node]; // 地面とコイン + 敵（きのこ、炎神）
+        case 2: return [Page2 node]; // ブロック縦に3つ並んでいて間にコイン + 間に敵（スライム、とげとげ）
+        case 3: return [Page3 node]; // 敵敵敵とブロック（下にコイン）+ 敵（スライム、とげ）+ 100コイン
+        case 4: return [Page4 node]; // 穴とコイン
+        case 5: return [Page5 node]; // 2段ブロック + 敵（きのこ、とげ）
+        case 6: return [Page6 node]; // ブロック横5個が4段とコイン + 敵（炎神）+ 100コイン
+        case 7: return [Page7 node]; // ブロック縦3個とでかコイン + 敵（とげ、炎神）
+        case 8: return [Page8 node]; // 階段と反転ブロックとでかコイン + 100コイン
+        case 9: return [Page9 node]; // 壁にコインスイッチ + 敵（きのこ）
+        case 10: return [Page10 node]; // 下くぐると100コイン
+        case 11: return [Page11 node]; // ジャンプ台（縦）とブロック/コイン + 敵（きのこ、スライム）
+        case 12: return [Page12 node]; // レール
+        case 13: return [Page13 node]; // 飛びブロックと間にコイン + 間に敵（きのこ、スライム）
         case 900: return [Page900 node];
         case 1000: return [Page1000 node];
         case 1001: return [Page1001 node];
@@ -62,11 +62,11 @@ const int INIT_ARRAY_CAPACITY = 5;
 	if (self) {
         self._dictionary = [NSMutableDictionary dictionary];
         self._pageDictionary = [NSMutableDictionary dictionary];
-        [self._pageDictionary setObject:@[@1, @2, @3, @4, @6,  @7,  @13] forKey:@"1"]; // 0 - 50M: シンプル
-        [self._pageDictionary setObject:@[@1, @3, @5, @9, @10, @11, @12] forKey:@"2"];
-        [self._pageDictionary setObject:@[@2, @4, @5, @6, @7,  @8,  @11, @12] forKey:@"3"];
-        [self._pageDictionary setObject:@[@1, @3, @4, @6, @11, @12, @13] forKey:@"4"];
-        [self._pageDictionary setObject:@[@1, @3, @4, @6, @12, @13] forKey:@"5"];
+        [self._pageDictionary setObject:@[@1, @2, @3, @4, @9, @10, @13] forKey:@"1"]; // 0 - 50M: シンプル
+        [self._pageDictionary setObject:@[@1, @2, @3, @4, @5, @7, @8, @9, @11] forKey:@"2"];
+        [self._pageDictionary setObject:@[@2, @4, @5, @6, @7, @11, @12, @13] forKey:@"3"];
+        [self._pageDictionary setObject:@[@1, @3, @5, @6, @11, @12, @13] forKey:@"4"];
+        [self._pageDictionary setObject:@[@1, @6, @11] forKey:@"5"];
         [self._pageDictionary setObject:@[@1001] forKey:@"1000"]; // 空
     }
     return self;
@@ -79,7 +79,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPageBy:(int)pageId {
-    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 1; // TODO:
+    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 3; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;

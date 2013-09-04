@@ -18,6 +18,14 @@
 @property (nonatomic, readwrite)BOOL _isStaged;
 @property (nonatomic, readwrite)int _value;
 
+typedef enum {
+    C_STANDARD = 1,
+    C_BIG = 2,
+    C_DROPPING = 3,
+    C_SWITCH = 4,
+    C_100 = 5
+} COIN_TYPE;
+
 // 指定したコインを生成する
 + (Coin*)createCoin:(int)coinId;
 + (Coin*)createCoin:(int)coinId groupId:(int)groupId;
@@ -29,6 +37,7 @@
 
 // 座標がコインに含まれているか判定する
 - (BOOL)takenIfCollided:(CGRect)rect;
+- (BOOL)takenIfCollided:(CGPoint)point radius:(float)radius;
 
 // コインを取得済みか
 - (BOOL)hasTaken;

@@ -13,7 +13,7 @@
 @implementation EnemyAnimation
 
 + (id)getWalkAction:(int)charaId {
-    return [CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"chara%d_left", charaId] frameNum:2];
+    return [CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"enemy%d_left", charaId] frameNum:3];
 }
 
 + (id)getDeadAction {

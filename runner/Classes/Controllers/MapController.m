@@ -53,6 +53,14 @@
     [self.landMap stop];
 }
 
+- (void)suspend {
+    [self.landMap suspend];
+}
+
+- (void)resume {
+    [self.landMap resume];
+}
+
 - (Block*)getHitBlock:(CGPoint)point {
 
     // 境界線は含む

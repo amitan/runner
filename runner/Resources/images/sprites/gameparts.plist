@@ -160,23 +160,62 @@
                 <key>sourceSize</key>
                 <string>{80,80}</string>
             </dict>
-            <key>plane.png</key>
+            <key>fire.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1697,3},{269,134}}</string>
+                <string>{{1697,3},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{269,134}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
-                <string>{269,134}</string>
+                <string>{60,60}</string>
+            </dict>
+            <key>fire_warning1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1761,3},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>fire_warning2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1865,3},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>plane.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,107},{240,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{240,120}}</string>
+                <key>sourceSize</key>
+                <string>{240,120}</string>
             </dict>
             <key>rail1_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,141},{640,18}}</string>
+                <string>{{247,107},{640,18}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +228,7 @@
             <key>rail2_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{647,141},{320,18}}</string>
+                <string>{{891,107},{320,18}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -199,10 +238,23 @@
                 <key>sourceSize</key>
                 <string>{320,18}</string>
             </dict>
+            <key>red_belt.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,231},{1134,6}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1134,6}}</string>
+                <key>sourceSize</key>
+                <string>{1136,6}</string>
+            </dict>
             <key>rope.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{971,141},{10,180}}</string>
+                <string>{{1141,231},{10,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +267,7 @@
             <key>switch101_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{985,141},{46,60}}</string>
+                <string>{{1155,231},{46,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +280,7 @@
             <key>switch101_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1035,141},{20,60}}</string>
+                <string>{{1205,231},{20,60}}</string>
                 <key>offset</key>
                 <string>{13,0}</string>
                 <key>rotated</key>
@@ -241,7 +293,7 @@
             <key>switch102_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1059,141},{60,46}}</string>
+                <string>{{1229,231},{60,46}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +306,7 @@
             <key>switch102_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1123,141},{60,20}}</string>
+                <string>{{1293,231},{60,20}}</string>
                 <key>offset</key>
                 <string>{0,13}</string>
                 <key>rotated</key>
@@ -267,7 +319,7 @@
             <key>trampoline1_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1187,141},{106,28}}</string>
+                <string>{{1357,231},{106,28}}</string>
                 <key>offset</key>
                 <string>{1,-16}</string>
                 <key>rotated</key>
@@ -280,7 +332,7 @@
             <key>trampoline1_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1297,141},{114,60}}</string>
+                <string>{{1467,231},{114,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -300,7 +352,7 @@
             <key>size</key>
             <string>{2048,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a7f644c8c3d5cd81bf141d6eb8f40bc7$</string>
+            <string>$TexturePacker:SmartUpdate:77dd11992c800b8775cfc1edf2ef2d06$</string>
             <key>textureFileName</key>
             <string>gameparts.png</string>
         </dict>

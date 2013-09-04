@@ -31,6 +31,7 @@
 // プレイヤーアクション
 - (void)jump;
 - (void)trampoline;
+- (BOOL)deadIfBulletCollided:(CGPoint)position;
 
 // スピードアップ
 - (void)speedUp;

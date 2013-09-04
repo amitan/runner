@@ -9,6 +9,7 @@
 #import "Page11.h"
 #import "Trampoline.h"
 #import "PointUtil.h"
+#import "Enemy.h"
 
 // ジャンプ台（縦）とブロック/コイン
 @implementation Page11
@@ -53,27 +54,58 @@
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:1 x:190 y:-360],
-                       [Coin createCoin:1 x:190 y:-310],
-                       [Coin createCoin:1 x:190 y:-260],
-                       [Coin createCoin:1 x:240 y:-210],
-                       [Coin createCoin:1 x:240 y:-160],
-                       [Coin createCoin:1 x:240 y:-110], // 縦コイン
-                       [Coin createCoin:1 x:620 y:-80],
-                       [Coin createCoin:1 x:680 y:-80],
-                       [Coin createCoin:1 x:740 y:-80],
-                       [Coin createCoin:1 x:800 y:-80],
-                       [Coin createCoin:1 x:860 y:-80],
-                       [Coin createCoin:1 x:920 y:-80],
-                       [Coin createCoin:1 x:980 y:-80],
-                       [Coin createCoin:1 x:1040 y:-80],
-                       [Coin createCoin:1 x:1100 y:-80]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:190 y:-360],
+                       [Coin createCoin:C_STANDARD x:190 y:-310],
+                       [Coin createCoin:C_STANDARD x:190 y:-260],
+                       [Coin createCoin:C_STANDARD x:240 y:-210],
+                       [Coin createCoin:C_STANDARD x:240 y:-160],
+                       [Coin createCoin:C_STANDARD x:240 y:-110], // 縦コイン
+                       [Coin createCoin:C_STANDARD x:620 y:-80],
+                       [Coin createCoin:C_STANDARD x:680 y:-80],
+                       [Coin createCoin:C_STANDARD x:740 y:-80],
+                       [Coin createCoin:C_STANDARD x:800 y:-80],
+                       [Coin createCoin:C_STANDARD x:860 y:-80],
+                       [Coin createCoin:C_STANDARD x:920 y:-80],
+                       [Coin createCoin:C_STANDARD x:980 y:-80],
+                       [Coin createCoin:C_STANDARD x:1040 y:-80],
+                       [Coin createCoin:C_STANDARD x:1100 y:-80]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }
     }
     return self;
+}
+
+- (void)reset {
+    
+    if (self.appearNum == 1) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:300 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:370 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:440 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:510 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:580 y:-520]];
+        self._enemies = extraEnemies;
+        
+    } else if (self.appearNum == 2) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:650 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:720 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:790 y:-520]];
+        self._enemies = extraEnemies;
+        
+    } else if (self.appearNum == 3) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:860 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:930 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1000 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1070 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1140 y:-520]];
+        self._enemies = extraEnemies;
+    }
+    
+    [super reset];
 }
 
 @end

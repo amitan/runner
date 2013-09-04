@@ -148,6 +148,9 @@
             <filename>../sprites/hud/stop_btn.png</filename>
             <filename>../sprites/hud/black.png</filename>
             <filename>../sprites/hud/fever.png</filename>
+            <filename>../sprites/hud/exp_bar_red.png</filename>
+            <filename>../sprites/hud/exp_bar.png</filename>
+            <filename>../sprites/hud/exp_bar_yellow.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

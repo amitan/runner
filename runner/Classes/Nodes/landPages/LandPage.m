@@ -180,16 +180,16 @@
     return false;
 }
 
-- (BOOL)attackEnemyIfCollided:(CGPoint)point {
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction {
     for (Enemy *enemy in self._enemies) {
-        if ([enemy deadIfCollided:point]) return true;
+        if ([enemy deadIfCollided:point direction:direction]) return enemy;
     }
-    return false;
+    return NULL;
 }
 
-- (BOOL)isHit:(CGPoint)point {
+- (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction {
     for (Enemy *enemy in self._enemies) {
-        if ([enemy isHit:point]) return true;
+        if ([enemy isEnemyHit:point direction:direction]) return true;
     }
     return false;    
 }

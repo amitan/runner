@@ -12,6 +12,7 @@
 @interface HudController : CCNode {
     
 }
+@property (nonatomic, readwrite)BOOL isPausing;
 
 // 動作を開始/停止する
 - (void)setup;
@@ -41,5 +42,8 @@
 
 // 演出を表示する
 - (void)showSpeedUpEffect;
+
+// 同期する
+- (void)sync;
 
 @end

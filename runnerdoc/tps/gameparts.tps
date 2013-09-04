@@ -163,6 +163,10 @@
             <filename>../sprites/gameparts/rope.png</filename>
             <filename>../sprites/gameparts/bubble.png</filename>
             <filename>../sprites/gameparts/plane.png</filename>
+            <filename>../sprites/gameparts/fire_warning1.png</filename>
+            <filename>../sprites/gameparts/fire_warning2.png</filename>
+            <filename>../sprites/gameparts/fire.png</filename>
+            <filename>../sprites/gameparts/red_belt.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

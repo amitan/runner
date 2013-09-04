@@ -30,9 +30,17 @@
 		F922C92D17CF8099005177A2 /* Page9.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91C17CF8099005177A2 /* Page9.m */; };
 		F922C92E17CF8099005177A2 /* Page900.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91E17CF8099005177A2 /* Page900.m */; };
 		F922C93817CF839E005177A2 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93717CF839D005177A2 /* Page.m */; };
-		F922C93C17CF8689005177A2 /* SkyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93B17CF8689005177A2 /* SkyPage.m */; };
-		F922C93F17CF86EB005177A2 /* Page1000.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93E17CF86EB005177A2 /* Page1000.m */; };
-		F922C94217CF9CF9005177A2 /* Page1001.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94117CF9CF9005177A2 /* Page1001.m */; };
+		F922C94A17D1C402005177A2 /* Page1000.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94517D1C402005177A2 /* Page1000.m */; };
+		F922C94B17D1C402005177A2 /* Page1001.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94717D1C402005177A2 /* Page1001.m */; };
+		F922C94C17D1C402005177A2 /* SkyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94917D1C402005177A2 /* SkyPage.m */; };
+		F922C94F17D1C879005177A2 /* enemy.plist in Resources */ = {isa = PBXBuildFile; fileRef = F922C94D17D1C879005177A2 /* enemy.plist */; };
+		F922C95017D1C879005177A2 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = F922C94E17D1C879005177A2 /* enemy.png */; };
+		F922C95417D1E7A7005177A2 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95317D1E7A7005177A2 /* Enemy.m */; };
+		F922C95717D1E888005177A2 /* StandardEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95617D1E887005177A2 /* StandardEnemy.m */; };
+		F922C95A17D1ED94005177A2 /* SkyEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95917D1ED93005177A2 /* SkyEnemy.m */; };
+		F922C95D17D24089005177A2 /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95C17D24085005177A2 /* Gun.m */; };
+		F922C96017D25586005177A2 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95F17D25582005177A2 /* Bullet.m */; };
+		F922C96317D32A7C005177A2 /* NeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C96217D32A7B005177A2 /* NeedleEnemy.m */; };
 		F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61B17C22FD7007CF0CF /* ConversationLayer.m */; };
 		F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */; };
 		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
@@ -198,8 +206,6 @@
 		F99DFAA517B94781001E1EA8 /* HomeInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */; };
 		F99DFAA817BA3765001E1EA8 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA717BA3765001E1EA8 /* HomeController.m */; };
 		F9A468C51795E2B2002BAFB7 /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C41795E2B1002BAFB7 /* HudController.m */; };
-		F9A468D51799D606002BAFB7 /* chara.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D31799D606002BAFB7 /* chara.plist */; };
-		F9A468D61799D606002BAFB7 /* chara.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D41799D606002BAFB7 /* chara.png */; };
 		F9A468DA179A7E9A002BAFB7 /* dead.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D8179A7E9A002BAFB7 /* dead.plist */; };
 		F9A468DB179A7E9A002BAFB7 /* stars.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D9179A7E9A002BAFB7 /* stars.png */; };
 		F9A468DE179A94F6002BAFB7 /* EnemyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468DD179A94F6002BAFB7 /* EnemyAnimation.m */; };
@@ -236,7 +242,6 @@
 		F9C9814E17B8C86200DDCE95 /* DroppingCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813517B8C86200DDCE95 /* DroppingCoin.m */; };
 		F9C9814F17B8C86200DDCE95 /* StandardCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813717B8C86200DDCE95 /* StandardCoin.m */; };
 		F9C9815017B8C86200DDCE95 /* SwitchCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813917B8C86200DDCE95 /* SwitchCoin.m */; };
-		F9C9815117B8C86200DDCE95 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813B17B8C86200DDCE95 /* Enemy.m */; };
 		F9C9815217B8C86200DDCE95 /* Gimmick.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813D17B8C86200DDCE95 /* Gimmick.m */; };
 		F9C9815317B8C86200DDCE95 /* Rail.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813F17B8C86200DDCE95 /* Rail.m */; };
 		F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814217B8C86200DDCE95 /* CoinSwitch.m */; };
@@ -298,12 +303,26 @@
 		F922C91E17CF8099005177A2 /* Page900.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page900.m; sourceTree = "<group>"; };
 		F922C93617CF839D005177A2 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
 		F922C93717CF839D005177A2 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
-		F922C93A17CF8689005177A2 /* SkyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyPage.h; sourceTree = "<group>"; };
-		F922C93B17CF8689005177A2 /* SkyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyPage.m; sourceTree = "<group>"; };
-		F922C93D17CF86EB005177A2 /* Page1000.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1000.h; sourceTree = "<group>"; };
-		F922C93E17CF86EB005177A2 /* Page1000.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1000.m; sourceTree = "<group>"; };
-		F922C94017CF9CF9005177A2 /* Page1001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1001.h; sourceTree = "<group>"; };
-		F922C94117CF9CF9005177A2 /* Page1001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1001.m; sourceTree = "<group>"; };
+		F922C94417D1C402005177A2 /* Page1000.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1000.h; sourceTree = "<group>"; };
+		F922C94517D1C402005177A2 /* Page1000.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1000.m; sourceTree = "<group>"; };
+		F922C94617D1C402005177A2 /* Page1001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1001.h; sourceTree = "<group>"; };
+		F922C94717D1C402005177A2 /* Page1001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1001.m; sourceTree = "<group>"; };
+		F922C94817D1C402005177A2 /* SkyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyPage.h; sourceTree = "<group>"; };
+		F922C94917D1C402005177A2 /* SkyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyPage.m; sourceTree = "<group>"; };
+		F922C94D17D1C879005177A2 /* enemy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = enemy.plist; sourceTree = "<group>"; };
+		F922C94E17D1C879005177A2 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
+		F922C95217D1E7A7005177A2 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		F922C95317D1E7A7005177A2 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		F922C95517D1E887005177A2 /* StandardEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardEnemy.h; sourceTree = "<group>"; };
+		F922C95617D1E887005177A2 /* StandardEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardEnemy.m; sourceTree = "<group>"; };
+		F922C95817D1ED92005177A2 /* SkyEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyEnemy.h; sourceTree = "<group>"; };
+		F922C95917D1ED93005177A2 /* SkyEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyEnemy.m; sourceTree = "<group>"; };
+		F922C95B17D24082005177A2 /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
+		F922C95C17D24085005177A2 /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
+		F922C95E17D2557D005177A2 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		F922C95F17D25582005177A2 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		F922C96117D32A79005177A2 /* NeedleEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeedleEnemy.h; sourceTree = "<group>"; };
+		F922C96217D32A7B005177A2 /* NeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeedleEnemy.m; sourceTree = "<group>"; };
 		F923F61A17C22FD7007CF0CF /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
 		F923F61B17C22FD7007CF0CF /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
 		F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpenterConversationLayer.h; sourceTree = "<group>"; };
@@ -643,8 +662,6 @@
 		F99DFAA717BA3765001E1EA8 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		F9A468C31795E2B1002BAFB7 /* HudController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudController.h; sourceTree = "<group>"; };
 		F9A468C41795E2B1002BAFB7 /* HudController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudController.m; sourceTree = "<group>"; };
-		F9A468D31799D606002BAFB7 /* chara.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chara.plist; sourceTree = "<group>"; };
-		F9A468D41799D606002BAFB7 /* chara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chara.png; sourceTree = "<group>"; };
 		F9A468D8179A7E9A002BAFB7 /* dead.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dead.plist; sourceTree = "<group>"; };
 		F9A468D9179A7E9A002BAFB7 /* stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stars.png; sourceTree = "<group>"; };
 		F9A468DC179A94F5002BAFB7 /* EnemyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyAnimation.h; sourceTree = "<group>"; };
@@ -699,8 +716,6 @@
 		F9C9813717B8C86200DDCE95 /* StandardCoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardCoin.m; sourceTree = "<group>"; };
 		F9C9813817B8C86200DDCE95 /* SwitchCoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCoin.h; sourceTree = "<group>"; };
 		F9C9813917B8C86200DDCE95 /* SwitchCoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCoin.m; sourceTree = "<group>"; };
-		F9C9813A17B8C86200DDCE95 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
-		F9C9813B17B8C86200DDCE95 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		F9C9813C17B8C86200DDCE95 /* Gimmick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gimmick.h; sourceTree = "<group>"; };
 		F9C9813D17B8C86200DDCE95 /* Gimmick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gimmick.m; sourceTree = "<group>"; };
 		F9C9813E17B8C86200DDCE95 /* Rail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rail.h; sourceTree = "<group>"; };
@@ -775,14 +790,6 @@
 				F922C90217CF8099005177A2 /* Page0.m */,
 				F922C90317CF8099005177A2 /* Page1.h */,
 				F922C90417CF8099005177A2 /* Page1.m */,
-				F922C90517CF8099005177A2 /* Page10.h */,
-				F922C90617CF8099005177A2 /* Page10.m */,
-				F922C90717CF8099005177A2 /* Page11.h */,
-				F922C90817CF8099005177A2 /* Page11.m */,
-				F922C90917CF8099005177A2 /* Page12.h */,
-				F922C90A17CF8099005177A2 /* Page12.m */,
-				F922C90B17CF8099005177A2 /* Page13.h */,
-				F922C90C17CF8099005177A2 /* Page13.m */,
 				F922C90D17CF8099005177A2 /* Page2.h */,
 				F922C90E17CF8099005177A2 /* Page2.m */,
 				F922C90F17CF8099005177A2 /* Page3.h */,
@@ -799,23 +806,46 @@
 				F922C91A17CF8099005177A2 /* Page8.m */,
 				F922C91B17CF8099005177A2 /* Page9.h */,
 				F922C91C17CF8099005177A2 /* Page9.m */,
+				F922C90517CF8099005177A2 /* Page10.h */,
+				F922C90617CF8099005177A2 /* Page10.m */,
+				F922C90717CF8099005177A2 /* Page11.h */,
+				F922C90817CF8099005177A2 /* Page11.m */,
+				F922C90917CF8099005177A2 /* Page12.h */,
+				F922C90A17CF8099005177A2 /* Page12.m */,
+				F922C90B17CF8099005177A2 /* Page13.h */,
+				F922C90C17CF8099005177A2 /* Page13.m */,
 				F922C91D17CF8099005177A2 /* Page900.h */,
 				F922C91E17CF8099005177A2 /* Page900.m */,
 			);
 			path = landPages;
 			sourceTree = "<group>";
 		};
-		F922C93917CF8679005177A2 /* skyPages */ = {
+		F922C94317D1C401005177A2 /* skyPages */ = {
 			isa = PBXGroup;
 			children = (
-				F922C93A17CF8689005177A2 /* SkyPage.h */,
-				F922C93B17CF8689005177A2 /* SkyPage.m */,
-				F922C93D17CF86EB005177A2 /* Page1000.h */,
-				F922C93E17CF86EB005177A2 /* Page1000.m */,
-				F922C94017CF9CF9005177A2 /* Page1001.h */,
-				F922C94117CF9CF9005177A2 /* Page1001.m */,
+				F922C94417D1C402005177A2 /* Page1000.h */,
+				F922C94517D1C402005177A2 /* Page1000.m */,
+				F922C94617D1C402005177A2 /* Page1001.h */,
+				F922C94717D1C402005177A2 /* Page1001.m */,
+				F922C94817D1C402005177A2 /* SkyPage.h */,
+				F922C94917D1C402005177A2 /* SkyPage.m */,
 			);
 			path = skyPages;
+			sourceTree = "<group>";
+		};
+		F922C95117D1E7A7005177A2 /* enemy */ = {
+			isa = PBXGroup;
+			children = (
+				F922C95217D1E7A7005177A2 /* Enemy.h */,
+				F922C95317D1E7A7005177A2 /* Enemy.m */,
+				F922C95517D1E887005177A2 /* StandardEnemy.h */,
+				F922C95617D1E887005177A2 /* StandardEnemy.m */,
+				F922C95817D1ED92005177A2 /* SkyEnemy.h */,
+				F922C95917D1ED93005177A2 /* SkyEnemy.m */,
+				F922C96117D32A79005177A2 /* NeedleEnemy.h */,
+				F922C96217D32A7B005177A2 /* NeedleEnemy.m */,
+			);
+			path = enemy;
 			sourceTree = "<group>";
 		};
 		F923F61917C22FC6007CF0CF /* conversation */ = {
@@ -1348,13 +1378,17 @@
 				F9C9812317B8C86200DDCE95 /* gimmick */,
 				F9A468F3179EC198002BAFB7 /* hud */,
 				F922C8FE17CF8099005177A2 /* landPages */,
-				F922C93917CF8679005177A2 /* skyPages */,
+				F922C94317D1C401005177A2 /* skyPages */,
 				F93DF6B3178AFE2F007AD085 /* Player.h */,
 				F93DF6B4178AFE2F007AD085 /* Player.m */,
 				F923F63917CA5481007CF0CF /* Follower.h */,
 				F923F63A17CA5483007CF0CF /* Follower.m */,
 				F923F63C17CD021C007CF0CF /* Plane.h */,
 				F923F63D17CD021C007CF0CF /* Plane.m */,
+				F922C95B17D24082005177A2 /* Gun.h */,
+				F922C95C17D24085005177A2 /* Gun.m */,
+				F922C95E17D2557D005177A2 /* Bullet.h */,
+				F922C95F17D25582005177A2 /* Bullet.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -1430,6 +1464,8 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F922C94D17D1C879005177A2 /* enemy.plist */,
+				F922C94E17D1C879005177A2 /* enemy.png */,
 				F9DAF99917BF572700422467 /* team.plist */,
 				F9DAF99A17BF572700422467 /* team.png */,
 				F9DAF99217BF417400422467 /* player.plist */,
@@ -1448,8 +1484,6 @@
 				F9A468E0179B4D70002BAFB7 /* header.png */,
 				F9A468E1179B4D70002BAFB7 /* title.plist */,
 				F9A468E2179B4D70002BAFB7 /* title.png */,
-				F9A468D31799D606002BAFB7 /* chara.plist */,
-				F9A468D41799D606002BAFB7 /* chara.png */,
 				F93DF6AF178AF9F0007AD085 /* gameparts.plist */,
 				F93DF6B0178AF9F0007AD085 /* gameparts.png */,
 			);
@@ -1505,8 +1539,7 @@
 				F9C9812417B8C86200DDCE95 /* blocks */,
 				F9C9812F17B8C86200DDCE95 /* coins */,
 				F9C9814017B8C86200DDCE95 /* switches */,
-				F9C9813A17B8C86200DDCE95 /* Enemy.h */,
-				F9C9813B17B8C86200DDCE95 /* Enemy.m */,
+				F922C95117D1E7A7005177A2 /* enemy */,
 				F9C9814517B8C86200DDCE95 /* Trampoline.h */,
 				F9C9814617B8C86200DDCE95 /* Trampoline.m */,
 				F9C9813E17B8C86200DDCE95 /* Rail.h */,
@@ -1635,8 +1668,6 @@
 				F9ABA637178E971700A02626 /* misaki_gothic.ttf in Resources */,
 				F9ABA639178F05BE00A02626 /* title_bg.png in Resources */,
 				F9ABA6471791079600A02626 /* NADView_readme.txt in Resources */,
-				F9A468D51799D606002BAFB7 /* chara.plist in Resources */,
-				F9A468D61799D606002BAFB7 /* chara.png in Resources */,
 				F9A468DA179A7E9A002BAFB7 /* dead.plist in Resources */,
 				F9A468DB179A7E9A002BAFB7 /* stars.png in Resources */,
 				F9A468E3179B4D70002BAFB7 /* header.plist in Resources */,
@@ -1659,6 +1690,8 @@
 				F9DAF99517BF417400422467 /* player.png in Resources */,
 				F9DAF99B17BF572700422467 /* team.plist in Resources */,
 				F9DAF99C17BF572700422467 /* team.png in Resources */,
+				F922C94F17D1C879005177A2 /* enemy.plist in Resources */,
+				F922C95017D1C879005177A2 /* enemy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1809,7 +1842,6 @@
 				F9C9814E17B8C86200DDCE95 /* DroppingCoin.m in Sources */,
 				F9C9814F17B8C86200DDCE95 /* StandardCoin.m in Sources */,
 				F9C9815017B8C86200DDCE95 /* SwitchCoin.m in Sources */,
-				F9C9815117B8C86200DDCE95 /* Enemy.m in Sources */,
 				F9C9815217B8C86200DDCE95 /* Gimmick.m in Sources */,
 				F9C9815317B8C86200DDCE95 /* Rail.m in Sources */,
 				F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */,
@@ -1856,9 +1888,15 @@
 				F922C92D17CF8099005177A2 /* Page9.m in Sources */,
 				F922C92E17CF8099005177A2 /* Page900.m in Sources */,
 				F922C93817CF839E005177A2 /* Page.m in Sources */,
-				F922C93C17CF8689005177A2 /* SkyPage.m in Sources */,
-				F922C93F17CF86EB005177A2 /* Page1000.m in Sources */,
-				F922C94217CF9CF9005177A2 /* Page1001.m in Sources */,
+				F922C94A17D1C402005177A2 /* Page1000.m in Sources */,
+				F922C94B17D1C402005177A2 /* Page1001.m in Sources */,
+				F922C94C17D1C402005177A2 /* SkyPage.m in Sources */,
+				F922C95417D1E7A7005177A2 /* Enemy.m in Sources */,
+				F922C95717D1E888005177A2 /* StandardEnemy.m in Sources */,
+				F922C95A17D1ED94005177A2 /* SkyEnemy.m in Sources */,
+				F922C95D17D24089005177A2 /* Gun.m in Sources */,
+				F922C96017D25586005177A2 /* Bullet.m in Sources */,
+				F922C96317D32A7C005177A2 /* NeedleEnemy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

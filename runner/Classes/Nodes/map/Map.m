@@ -53,4 +53,11 @@
     }
 }
 
+- (void)suspend {
+    [self stop];
+}
+- (void)resume {
+    [self start];
+}
+
 @end

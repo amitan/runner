@@ -47,25 +47,25 @@ const int PAGE12_INTERVAL1 = 2100;
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:1 x:350 y:-430],
-                       [Coin createCoin:1 x:380 y:-370],
-                       [Coin createCoin:1 x:410 y:-310],
-                       [Coin createCoin:1 x:1190 y:-220],
-                       [Coin createCoin:1 x:1250 y:-280],
-                       [Coin createCoin:1 x:1970 y:-160],
-                       [Coin createCoin:1 x:2000 y:-190],
-                       [Coin createCoin:1 x:2030 y:-220],
-                       [Coin createCoin:1 x:2060 y:-250],
-                       [Coin createCoin:1 x:2090 y:-280],
-                       [Coin createCoin:1 x:2120 y:-310],
-                       [Coin createCoin:1 x:2150 y:-340],
-                       [Coin createCoin:1 x:2180 y:-370],
-                       [Coin createCoin:1 x:2210 y:-400],
-                       [Coin createCoin:1 x:2240 y:-430],
-                       [Coin createCoin:1 x:2270 y:-460],
-                       [Coin createCoin:1 x:2300 y:-490],
-                       [Coin createCoin:1 x:2330 y:-520],
-                       [Coin createCoin:1 x:2360 y:-550]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:350 y:-430],
+                       [Coin createCoin:C_STANDARD x:380 y:-370],
+                       [Coin createCoin:C_STANDARD x:410 y:-310],
+                       [Coin createCoin:C_STANDARD x:1190 y:-220],
+                       [Coin createCoin:C_STANDARD x:1250 y:-280],
+                       [Coin createCoin:C_STANDARD x:1970 y:-160],
+                       [Coin createCoin:C_STANDARD x:2000 y:-190],
+                       [Coin createCoin:C_STANDARD x:2030 y:-220],
+                       [Coin createCoin:C_STANDARD x:2060 y:-250],
+                       [Coin createCoin:C_STANDARD x:2090 y:-280],
+                       [Coin createCoin:C_STANDARD x:2120 y:-310],
+                       [Coin createCoin:C_STANDARD x:2150 y:-340],
+                       [Coin createCoin:C_STANDARD x:2180 y:-370],
+                       [Coin createCoin:C_STANDARD x:2210 y:-400],
+                       [Coin createCoin:C_STANDARD x:2240 y:-430],
+                       [Coin createCoin:C_STANDARD x:2270 y:-460],
+                       [Coin createCoin:C_STANDARD x:2300 y:-490],
+                       [Coin createCoin:C_STANDARD x:2330 y:-520],
+                       [Coin createCoin:C_STANDARD x:2360 y:-550]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
@@ -90,6 +90,17 @@ const int PAGE12_INTERVAL1 = 2100;
     if ([self._land isHit:point]) return self._land;
     if ([self._land2 isHit:point]) return self._land2;
     return NULL;
+}
+
+- (void)reset {
+    
+    if (self.appearNum == 1) {
+        NSMutableArray *extraCoins = [NSMutableArray arrayWithArray:self._coins];
+        [extraCoins addObject:[Coin createCoin:C_100 x:1600 y:-130]];
+        self._coins = extraCoins;
+    }
+    
+    [super reset];
 }
 
 @end

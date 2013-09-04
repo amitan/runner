@@ -23,50 +23,61 @@
         [self._land stageOn:self];
         
         // ブロック追加
-        self._blocks = @[[Block createBlock:103 x:100 y:-730],
-                         [Block createBlock:103 x:500 y:-730],
-                         [Block createBlock:103 x:900 y:-730],
-                         [Block createBlock:103 x:1300 y:-730],
-                         [Block createBlock:103 x:1700 y:-730],
-                         [Block createBlock:103 x:1880 y:-730],
-                         [Block createBlock:103 x:2060 y:-730],
-                         [Block createBlock:103 x:2240 y:-730]];
+        self._blocks = @[[Block createBlock:103 x:100 y:-490],
+                         [Block createBlock:103 x:500 y:-490],
+                         [Block createBlock:103 x:900 y:-490],
+                         [Block createBlock:103 x:1300 y:-490],
+                         [Block createBlock:103 x:1700 y:-490],
+                         [Block createBlock:103 x:1880 y:-490],
+                         [Block createBlock:103 x:2060 y:-490],
+                         [Block createBlock:103 x:2240 y:-490]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
 
         // コインを追加
-        self._coins = @[[Coin createCoin:1 x:250 y:-460],
-                        [Coin createCoin:1 x:300 y:-430],
-                        [Coin createCoin:1 x:350 y:-460],
-                        [Coin createCoin:1 x:650 y:-460],
-                        [Coin createCoin:1 x:700 y:-430],
-                        [Coin createCoin:1 x:750 y:-460],
-                        [Coin createCoin:1 x:1050 y:-460],
-                        [Coin createCoin:1 x:1100 y:-430],
-                        [Coin createCoin:1 x:1150 y:-460],
-                        [Coin createCoin:1 x:1450 y:-460],
-                        [Coin createCoin:1 x:1500 y:-430],
-                        [Coin createCoin:1 x:1550 y:-460],
-                        [Coin createCoin:5 x:2060 y:-620]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:250 y:-220],
+                        [Coin createCoin:C_STANDARD x:300 y:-190],
+                        [Coin createCoin:C_STANDARD x:350 y:-220],
+                        [Coin createCoin:C_STANDARD x:650 y:-220],
+                        [Coin createCoin:C_STANDARD x:700 y:-190],
+                        [Coin createCoin:C_STANDARD x:750 y:-220],
+                        [Coin createCoin:C_STANDARD x:1050 y:-220],
+                        [Coin createCoin:C_STANDARD x:1100 y:-190],
+                        [Coin createCoin:C_STANDARD x:1150 y:-220],
+                        [Coin createCoin:C_STANDARD x:1450 y:-220],
+                        [Coin createCoin:C_STANDARD x:1500 y:-190],
+                        [Coin createCoin:C_STANDARD x:1550 y:-220],
+                        [Coin createCoin:C_100 x:2060 y:-380]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
-        }
-        
-        // 敵を追加
-        self._enemies = @[[Enemy createEnemy:1 x:1880 y:-655],
-                          [Enemy createEnemy:1 x:2320 y:-655]];
-        for (Enemy *enemy in self._enemies) {
-            [enemy stageOn:self];
-        }
-
+        }        
     }
     return self;
 }
 
-- (void)dealloc {
-    [super dealloc];
+- (void)reset {
+    
+    if (self.appearNum == 1) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:300 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1500 y:-520]];
+        self._enemies = extraEnemies;
+        
+    } else if (self.appearNum == 2) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:700 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:1100 y:-520]];
+        self._enemies = extraEnemies;
+        
+    } else if (self.appearNum == 3) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1880 y:-460]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:2320 y:-460]];
+        self._enemies = extraEnemies;
+    }
+    
+    [super reset];
 }
-
 @end

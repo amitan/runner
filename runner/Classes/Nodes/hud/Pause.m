@@ -65,6 +65,10 @@
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    [self stageOff];
+    [[GameScene sharedInstance] resume];
+    [GameScene sharedInstance].hudController.isPausing = false;
+    [[GameScene sharedInstance].hudController sync];
     return YES;
 }
 

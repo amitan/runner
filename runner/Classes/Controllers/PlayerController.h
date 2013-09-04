@@ -25,6 +25,7 @@
 - (void)ride;
 - (void)speedUp;
 - (void)fly;
+- (BOOL)deadIfBulletCollided:(CGPoint)position;
 
 // 取得
 - (CGPoint)getPlayerFootPosition;

@@ -90,14 +90,33 @@
     
     // 当たり判定チェック
     if (CGRectIntersectsRect([self getLayerBasedBox], rect)) {
-        self._isStaged = false;
-        [self removeFromParentAndCleanup:NO];
-        
-        HudController *header = [GameScene sharedInstance].hudController;
-        [header addCoin:self._value];
+        [self _takeCoin];
         return true;
     }
     return false;
+}
+
+- (BOOL)takenIfCollided:(CGPoint)point radius:(float)radius {
+    
+    // コインがステージ上にない場合はfalse
+    if (!self._isStaged) return false;
+    
+    // 当たり判定チェック
+    CGRect rect = [self getLayerBasedBox];
+    float dx = rect.origin.x - point.x;
+    float dy = rect.origin.y - point.y;
+    if(pow(dx, 2) + pow(dy, 2) <= pow(radius, 2)) {
+        [self _takeCoin];
+        return true;
+    }
+    return false;
+}
+
+- (void)_takeCoin {
+    self._isStaged = false;
+    [self removeFromParentAndCleanup:NO];
+    HudController *header = [GameScene sharedInstance].hudController;
+    [header addCoin:self._value];
 }
 
 - (BOOL)hasTaken {

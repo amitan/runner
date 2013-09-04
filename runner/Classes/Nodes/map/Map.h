@@ -22,5 +22,7 @@
 // アニメーションを開始/停止する
 - (void)start;
 - (void)stop;
+- (void)suspend;
+- (void)resume;
 
 @end

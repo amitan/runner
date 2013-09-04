@@ -17,7 +17,7 @@
 
 @interface Player ()
 @property (nonatomic, readwrite)int _monsterId;
-@property (nonatomic, readwrite)BOOL _isStaged;
+@property (nonatomic, readwrite)BOOL _isStaged, _isBulletHit;
 @property (nonatomic, readwrite)int _jumpNum, _currentJumpNum, _jumpSpeed;
 @property (nonatomic, retain)CCSprite *_playerSprite;
 @property (nonatomic, readwrite)BOOL _onGround, _isAdjusting, _isReverse, _onTopBlock, _onRailed;
@@ -44,13 +44,12 @@ const int BLOCK_TOP_REFLECTION = -10;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         self._monsterId = monsterId;
         self._isStaged = false;
+        self._isBulletHit = false;
         self._jumpNum = [[PlayerMaster getInstance] getJumpNum:self._monsterId];
         self._onGround = true;
         self._vx = [PointUtil getPoint:INIT_SCROLL_SPEED];
         self._isAdjusting = false;
         self._isReverse = false;
-        self._limitLeftX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
-        self._limitRightX = winSize.width / 2 + [PointUtil getPoint:BASE_WIDTH / 2];
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
         self._jumpSpeed = [PointUtil getPoint:[[PlayerMaster getInstance] getJumpSpeed:self._monsterId]];
         self._onTopBlock = false;
@@ -60,6 +59,8 @@ const int BLOCK_TOP_REFLECTION = -10;
         NSString* fileName = [NSString stringWithFormat:@"player%d_right1.png", self._monsterId];
         self._playerSprite = [CCSprite spriteWithSpriteFrameName:fileName];
         [self addChild:self._playerSprite];
+        self._limitLeftX = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2] - [self getWidth] / 2;
+        self._limitRightX = winSize.width / 2 + [PointUtil getPoint:BASE_WIDTH / 2] + [self getWidth] / 2;
     }
     return self;
 }
@@ -93,12 +94,16 @@ const int BLOCK_TOP_REFLECTION = -10;
     if (self._onRailed) {
         self._vy = self._jumpSpeed * 0.8;
         self._onRailed = false;
-        [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse frameNum:self.frameNum]];
+        [self._playerSprite resumeSchedulerAndActions];
         
-    } else if ((self._currentJumpNum == 0 && self._onGround) || (self._currentJumpNum != 0 && self._currentJumpNum < self._jumpNum)) {
-        self._currentJumpNum++;
+    } else if (self._currentJumpNum == 0 && self._onGround) { // 初回ジャンプ
+        self._vy = self._jumpSpeed;
+        
+    } else if (self._currentJumpNum != 0 && self._currentJumpNum < self._jumpNum) { // 2回目以降ジャンプ
+        [self._playerSprite runAction:[CCRotateBy actionWithDuration:0.2f angle:360]];
         self._vy = self._jumpSpeed;
     }
+    self._currentJumpNum++;
 }
 
 - (void)speedUp {
@@ -110,6 +115,14 @@ const int BLOCK_TOP_REFLECTION = -10;
     self._vy = self._jumpSpeed * 1.5;
 }
 
+- (BOOL)deadIfBulletCollided:(CGPoint)position {
+    if (CGRectContainsPoint([self getRect], position)) {
+        self._isBulletHit = true;
+        return true;
+    }
+    return false;
+}
+
 - (void)update:(ccTime)dt {
 
     // ステージ上にいなければ何も処理しない
@@ -119,6 +132,12 @@ const int BLOCK_TOP_REFLECTION = -10;
     // 死亡判定
     ///////////////////////////////////////////////////////////////
     MapController *mapController = [GameScene sharedInstance].mapController;
+    
+    // 弾丸判定
+    if (self._isBulletHit) {
+        [self dead];
+        return;
+    }
     
     // 圧死判定
     if ([self getCenterRightPosition].x < self._limitLeftX || [self getCenterLeftPosition].x > self._limitRightX) {
@@ -133,9 +152,15 @@ const int BLOCK_TOP_REFLECTION = -10;
     }
     
     // 敵との当たり判定
-    if ([mapController.landMap isHit:[self getCenterRightPosition]]) {
+    if ([mapController.landMap isEnemyHit:[self getCenterRightPosition] direction:LEFT]
+        || [mapController.landMap isEnemyHit:[self getCenterBottomPosition] direction:TOP]
+        || [mapController.landMap isEnemyHit:[self getCenterTopPosition] direction:BOTTOM]) {
         [self dead];
         return;
+    }
+    if (self._isReverse && [mapController.landMap isEnemyHit:[self getCenterLeftPosition] direction:RIGHT]) {
+        [self dead];
+        return;        
     }
     
     ///////////////////////////////////////////////////////////////
@@ -144,8 +169,6 @@ const int BLOCK_TOP_REFLECTION = -10;
     if (!self._onRailed) {
         self._vy -= [PointUtil getPoint:GRAVITY];
     }
-    float dx = self._vx * dt;
-    float x = self.position.x;
 
     ///////////////////////////////////////////////////////////////
     // コイン/アイテム判定
@@ -158,12 +181,55 @@ const int BLOCK_TOP_REFLECTION = -10;
     ///////////////////////////////////////////////////////////////
     // 横軸の判定
     ///////////////////////////////////////////////////////////////
-    CGPoint nextRightXPosition = ccpAdd([self getCenterRightPosition], ccp(dx, 0));
-    BOOL isXHit = false;
     BOOL currentReverse = self._isReverse;
+    float dx = self._vx * dt;
+    float x = [self _checkX:dx];
     
+    ///////////////////////////////////////////////////////////////
+    // 縦軸の判定
+    ///////////////////////////////////////////////////////////////
+    float y = [self _checkY:dt reverse:currentReverse];
+    
+    ///////////////////////////////////////////////////////////////
+    // 位置更新
+    ///////////////////////////////////////////////////////////////
+    if (self._currentRail) {
+        if (![self._currentRail isRopeMovable]) {
+            self._onRailed = false;
+            self._currentRail = nil;
+            [self._playerSprite resumeSchedulerAndActions];
+        } else {
+            CGPoint diff = [self._currentRail moveRope:dx];
+            if (self._onRailed) {
+                y = self.position.y + diff.y;
+            }
+        }
+    }
+    self.position = ccp(x, y);
+    
+    ///////////////////////////////////////////////////////////////
+    // スピードアップ判定
+    ///////////////////////////////////////////////////////////////
+    if ([mapController.landMap checkSpeedUp:self.position]) {
+        [self speedUp];
+    }
+
+    ///////////////////////////////////////////////////////////////
+    // 炎判定
+    ///////////////////////////////////////////////////////////////
+    if ([mapController.landMap checkFire:dt]) {
+        [mapController.landMap fire];
+    }
+}
+
+- (float)_checkX:(float)dx {
+    float x = self.position.x;
+    BOOL isXHit = false;
+    MapController *mapController = [GameScene sharedInstance].mapController;
+    CGPoint nextRightXPosition = ccpAdd([self getCenterRightPosition], ccp(dx, 0));
+
     // ブロックに衝突している場合はプレイヤーも一緒に移動
-    if (!currentReverse) {
+    if (!self._isReverse) {
         Block *blockX = [mapController getHitBlock:nextRightXPosition]; // 右端判定
         if (blockX) {
             if (blockX.isLeftReverse) {
@@ -204,35 +270,7 @@ const int BLOCK_TOP_REFLECTION = -10;
     // マップスクロール
     if (self._isReverse) dx *= -1;
     [mapController scroll:dx];
-    
-    ///////////////////////////////////////////////////////////////
-    // 縦軸の判定
-    ///////////////////////////////////////////////////////////////
-    float y = [self _checkY:dt reverse:currentReverse];
-    
-    ///////////////////////////////////////////////////////////////
-    // 位置更新
-    ///////////////////////////////////////////////////////////////
-    if (self._currentRail) {
-        if (![self._currentRail isRopeMovable]) {
-            self._onRailed = false;
-            self._currentRail = nil;
-            [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse frameNum:self.frameNum]];
-        } else {
-            CGPoint diff = [self._currentRail moveRope:dx];
-            if (self._onRailed) {
-                y = self.position.y + diff.y;
-            }
-        }
-    }
-    self.position = ccp(x, y);
-    
-    ///////////////////////////////////////////////////////////////
-    // スピードアップ判定
-    ///////////////////////////////////////////////////////////////
-    if ([mapController.landMap checkSpeedUp:self.position]) {
-        [self speedUp];
-    }
+    return x;
 }
 
 - (float)_checkY:(ccTime)dt reverse:(BOOL)currentReverse {
@@ -241,12 +279,20 @@ const int BLOCK_TOP_REFLECTION = -10;
     float y = self.position.y;
 
     CGPoint nextCenterBottomYPosition = ccpAdd([self getCenterBottomPosition], ccp(0, dy));
-    
+    CGPoint nextCenterTopYPosition = ccpAdd([self getCenterTopPosition], ccp(0, dy));
+
     // 敵チェック
-    if ([mapController.landMap attackEnemyIfCollided:nextCenterBottomYPosition]) {
-        [[GameScene sharedInstance].hudController addExp:5];
+    Enemy *enemy1 = [mapController.landMap attackEnemyIfCollided:nextCenterBottomYPosition direction:TOP];
+    if (enemy1) {
         self._vy = self._jumpSpeed * 0.6;
         y += self._vy * dt;
+        [[GameScene sharedInstance].hudController addExp:[enemy1 getExp]];
+        return y;
+    }
+    Enemy *enemy2 = [mapController.landMap attackEnemyIfCollided:nextCenterTopYPosition direction:BOTTOM];
+    if (enemy2) {
+        [[GameScene sharedInstance].hudController addExp:[enemy2 getExp]];
+        self._vy = 0;
         return y;
     }
         
@@ -272,12 +318,11 @@ const int BLOCK_TOP_REFLECTION = -10;
             self._currentRail = rail;
             self._onRailed = true;
             self._vy = 0;
-            [self._playerSprite stopAllActions];
+            [self._playerSprite pauseSchedulerAndActions];
         }
     }
     
     // 上ブロック衝突判定
-    CGPoint nextCenterTopYPosition = ccpAdd([self getCenterTopPosition], ccp(0, dy));
     Block *topBlock = [mapController getHitBlock:nextCenterTopYPosition];
     if (!self._onTopBlock && topBlock) {
         y = [topBlock getBottomPoint] - self._playerSprite.contentSize.height / 2;

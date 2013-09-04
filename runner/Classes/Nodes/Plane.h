@@ -22,9 +22,8 @@
 
 // アクション
 - (void)takeOff:(id)func;
-- (void)rotateUp;
-- (void)rotateDown;
 - (void)flyUp;
 - (void)flyDown;
+- (void)climbout;
 
 @end

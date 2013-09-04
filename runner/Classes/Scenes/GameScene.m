@@ -138,9 +138,26 @@ static GameScene *_scene = nil;
 }
 
 - (void)onGameStart:(id)sender {
+    [self gameStart];
+}
+
+- (void)gameStart {
     [self.mapController start];
     [self.hudController start];
-    [self.playerController start];
+    [self.playerController start];    
+}
+
+- (void)resume {
+    [self.mapController resume];
+    [self.hudController start];
+    [self.playerController start];    
+}
+
+- (void)suspend {
+    [self.countController stop];
+    [self.mapController suspend];
+    [self.hudController stop];
+    [self.playerController stop];    
 }
 
 - (void)stop {

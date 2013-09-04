@@ -11,6 +11,7 @@
 #import "Map.h"
 #import "Block.h"
 #import "Rail.h"
+#import "Enemy.h"
 
 @interface LandMap : Map {
     
@@ -32,11 +33,13 @@
 - (BOOL)jumpIfCollided:(CGRect)rect;
 
 // 敵チェック
-- (BOOL)attackEnemyIfCollided:(CGPoint)point;
-- (BOOL)isHit:(CGPoint)point;
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction;
+- (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction;
 
 // スピードアップするか判定する
 - (BOOL)checkSpeedUp:(CGPoint)point;
+- (BOOL)checkFire:(ccTime)dt;
+- (void)fire;
 
 // 必要に応じてページの追加/削除を行う
 - (void)refillIfNeeded;

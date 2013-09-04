@@ -18,7 +18,7 @@
 	if (self) {
         self.isPlaying = false;
         self.isStaged = false;
-        self.appearNum = 0;
+        self.appearNum = 1;
     }
     return self;
 }

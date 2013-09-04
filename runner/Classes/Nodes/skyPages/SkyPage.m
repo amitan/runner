@@ -14,14 +14,35 @@
 
 @implementation SkyPage
 
-- (BOOL)takeCoinsIfCollided:(CGRect)rect {
+- (BOOL)takeCoinsIfCollided:(CGPoint)center radius:(float)radius {
     
     // コイン取得チェック
-    BOOL result = false;
     for (Coin *coin in self._coins) {
-        if ([coin takenIfCollided:rect]) result = true;
+        if ([coin takenIfCollided:center radius:radius]) return true;
     }
-    return result;
+    return false;
+}
+
+- (void)start {
+    [super start];
+    for (Coin *coin in self._coins) {
+        [coin start];
+    }
+}
+
+- (void)stop {
+    [super stop];
+    for (Coin *coin in self._coins) {
+        [coin stop];
+    }
+}
+
+- (void)reset {
+    [super reset];
+    for (Coin *coin in self._coins) {
+        [coin reset];
+        [coin stageOn:self];
+    }
 }
 
 - (float)getWidth {

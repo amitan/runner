@@ -93,7 +93,7 @@
         [self._player stageOff];
         self._player.position = ccp(0, [self._player getHeight] / 2);
         [self._plane addChild:self._player];
-        [self._plane rotateUp];
+        [self._plane climbout];
         [[GameScene sharedInstance].mapController flyUp];
     }]];
 }
@@ -101,6 +101,10 @@
 - (void)fly {
     self._isFlying = true;
     [self._plane start];
+}
+
+- (BOOL)deadIfBulletCollided:(CGPoint)position {
+    return [self._player deadIfBulletCollided:position];
 }
 
 - (CGPoint)getPlayerFootPosition {

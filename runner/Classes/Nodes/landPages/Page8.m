@@ -55,12 +55,23 @@
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:2 x:1100 y:-70]];
+        self._coins = @[[Coin createCoin:C_BIG x:1100 y:-70]];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
         }
     }
     return self;
+}
+
+- (void)reset {
+    
+    if (self.appearNum == 1) {
+        NSMutableArray *extraCoins = [NSMutableArray arrayWithArray:self._coins];
+        [extraCoins addObject:[Coin createCoin:C_100 x:2000 y:-130]];
+        self._coins = extraCoins;
+    }
+    
+    [super reset];
 }
 
 @end

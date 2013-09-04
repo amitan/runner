@@ -23,6 +23,8 @@
 - (void)setup:(int)stageId;
 - (void)start;
 - (void)stop;
+- (void)suspend;
+- (void)resume;
 
 // 衝突しているブロック/エネミーを取得する
 - (Block*)getHitBlock:(CGPoint)point;

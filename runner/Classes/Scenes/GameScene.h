@@ -39,7 +39,10 @@
 // ゲームを開始/停止する
 - (void)setup;
 - (void)start;
+- (void)gameStart;
 - (void)stop;
+- (void)resume;
+- (void)suspend;
 
 // ゲームを終了する
 - (void)finishGame;

@@ -18,7 +18,7 @@
 
 @implementation Plane
 const int INIT_FLYING_SPEED = 700;
-const int UPDOWN_SPEED = 500;
+const int UPDOWN_SPEED = 300;
 
 - (id)init {
     self = [super init];
@@ -47,15 +47,12 @@ const int UPDOWN_SPEED = 500;
     [self runAction:[CCSequence actions:moveTo, func, nil]];
 }
 
-- (void)rotateUp {
-    [self runAction:[CCRotateTo actionWithDuration:0.3f angle:-10]];
-}
-
-- (void)rotateDown {
-    [self runAction:[CCRotateTo actionWithDuration:0.3f angle:10]];
+- (void)climbout {
+    [self runAction:[CCRotateTo actionWithDuration:0.3f angle:-30]];
 }
 
 - (void)start {
+    [self runAction:[CCRotateTo actionWithDuration:0.2f angle:-5]];
     [self scheduleUpdate];
 }
 
@@ -66,14 +63,14 @@ const int UPDOWN_SPEED = 500;
 - (void)flyDown {
     if (self._isUp) {
         self._isUp = false;
-        [self rotateDown];
+        [self runAction:[CCRotateTo actionWithDuration:0.3f angle:5]];
     }
 }
 
 - (void)flyUp {
     if (!self._isUp) {
         self._isUp = true;
-        [self rotateUp];
+        [self runAction:[CCRotateTo actionWithDuration:0.3f angle:-5]];
     }
 }
 
@@ -83,7 +80,7 @@ const int UPDOWN_SPEED = 500;
     // 取得判定
     ///////////////////////////////////////////////////////////////
     MapController *mapController = [GameScene sharedInstance].mapController;
-    [mapController.skyMap takeItemsIfCollided:[self getRect]];
+    [mapController.skyMap takeItemsIfCollided:self.position radius:self._sprite.contentSize.width / 2];
 
     ///////////////////////////////////////////////////////////////
     // 横軸判定
@@ -95,7 +92,7 @@ const int UPDOWN_SPEED = 500;
     // 縦軸判定
     ///////////////////////////////////////////////////////////////
     float dy;
-    if (![self _isUpLimit] && ![self _isDownLimit]) {
+    if (!([self _isUpLimit] || [self _isDownLimit])) {
         dy = (self._isUp) ? self._vy * dt : - self._vy * dt;
     }
     
@@ -110,12 +107,14 @@ const int UPDOWN_SPEED = 500;
 }
 
 - (BOOL)_isDownLimit {
-    return !self._isUp && self.position.y < - self._sprite.contentSize.height;
+    CCLOG(@"%f, %f", self.position.y, -self._sprite.contentSize.height);
+    return !self._isUp && self.position.y < - self._sprite.contentSize.height / 2;
 }
 
 - (CGRect)getRect {
-    return CGRectMake(self.position.x - self.contentSize.width / 2,
+    CGRect rect = CGRectMake(self.position.x - self.contentSize.width / 2,
                       self.position.y - self.contentSize.height / 2,
                       self.contentSize.width, self.contentSize.height);
+    return rect;
 }
 @end

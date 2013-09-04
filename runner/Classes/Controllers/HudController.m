@@ -21,19 +21,20 @@
 @property (nonatomic, readwrite)int _currentDistance, _exp;
 @property (nonatomic, retain)CCLabelTTF *_coinNumLabel, *_distanceLabel;
 @property (nonatomic, retain)CCSprite *_coinBonus;
-@property (nonatomic, retain)CCLabelTTF *_coinBonusLabel;
-@property (nonatomic, retain)CCSprite *_speedUp, *_fever;
-@property (nonatomic, retain)CCSpriteButton *_stopSprite, *_playSprite;
-@property (nonatomic, readwrite)BOOL _isPausing;
+@property (nonatomic, retain)CCLabelTTF *_coinBonusLabel, *_expLabel;
+@property (nonatomic, retain)CCSprite *_speedUp, *_fever, *_expBar;
+@property (nonatomic, retain)CCSpriteButton *_stopSprite;
 @property (nonatomic, retain)Pause *_pause;
 @end
 
 @implementation HudController
+const int COIN_BONUS_EFFECT_X = 300;
+const float EXP_BAR_FULL = 234;
 
 - (id)init {
     self = [super init];
 	if (self) {
-        self._isPausing = false;
+        self.isPausing = false;
     }
     return self;
 }
@@ -58,6 +59,12 @@
     coinUnit.position = [PointUtil getPosition:122 y:20];
     [coinBaseSprite addChild:coinUnit];
 
+    // 停止/再生ボタン
+    self._stopSprite = [CCSpriteButton spriteWithSpriteFrameName:@"stop_btn.png"];
+    [self._stopSprite addClickListner:self selector:@selector(clickStopButton:)];
+    [PointUtil setTLPosition:self._stopSprite x:20 y:20];
+    [[GameScene sharedInstance].hudLayer addChild:self._stopSprite];
+    
     // スピードアップエフェクト追加
     self._speedUp = [CCSprite spriteWithSpriteFrameName:@"speed_up.png"];
     [PointUtil setTLPosition:self._speedUp x:339 y:84];
@@ -72,7 +79,7 @@
 
     // コインボーナスエフェクト追加
     self._coinBonus = [CCSprite spriteWithSpriteFrameName:@"coin_bonus.png"];
-    [PointUtil setTLPosition:self._coinBonus x:BASE_WIDTH y:84];
+    [PointUtil setTLPosition:self._coinBonus x:-COIN_BONUS_EFFECT_X y:100];
     self._coinBonusLabel = [LabelUtil createLabel:@"" fontSize:42 dimensions:CGSizeMake(100, 30) alignment:kCCTextAlignmentLeft];
     self._coinBonusLabel.color = [ColorUtil getEffectOrangeColor];
     self._coinBonusLabel.position = [PointUtil getPosition:235 y:16];
@@ -80,17 +87,22 @@
     self._coinBonus.visible = NO;
     [[GameScene sharedInstance].hudLayer addChild:self._coinBonus];
     
-    // 停止/再生ボタン
-    self._stopSprite = [CCSpriteButton spriteWithSpriteFrameName:@"stop_btn.png"];
-    [self._stopSprite addClickListner:self selector:@selector(clickStopButton:)];
-    [PointUtil setTLPosition:self._stopSprite x:20 y:20];
-    [[GameScene sharedInstance].hudLayer addChild:self._stopSprite];    
-
-    self._playSprite = [CCSpriteButton spriteWithSpriteFrameName:@"play_btn.png"];
-    [self._playSprite addClickListner:self selector:@selector(clickPlayButton:)];
-    [PointUtil setTLPosition:self._playSprite x:20 y:20];
-    [[GameScene sharedInstance].hudLayer addChild:self._playSprite];
-
+    // expバー
+    self._expBar = [CCSprite spriteWithSpriteFrameName:@"exp_bar_yellow.png"];
+    self._expBar.scaleX = 0;
+    self._expBar.anchorPoint = ccp(0, 0.5);
+    [PointUtil setTLPosition:self._expBar x:246 y:580];
+    [[GameScene sharedInstance].hudLayer addChild:self._expBar];
+    
+    CCSprite *expBarBase = [CCSprite spriteWithSpriteFrameName:@"exp_bar.png"];
+    [PointUtil setTLPosition:expBarBase x:236 y:580];
+    [[GameScene sharedInstance].hudLayer addChild:expBarBase];
+    
+    self._expLabel = [LabelUtil createLabel:@"" fontSize:28];
+    self._expLabel.position = ccp(expBarBase.contentSize.width / 2, 2 * expBarBase.contentSize.height / 5);
+    self._expLabel.color = [ColorUtil getEffectOrangeColor];
+    [expBarBase addChild:self._expLabel];
+    
     // 停止ビュー
     self._pause = [Pause node];
     
@@ -106,7 +118,6 @@
     self._speedUp = nil;
     self._fever = nil;
     self._stopSprite = nil;
-    self._playSprite = nil;
     self._pause = nil;
     [super dealloc];
 }
@@ -120,17 +131,15 @@
 - (void)sync {
     [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", self._totalCoinNum]];
     [self._distanceLabel setString:[NSString stringWithFormat:@"%dM", self._currentDistance]];
-    if (self._isPausing) {
+    if (self.isPausing) {
         self._stopSprite.visible = NO;
-        self._playSprite.visible = YES;
         self._stopSprite.isEnabled = NO;
-        self._playSprite.isEnabled = YES;
     } else {
         self._stopSprite.visible = YES;
-        self._playSprite.visible = NO;
         self._stopSprite.isEnabled = YES;
-        self._playSprite.isEnabled = NO;
     }
+    [self._expLabel setString:[NSString stringWithFormat:@"%d/100", self._exp]];
+    self._expBar.scaleX = EXP_BAR_FULL * self._exp / 100;
 }
 
 - (void)addCoin:(int)num {
@@ -160,7 +169,7 @@
 - (void)addCoinBonus:(int)num playerNo:(int)playerNo {
     self._coinBonus.visible = YES;
     [self._coinBonusLabel setString:[NSString stringWithFormat:@"+%d", num]];
-    [self._coinBonus runAction:[CommonAnimation getEffectAppearAction]];
+    [self._coinBonus runAction:[CommonAnimation getEffectAppearAction:COIN_BONUS_EFFECT_X + 20]];
     self._totalCoinNum += num;
     switch (playerNo) {
         case 1:
@@ -200,10 +209,10 @@
 }
 
 - (void)addExp:(int)num {
-    self._exp += num;
-    if (self._exp > 0) { // TODO: 本当は100以上
-        self._exp = 0;
-//        [[GameScene sharedInstance] fever];
+    self._exp = min(self._exp + num, 100);
+    [self sync];
+    if (self._exp >= 100) {
+        [[GameScene sharedInstance] fever];
     }
 }
 
@@ -215,16 +224,9 @@
     [self._speedUp runAction:[CommonAnimation getNotificationAction]];
 }
 
-- (void)clickPlayButton:(id)sender {
-    [self._pause stageOff];
-    self._isPausing = false;
-    [[GameScene sharedInstance] start];
-    [self sync];
-}
-
 - (void)clickStopButton:(id)sender {
-    self._isPausing = true;
-    [[GameScene sharedInstance] stop];
+    self.isPausing = true;
+    [[GameScene sharedInstance] suspend];
     [self sync];
     [self._pause stageOn];
 }
