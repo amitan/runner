@@ -16,6 +16,7 @@
 
 // ギミック配置
 - (void)stageOn:(CCNode*)page;
+- (void)stageOff;
 - (void)start;
 - (void)stop;
 - (void)reset;
@@ -23,6 +24,7 @@
 // プロパティ取得
 - (CGRect)getLayerBasedBox;
 - (CGRect)getLayerBasedBox:(CCSprite*)sprite;
+- (CGPoint)getLayerBasedPosition;
 - (float)getWidth;
 - (float)getHeight;
 

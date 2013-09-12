@@ -32,6 +32,8 @@
 - (void)jump;
 - (void)trampoline;
 - (BOOL)deadIfBulletCollided:(CGPoint)position;
+- (void)getOff:(CGPoint)position func:(id)func;
+- (void)goDown:(id)func;
 
 // スピードアップ
 - (void)speedUp;

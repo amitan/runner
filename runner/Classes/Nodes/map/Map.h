@@ -14,6 +14,8 @@
     
 }
 @property (nonatomic, readwrite)BOOL isPlaying;
+@property (nonatomic, readwrite)float _currentRight;
+@property (nonatomic, retain)NSMutableArray *_pages;
 
 // マップにページを追加する
 - (void)addPage:(Page *)page;

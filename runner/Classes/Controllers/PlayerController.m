@@ -98,6 +98,16 @@
     }]];
 }
 
+- (void)getOff:(CGPoint)position {
+    [self._player getOff:position func:[CCCallBlock actionWithBlock:^{
+        [[GameScene sharedInstance].mapController flyDown];
+        [self._player goDown:[CCCallBlock actionWithBlock:^{
+            self._isFlying = false;
+            [self._player start];
+        }]];
+    }]];
+}
+
 - (void)fly {
     self._isFlying = true;
     [self._plane start];

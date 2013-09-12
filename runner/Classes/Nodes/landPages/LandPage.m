@@ -34,8 +34,6 @@
     self._land = nil;
     self._lastCoin = nil;
     self._blocks = nil;
-    self._coins = nil;
-    self._enemies = nil;
     self._switches = nil;
     self._trampolines = nil;
     self._rails = nil;
@@ -46,12 +44,6 @@
     [super start];
     for (Block *block in self._blocks) {
         [block start];
-    }
-    for (Coin *coin in self._coins) {
-        [coin start];
-    }
-    for (Enemy *enemy in self._enemies) {
-        [enemy start];
     }
     for (Switch *sw in self._switches) {
         [sw start];
@@ -68,12 +60,6 @@
     [super stop];
     for (Block *block in self._blocks) {
         [block stop];
-    }
-    for (Coin *coin in self._coins) {
-        [coin stop];
-    }
-    for (Enemy *enemy in self._enemies) {
-        [enemy stop];
     }
     for (Switch *sw in self._switches) {
         [sw stop];
@@ -92,14 +78,6 @@
     for (Block *block in self._blocks) {
         [block reset];
         [block stageOn:self];
-    }
-    for (Coin *coin in self._coins) {
-        [coin reset];
-        [coin stageOn:self];
-    }
-    for (Enemy *enemy in self._enemies) {
-        [enemy reset];
-        [enemy stageOn:self];
     }
     for (Switch *sw in self._switches) {
         [sw reset];
@@ -191,7 +169,6 @@
     for (Enemy *enemy in self._enemies) {
         if ([enemy isEnemyHit:point direction:direction]) return true;
     }
-    return false;    
+    return false;
 }
-
 @end

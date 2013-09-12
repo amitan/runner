@@ -22,7 +22,7 @@
 @property (nonatomic, retain)CCSprite *_playerSprite;
 @property (nonatomic, readwrite)BOOL _onGround, _isAdjusting, _isReverse, _onTopBlock, _onRailed;
 @property (nonatomic, readwrite)float _vx, _vy;
-@property (nonatomic, readwrite)float _properPositionX;
+@property (nonatomic, readwrite)CGPoint _properPosition;
 @property (nonatomic, readwrite)float _limitLeftX, _limitRightX, _limitY;
 @property (nonatomic, retain)Rail *_currentRail;
 @end
@@ -71,9 +71,23 @@ const int BLOCK_TOP_REFLECTION = -10;
 
 - (void)stageOn {
     self._isStaged = true;
-    [PointUtil setPosition:self x:INIT_PLAYER_X y:520 offsetX:0 offsetY:-self._playerSprite.contentSize.height / 2];
-    self._properPositionX = self.position.x;
+    [PointUtil setPosition:self x:INIT_PLAYER_X y:520 offsetX:0 offsetY:-[self getHeight] / 2];
+    self._properPosition = self.position;
     [[GameScene sharedInstance].gameLayer addChild:self z:INIT_PLAYER_Z];
+}
+
+- (void)getOff:(CGPoint)position func:(id)func {
+    [self removeFromParentAndCleanup:NO];
+    self.position = ccpAdd(position, ccp(0, self._playerSprite.contentSize.height / 2));
+    [[GameScene sharedInstance].gameLayer addChild:self z:INIT_PLAYER_Z];
+    [self runAction:[CCSequence actions:[CCMoveBy actionWithDuration:0.2f position:ccp(0, [PointUtil getPoint:100])], func, nil]];
+}
+
+- (void)goDown:(id)func {
+    id moveDown = [CCMoveTo actionWithDuration:1.0f position:ccpAdd(self._properPosition, ccp(0, -[self getHeight] / 2))];
+    id backRotate = [CCRotateBy actionWithDuration:0.8f angle:-720];
+    id knockBack = [CCSpawn actions:moveDown, backRotate, nil];
+    [self runAction:[CCSequence actions:knockBack, func, nil]];
 }
 
 - (void)stageOff {
@@ -254,14 +268,14 @@ const int BLOCK_TOP_REFLECTION = -10;
     
     if (!isXHit) {
         if (self._isAdjusting) { // 場所調整中
-            if (self._properPositionX <= self.position.x) {
+            if (self._properPosition.x <= self.position.x) {
                 self._isAdjusting = false;
-                x = self._properPositionX;
+                x = self._properPosition.x;
             } else {
                 x = self.position.x + [PointUtil getPoint:1];
             }
         } else { // 規定値より後ろにいる場合
-            if (self._properPositionX - [PointUtil getPoint:50] > self.position.x) {
+            if (self._properPosition.x - [PointUtil getPoint:50] > self.position.x) {
                 self._isAdjusting = true;
             }
         }

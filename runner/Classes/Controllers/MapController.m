@@ -18,7 +18,7 @@
 
 @interface MapController ()
 @property (nonatomic, readwrite)CGPoint _tempPosition;
-@property (nonatomic, readwrite)BOOL _isFlying;
+@property (nonatomic, readwrite)BOOL _isFlyingUp, _isFlyingDown;
 @end
 
 @implementation MapController
@@ -26,7 +26,8 @@
 - (id)init {
     self = [super init];
 	if (self) {
-        self._isFlying = false;
+        self._isFlyingUp = false;
+        self._isFlyingDown = false;
     }
     return self;
 }
@@ -85,25 +86,41 @@
 
 - (void)flyUp {
     self._tempPosition = self.landMap.position;
-    self._isFlying = true;
+    self._isFlyingUp = true;
     [self.skyMap start];
+    [self.landMap restructure];
+    [self scheduleUpdate];
+}
+
+- (void)flyDown {
+    self._isFlyingDown = true;
     [self scheduleUpdate];
 }
 
 - (void)update:(ccTime)dt {
-    if (self._isFlying) {
+    if (self._isFlyingUp) {
         if (self.landMap.position.y < self._tempPosition.y - BASE_HEIGHT) {
-            self._isFlying = false;
-            [[GameScene sharedInstance].playerController fly];
+            self._isFlyingUp = false;
             [self.landMap stop];
-            [self unscheduleUpdate];
+            [[GameScene sharedInstance].playerController fly];
         } else {
             float dx = [PointUtil getPoint:10];
             float dy = [PointUtil getPoint:10];
-            self.landMap.position = ccp(self.landMap.position.x - dx, self.landMap.position.y - dy);
-            self.skyMap.position = ccp(self.skyMap.position.x - dx, self.skyMap.position.y - dy);
+            self.landMap.position = ccpAdd(self.landMap.position, ccp(-dx, -dy));
+            self.skyMap.position = ccpAdd(self.skyMap.position, ccp(-dx, -dy));
             [[GameScene sharedInstance].hudController addDistance:dx];
         }
+    } else if (self._isFlyingDown) {
+        if (self.landMap.position.y >= self._tempPosition.y) {
+            self._isFlyingDown = false;
+            self.landMap.position = ccp(self.landMap.position.x, self._tempPosition.y);
+            [self.skyMap restructure];
+        } else {
+            float dy = [PointUtil getPoint:10];
+            self.landMap.position = ccpAdd(self.landMap.position, ccp(0, dy));
+            self.skyMap.position = ccpAdd(self.skyMap.position, ccp(0, dy));
+        }
+        
     } else {
         [self unscheduleUpdate];
     }

@@ -43,5 +43,6 @@
 
 // 必要に応じてページの追加/削除を行う
 - (void)refillIfNeeded;
+- (void)restructure;
 
 @end

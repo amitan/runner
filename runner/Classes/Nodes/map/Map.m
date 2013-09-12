@@ -11,8 +11,6 @@
 
 @interface Map ()
 @property (nonatomic, readwrite)int _stageId;
-@property (nonatomic, readwrite)float _currentRight;
-@property (nonatomic, retain)NSMutableArray *_pages;
 @property (nonatomic, readwrite)int _pageNum;
 @end
 

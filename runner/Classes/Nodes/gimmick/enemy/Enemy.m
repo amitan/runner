@@ -10,6 +10,7 @@
 #import "PointUtil.h"
 #import "StandardEnemy.h"
 #import "SkyEnemy.h"
+#import "HalfNeedleEnemy.h"
 #import "NeedleEnemy.h"
 #import "EnemyAnimation.h"
 
@@ -24,9 +25,11 @@
 }
 
 + (Enemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y {
-    if (enemyId >= 100) {
+    if (enemyId >= 100 && enemyId < 200) {
         return [SkyEnemy createEnemy:enemyId x:x y:y];
-    } else if (enemyId >= 200) {
+    } else if (enemyId == 200) {
+        return [HalfNeedleEnemy createEnemy:enemyId x:x y:y];
+    } else if (enemyId == 201) {
         return [NeedleEnemy createEnemy:enemyId x:x y:y];
     }
     return [StandardEnemy createEnemy:enemyId x:x y:y];
@@ -84,6 +87,10 @@
 }
 
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction {
+    return true;
+}
+
+- (BOOL)isEnemyHit:(CGPoint)point radius:(float)radius {
     return true;
 }
 

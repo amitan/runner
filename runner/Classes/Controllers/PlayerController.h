@@ -23,6 +23,7 @@
 - (void)touchEnd;
 - (void)trampoline;
 - (void)ride;
+- (void)getOff:(CGPoint)position;
 - (void)speedUp;
 - (void)fly;
 - (BOOL)deadIfBulletCollided:(CGPoint)position;

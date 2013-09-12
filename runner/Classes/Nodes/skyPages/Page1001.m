@@ -8,6 +8,7 @@
 
 #import "Page1001.h"
 #import "Coin.h"
+#import "Enemy.h"
 
 @implementation Page1001
 
@@ -36,6 +37,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-50],
                         [Coin createCoin:C_STANDARD x:850 y:-50],
                         [Coin createCoin:C_STANDARD x:900 y:-50],
+                        [Coin createCoin:C_STANDARD x:950 y:-50],
                         [Coin createCoin:C_STANDARD x:50 y:-100],
                         [Coin createCoin:C_STANDARD x:100 y:-100],
                         [Coin createCoin:C_STANDARD x:150 y:-100],
@@ -54,6 +56,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-100],
                         [Coin createCoin:C_STANDARD x:850 y:-100],
                         [Coin createCoin:C_STANDARD x:900 y:-100],
+                        [Coin createCoin:C_STANDARD x:950 y:-100],
                         [Coin createCoin:C_STANDARD x:50 y:-150],
                         [Coin createCoin:C_STANDARD x:100 y:-150],
                         [Coin createCoin:C_STANDARD x:150 y:-150],
@@ -72,6 +75,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-150],
                         [Coin createCoin:C_STANDARD x:850 y:-150],
                         [Coin createCoin:C_STANDARD x:900 y:-150],
+                        [Coin createCoin:C_STANDARD x:950 y:-150],
                         [Coin createCoin:C_STANDARD x:50 y:-200],
                         [Coin createCoin:C_STANDARD x:100 y:-200],
                         [Coin createCoin:C_STANDARD x:150 y:-200],
@@ -90,6 +94,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-200],
                         [Coin createCoin:C_STANDARD x:850 y:-200],
                         [Coin createCoin:C_STANDARD x:900 y:-200],
+                        [Coin createCoin:C_STANDARD x:950 y:-200],
                         [Coin createCoin:C_STANDARD x:50 y:-250],
                         [Coin createCoin:C_STANDARD x:100 y:-250],
                         [Coin createCoin:C_STANDARD x:150 y:-250],
@@ -108,6 +113,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-250],
                         [Coin createCoin:C_STANDARD x:850 y:-250],
                         [Coin createCoin:C_STANDARD x:900 y:-250],
+                        [Coin createCoin:C_STANDARD x:950 y:-250],
                         [Coin createCoin:C_STANDARD x:50 y:-300],
                         [Coin createCoin:C_STANDARD x:100 y:-300],
                         [Coin createCoin:C_STANDARD x:150 y:-300],
@@ -126,6 +132,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-300],
                         [Coin createCoin:C_STANDARD x:850 y:-300],
                         [Coin createCoin:C_STANDARD x:900 y:-300],
+                        [Coin createCoin:C_STANDARD x:950 y:-300],
                         [Coin createCoin:C_STANDARD x:50 y:-350],
                         [Coin createCoin:C_STANDARD x:100 y:-350],
                         [Coin createCoin:C_STANDARD x:150 y:-350],
@@ -144,6 +151,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-350],
                         [Coin createCoin:C_STANDARD x:850 y:-350],
                         [Coin createCoin:C_STANDARD x:900 y:-350],
+                        [Coin createCoin:C_STANDARD x:950 y:-350],
                         [Coin createCoin:C_STANDARD x:50 y:-400],
                         [Coin createCoin:C_STANDARD x:100 y:-400],
                         [Coin createCoin:C_STANDARD x:150 y:-400],
@@ -162,6 +170,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-400],
                         [Coin createCoin:C_STANDARD x:850 y:-400],
                         [Coin createCoin:C_STANDARD x:900 y:-400],
+                        [Coin createCoin:C_STANDARD x:950 y:-400],
                         [Coin createCoin:C_STANDARD x:50 y:-450],
                         [Coin createCoin:C_STANDARD x:100 y:-450],
                         [Coin createCoin:C_STANDARD x:150 y:-450],
@@ -180,6 +189,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-450],
                         [Coin createCoin:C_STANDARD x:850 y:-450],
                         [Coin createCoin:C_STANDARD x:900 y:-450],
+                        [Coin createCoin:C_STANDARD x:950 y:-450],
                         [Coin createCoin:C_STANDARD x:50 y:-500],
                         [Coin createCoin:C_STANDARD x:100 y:-500],
                         [Coin createCoin:C_STANDARD x:150 y:-500],
@@ -198,6 +208,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-500],
                         [Coin createCoin:C_STANDARD x:850 y:-500],
                         [Coin createCoin:C_STANDARD x:900 y:-500],
+                        [Coin createCoin:C_STANDARD x:950 y:-500],
                         [Coin createCoin:C_STANDARD x:50 y:-550],
                         [Coin createCoin:C_STANDARD x:100 y:-550],
                         [Coin createCoin:C_STANDARD x:150 y:-550],
@@ -216,6 +227,7 @@
                         [Coin createCoin:C_STANDARD x:800 y:-550],
                         [Coin createCoin:C_STANDARD x:850 y:-550],
                         [Coin createCoin:C_STANDARD x:900 y:-550],
+                        [Coin createCoin:C_STANDARD x:950 y:-550],
                         [Coin createCoin:C_STANDARD x:50 y:-600],
                         [Coin createCoin:C_STANDARD x:100 y:-600],
                         [Coin createCoin:C_STANDARD x:150 y:-600],
@@ -234,12 +246,54 @@
                         [Coin createCoin:C_STANDARD x:800 y:-600],
                         [Coin createCoin:C_STANDARD x:850 y:-600],
                         [Coin createCoin:C_STANDARD x:900 y:-600],
+                        [Coin createCoin:C_STANDARD x:950 y:-600],
                         ];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
-        }
+        }        
     }
     return self;
+}
+
+- (void)clear {
+    [super clear];
+    for (Enemy *enemy in self._enemies) {
+        [enemy stageOff];
+    }
+    self._enemies = NULL;    
+}
+
+- (void)reset {
+    [self clear];
+    
+    int index = floor(CCRANDOM_0_1() * 8);
+    if (index == 1) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:100 y:-660],
+                          [Enemy createEnemy:E_NEEDLE x:100 y:-570]];
+    } else if (index == 2) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:100 y:-200],
+                          [Enemy createEnemy:E_NEEDLE x:100 y:-110]];
+    } else if (index == 3) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:400 y:-660],
+                          [Enemy createEnemy:E_NEEDLE x:400 y:-570]];
+    } else if (index == 4) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:400 y:-200],
+                          [Enemy createEnemy:E_NEEDLE x:400 y:-110]];
+    } else if (index == 5) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:800 y:-660],
+                          [Enemy createEnemy:E_NEEDLE x:800 y:-570]];
+    } else if (index == 6) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:800 y:-200],
+                          [Enemy createEnemy:E_NEEDLE x:800 y:-110]];
+    } else if (index == 7) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:400 y:-480],
+                          [Enemy createEnemy:E_NEEDLE x:400 y:-390]];
+    }
+    for (Enemy *enemy in self._enemies) {
+        [enemy stageOn:self];
+        enemy.zOrder = 10;
+    }
+    [super reset];
 }
 
 @end

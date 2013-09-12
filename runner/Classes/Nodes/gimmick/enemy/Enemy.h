@@ -21,6 +21,7 @@ typedef enum {
     E_SLYME = 2,
     E_ENJIN = 100,
     E_NEEDLE_HALF = 200,
+    E_NEEDLE = 201,
 } ENEMY_TYPE;
 
 
@@ -36,6 +37,7 @@ typedef enum {
 
 // 座標が敵に含まれているか判定する
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction;
+- (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius;
 - (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction;
 - (BOOL)_isHit:(CGPoint)point;
 

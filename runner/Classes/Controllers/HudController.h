@@ -39,6 +39,7 @@
 // EXPを加算/取得する
 - (void)addExp:(int)num;
 - (void)fever;
+- (void)stopFever;
 
 // 演出を表示する
 - (void)showSpeedUpEffect;

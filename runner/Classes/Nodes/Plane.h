@@ -19,11 +19,13 @@
 // 動作を開始/停止する
 - (void)start;
 - (void)stop;
+- (void)reset;
 
 // アクション
 - (void)takeOff:(id)func;
 - (void)flyUp;
 - (void)flyDown;
 - (void)climbout;
+- (void)flyAway;
 
 @end

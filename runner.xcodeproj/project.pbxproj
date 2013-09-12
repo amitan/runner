@@ -40,7 +40,7 @@
 		F922C95A17D1ED94005177A2 /* SkyEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95917D1ED93005177A2 /* SkyEnemy.m */; };
 		F922C95D17D24089005177A2 /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95C17D24085005177A2 /* Gun.m */; };
 		F922C96017D25586005177A2 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95F17D25582005177A2 /* Bullet.m */; };
-		F922C96317D32A7C005177A2 /* NeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C96217D32A7B005177A2 /* NeedleEnemy.m */; };
+		F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */; };
 		F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61B17C22FD7007CF0CF /* ConversationLayer.m */; };
 		F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */; };
 		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
@@ -200,6 +200,7 @@
 		F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */; };
 		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
 		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
+		F96DDCF717DCBE8600DE88D0 /* NeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F96DDCF617DCBE8600DE88D0 /* NeedleEnemy.m */; };
 		F99DFA9E17B93707001E1EA8 /* towner.plist in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9C17B93707001E1EA8 /* towner.plist */; };
 		F99DFA9F17B93707001E1EA8 /* towner.png in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9D17B93707001E1EA8 /* towner.png */; };
 		F99DFAA217B9466C001E1EA8 /* HomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA117B9466C001E1EA8 /* HomeScene.m */; };
@@ -321,8 +322,8 @@
 		F922C95C17D24085005177A2 /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
 		F922C95E17D2557D005177A2 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		F922C95F17D25582005177A2 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
-		F922C96117D32A79005177A2 /* NeedleEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeedleEnemy.h; sourceTree = "<group>"; };
-		F922C96217D32A7B005177A2 /* NeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeedleEnemy.m; sourceTree = "<group>"; };
+		F922C96117D32A79005177A2 /* HalfNeedleEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfNeedleEnemy.h; sourceTree = "<group>"; };
+		F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfNeedleEnemy.m; sourceTree = "<group>"; };
 		F923F61A17C22FD7007CF0CF /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
 		F923F61B17C22FD7007CF0CF /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
 		F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpenterConversationLayer.h; sourceTree = "<group>"; };
@@ -652,6 +653,8 @@
 		F93DF6C3178B1F54007AD085 /* CommonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAnimation.m; sourceTree = "<group>"; };
 		F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterfaceLayer.h; sourceTree = "<group>"; };
 		F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInterfaceLayer.m; sourceTree = "<group>"; };
+		F96DDCF517DCBE8600DE88D0 /* NeedleEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeedleEnemy.h; sourceTree = "<group>"; };
+		F96DDCF617DCBE8600DE88D0 /* NeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeedleEnemy.m; sourceTree = "<group>"; };
 		F99DFA9C17B93707001E1EA8 /* towner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = towner.plist; sourceTree = "<group>"; };
 		F99DFA9D17B93707001E1EA8 /* towner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = towner.png; sourceTree = "<group>"; };
 		F99DFAA017B9466C001E1EA8 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScene.h; sourceTree = "<group>"; };
@@ -842,8 +845,10 @@
 				F922C95617D1E887005177A2 /* StandardEnemy.m */,
 				F922C95817D1ED92005177A2 /* SkyEnemy.h */,
 				F922C95917D1ED93005177A2 /* SkyEnemy.m */,
-				F922C96117D32A79005177A2 /* NeedleEnemy.h */,
-				F922C96217D32A7B005177A2 /* NeedleEnemy.m */,
+				F922C96117D32A79005177A2 /* HalfNeedleEnemy.h */,
+				F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */,
+				F96DDCF517DCBE8600DE88D0 /* NeedleEnemy.h */,
+				F96DDCF617DCBE8600DE88D0 /* NeedleEnemy.m */,
 			);
 			path = enemy;
 			sourceTree = "<group>";
@@ -1896,7 +1901,8 @@
 				F922C95A17D1ED94005177A2 /* SkyEnemy.m in Sources */,
 				F922C95D17D24089005177A2 /* Gun.m in Sources */,
 				F922C96017D25586005177A2 /* Bullet.m in Sources */,
-				F922C96317D32A7C005177A2 /* NeedleEnemy.m in Sources */,
+				F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */,
+				F96DDCF717DCBE8600DE88D0 /* NeedleEnemy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

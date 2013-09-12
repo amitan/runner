@@ -13,6 +13,6 @@
 @interface SkyEnemy : Enemy {
     
 }
-+ (Enemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y;
++ (SkyEnemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y;
 
 @end

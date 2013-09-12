@@ -18,7 +18,7 @@
 	if (self) {
         self.isPlaying = false;
         self.isStaged = false;
-        self.appearNum = 1;
+        [self resetAppearNum];
     }
     return self;
 }
@@ -33,16 +33,46 @@
     return false;
 }
 
+- (void)resetAppearNum {
+    self.appearNum = 1;
+}
+
+- (void)dealloc {
+    self._coins = nil;
+    self._enemies = nil;
+    [super dealloc];
+}
+
 - (void)start {
     self.isPlaying = true;
+    for (Coin *coin in self._coins) {
+        [coin start];
+    }
+    for (Enemy *enemy in self._enemies) {
+        [enemy start];
+    }
 }
 
 - (void)stop {
     self.isPlaying = false;
+    for (Coin *coin in self._coins) {
+        [coin stop];
+    }
+    for (Enemy *enemy in self._enemies) {
+        [enemy stop];
+    }
 }
 
 - (void)reset {
     self.appearNum++;
+    for (Coin *coin in self._coins) {
+        [coin reset];
+        [coin stageOn:self];
+    }
+    for (Enemy *enemy in self._enemies) {
+        [enemy reset];
+        [enemy stageOn:self];
+    }
 }
 
 - (void)stageOn:(CCNode*)map {
@@ -60,5 +90,9 @@
 - (float)getWidth {
     return 0;
 }
+
+- (void)clear {
+}
+
 
 @end

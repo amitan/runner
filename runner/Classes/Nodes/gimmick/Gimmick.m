@@ -22,6 +22,10 @@
     }
 }
 
+- (void)stageOff {
+    [self removeFromParentAndCleanup:NO];
+}
+
 - (CGRect)getLayerBasedBox {
     return CGRectMake(self.position.x + [self parent].position.x - [self getWidth] / 2,
                       self.position.y + [self parent].position.y - [self getHeight] / 2,
@@ -32,6 +36,11 @@
     return CGRectMake(self.position.x + [self parent].position.x + sprite.position.x - sprite.contentSize.width / 2,
                       self.position.y + [self parent].position.y + sprite.position.y - sprite.contentSize.height / 2,
                       sprite.contentSize.width, sprite.contentSize.height);
+}
+
+- (CGPoint)getLayerBasedPosition {
+    return ccp(self.position.x + [self parent].position.x,
+               self.position.y + [self parent].position.y);
 }
 
 - (float)getWidth {

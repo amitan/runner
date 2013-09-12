@@ -10,13 +10,13 @@
 #import "GameScene.h"
 #import "GameUtil.h"
 #import "SkyPage.h"
+#import "PointUtil.h"
 
 @interface SkyMap ()
 @property (nonatomic, readwrite)int _stageId;
-@property (nonatomic, retain)NSMutableArray *_pages;
 @end
 @implementation SkyMap
-const int INIT_SKY_PAGE_NUM = 1;
+const int INIT_SKY_PAGE_NUM = 2;
 const int MIN_SKY_PAGE_STOCK_NUM = 3;
 
 + (SkyMap*)createMap:(int)stageId {
@@ -33,8 +33,8 @@ const int MIN_SKY_PAGE_STOCK_NUM = 3;
         
         // 初期ページを追加
         PageController *pageController = [GameScene sharedInstance].pageController;
-        for (int i = 0; i <= INIT_SKY_PAGE_NUM; i++) {
-            [self addPage:[pageController getPageBy:i + SKY_PAGE_BASE_ID]];
+        for (int i = 0; i < INIT_SKY_PAGE_NUM; i++) {
+            [self addPage:[pageController getPageBy:SKY_PAGE_BASE_ID]];
         }
     }
     return self;
@@ -44,6 +44,12 @@ const int MIN_SKY_PAGE_STOCK_NUM = 3;
     SkyPage *currentPage = [self getCurrentPage:center];
     CGPoint location = ccpSub(center, self.position);
     [currentPage takeCoinsIfCollided:location radius:radius];
+}
+
+- (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius {
+    SkyPage *currentPage = [self getCurrentPage:center];
+    CGPoint location = ccpSub(center, self.position);
+    return [currentPage isEnemyHit:location radius:radius];
 }
 
 - (SkyPage*)getCurrentPage:(CGPoint)point {
@@ -72,6 +78,21 @@ const int MIN_SKY_PAGE_STOCK_NUM = 3;
     }
     if (self._pages.count < MIN_SKY_PAGE_STOCK_NUM) {
         [self addPage:[[GameScene sharedInstance].pageController getSkyPage]];
+    }
+}
+
+- (void)restructure {
+    for (Page *page in self._pages) {
+        [page stageOff];
+    }
+    self.position = ccp(0, self.position.y);
+    PageController *pageController = [GameScene sharedInstance].pageController;
+    [pageController resetPages:SKY_PAGE_BASE_ID];
+    self._currentRight = 0;
+    self._pages = [NSMutableArray arrayWithCapacity:5];
+    for (int i = 0; i < INIT_SKY_PAGE_NUM; i++) {
+        Page *page = [pageController getPageBy:SKY_PAGE_BASE_ID];
+        [self addPage:page];
     }
 }
 

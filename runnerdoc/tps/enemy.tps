@@ -153,6 +153,9 @@
             <filename>../sprites/enemy/enemy200_left1.png</filename>
             <filename>../sprites/enemy/enemy200_left2.png</filename>
             <filename>../sprites/enemy/enemy200_left3.png</filename>
+            <filename>../sprites/enemy/enemy201_left1.png</filename>
+            <filename>../sprites/enemy/enemy201_left2.png</filename>
+            <filename>../sprites/enemy/enemy201_left3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

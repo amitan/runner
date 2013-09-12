@@ -13,9 +13,9 @@
 @interface SkyPage : Page {
     
 }
-@property (nonatomic, retain)NSArray *_coins;
 
 // 衝突判定
 - (BOOL)takeCoinsIfCollided:(CGPoint)center radius:(float)radius;
+- (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius;
 
 @end

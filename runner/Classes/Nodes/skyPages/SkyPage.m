@@ -11,6 +11,7 @@
 #import "Coin.h"
 #import "Page1000.h"
 #import "Page1001.h"
+#import "Enemy.h"
 
 @implementation SkyPage
 
@@ -23,30 +24,15 @@
     return false;
 }
 
-- (void)start {
-    [super start];
-    for (Coin *coin in self._coins) {
-        [coin start];
+- (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius {
+    for (Enemy *enemy in self._enemies) {
+        if ([enemy isEnemyHit:center radius:radius]) return true;
     }
-}
-
-- (void)stop {
-    [super stop];
-    for (Coin *coin in self._coins) {
-        [coin stop];
-    }
-}
-
-- (void)reset {
-    [super reset];
-    for (Coin *coin in self._coins) {
-        [coin reset];
-        [coin stageOn:self];
-    }
+    return false;
 }
 
 - (float)getWidth {
-    return [PointUtil getPoint:960];
+    return [PointUtil getPoint:950];
 }
 
 @end

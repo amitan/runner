@@ -220,6 +220,11 @@ const float EXP_BAR_FULL = 234;
     [self._fever runAction:[CommonAnimation getBlinkAction]];
 }
 
+- (void)stopFever {
+    [self._fever stopAllActions];
+    self._fever.visible = NO;
+}
+
 - (void)showSpeedUpEffect {
     [self._speedUp runAction:[CommonAnimation getNotificationAction]];
 }

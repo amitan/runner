@@ -121,10 +121,49 @@
                 <key>sourceSize</key>
                 <string>{132,66}</string>
             </dict>
+            <key>enemy201_left1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,273},{180,180}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{180,180}}</string>
+                <key>sourceSize</key>
+                <string>{180,180}</string>
+            </dict>
+            <key>enemy201_left2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,273},{180,180}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{180,180}}</string>
+                <key>sourceSize</key>
+                <string>{180,180}</string>
+            </dict>
+            <key>enemy201_left3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,273},{180,180}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{180,180}}</string>
+                <key>sourceSize</key>
+                <string>{180,180}</string>
+            </dict>
             <key>enemy2_left1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,273},{59,48}}</string>
+                <string>{{187,273},{59,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +176,7 @@
             <key>enemy2_left2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{66,273},{59,44}}</string>
+                <string>{{3,457},{59,44}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +189,7 @@
             <key>enemy2_left3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{129,273},{63,39}}</string>
+                <string>{{66,457},{63,39}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -170,7 +209,7 @@
             <key>size</key>
             <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d2ac517f87d5c90d03a0ef4b7eb72f03$</string>
+            <string>$TexturePacker:SmartUpdate:ee3c46a1863ac88d56b1c6179ab15788$</string>
             <key>textureFileName</key>
             <string>enemy.png</string>
         </dict>

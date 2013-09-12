@@ -33,5 +33,6 @@
 - (void)scroll:(float)dx;
 - (void)skyScroll:(float)dx;
 - (void)flyUp;
+- (void)flyDown;
 
 @end

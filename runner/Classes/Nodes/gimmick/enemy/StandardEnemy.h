@@ -13,6 +13,6 @@
 @interface StandardEnemy : Enemy {
     
 }
-+ (Enemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y;
++ (StandardEnemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y;
 
 @end

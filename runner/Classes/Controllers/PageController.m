@@ -122,4 +122,15 @@ const int INIT_ARRAY_CAPACITY = 5;
     return NULL;
 }
 
+- (void)resetPages:(int)pageId {
+    NSArray *keyArray = [self._pageDictionary objectForKey:[NSString stringWithFormat:@"%d", pageId]];
+    for (NSNumber* pageIdNumber in keyArray) {
+        NSMutableArray *array = [self._dictionary objectForKey:[NSString stringWithFormat:@"%d", [pageIdNumber intValue]]];
+        for (Page* page in array) {
+            [page resetAppearNum];
+            [page clear];
+        }
+    }
+}
+
 @end

@@ -22,8 +22,10 @@
 
 // 必要に応じてページの追加/削除を行う
 - (void)refillIfNeeded;
+- (void)restructure;
 
 // コインを取得しているかチェックする
 - (void)takeItemsIfCollided:(CGPoint)center radius:(float)radius;
+- (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius;
 
 @end

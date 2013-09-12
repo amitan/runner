@@ -19,5 +19,5 @@
 - (LandPage*)getLandPage;
 - (Page*)getSkyPage;
 - (Page*)getPageBy:(int)pageId;
-
+- (void)resetPages:(int)pageId;
 @end
