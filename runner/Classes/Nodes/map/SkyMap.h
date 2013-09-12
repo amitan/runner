@@ -27,5 +27,6 @@
 // コインを取得しているかチェックする
 - (void)takeItemsIfCollided:(CGPoint)center radius:(float)radius;
 - (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius;
+- (BOOL)checkSpeedUp;
 
 @end

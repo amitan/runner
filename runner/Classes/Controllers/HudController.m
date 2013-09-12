@@ -17,7 +17,7 @@
 
 @interface HudController ()
 @property (nonatomic, readwrite)int _totalCoinNum, _player1CoinNum, _player2CoinNum, _player3CoinNum;
-@property (nonatomic, readwrite)float _dx;
+@property (nonatomic, readwrite)float _dx, _skyDx, _landDx;
 @property (nonatomic, readwrite)int _currentDistance, _exp;
 @property (nonatomic, retain)CCLabelTTF *_coinNumLabel, *_distanceLabel;
 @property (nonatomic, retain)CCSprite *_coinBonus;
@@ -30,6 +30,7 @@
 @implementation HudController
 const int COIN_BONUS_EFFECT_X = 300;
 const float EXP_BAR_FULL = 234;
+const float DISTANCE_FACTOR = 128.0f;
 
 - (id)init {
     self = [super init];
@@ -194,8 +195,30 @@ const float EXP_BAR_FULL = 234;
     }
 }
 
+- (void)addSkyDistance:(float)dx {
+    self._skyDx += dx;
+    [self addDistance:dx];
+}
+
+- (void)addLandDistance:(float)dx {
+    self._landDx += dx;
+    [self addDistance:dx];
+}
+
 - (int)getDistance {
-    return self._dx / 128.0f;
+    return self._dx / DISTANCE_FACTOR;
+}
+
+- (int)getSkyDistance {
+    return self._skyDx / DISTANCE_FACTOR;
+}
+
+- (int)getLandDistance {
+    return self._landDx / DISTANCE_FACTOR;
+}
+
+- (void)resetSkyDistance {
+    self._skyDx = 0;
 }
 
 - (int)getPlayer1Coin {
@@ -214,6 +237,10 @@ const float EXP_BAR_FULL = 234;
     if (self._exp >= 100) {
         [[GameScene sharedInstance] fever];
     }
+}
+
+- (void)resetExp {
+    self._exp = 0;
 }
 
 - (void)fever {

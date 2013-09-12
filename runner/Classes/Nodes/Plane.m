@@ -68,6 +68,8 @@ const int UPDOWN_SPEED = 300;
     self._isFlyingAway = false;
     self._sprite.color = [ColorUtil getDefaultColor];
     self.position = self._initPosition;
+    [[GameScene sharedInstance].hudController resetSkyDistance];
+    self._vx = [PointUtil getPoint:INIT_FLYING_SPEED];
 }
 
 - (void)flyDown {
@@ -91,6 +93,7 @@ const int UPDOWN_SPEED = 300;
 - (void)dead {
     [[GameScene sharedInstance].hudController stopFever];
     CGPoint currentPosition = ccpAdd(self.position, self._sprite.position);
+    [[GameScene sharedInstance].hudController resetExp];
     [[GameScene sharedInstance].playerController getOff:currentPosition];
     [self flyAway];
 }
@@ -140,7 +143,19 @@ const int UPDOWN_SPEED = 300;
     ///////////////////////////////////////////////////////////////
     // 位置更新
     ///////////////////////////////////////////////////////////////
-    self.position = ccp(self.position.x, self.position.y + dy);    
+    self.position = ccp(self.position.x, self.position.y + dy);
+    
+    ///////////////////////////////////////////////////////////////
+    // スピードアップ判定
+    ///////////////////////////////////////////////////////////////
+    if ([mapController.skyMap checkSpeedUp]) {
+        [self speedUp];
+    }
+}
+
+- (void)speedUp {
+    [[GameScene sharedInstance].hudController showSpeedUpEffect];
+    self._vx *= 1.2;
 }
 
 - (BOOL)_isUpLimit {

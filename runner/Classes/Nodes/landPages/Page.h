@@ -15,6 +15,7 @@
 }
 @property (nonatomic, readwrite)BOOL isPlaying;
 @property (nonatomic, readwrite)BOOL isStaged;
+@property (nonatomic, readwrite)BOOL isSpeedUp;
 @property (nonatomic, readwrite)int appearNum;
 @property (nonatomic, retain)NSArray *_coins;
 @property (nonatomic, retain)NSArray *_enemies;

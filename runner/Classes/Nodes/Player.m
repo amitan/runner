@@ -20,7 +20,7 @@
 @property (nonatomic, readwrite)BOOL _isStaged, _isBulletHit;
 @property (nonatomic, readwrite)int _jumpNum, _currentJumpNum, _jumpSpeed;
 @property (nonatomic, retain)CCSprite *_playerSprite;
-@property (nonatomic, readwrite)BOOL _onGround, _isAdjusting, _isReverse, _onTopBlock, _onRailed;
+@property (nonatomic, readwrite)BOOL _onGround, _isForwardAdjusting, _isBackAdjusting, _isReverse, _onTopBlock, _onRailed;
 @property (nonatomic, readwrite)float _vx, _vy;
 @property (nonatomic, readwrite)CGPoint _properPosition;
 @property (nonatomic, readwrite)float _limitLeftX, _limitRightX, _limitY;
@@ -48,7 +48,8 @@ const int BLOCK_TOP_REFLECTION = -10;
         self._jumpNum = [[PlayerMaster getInstance] getJumpNum:self._monsterId];
         self._onGround = true;
         self._vx = [PointUtil getPoint:INIT_SCROLL_SPEED];
-        self._isAdjusting = false;
+        self._isForwardAdjusting = false;
+        self._isBackAdjusting = false;
         self._isReverse = false;
         self._limitY = winSize.height / 2 - [PointUtil getPoint:BASE_HEIGHT / 2];
         self._jumpSpeed = [PointUtil getPoint:[[PlayerMaster getInstance] getJumpSpeed:self._monsterId]];
@@ -267,24 +268,50 @@ const int BLOCK_TOP_REFLECTION = -10;
     }
     
     if (!isXHit) {
-        if (self._isAdjusting) { // 場所調整中
+        if (self._isForwardAdjusting) { // 場所調整中
             if (self._properPosition.x <= self.position.x) {
-                self._isAdjusting = false;
+                self._isForwardAdjusting = false;
                 x = self._properPosition.x;
             } else {
-                x = self.position.x + [PointUtil getPoint:1];
+                x = self.position.x + [PointUtil getPoint:2];
             }
-        } else { // 規定値より後ろにいる場合
+        } else if (self._isBackAdjusting) { // 場所調整中
+                if (self._properPosition.x >= self.position.x) {
+                    self._isBackAdjusting = false;
+                    x = self._properPosition.x;
+                } else {
+                    x = self.position.x - [PointUtil getPoint:2];
+                }
+        } else {
+            // 規定値より後ろにいる場合
             if (self._properPosition.x - [PointUtil getPoint:50] > self.position.x) {
-                self._isAdjusting = true;
+                self._isForwardAdjusting = true;
+            
+            // 規定値より前にいる場合
+            } else if (self._properPosition.x + [PointUtil getPoint:50] < self.position.x) {
+                self._isBackAdjusting = true;
             }
         }
     }
     
     // マップスクロール
-    if (self._isReverse) dx *= -1;
-    [mapController scroll:dx];
+    if (!isXHit) {
+        [self scroll:dx];
+    } else {
+        if (!self._isReverse && self._properPosition.x - [PointUtil getPoint:120] < self.position.x) {
+            [self scroll:dx];
+        } else if (self._isReverse && self._properPosition.x + [PointUtil getPoint:150] > self.position.x) {
+            [self scroll:dx];
+        }
+    }
+    
     return x;
+}
+
+- (void)scroll:(float)dx {
+    MapController *mapController = [GameScene sharedInstance].mapController;
+    if (self._isReverse) dx *= -1;
+    [mapController scroll:dx];    
 }
 
 - (float)_checkY:(ccTime)dt reverse:(BOOL)currentReverse {

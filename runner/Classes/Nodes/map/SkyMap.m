@@ -14,6 +14,7 @@
 
 @interface SkyMap ()
 @property (nonatomic, readwrite)int _stageId;
+@property (nonatomic, readwrite)int _speed;
 @end
 @implementation SkyMap
 const int INIT_SKY_PAGE_NUM = 2;
@@ -30,6 +31,7 @@ const int MIN_SKY_PAGE_STOCK_NUM = 3;
         // 初期設定
         self._stageId = stageId;
         self._pages = [NSMutableArray arrayWithCapacity:5];
+        self._speed = 1;
         
         // 初期ページを追加
         PageController *pageController = [GameScene sharedInstance].pageController;
@@ -94,6 +96,24 @@ const int MIN_SKY_PAGE_STOCK_NUM = 3;
         Page *page = [pageController getPageBy:SKY_PAGE_BASE_ID];
         [self addPage:page];
     }
+}
+
+- (BOOL)checkSpeedUp {
+    float speed = [self _getSpeed];
+    if (self._speed != speed) {
+        self._speed = speed;
+        return true;
+    }
+    return false;
+}
+
+- (int)_getSpeed {
+    float skyDistance = [[GameScene sharedInstance].hudController getSkyDistance];
+    if (skyDistance > 300) return 5;
+    if (skyDistance > 200) return 4;
+    if (skyDistance > 100) return 3;
+    if (skyDistance > 50) return 2;
+    return 1;
 }
 
 @end

@@ -19,7 +19,6 @@
 @interface LandPage : Page {
     
 }
-@property (nonatomic, readwrite)BOOL isSpeedUp;
 @property (nonatomic, retain)Block *_land;
 @property (nonatomic, retain)Coin *_lastCoin;
 @property (nonatomic, retain)NSArray *_blocks;

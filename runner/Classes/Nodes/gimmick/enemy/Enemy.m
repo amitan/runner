@@ -38,11 +38,11 @@
 - (int)getExp {
     switch (self._enemyId) {
         case E_KINOKO:
-            return 300;
+            return 10;
         case E_SLYME:
-            return 1;
-        case E_ENJIN:
             return 7;
+        case E_ENJIN:
+            return 15;
         default:
             return 0;
     }

@@ -27,5 +27,6 @@
 - (void)flyDown;
 - (void)climbout;
 - (void)flyAway;
+- (void)speedUp;
 
 @end

@@ -24,9 +24,9 @@ const int MAX_SPEED_STEP = 5;
 const int MIN_LAND_PAGE_STOCK_NUM = 3;
 const int INIT_PAGE_NUM = 1;
 const int MIN_FIRE_SPEED = 3;
-const float MIN_FIRE_SECONDS = 15;
-const float MIN_FIRE_SECONDS2 = 10;
-const float MIN_FIRE_SECONDS3 = 5;
+const float MIN_FIRE_SECONDS = 10;
+const float MIN_FIRE_SECONDS2 = 7;
+const float MIN_FIRE_SECONDS3 = 3;
 
 @synthesize isPlaying;
 
@@ -120,7 +120,7 @@ const float MIN_FIRE_SECONDS3 = 5;
 
 - (void)refillIfNeeded {
     
-    int nextSpeed = [self _getSpeed:[[GameScene sharedInstance].hudController getDistance]];
+    int nextSpeed = [self _getSpeed:[[GameScene sharedInstance].hudController getLandDistance]];
     if (self.speed != nextSpeed) {
         self.speed = nextSpeed;
         [self addPage:[[GameScene sharedInstance].pageController getPageBy:SPEED_UP_PAGE]];
@@ -202,10 +202,9 @@ const float MIN_FIRE_SECONDS3 = 5;
     if (self.speed >= MAX_SPEED_STEP) {
         return self.speed;
     }
-    // TODO: 後で見直す
     if (distance > 1000) return 5;
     if (distance > 500) return 4;
-    if (distance > 100) return 3;
+    if (distance > 200) return 3;
     if (distance > 50) return 2;
     return 1;
 }

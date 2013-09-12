@@ -266,7 +266,7 @@
 - (void)reset {
     [self clear];
     
-    int index = floor(CCRANDOM_0_1() * 8);
+    int index = floor(CCRANDOM_0_1() * 10);
     if (index == 1) {
         self._enemies = @[[Enemy createEnemy:E_NEEDLE x:100 y:-660],
                           [Enemy createEnemy:E_NEEDLE x:100 y:-570]];
@@ -274,20 +274,27 @@
         self._enemies = @[[Enemy createEnemy:E_NEEDLE x:100 y:-200],
                           [Enemy createEnemy:E_NEEDLE x:100 y:-110]];
     } else if (index == 3) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:100 y:-480],
+                          [Enemy createEnemy:E_NEEDLE x:100 y:-390]];
+        
+    } else if (index == 4) {
         self._enemies = @[[Enemy createEnemy:E_NEEDLE x:400 y:-660],
                           [Enemy createEnemy:E_NEEDLE x:400 y:-570]];
-    } else if (index == 4) {
+    } else if (index == 5) {
         self._enemies = @[[Enemy createEnemy:E_NEEDLE x:400 y:-200],
                           [Enemy createEnemy:E_NEEDLE x:400 y:-110]];
-    } else if (index == 5) {
-        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:800 y:-660],
-                          [Enemy createEnemy:E_NEEDLE x:800 y:-570]];
     } else if (index == 6) {
-        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:800 y:-200],
-                          [Enemy createEnemy:E_NEEDLE x:800 y:-110]];
-    } else if (index == 7) {
         self._enemies = @[[Enemy createEnemy:E_NEEDLE x:400 y:-480],
                           [Enemy createEnemy:E_NEEDLE x:400 y:-390]];
+    } else if (index == 7) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:800 y:-660],
+                          [Enemy createEnemy:E_NEEDLE x:800 y:-570]];
+    } else if (index == 8) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:800 y:-200],
+                          [Enemy createEnemy:E_NEEDLE x:800 y:-110]];
+    } else if (index == 9) {
+        self._enemies = @[[Enemy createEnemy:E_NEEDLE x:800 y:-480],
+                          [Enemy createEnemy:E_NEEDLE x:800 y:-390]];
     }
     for (Enemy *enemy in self._enemies) {
         [enemy stageOn:self];

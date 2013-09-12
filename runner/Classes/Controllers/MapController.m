@@ -74,13 +74,13 @@
 
 - (void)scroll:(float)dx {
     self.landMap.position = ccp(self.landMap.position.x - dx, self.landMap.position.y);
-    [[GameScene sharedInstance].hudController addDistance:dx];
+    [[GameScene sharedInstance].hudController addLandDistance:dx];
     [self.landMap refillIfNeeded];
 }
 
 - (void)skyScroll:(float)dx {
     self.skyMap.position = ccp(self.skyMap.position.x - dx, self.skyMap.position.y);
-    [[GameScene sharedInstance].hudController addDistance:dx];
+    [[GameScene sharedInstance].hudController addSkyDistance:dx];
     [self.skyMap refillIfNeeded];
 }
 

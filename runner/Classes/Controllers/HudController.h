@@ -28,8 +28,13 @@
 - (void)addCoinBonus:(int)num playerNo:(int)no;
 
 // 距離を加算/取得する
-- (void)addDistance:(float)num;
+- (void)addDistance:(float)dx;
+- (void)addSkyDistance:(float)dx;
+- (void)addLandDistance:(float)dx;
 - (int)getDistance;
+- (int)getSkyDistance;
+- (int)getLandDistance;
+- (void)resetSkyDistance;
 
 // コイン数を取得する
 - (int)getPlayer1Coin;
@@ -38,6 +43,7 @@
 
 // EXPを加算/取得する
 - (void)addExp:(int)num;
+- (void)resetExp;
 - (void)fever;
 - (void)stopFever;
 

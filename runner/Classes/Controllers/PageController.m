@@ -62,7 +62,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 	if (self) {
         self._dictionary = [NSMutableDictionary dictionary];
         self._pageDictionary = [NSMutableDictionary dictionary];
-        [self._pageDictionary setObject:@[@1, @2, @3, @4, @9, @10, @13] forKey:@"1"]; // 0 - 50M: シンプル
+        [self._pageDictionary setObject:@[@1, @1, @2, @3, @3, @4, @9, @10, @13] forKey:@"1"]; // 0 - 50M: シンプル
         [self._pageDictionary setObject:@[@1, @2, @3, @4, @5, @7, @8, @9, @11] forKey:@"2"];
         [self._pageDictionary setObject:@[@2, @4, @5, @6, @7, @11, @12, @13] forKey:@"3"];
         [self._pageDictionary setObject:@[@1, @3, @5, @6, @11, @12, @13] forKey:@"4"];
@@ -79,7 +79,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPageBy:(int)pageId {
-    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 3; // TODO:
+    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 8; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;
