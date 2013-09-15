@@ -19,6 +19,13 @@ const float BASE_HEIGHT = 640.0f;
 }
 
 + (float)getScaleWithoutRetina {
+    CGSize size = [self getScreenSize];
+    float scaleX = size.width / BASE_WIDTH;
+    float scaleY = size.height / BASE_HEIGHT;
+    return (scaleX < scaleY) ? scaleX : scaleY;
+}
+
++ (CGSize)getScreenSize {
     CGSize winSize = [[CCDirector sharedDirector] winSize];
     float width = winSize.width;
     float height = winSize.height;
@@ -26,9 +33,7 @@ const float BASE_HEIGHT = 640.0f;
         width = winSize.height;
         height = winSize.width;
     }
-    float scaleX = width / BASE_WIDTH;
-    float scaleY = height / BASE_HEIGHT;
-    return (scaleX < scaleY) ? scaleX : scaleY;
+    return CGSizeMake(width, height);
 }
 
 + (float)getPoint:(float)point {

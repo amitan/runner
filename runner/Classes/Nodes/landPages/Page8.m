@@ -42,14 +42,13 @@
                         [Block createBlock:302 x:650 y:-190],
                         [Block createBlock:302 x:650 y:-130],
                         [Block createBlock:302 x:650 y:-70],
-                        [Block createBlock:304 x:950 y:-60], // ここまで反転ブロック
-                        [Block createBlock:105 x:890 y:-120],
-                        [Block createBlock:102 x:1010 y:-240],
-                        [Block createBlock:102 x:1310 y:-300],
-                        [Block createBlock:103 x:1700 y:-490],
-                        [Block createBlock:103 x:1700 y:-430],
-                        [Block createBlock:103 x:2000 y:-250],
-                        [Block createBlock:303 x:2120 y:-130]];
+                        [Block createBlock:304 x:950 y:-90], // ここまで反転ブロック
+                        [Block createBlock:105 x:890 y:-150],
+                        [Block createBlock:102 x:1010 y:-270],
+                        [Block createBlock:103 x:1400 y:-490],
+                        [Block createBlock:103 x:1400 y:-430],
+                        [Block createBlock:103 x:1700 y:-250],
+                        [Block createBlock:303 x:1820 y:-130]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
@@ -67,7 +66,7 @@
     
     if (self.appearNum == 1) {
         NSMutableArray *extraCoins = [NSMutableArray arrayWithArray:self._coins];
-        [extraCoins addObject:[Coin createCoin:C_100 x:2000 y:-130]];
+        [extraCoins addObject:[Coin createCoin:C_100 x:1700 y:-130]];
         self._coins = extraCoins;
     }
     

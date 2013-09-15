@@ -167,6 +167,8 @@
             <filename>../sprites/gameparts/fire_warning2.png</filename>
             <filename>../sprites/gameparts/fire.png</filename>
             <filename>../sprites/gameparts/red_belt.png</filename>
+            <filename>../sprites/gameparts/item_base.png</filename>
+            <filename>../sprites/gameparts/item_magnet.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

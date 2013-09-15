@@ -199,10 +199,36 @@
                 <key>sourceSize</key>
                 <string>{100,100}</string>
             </dict>
+            <key>item_base.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3,107},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>item_magnet.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{107,107},{84,74}}</string>
+                <key>offset</key>
+                <string>{-3,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{5,13},{84,74}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
             <key>plane.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,107},{220,110}}</string>
+                <string>{{195,107},{220,110}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +241,7 @@
             <key>rail1_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{227,107},{640,18}}</string>
+                <string>{{419,107},{640,18}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +254,7 @@
             <key>rail2_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{871,107},{320,18}}</string>
+                <string>{{1063,107},{320,18}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -352,7 +378,7 @@
             <key>size</key>
             <string>{2048,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a650f9ed6138934e51983c5ac361f2fb$</string>
+            <string>$TexturePacker:SmartUpdate:c1227f55d043afdf6958f0b8990d5dde$</string>
             <key>textureFileName</key>
             <string>gameparts.png</string>
         </dict>

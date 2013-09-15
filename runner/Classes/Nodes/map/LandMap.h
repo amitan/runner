@@ -31,6 +31,7 @@
 // コインを取得しているかチェックする
 - (void)takeItemsIfCollided:(CGRect)rect;
 - (BOOL)jumpIfCollided:(CGRect)rect;
+- (Item*)takeItemIfCollided:(CGRect)rect;
 
 // 敵チェック
 - (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction;
@@ -38,8 +39,10 @@
 
 // スピードアップするか判定する
 - (BOOL)checkSpeedUp:(CGPoint)point;
-- (BOOL)checkFire:(ccTime)dt;
-- (void)fire;
+- (BOOL)checkFire1:(ccTime)dt;
+- (BOOL)checkFire2:(ccTime)dt;
+- (void)fire1;
+- (void)fire2;
 
 // 必要に応じてページの追加/削除を行う
 - (void)refillIfNeeded;

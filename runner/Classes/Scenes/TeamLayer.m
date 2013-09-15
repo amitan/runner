@@ -68,8 +68,7 @@
                 // プレイヤー名とレベル
                 NSString *name = [self._playerMaster getName:playerId];
                 int level = [userPlayer[@"level"] intValue];
-                int maxLevel = [self._playerMaster getMaxLevel:playerId];
-                NSString *playerName = [NSString stringWithFormat:@"%@ Lv: %d/%d", name, level, maxLevel];
+                NSString *playerName = [NSString stringWithFormat:@"%@ Lv: %d", name, level];
                 CCLabelTTF *playerNameLabel = [LabelUtil createLabel:playerName fontSize:26 dimensions:CGSizeMake(386, 60) alignment:kCCTextAlignmentLeft];
                 playerNameLabel.position = [PointUtil getPosition:307 y:190];
                 [baseButton addChild:playerNameLabel];

@@ -13,7 +13,6 @@
 + (PlayerMaster *)getInstance;
 
 - (NSString*)getName:(int)playerId;
-- (int)getMaxLevel:(int)playerId;
 - (int)getNextGold:(int)playerId currentLevel:(int)level;
 - (int)getGoldBonus:(int)playerId currentLevel:(int)level;
 - (int)getFrameNum:(int)playerId;

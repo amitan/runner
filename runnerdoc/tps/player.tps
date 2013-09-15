@@ -147,60 +147,40 @@
             <filename>../sprites/player/player2001001_right1.png</filename>
             <filename>../sprites/player/player2001001_right2.png</filename>
             <filename>../sprites/player/player2001001_right3.png</filename>
-            <filename>../sprites/player/player2001002_left1.png</filename>
-            <filename>../sprites/player/player2001002_left2.png</filename>
-            <filename>../sprites/player/player2001002_left3.png</filename>
-            <filename>../sprites/player/player2001002_right1.png</filename>
-            <filename>../sprites/player/player2001002_right2.png</filename>
-            <filename>../sprites/player/player2001002_right3.png</filename>
-            <filename>../sprites/player/player2001003_left1.png</filename>
-            <filename>../sprites/player/player2001003_left2.png</filename>
-            <filename>../sprites/player/player2001003_left3.png</filename>
-            <filename>../sprites/player/player2001003_right1.png</filename>
-            <filename>../sprites/player/player2001003_right2.png</filename>
-            <filename>../sprites/player/player2001003_right3.png</filename>
             <filename>../sprites/player/player2002001_left1.png</filename>
             <filename>../sprites/player/player2002001_left2.png</filename>
             <filename>../sprites/player/player2002001_left3.png</filename>
             <filename>../sprites/player/player2002001_right1.png</filename>
             <filename>../sprites/player/player2002001_right2.png</filename>
             <filename>../sprites/player/player2002001_right3.png</filename>
-            <filename>../sprites/player/player2002002_left1.png</filename>
-            <filename>../sprites/player/player2002002_left2.png</filename>
-            <filename>../sprites/player/player2002002_left3.png</filename>
-            <filename>../sprites/player/player2002002_right1.png</filename>
-            <filename>../sprites/player/player2002002_right2.png</filename>
-            <filename>../sprites/player/player2002002_right3.png</filename>
-            <filename>../sprites/player/player2002003_left1.png</filename>
-            <filename>../sprites/player/player2002003_left2.png</filename>
-            <filename>../sprites/player/player2002003_left3.png</filename>
-            <filename>../sprites/player/player2002003_right1.png</filename>
-            <filename>../sprites/player/player2002003_right2.png</filename>
-            <filename>../sprites/player/player2002003_right3.png</filename>
             <filename>../sprites/player/player2003001_left1.png</filename>
             <filename>../sprites/player/player2003001_left2.png</filename>
             <filename>../sprites/player/player2003001_left3.png</filename>
             <filename>../sprites/player/player2003001_right1.png</filename>
             <filename>../sprites/player/player2003001_right2.png</filename>
             <filename>../sprites/player/player2003001_right3.png</filename>
-            <filename>../sprites/player/player2003002_left1.png</filename>
-            <filename>../sprites/player/player2003002_left2.png</filename>
-            <filename>../sprites/player/player2003002_left3.png</filename>
-            <filename>../sprites/player/player2003002_right1.png</filename>
-            <filename>../sprites/player/player2003002_right2.png</filename>
-            <filename>../sprites/player/player2003002_right3.png</filename>
-            <filename>../sprites/player/player2003003_left1.png</filename>
-            <filename>../sprites/player/player2003003_left2.png</filename>
-            <filename>../sprites/player/player2003003_left3.png</filename>
-            <filename>../sprites/player/player2003003_right1.png</filename>
-            <filename>../sprites/player/player2003003_right2.png</filename>
-            <filename>../sprites/player/player2003003_right3.png</filename>
             <filename>../sprites/player/player2000001_left1.png</filename>
             <filename>../sprites/player/player2000001_left2.png</filename>
-            <filename>../sprites/player/player2000001_left3.png</filename>
             <filename>../sprites/player/player2000001_right1.png</filename>
             <filename>../sprites/player/player2000001_right2.png</filename>
-            <filename>../sprites/player/player2000001_right3.png</filename>
+            <filename>../sprites/player/player2000001_stand.png</filename>
+            <filename>../sprites/player/player2001001_stand.png</filename>
+            <filename>../sprites/player/player2002001_stand.png</filename>
+            <filename>../sprites/player/player2003001_stand.png</filename>
+            <filename>../sprites/player/player2004001_left1.png</filename>
+            <filename>../sprites/player/player2004001_left2.png</filename>
+            <filename>../sprites/player/player2004001_left3.png</filename>
+            <filename>../sprites/player/player2004001_right1.png</filename>
+            <filename>../sprites/player/player2004001_right2.png</filename>
+            <filename>../sprites/player/player2004001_right3.png</filename>
+            <filename>../sprites/player/player2004001_stand.png</filename>
+            <filename>../sprites/player/player2005001_left1.png</filename>
+            <filename>../sprites/player/player2005001_left2.png</filename>
+            <filename>../sprites/player/player2005001_left3.png</filename>
+            <filename>../sprites/player/player2005001_right1.png</filename>
+            <filename>../sprites/player/player2005001_right2.png</filename>
+            <filename>../sprites/player/player2005001_right3.png</filename>
+            <filename>../sprites/player/player2005001_stand.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -17,6 +17,7 @@ extern const float BASE_HEIGHT;
 // 640 x 960を基準としたスケール値を取得する
 + (float)getScale;
 + (float)getScaleWithoutRetina;
++ (CGSize)getScreenSize;
 
 // スケール値を考慮した座標点を取得する
 + (float)getPoint:(float)point;

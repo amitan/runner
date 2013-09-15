@@ -71,7 +71,7 @@ const int INIT_GUN_POSITION_Y = 520;
         [self._bullet1 start];
         [self._bullet2 start];
     }];
-    [self._sprite runAction:[CommonAnimation getFrameAction:@"fire_warning" frameNum:2 duration:0.2f count:7 func:fire]];
+    [self._sprite runAction:[CommonAnimation getFrameAction:@"fire_warning" frameNum:2 duration:0.15f count:7 func:fire]];
     [self._lineSprite runAction:[CommonAnimation getBlinkAction]];
 }
 

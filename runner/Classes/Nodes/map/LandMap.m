@@ -15,18 +15,20 @@
 
 @interface LandMap ()
 @property (nonatomic, readwrite)int _stageId;
-@property (nonatomic, readwrite)float _fireTime;
-@property (nonatomic, retain)Gun *_gun;
+@property (nonatomic, readwrite)float _fire1Time, _fire2Time;
+@property (nonatomic, retain)Gun *_gun1, *_gun2;
 @end
 
 @implementation LandMap
 const int MAX_SPEED_STEP = 5;
 const int MIN_LAND_PAGE_STOCK_NUM = 3;
 const int INIT_PAGE_NUM = 1;
-const int MIN_FIRE_SPEED = 3;
-const float MIN_FIRE_SECONDS = 10;
-const float MIN_FIRE_SECONDS2 = 7;
-const float MIN_FIRE_SECONDS3 = 3;
+const int MIN_FIRE1_SPEED = 2;
+const int MIN_FIRE2_SPEED = 3;
+const float MIN_FIRE1_SECONDS = 10;
+const float MIN_FIRE1_SECONDS2 = 7;
+const float MIN_FIRE1_SECONDS3 = 3;
+const float MIN_FIRE2_SECONDS = 10;
 
 @synthesize isPlaying;
 
@@ -43,8 +45,10 @@ const float MIN_FIRE_SECONDS3 = 3;
         self._pages = [NSMutableArray arrayWithCapacity:5];
         self.speed = 1;
         self.isPlaying = false;
-        self._fireTime = MIN_FIRE_SECONDS;
-        self._gun = [Gun node];
+        self._fire1Time = MIN_FIRE1_SECONDS;
+        self._fire2Time = MIN_FIRE2_SECONDS;
+        self._gun1 = [Gun node];
+        self._gun2 = [Gun node];
         
         // 初期ページを追加
         PageController *pageController = [GameScene sharedInstance].pageController;
@@ -63,7 +67,7 @@ const float MIN_FIRE_SECONDS3 = 3;
 }
 
 - (Rail*)getHitRail:(CGRect)rect {
-    CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
+    CGPoint point = [self _getCollisionPoint:rect];
     LandPage *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
     CGRect newRect = CGRectMake(location.x - rect.size.width / 6, location.y - rect.size.height / 6, rect.size.width / 3, rect.size.height / 3);
@@ -71,7 +75,7 @@ const float MIN_FIRE_SECONDS3 = 3;
 }
 
 - (void)takeItemsIfCollided:(CGRect)rect {
-    CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
+    CGPoint point = [self _getCollisionPoint:rect];
     LandPage *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
     CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
@@ -79,12 +83,24 @@ const float MIN_FIRE_SECONDS3 = 3;
     [currentPage pressSwitchesIfCollided:worldRect];
 }
 
+- (Item*)takeItemIfCollided:(CGRect)rect {
+    CGPoint point = [self _getCollisionPoint:rect];
+    LandPage *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
+    return [currentPage takeItemIfCollided:worldRect];
+}
+
 - (BOOL)jumpIfCollided:(CGRect)rect {
-    CGPoint point = ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
+    CGPoint point = [self _getCollisionPoint:rect];
     LandPage *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
     CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
     return [currentPage jumpIfCollided:worldRect];
+}
+
+- (CGPoint)_getCollisionPoint:(CGRect)rect {
+    return ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
 }
 
 - (Enemy*)attackEnemyIfCollided:(CGPoint)point  direction:(DIRECTION)direction {
@@ -157,22 +173,22 @@ const float MIN_FIRE_SECONDS3 = 3;
     }
 }
 
-- (BOOL)checkFire:(ccTime)dt {
-    if (self.speed >= MIN_FIRE_SPEED) {
-        self._fireTime -= dt;
-        if (self._fireTime < 0) {
+- (BOOL)checkFire1:(ccTime)dt {
+    if (self.speed >= MIN_FIRE1_SPEED) {
+        self._fire1Time -= dt;
+        if (self._fire1Time < 0) {
             switch (self.speed) {
-                case MIN_FIRE_SPEED:
-                    self._fireTime = MIN_FIRE_SECONDS;
+                case MIN_FIRE1_SPEED:
+                    self._fire1Time = MIN_FIRE1_SECONDS;
                     break;
-                case MIN_FIRE_SPEED + 1:
-                    self._fireTime = MIN_FIRE_SECONDS2;
+                case MIN_FIRE1_SPEED + 1:
+                    self._fire1Time = MIN_FIRE1_SECONDS2;
                     break;
-                case MIN_FIRE_SPEED + 2:
-                    self._fireTime = MIN_FIRE_SECONDS3;
+                case MIN_FIRE1_SPEED + 2:
+                    self._fire1Time = MIN_FIRE1_SECONDS3;
                     break;
                 default:
-                    self._fireTime = MIN_FIRE_SECONDS;
+                    self._fire1Time = MIN_FIRE1_SECONDS;
                     break;
             }
             return true;
@@ -181,31 +197,56 @@ const float MIN_FIRE_SECONDS3 = 3;
     return false;
 }
 
-- (void)fire {
-    if ([self._gun isReady]) {
-        [self._gun stageOn];
-        [self._gun start];
+- (BOOL)checkFire2:(ccTime)dt {
+    if (self.speed >= MIN_FIRE2_SPEED) {
+        self._fire2Time -= dt;
+        if (self._fire2Time < 0) {
+            self._fire2Time = MIN_FIRE2_SECONDS;
+            return true;
+        }
+    }
+    return false;
+}
+
+- (void)fire1 {
+    if ([self._gun1 isReady]) {
+        [self._gun1 stageOn];
+        [self._gun1 start];
+    }
+}
+
+- (void)fire2 {
+    if ([self._gun2 isReady]) {
+        [self._gun2 stageOn];
+        [self._gun2 start];
     }
 }
 
 - (void)suspend {
-    [self._gun suspend];
+    [self._gun1 suspend];
+    [self._gun2 suspend];
     [super suspend];
 }
 
 - (void)resume {
     [super resume];
-    [self._gun resume];
+    [self._gun1 resume];
+    [self._gun2 resume];
 }
 
 - (int)_getSpeed:(int)distance {
     if (self.speed >= MAX_SPEED_STEP) {
         return self.speed;
     }
-    if (distance > 1000) return 5;
-    if (distance > 500) return 4;
-    if (distance > 200) return 3;
+// TODO:back
+    if (distance > 1500) return 5;
+    if (distance > 800) return 4;
+    if (distance > 300) return 3;
     if (distance > 50) return 2;
+//    if (distance > 120) return 5;
+//    if (distance > 90) return 4;
+//    if (distance > 60) return 3;
+//    if (distance > 30) return 2;
     return 1;
 }
 

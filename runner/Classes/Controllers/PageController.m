@@ -23,6 +23,7 @@
 #import "Page11.h"
 #import "Page12.h"
 #import "Page13.h"
+#import "Page14.h"
 #import "Page900.h"
 #import "Page1000.h"
 #import "Page1001.h"
@@ -50,9 +51,10 @@ const int INIT_ARRAY_CAPACITY = 5;
         case 11: return [Page11 node]; // ジャンプ台（縦）とブロック/コイン + 敵（きのこ、スライム）
         case 12: return [Page12 node]; // レール
         case 13: return [Page13 node]; // 飛びブロックと間にコイン + 間に敵（きのこ、スライム）
-        case 900: return [Page900 node];
-        case 1000: return [Page1000 node];
-        case 1001: return [Page1001 node];
+        case 14: return [Page14 node]; // 1個ブロックが3つとアイテム + 敵
+        case 900: return [Page900 node]; // スピードアップ
+        case 1000: return [Page1000 node]; // 空：何もなし
+        case 1001: return [Page1001 node]; // 空：コイン
         default: return [Page0 node]; // 地面のみ
     }
 }
@@ -62,8 +64,8 @@ const int INIT_ARRAY_CAPACITY = 5;
 	if (self) {
         self._dictionary = [NSMutableDictionary dictionary];
         self._pageDictionary = [NSMutableDictionary dictionary];
-        [self._pageDictionary setObject:@[@1, @1, @2, @3, @3, @4, @9, @10, @13] forKey:@"1"]; // 0 - 50M: シンプル
-        [self._pageDictionary setObject:@[@1, @2, @3, @4, @5, @7, @8, @9, @11] forKey:@"2"];
+        [self._pageDictionary setObject:@[@1, @2, @3, @4, @9, @10, @13] forKey:@"1"]; // 0 - 50M: シンプル
+        [self._pageDictionary setObject:@[@1, @2, @3, @4, @5, @7, @8, @11] forKey:@"2"];
         [self._pageDictionary setObject:@[@2, @4, @5, @6, @7, @11, @12, @13] forKey:@"3"];
         [self._pageDictionary setObject:@[@1, @3, @5, @6, @11, @12, @13] forKey:@"4"];
         [self._pageDictionary setObject:@[@1, @6, @11] forKey:@"5"];
@@ -79,7 +81,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPageBy:(int)pageId {
-    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 8; // TODO:
+//    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 14; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;

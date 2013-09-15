@@ -28,7 +28,7 @@
 @end
 
 @implementation Player
-const int INIT_SCROLL_SPEED = 600;
+const int INIT_SCROLL_SPEED = 500;
 const int BLOCK_TOP_REFLECTION = -10;
 
 
@@ -192,7 +192,11 @@ const int BLOCK_TOP_REFLECTION = -10;
     if ([mapController.landMap jumpIfCollided:[self getRect]]) {
         return;
     }
-
+    Item *item = [mapController.landMap takeItemIfCollided:[self getRect]];
+    if (item) {
+        CCLOG(@"take!!");
+    }
+    
     ///////////////////////////////////////////////////////////////
     // 横軸の判定
     ///////////////////////////////////////////////////////////////
@@ -232,8 +236,11 @@ const int BLOCK_TOP_REFLECTION = -10;
     ///////////////////////////////////////////////////////////////
     // 炎判定
     ///////////////////////////////////////////////////////////////
-    if ([mapController.landMap checkFire:dt]) {
-        [mapController.landMap fire];
+    if ([mapController.landMap checkFire1:dt]) {
+        [mapController.landMap fire1];
+    }
+    if ([mapController.landMap checkFire2:dt]) {
+        [mapController.landMap fire2];
     }
 }
 
@@ -298,7 +305,7 @@ const int BLOCK_TOP_REFLECTION = -10;
     if (!isXHit) {
         [self scroll:dx];
     } else {
-        if (!self._isReverse && self._properPosition.x - [PointUtil getPoint:120] < self.position.x) {
+        if (!self._isReverse && self._properPosition.x - [PointUtil getPoint:180] < self.position.x) {
             [self scroll:dx];
         } else if (self._isReverse && self._properPosition.x + [PointUtil getPoint:150] > self.position.x) {
             [self scroll:dx];

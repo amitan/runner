@@ -99,10 +99,11 @@
 
 - (void)update:(ccTime)dt {
     if (self._isFlyingUp) {
-        if (self.landMap.position.y < self._tempPosition.y - BASE_HEIGHT) {
+        if (self.landMap.position.y < self._tempPosition.y - [PointUtil getPoint:BASE_HEIGHT]) {
             self._isFlyingUp = false;
             [self.landMap stop];
             [[GameScene sharedInstance].playerController fly];
+            [self unscheduleUpdate];
         } else {
             float dx = [PointUtil getPoint:10];
             float dy = [PointUtil getPoint:10];
@@ -115,6 +116,7 @@
             self._isFlyingDown = false;
             self.landMap.position = ccp(self.landMap.position.x, self._tempPosition.y);
             [self.skyMap restructure];
+            [self unscheduleUpdate];
         } else {
             float dy = [PointUtil getPoint:10];
             self.landMap.position = ccpAdd(self.landMap.position, ccp(0, dy));

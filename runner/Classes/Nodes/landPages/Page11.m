@@ -31,6 +31,7 @@
                         [Block createBlock:101 x:100 y:-490],
                         [Block createBlock:101 x:160 y:-490],
                         [Block createBlock:101 x:220 y:-490], // ジャンプ台ブロック
+                        [Block createBlock:101 x:500 y:-140],
                         [Block createBlock:101 x:560 y:-140],
                         [Block createBlock:101 x:620 y:-140],
                         [Block createBlock:101 x:680 y:-140],

@@ -37,6 +37,7 @@
     self._switches = nil;
     self._trampolines = nil;
     self._rails = nil;
+    self._item = nil;
     [super dealloc];
 }
 
@@ -54,6 +55,7 @@
     for (Rail *rail in self._rails) {
         [rail start];
     }
+    [self._item start];
 }
 
 - (void)stop {
@@ -70,6 +72,7 @@
     for (Rail *rail in self._rails) {
         [rail stop];
     }
+    [self._item stop];
 }
 
 - (void)reset {
@@ -88,6 +91,8 @@
     for (Rail *rail in self._rails) {
         [rail reset];
     }
+    [self._item reset];
+    [self._item stageOn:self];
 }
 
 - (float)getWidth {
@@ -133,6 +138,15 @@
         }
     }
     return result;
+}
+
+- (Item*)takeItemIfCollided:(CGRect)rect {
+    if (self._item) {
+        if ([self._item takenIfCollided:rect]) {
+            return self._item;
+        }
+    }
+    return NULL;
 }
 
 - (BOOL)pressSwitchesIfCollided:(CGRect)rect {

@@ -101,7 +101,7 @@ const int UPDOWN_SPEED = 300;
 - (void)update:(ccTime)dt {
     
     if (self._isFlyingAway) {
-        if (self.position.x > BASE_WIDTH) {
+        if (self.position.x > [PointUtil getPoint:BASE_WIDTH]) {
             [self stop];
             [self reset];
         } else {
@@ -135,7 +135,7 @@ const int UPDOWN_SPEED = 300;
     ///////////////////////////////////////////////////////////////
     // 縦軸判定
     ///////////////////////////////////////////////////////////////
-    float dy;
+    float dy = 0;
     if (!([self _isUpLimit] || [self _isDownLimit])) {
         dy = (self._isUp) ? self._vy * dt : - self._vy * dt;
     }
@@ -159,11 +159,17 @@ const int UPDOWN_SPEED = 300;
 }
 
 - (BOOL)_isUpLimit {
-    return self._isUp && self.position.y > BASE_HEIGHT - 2 * self._sprite.contentSize.height;
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    float dy = winSize.height / 2 - [PointUtil getPoint:(0 - BASE_HEIGHT / 2)];
+
+    return self._isUp && self.position.y > dy - self._sprite.contentSize.height / 2;
 }
 
 - (BOOL)_isDownLimit {
-    return !self._isUp && self.position.y < - 1.5 * self._sprite.contentSize.height;
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    float dy = winSize.height / 2 - [PointUtil getPoint:(BASE_HEIGHT - BASE_HEIGHT / 2)];
+
+    return !self._isUp && self.position.y < dy;
 }
 
 - (CGRect)getRect {
