@@ -19,7 +19,6 @@
 typedef enum {
     E_KINOKO = 1,
     E_SLYME = 2,
-    E_ENJIN = 100,
     E_NEEDLE_HALF = 200,
     E_NEEDLE = 201,
 } ENEMY_TYPE;

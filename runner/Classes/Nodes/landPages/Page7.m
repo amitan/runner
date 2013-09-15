@@ -32,8 +32,7 @@
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:C_BIG x:500 y:-60],
-                        [Coin createCoin:C_STANDARD x:700 y:-495],
+        self._coins = @[[Coin createCoin:C_STANDARD x:700 y:-495],
                         [Coin createCoin:C_STANDARD x:750 y:-495],
                         [Coin createCoin:C_STANDARD x:800 y:-495],
                         [Coin createCoin:C_STANDARD x:850 y:-495],
@@ -63,12 +62,6 @@
         [extraEnemies addObject:[Enemy createEnemy:E_NEEDLE_HALF x:400 y:-520]];
         self._enemies = extraEnemies;
         
-    } else if (self.appearNum == 2) {
-        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
-        [extraEnemies addObject:[Enemy createEnemy:E_ENJIN x:1150 y:-400]];
-        [extraEnemies addObject:[Enemy createEnemy:E_ENJIN x:1250 y:-400]];
-        [extraEnemies addObject:[Enemy createEnemy:E_ENJIN x:1350 y:-400]];
-        self._enemies = extraEnemies;
     }
     
     [super reset];

@@ -67,19 +67,12 @@
     
     if (self.appearNum == 1) {
         NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
-        [extraEnemies addObject:[Enemy createEnemy:E_ENJIN x:790 y:-300]];
-        [extraEnemies addObject:[Enemy createEnemy:E_ENJIN x:890 y:-300]];
-        [extraEnemies addObject:[Enemy createEnemy:E_ENJIN x:990 y:-300]];
-        self._enemies = extraEnemies;
-        
-    } else if (self.appearNum == 2) {
-        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
         [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1500 y:-522]];
         [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1570 y:-522]];
         [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1640 y:-522]];
         self._enemies = extraEnemies;
         
-    } else if (self.appearNum == 3) {
+    } else if (self.appearNum == 2) {
         NSMutableArray *extraCoins = [NSMutableArray arrayWithArray:self._coins];
         [extraCoins addObject:[Coin createCoin:C_100 x:890 y:-480]];
         self._coins = extraCoins;

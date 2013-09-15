@@ -10,8 +10,6 @@
 #import "CommonAnimation.h"
 #import "GameScene.h"
 #import "StandardCoin.h"
-#import "BigCoin.h"
-#import "DroppingCoin.h"
 #import "SwitchCoin.h"
 #import "PointUtil.h"
 
@@ -34,12 +32,6 @@
     switch (coinId) {
         case 1:
             coin = [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
-            break;
-        case 2:
-            coin = [[[BigCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
-            break;
-        case 3:
-            coin = [[[DroppingCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
             break;
         case 4:
             coin = [[[SwitchCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
@@ -66,16 +58,6 @@
         [self addChild:self._sprite];
     }
     return self;
-}
-
-- (void)start {
-    [super start];
-    [self._sprite runAction:[CommonAnimation getFrameRepeatAction:[NSString stringWithFormat:@"coin%d_", self._coinId] frameNum:2]];
-}
-
-- (void)stop {
-    [super stop];
-    [self._sprite stopAllActions];
 }
 
 - (void)stageOn:(CCNode*)page {

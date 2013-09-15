@@ -20,8 +20,6 @@
 
 typedef enum {
     C_STANDARD = 1,
-    C_BIG = 2,
-    C_DROPPING = 3,
     C_SWITCH = 4,
     C_100 = 5
 } COIN_TYPE;

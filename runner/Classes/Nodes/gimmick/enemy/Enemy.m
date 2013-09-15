@@ -9,7 +9,6 @@
 #import "Enemy.h"
 #import "PointUtil.h"
 #import "StandardEnemy.h"
-#import "SkyEnemy.h"
 #import "HalfNeedleEnemy.h"
 #import "NeedleEnemy.h"
 #import "EnemyAnimation.h"
@@ -25,9 +24,7 @@
 }
 
 + (Enemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y {
-    if (enemyId >= 100 && enemyId < 200) {
-        return [SkyEnemy createEnemy:enemyId x:x y:y];
-    } else if (enemyId == 200) {
+    if (enemyId == 200) {
         return [HalfNeedleEnemy createEnemy:enemyId x:x y:y];
     } else if (enemyId == 201) {
         return [NeedleEnemy createEnemy:enemyId x:x y:y];
@@ -41,8 +38,6 @@
             return 10;
         case E_SLYME:
             return 7;
-        case E_ENJIN:
-            return 15;
         default:
             return 0;
     }

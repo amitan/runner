@@ -51,13 +51,7 @@
                         [Block createBlock:303 x:1820 y:-130]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
-        }
-        
-        // コインを追加
-        self._coins = @[[Coin createCoin:C_BIG x:1100 y:-70]];
-        for (Coin *coin in self._coins) {
-            [coin stageOn:self];
-        }
+        }        
     }
     return self;
 }

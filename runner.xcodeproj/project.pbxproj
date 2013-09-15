@@ -37,7 +37,6 @@
 		F922C95017D1C879005177A2 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = F922C94E17D1C879005177A2 /* enemy.png */; };
 		F922C95417D1E7A7005177A2 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95317D1E7A7005177A2 /* Enemy.m */; };
 		F922C95717D1E888005177A2 /* StandardEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95617D1E887005177A2 /* StandardEnemy.m */; };
-		F922C95A17D1ED94005177A2 /* SkyEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95917D1ED93005177A2 /* SkyEnemy.m */; };
 		F922C95D17D24089005177A2 /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95C17D24085005177A2 /* Gun.m */; };
 		F922C96017D25586005177A2 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95F17D25582005177A2 /* Bullet.m */; };
 		F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */; };
@@ -240,9 +239,7 @@
 		F9C9814917B8C86200DDCE95 /* LeftReverseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812A17B8C86200DDCE95 /* LeftReverseBlock.m */; };
 		F9C9814A17B8C86200DDCE95 /* RightReverseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812C17B8C86200DDCE95 /* RightReverseBlock.m */; };
 		F9C9814B17B8C86200DDCE95 /* StandardBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9812E17B8C86200DDCE95 /* StandardBlock.m */; };
-		F9C9814C17B8C86200DDCE95 /* BigCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813117B8C86200DDCE95 /* BigCoin.m */; };
 		F9C9814D17B8C86200DDCE95 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813317B8C86200DDCE95 /* Coin.m */; };
-		F9C9814E17B8C86200DDCE95 /* DroppingCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813517B8C86200DDCE95 /* DroppingCoin.m */; };
 		F9C9814F17B8C86200DDCE95 /* StandardCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813717B8C86200DDCE95 /* StandardCoin.m */; };
 		F9C9815017B8C86200DDCE95 /* SwitchCoin.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813917B8C86200DDCE95 /* SwitchCoin.m */; };
 		F9C9815217B8C86200DDCE95 /* Gimmick.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9813D17B8C86200DDCE95 /* Gimmick.m */; };
@@ -318,8 +315,6 @@
 		F922C95317D1E7A7005177A2 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		F922C95517D1E887005177A2 /* StandardEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardEnemy.h; sourceTree = "<group>"; };
 		F922C95617D1E887005177A2 /* StandardEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardEnemy.m; sourceTree = "<group>"; };
-		F922C95817D1ED92005177A2 /* SkyEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyEnemy.h; sourceTree = "<group>"; };
-		F922C95917D1ED93005177A2 /* SkyEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyEnemy.m; sourceTree = "<group>"; };
 		F922C95B17D24082005177A2 /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
 		F922C95C17D24085005177A2 /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
 		F922C95E17D2557D005177A2 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
@@ -715,12 +710,8 @@
 		F9C9812C17B8C86200DDCE95 /* RightReverseBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightReverseBlock.m; sourceTree = "<group>"; };
 		F9C9812D17B8C86200DDCE95 /* StandardBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardBlock.h; sourceTree = "<group>"; };
 		F9C9812E17B8C86200DDCE95 /* StandardBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardBlock.m; sourceTree = "<group>"; };
-		F9C9813017B8C86200DDCE95 /* BigCoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigCoin.h; sourceTree = "<group>"; };
-		F9C9813117B8C86200DDCE95 /* BigCoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigCoin.m; sourceTree = "<group>"; };
 		F9C9813217B8C86200DDCE95 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		F9C9813317B8C86200DDCE95 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
-		F9C9813417B8C86200DDCE95 /* DroppingCoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DroppingCoin.h; sourceTree = "<group>"; };
-		F9C9813517B8C86200DDCE95 /* DroppingCoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DroppingCoin.m; sourceTree = "<group>"; };
 		F9C9813617B8C86200DDCE95 /* StandardCoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardCoin.h; sourceTree = "<group>"; };
 		F9C9813717B8C86200DDCE95 /* StandardCoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardCoin.m; sourceTree = "<group>"; };
 		F9C9813817B8C86200DDCE95 /* SwitchCoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCoin.h; sourceTree = "<group>"; };
@@ -851,8 +842,6 @@
 				F922C95317D1E7A7005177A2 /* Enemy.m */,
 				F922C95517D1E887005177A2 /* StandardEnemy.h */,
 				F922C95617D1E887005177A2 /* StandardEnemy.m */,
-				F922C95817D1ED92005177A2 /* SkyEnemy.h */,
-				F922C95917D1ED93005177A2 /* SkyEnemy.m */,
 				F922C96117D32A79005177A2 /* HalfNeedleEnemy.h */,
 				F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */,
 				F96DDCF517DCBE8600DE88D0 /* NeedleEnemy.h */,
@@ -1583,10 +1572,6 @@
 			children = (
 				F9C9813217B8C86200DDCE95 /* Coin.h */,
 				F9C9813317B8C86200DDCE95 /* Coin.m */,
-				F9C9813017B8C86200DDCE95 /* BigCoin.h */,
-				F9C9813117B8C86200DDCE95 /* BigCoin.m */,
-				F9C9813417B8C86200DDCE95 /* DroppingCoin.h */,
-				F9C9813517B8C86200DDCE95 /* DroppingCoin.m */,
 				F9C9813617B8C86200DDCE95 /* StandardCoin.h */,
 				F9C9813717B8C86200DDCE95 /* StandardCoin.m */,
 				F9C9813817B8C86200DDCE95 /* SwitchCoin.h */,
@@ -1852,9 +1837,7 @@
 				F9C9814917B8C86200DDCE95 /* LeftReverseBlock.m in Sources */,
 				F9C9814A17B8C86200DDCE95 /* RightReverseBlock.m in Sources */,
 				F9C9814B17B8C86200DDCE95 /* StandardBlock.m in Sources */,
-				F9C9814C17B8C86200DDCE95 /* BigCoin.m in Sources */,
 				F9C9814D17B8C86200DDCE95 /* Coin.m in Sources */,
-				F9C9814E17B8C86200DDCE95 /* DroppingCoin.m in Sources */,
 				F9C9814F17B8C86200DDCE95 /* StandardCoin.m in Sources */,
 				F9C9815017B8C86200DDCE95 /* SwitchCoin.m in Sources */,
 				F9C9815217B8C86200DDCE95 /* Gimmick.m in Sources */,
@@ -1908,7 +1891,6 @@
 				F922C94C17D1C402005177A2 /* SkyPage.m in Sources */,
 				F922C95417D1E7A7005177A2 /* Enemy.m in Sources */,
 				F922C95717D1E888005177A2 /* StandardEnemy.m in Sources */,
-				F922C95A17D1ED94005177A2 /* SkyEnemy.m in Sources */,
 				F922C95D17D24089005177A2 /* Gun.m in Sources */,
 				F922C96017D25586005177A2 /* Bullet.m in Sources */,
 				F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */,
