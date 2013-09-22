@@ -23,6 +23,11 @@
     return emitter;
 }
 
++ (id)getRotateAction {
+    id rotate = [CCRotateBy actionWithDuration:0.3f angle:360];
+    return [CCRepeatForever actionWithAction:rotate];
+}
+
 + (id)getDamagedAction {
     id tint = [CCTintTo actionWithDuration:0.3f red:255 green:0 blue:0];
     id reset = [CCTintTo actionWithDuration:0 red:255 green:255 blue:255];

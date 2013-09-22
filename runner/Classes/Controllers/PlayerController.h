@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Bullet.h"
 
 @interface PlayerController : CCNode {
     
@@ -26,7 +27,7 @@
 - (void)getOff:(CGPoint)position;
 - (void)speedUp;
 - (void)fly;
-- (BOOL)deadIfBulletCollided:(CGPoint)position;
+- (BOOL)deadIfBulletCollided:(Bullet*)position;
 - (void)changePlayer:(int)crystalId;
 - (void)backToDefaultPlayer;
 

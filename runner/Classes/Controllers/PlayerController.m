@@ -131,8 +131,8 @@
     [self._plane start];
 }
 
-- (BOOL)deadIfBulletCollided:(CGPoint)position {
-    return [self._player deadIfBulletCollided:position];
+- (BOOL)deadIfBulletCollided:(Bullet*)bullet {
+    return [self._player deadIfBulletCollided:bullet];
 }
 
 - (CGPoint)getPlayerFootPosition {

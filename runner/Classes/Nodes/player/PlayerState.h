@@ -10,12 +10,12 @@
 #import "cocos2d.h"
 
 @interface PlayerState : NSObject
-@property (nonatomic, readwrite)int _jumpNum, _jumpSpeed, _crystalId;
+@property (nonatomic, readwrite)int _jumpNum, _jumpSpeed, _crystalId, _playerId;
 
 + (PlayerState*)create:(int)playerId crystalId:(int)crystalId;
 
 - (id)initWithCrystalId:(int)playerId crystalId:(int)crystalId;
-- (void)reset;
+- (void)reset:(CCSprite*)sprite;
 
 // アクション
 - (float)jump:(CCSprite *)sprite num:(float)num vy:(float)vy onGroud:(BOOL)onGround; // ジャンプ
@@ -24,5 +24,6 @@
 - (BOOL)ignoreEnemyJump;
 - (BOOL)ignoreEnemy;
 - (BOOL)isForce;
+- (float)touchEnd:(CCSprite*)sprite vy:(float)vy onGround:(BOOL)onGround isReverse:(BOOL)isReverse isRunning:(BOOL)isRunning;
 
 @end

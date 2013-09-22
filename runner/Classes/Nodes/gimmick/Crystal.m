@@ -67,7 +67,7 @@
 
 - (void)_addCrystal {
     // TODO:back
-    self._crystalId = CRYSTAL_BLACK;
+    self._crystalId = CRYSTAL_BLUE;
 //    self._crystalId = floor(CCRANDOM_0_1()*4) + 1;
     if (![self._sprite parent]) {
         self._sprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"crystal%d_1.png", self._crystalId]];

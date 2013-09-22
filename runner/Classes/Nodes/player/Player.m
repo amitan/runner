@@ -21,7 +21,7 @@
 
 @interface Player ()
 @property (nonatomic, readwrite)int _monsterId;
-@property (nonatomic, readwrite)BOOL _isStaged, _isBulletHit, _isInvisible, _isTouching;
+@property (nonatomic, readwrite)BOOL _isStaged, _isBulletHit, _isInvisible, _isTouching, _isPlaying;
 @property (nonatomic, readwrite)int _currentJumpNum, _jumpSpeed, _crystalId;
 @property (nonatomic, retain)CCSprite *_playerSprite, *_effectSprite;
 @property (nonatomic, readwrite)BOOL _onGround, _isForwardAdjusting, _isBackAdjusting, _isReverse, _onTopBlock, _onRailed;
@@ -65,6 +65,7 @@ const float INVISIBLE_TIME = 2;
         self._onRailed = false;
         self._crystalId = [[PlayerMaster getInstance] getCrystalId:monsterId];
         self._invisibleTime = 0;
+        self._isPlaying = false;
         
         // アニメーションの最初のコマを読み込む
         NSString *direction = (isReverse) ? @"left" : @"right";
@@ -114,11 +115,13 @@ const float INVISIBLE_TIME = 2;
 }
 
 - (void)start {
+    self._isPlaying = true;
     [self._playerSprite runAction:[PlayerAnimation getWalkAction:self._monsterId isReverse:self._isReverse frameNum:3]];
     [self scheduleUpdate];
 }
 
 - (void)invisibleStart {
+    self._isPlaying = true;
     self._isInvisible = true;
     self._invisibleTime = INVISIBLE_TIME;
     self._playerSprite.opacity = 128;
@@ -127,9 +130,10 @@ const float INVISIBLE_TIME = 2;
 }
 
 - (void)stop {
+    self._isPlaying = false;
     [self unscheduleUpdate];
     [self._playerSprite stopAllActions];
-    [self._state reset];
+    [self._state reset:self._playerSprite];
 }
 
 - (void)touchBegan {
@@ -147,6 +151,7 @@ const float INVISIBLE_TIME = 2;
 
 - (void)touchEnd {
     self._isTouching = false;
+    self._vy = [self._state touchEnd:self._playerSprite vy:self._vy onGround:self._onGround isReverse:self._isReverse isRunning:self._isPlaying];
 }
 
 - (void)jump {
@@ -163,12 +168,14 @@ const float INVISIBLE_TIME = 2;
     self._vy = self._jumpSpeed * 1.5;
 }
 
-- (BOOL)deadIfBulletCollided:(CGPoint)position {
+- (BOOL)deadIfBulletCollided:(Bullet*)bullet {
     if (self._isInvisible) {
         return false;
     }
-    if (CGRectContainsPoint([self getRect], position)) {
-        if (![self._state ignoreEnemy]) {
+    if (CGRectContainsPoint([self getRect], bullet.position)) {
+        if ([self._state ignoreEnemy]) {
+            [bullet clear];
+        } else {
             self._isBulletHit = true;
         }
         return true;
@@ -180,7 +187,7 @@ const float INVISIBLE_TIME = 2;
 
     // ステージ上にいなければ何も処理しない
     if (!self._isStaged) return;
-    
+
     ///////////////////////////////////////////////////////////////
     // 点滅判定
     ///////////////////////////////////////////////////////////////

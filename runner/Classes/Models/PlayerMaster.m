@@ -30,7 +30,7 @@ static PlayerMaster *_master = nil;
         [self._masterDictionary setObject:
          @{ @"name": @"ホワイトウルフ", @"specialType": @1, @"frameNum": @2, @"jumpSpeed": @1300, @"crystalId": @0} forKey:@"2000001"];
         [self._masterDictionary setObject:
-         @{ @"name": @"ブルーウルフ", @"specialType": @2, @"frameNum": @3, @"jumpSpeed": @1400, @"crystalId": @1} forKey:@"2000002"];
+         @{ @"name": @"ブルーウルフ", @"specialType": @2, @"frameNum": @3, @"jumpSpeed": @1500, @"crystalId": @1} forKey:@"2000002"];
         [self._masterDictionary setObject:
          @{ @"name": @"イエローウルフ", @"specialType": @3, @"frameNum": @3, @"jumpSpeed": @1300, @"crystalId": @2} forKey:@"2000003"];
         [self._masterDictionary setObject:
@@ -41,10 +41,10 @@ static PlayerMaster *_master = nil;
         self._specialDictionary = [NSMutableDictionary dictionary];
         [self._specialDictionary setObject:@"特になし" forKey:@"0"];
         [self._specialDictionary setObject:@"2段ジャンプ" forKey:@"1"];
-        [self._specialDictionary setObject:@"ぐるぐるジャンプ" forKey:@"2"]; // TODO
+        [self._specialDictionary setObject:@"ぐるぐるジャンプ" forKey:@"2"];
         [self._specialDictionary setObject:@"空走り" forKey:@"3"];
         [self._specialDictionary setObject:@"急降下" forKey:@"4"];
-        [self._specialDictionary setObject:@"オート攻撃" forKey:@"5"]; // TODO
+        [self._specialDictionary setObject:@"雷攻撃" forKey:@"5"];
     }
     return self;
 }

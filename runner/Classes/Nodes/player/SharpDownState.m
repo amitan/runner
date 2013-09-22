@@ -29,7 +29,7 @@
     return self;
 }
 
-- (void)reset {
+- (void)reset:(CCSprite*)sprite {
     [self._sprite removeFromParentAndCleanup:NO];
 }
 

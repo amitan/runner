@@ -62,7 +62,7 @@ const int BULLET_DISAPPEAR_X = -200;
     if (self.position.x < [PointUtil getPoint:BULLET_DISAPPEAR_X]) {
         [self clear];
     } else {
-        [[GameScene sharedInstance].playerController deadIfBulletCollided:self.position];
+        [[GameScene sharedInstance].playerController deadIfBulletCollided:self];
     }
 }
 

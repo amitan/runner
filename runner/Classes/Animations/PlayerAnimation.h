@@ -15,6 +15,7 @@
 + (id)getWalkAction:(int)monsterId isReverse:(BOOL)isReverse frameNum:(int)frameNum;
 
 + (id)getDamagedAction;
++ (id)getRotateAction;
 
 // 死亡演出を取得
 + (CCParticleSystem*)getDeadParticle;

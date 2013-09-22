@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Bullet.h"
 
 @interface Player : CCNode {
     
@@ -34,7 +35,7 @@
 // プレイヤーアクション
 - (void)jump;
 - (void)trampoline;
-- (BOOL)deadIfBulletCollided:(CGPoint)position;
+- (BOOL)deadIfBulletCollided:(Bullet*)bullet;
 - (void)getOff:(CGPoint)position func:(id)func;
 - (void)goDown:(id)func;
 
