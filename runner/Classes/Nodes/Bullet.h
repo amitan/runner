@@ -18,5 +18,6 @@
 - (void)stop;
 - (void)reset;
 - (void)stageOn:(CGPoint)position;
+- (void)clear;
 
 @end

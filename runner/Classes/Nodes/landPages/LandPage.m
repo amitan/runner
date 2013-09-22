@@ -38,6 +38,7 @@
     self._trampolines = nil;
     self._rails = nil;
     self._item = nil;
+    self._crystal = nil;
     [super dealloc];
 }
 
@@ -56,6 +57,7 @@
         [rail start];
     }
     [self._item start];
+    [self._crystal start];
 }
 
 - (void)stop {
@@ -73,6 +75,7 @@
         [rail stop];
     }
     [self._item stop];
+    [self._crystal stop];
 }
 
 - (void)reset {
@@ -93,6 +96,8 @@
     }
     [self._item reset];
     [self._item stageOn:self];
+    [self._crystal reset];
+    [self._crystal stageOn:self];
 }
 
 - (float)getWidth {
@@ -149,6 +154,15 @@
     return NULL;
 }
 
+- (Crystal*)takeCrystalIfCollided:(CGRect)rect {
+    if (self._crystal) {
+        if ([self._crystal takenIfCollided:rect]) {
+            return self._crystal;
+        }
+    }
+    return NULL;
+}
+
 - (BOOL)pressSwitchesIfCollided:(CGRect)rect {
     BOOL result = false;
     for (Switch *sw in self._switches) {
@@ -172,11 +186,21 @@
     return false;
 }
 
-- (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction {
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction isForce:(BOOL)isForce {
     for (Enemy *enemy in self._enemies) {
-        if ([enemy deadIfCollided:point direction:direction]) return enemy;
+        if ([enemy deadIfCollided:point direction:direction isForce:isForce]) return enemy;
     }
     return NULL;
+}
+
+- (NSArray*)attackEnemiesBetween:(CGPoint)point end:(CGPoint)endPoint {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:1];
+    for (Enemy *enemy in self._enemies) {
+        if ([enemy deadBetween:point end:(CGPoint)endPoint]) {
+            [array addObject:enemy];
+        }
+    }
+    return array;
 }
 
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction {

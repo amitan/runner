@@ -38,6 +38,8 @@
             return 10;
         case E_SLYME:
             return 7;
+        case E_NEEDLE_HALF:
+            return 20;
         default:
             return 0;
     }
@@ -100,8 +102,12 @@
     return false;
 }
 
-- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction {
+- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction isForce:(BOOL)isForce {
     return false;
 }
+- (BOOL)deadBetween:(CGPoint)point end:(CGPoint)endPoint {
+    return false;
+}
+
 
 @end

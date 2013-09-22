@@ -29,7 +29,7 @@
     return false;
 }
 
-- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction {
+- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction isForce:(BOOL)isForce {
     return false;
 }
 @end

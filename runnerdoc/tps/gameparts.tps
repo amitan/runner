@@ -144,10 +144,6 @@
             <filename>../sprites/gameparts/black_belt.png</filename>
             <filename>../sprites/gameparts/coin1_1.png</filename>
             <filename>../sprites/gameparts/coin1_2.png</filename>
-            <filename>../sprites/gameparts/coin2_1.png</filename>
-            <filename>../sprites/gameparts/coin2_2.png</filename>
-            <filename>../sprites/gameparts/coin3_1.png</filename>
-            <filename>../sprites/gameparts/coin3_2.png</filename>
             <filename>../sprites/gameparts/coin4_1.png</filename>
             <filename>../sprites/gameparts/coin4_2.png</filename>
             <filename>../sprites/gameparts/switch101_1.png</filename>
@@ -161,7 +157,6 @@
             <filename>../sprites/gameparts/rail1_1.png</filename>
             <filename>../sprites/gameparts/rail2_1.png</filename>
             <filename>../sprites/gameparts/rope.png</filename>
-            <filename>../sprites/gameparts/bubble.png</filename>
             <filename>../sprites/gameparts/plane.png</filename>
             <filename>../sprites/gameparts/fire_warning1.png</filename>
             <filename>../sprites/gameparts/fire_warning2.png</filename>
@@ -169,6 +164,11 @@
             <filename>../sprites/gameparts/red_belt.png</filename>
             <filename>../sprites/gameparts/item_base.png</filename>
             <filename>../sprites/gameparts/item_magnet.png</filename>
+            <filename>../sprites/gameparts/crystal1_1.png</filename>
+            <filename>../sprites/gameparts/crystal2_1.png</filename>
+            <filename>../sprites/gameparts/crystal3_1.png</filename>
+            <filename>../sprites/gameparts/none.png</filename>
+            <filename>../sprites/gameparts/crystal4_1.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

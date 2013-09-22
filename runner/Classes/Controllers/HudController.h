@@ -42,7 +42,7 @@
 - (int)getPlayer3Coin;
 
 // EXPを加算/取得する
-- (void)addExp:(int)num;
+- (BOOL)addExp:(int)num;
 - (void)resetExp;
 - (void)fever;
 - (void)stopFever;

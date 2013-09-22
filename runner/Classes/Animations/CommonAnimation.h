@@ -29,4 +29,7 @@
 // 通知アニメーションを取得
 + (id)getNotificationAction;
 
++ (id)getTopDownAction;
++ (id)getShakeAction;
+
 @end

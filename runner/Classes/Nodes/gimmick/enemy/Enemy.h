@@ -37,7 +37,8 @@ typedef enum {
 // 座標が敵に含まれているか判定する
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction;
 - (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius;
-- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction;
+- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction isForce:(BOOL)isForce;
+- (BOOL)deadBetween:(CGPoint)point end:(CGPoint)endPoint;
 - (BOOL)_isHit:(CGPoint)point;
 
 @end

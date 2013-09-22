@@ -8,6 +8,7 @@
 
 #import "HalfNeedleEnemy.h"
 #import "PointUtil.h"
+#import "EnemyAnimation.h"
 
 @implementation HalfNeedleEnemy
 
@@ -21,7 +22,14 @@
     return [self _isHit:point];
 }
 
-- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction {
-    return false;
+- (BOOL)deadIfCollided:(CGPoint)point direction:(DIRECTION)direction isForce:(BOOL)isForce {
+    if (direction != TOP) return false;
+    if (!isForce) return false;
+    BOOL result = [self _isHit:point];
+    if (result) {
+        self._isStaged = false;
+        [self._sprite runAction:[EnemyAnimation getDeadAction]];
+    }
+    return result;
 }
 @end

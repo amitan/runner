@@ -23,7 +23,6 @@
 #import "Page11.h"
 #import "Page12.h"
 #import "Page13.h"
-#import "Page14.h"
 #import "Page900.h"
 #import "Page1000.h"
 #import "Page1001.h"
@@ -44,14 +43,13 @@ const int INIT_ARRAY_CAPACITY = 5;
         case 4: return [Page4 node]; // 穴とコイン
         case 5: return [Page5 node]; // 2段ブロック + 敵（きのこ、とげ）
         case 6: return [Page6 node]; // ブロック横5個が4段とコイン + 敵（炎神）+ 100コイン
-        case 7: return [Page7 node]; // ブロック縦3個とでかコイン + 敵（とげ、炎神）
-        case 8: return [Page8 node]; // 階段と反転ブロックとでかコイン + 100コイン
+        case 7: return [Page7 node]; // ブロック縦3個とクリスタル + 敵（とげ、炎神）
+        case 8: return [Page8 node]; // 階段と反転ブロックとクリスタル + 100コイン
         case 9: return [Page9 node]; // 壁にコインスイッチ + 敵（きのこ）
         case 10: return [Page10 node]; // 下くぐると100コイン
         case 11: return [Page11 node]; // ジャンプ台（縦）とブロック/コイン + 敵（きのこ、スライム）
         case 12: return [Page12 node]; // レール
         case 13: return [Page13 node]; // 飛びブロックと間にコイン + 間に敵（きのこ、スライム）
-        case 14: return [Page14 node]; // 1個ブロックが3つとアイテム + 敵
         case 900: return [Page900 node]; // スピードアップ
         case 1000: return [Page1000 node]; // 空：何もなし
         case 1001: return [Page1001 node]; // 空：コイン
@@ -81,7 +79,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPageBy:(int)pageId {
-//    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 14; // TODO:
+    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 7; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;

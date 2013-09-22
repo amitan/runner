@@ -18,7 +18,7 @@
 @interface HudController ()
 @property (nonatomic, readwrite)int _totalCoinNum, _player1CoinNum, _player2CoinNum, _player3CoinNum;
 @property (nonatomic, readwrite)float _dx, _skyDx, _landDx;
-@property (nonatomic, readwrite)int _currentDistance, _exp;
+@property (nonatomic, readwrite)int _currentDistance, _exp, _maxExp;
 @property (nonatomic, retain)CCLabelTTF *_coinNumLabel, *_distanceLabel;
 @property (nonatomic, retain)CCSprite *_coinBonus;
 @property (nonatomic, retain)CCLabelTTF *_coinBonusLabel, *_expLabel;
@@ -31,11 +31,13 @@
 const int COIN_BONUS_EFFECT_X = 300;
 const float EXP_BAR_FULL = 234;
 const float DISTANCE_FACTOR = 128.0f;
+const int MAX_EXP = 30;
 
 - (id)init {
     self = [super init];
 	if (self) {
         self.isPausing = false;
+        self._maxExp = MAX_EXP;
     }
     return self;
 }
@@ -139,8 +141,8 @@ const float DISTANCE_FACTOR = 128.0f;
         self._stopSprite.visible = YES;
         self._stopSprite.isEnabled = YES;
     }
-    [self._expLabel setString:[NSString stringWithFormat:@"%d/100", self._exp]];
-    self._expBar.scaleX = EXP_BAR_FULL * self._exp / 100;
+    [self._expLabel setString:[NSString stringWithFormat:@"%d/%d", self._exp, self._maxExp]];
+    self._expBar.scaleX = EXP_BAR_FULL * self._exp / self._maxExp;
 }
 
 - (void)addCoin:(int)num {
@@ -231,16 +233,19 @@ const float DISTANCE_FACTOR = 128.0f;
     return self._player3CoinNum;
 }
 
-- (void)addExp:(int)num {
-    self._exp = min(self._exp + num, 100);
+- (BOOL)addExp:(int)num {
+    self._exp = min(self._exp + num, self._maxExp);
     [self sync];
-    if (self._exp >= 100) {
+    if (self._exp >= self._maxExp) {
         [[GameScene sharedInstance] fever];
+        return true;
     }
+    return false;
 }
 
 - (void)resetExp {
     self._exp = 0;
+    self._maxExp += 1.5 * MAX_EXP;
 }
 
 - (void)fever {

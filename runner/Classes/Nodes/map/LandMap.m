@@ -91,6 +91,14 @@ const float MIN_FIRE2_SECONDS = 10;
     return [currentPage takeItemIfCollided:worldRect];
 }
 
+- (Crystal*)takeCrystalIfCollided:(CGRect)rect {
+    CGPoint point = [self _getCollisionPoint:rect];
+    LandPage *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
+    return [currentPage takeCrystalIfCollided:worldRect];
+}
+
 - (BOOL)jumpIfCollided:(CGRect)rect {
     CGPoint point = [self _getCollisionPoint:rect];
     LandPage *currentPage = [self getCurrentPage:point];
@@ -103,10 +111,26 @@ const float MIN_FIRE2_SECONDS = 10;
     return ccp(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
 }
 
-- (Enemy*)attackEnemyIfCollided:(CGPoint)point  direction:(DIRECTION)direction {
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point  direction:(DIRECTION)direction isForce:(BOOL)isForce {
     LandPage *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
-    return [currentPage attackEnemyIfCollided:location direction:direction];
+    return [currentPage attackEnemyIfCollided:location direction:direction isForce:isForce];
+}
+
+- (NSArray*)attackAllEnemies {
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    float limitX1 = winSize.width / 2 - [PointUtil getPoint:BASE_WIDTH / 2];
+    float limitX2 = winSize.width / 2 + [PointUtil getPoint:BASE_WIDTH / 2];
+    float centerY = winSize.height / 2;
+    CGPoint leftPoint = ccp(limitX1, centerY);
+    CGPoint rightPoint = ccp(limitX2, centerY);
+    CGPoint leftLocation = ccpSub(leftPoint, self.position);
+    CGPoint rightLocation = ccpSub(rightPoint, self.position);
+    LandPage *leftPage = [self getCurrentPage:leftPoint];
+    NSArray *leftArray = [leftPage attackEnemiesBetween:leftLocation end:rightLocation];
+    LandPage *rightPage = [self getCurrentPage:rightPoint];
+    NSArray *rightArray = [rightPage attackEnemiesBetween:leftLocation end:rightLocation];
+    return [leftArray arrayByAddingObjectsFromArray:rightArray];
 }
 
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction {
@@ -220,6 +244,11 @@ const float MIN_FIRE2_SECONDS = 10;
         [self._gun2 stageOn];
         [self._gun2 start];
     }
+}
+
+- (void)clearBullets {
+    [self._gun1 clearBullets];
+    [self._gun2 clearBullets];
 }
 
 - (void)suspend {

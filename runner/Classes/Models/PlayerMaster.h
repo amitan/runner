@@ -20,4 +20,5 @@
 - (NSString*)getSpecialName:(int)typeId;
 - (int)getJumpNum:(int)playerId;
 - (int)getJumpSpeed:(int)playerId;
+- (int)getCrystalId:(int)monsterId;
 @end

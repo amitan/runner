@@ -65,6 +65,11 @@ const int INIT_GUN_POSITION_Y = 520;
     return false;
 }
 
+- (void)clearBullets {
+    [self._bullet1 clear];
+    [self._bullet2 clear];
+}
+
 - (void)start {
     id fire = [CCCallBlock actionWithBlock:^{
         [self stageOff];

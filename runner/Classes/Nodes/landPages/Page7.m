@@ -32,25 +32,25 @@
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:C_STANDARD x:700 y:-495],
-                        [Coin createCoin:C_STANDARD x:750 y:-495],
-                        [Coin createCoin:C_STANDARD x:800 y:-495],
-                        [Coin createCoin:C_STANDARD x:850 y:-495],
-                        [Coin createCoin:C_STANDARD x:900 y:-495],
-                        [Coin createCoin:C_STANDARD x:950 y:-495],
-                        [Coin createCoin:C_STANDARD x:1000 y:-495],
-                        [Coin createCoin:C_STANDARD x:1050 y:-495],
-                        [Coin createCoin:C_STANDARD x:1100 y:-495],
-                        [Coin createCoin:C_STANDARD x:1150 y:-495],
-                        [Coin createCoin:C_STANDARD x:1200 y:-495],
-                        [Coin createCoin:C_STANDARD x:1250 y:-495],
-                        [Coin createCoin:C_STANDARD x:1300 y:-495],
-                        [Coin createCoin:C_STANDARD x:1350 y:-495],
-                        [Coin createCoin:C_STANDARD x:1400 y:-495],
-                        [Coin createCoin:C_STANDARD x:1450 y:-495]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:700 y:-395],
+                        [Coin createCoin:C_STANDARD x:750 y:-345],
+                        [Coin createCoin:C_STANDARD x:800 y:-345],
+                        [Coin createCoin:C_STANDARD x:850 y:-345],
+                        [Coin createCoin:C_STANDARD x:900 y:-345],
+                        [Coin createCoin:C_STANDARD x:950 y:-395],
+                        [Coin createCoin:C_STANDARD x:1350 y:-395],
+                        [Coin createCoin:C_STANDARD x:1400 y:-395],
+                        [Coin createCoin:C_STANDARD x:1450 y:-395],
+                        [Coin createCoin:C_STANDARD x:1350 y:-345],
+                        [Coin createCoin:C_STANDARD x:1400 y:-345],
+                        [Coin createCoin:C_STANDARD x:1450 y:-345]];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
-        }        
+        }
+        
+        // クリスタル
+        self._crystal = [Crystal createCrystal:420 y:-70];
+        [self._crystal stageOn:self];
     }
     return self;
 }
@@ -62,6 +62,11 @@
         [extraEnemies addObject:[Enemy createEnemy:E_NEEDLE_HALF x:400 y:-520]];
         self._enemies = extraEnemies;
         
+    } else if (self.appearNum == 2) {
+        NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1500 y:-522]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:1570 y:-522]];
+        self._enemies = extraEnemies;
     }
     
     [super reset];

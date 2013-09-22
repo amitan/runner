@@ -141,46 +141,36 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/player/player2001001_left1.png</filename>
-            <filename>../sprites/player/player2001001_left2.png</filename>
-            <filename>../sprites/player/player2001001_left3.png</filename>
-            <filename>../sprites/player/player2001001_right1.png</filename>
-            <filename>../sprites/player/player2001001_right2.png</filename>
-            <filename>../sprites/player/player2001001_right3.png</filename>
-            <filename>../sprites/player/player2002001_left1.png</filename>
-            <filename>../sprites/player/player2002001_left2.png</filename>
-            <filename>../sprites/player/player2002001_left3.png</filename>
-            <filename>../sprites/player/player2002001_right1.png</filename>
-            <filename>../sprites/player/player2002001_right2.png</filename>
-            <filename>../sprites/player/player2002001_right3.png</filename>
-            <filename>../sprites/player/player2003001_left1.png</filename>
-            <filename>../sprites/player/player2003001_left2.png</filename>
-            <filename>../sprites/player/player2003001_left3.png</filename>
-            <filename>../sprites/player/player2003001_right1.png</filename>
-            <filename>../sprites/player/player2003001_right2.png</filename>
-            <filename>../sprites/player/player2003001_right3.png</filename>
             <filename>../sprites/player/player2000001_left1.png</filename>
             <filename>../sprites/player/player2000001_left2.png</filename>
+            <filename>../sprites/player/player2000001_left3.png</filename>
             <filename>../sprites/player/player2000001_right1.png</filename>
             <filename>../sprites/player/player2000001_right2.png</filename>
-            <filename>../sprites/player/player2000001_stand.png</filename>
-            <filename>../sprites/player/player2001001_stand.png</filename>
-            <filename>../sprites/player/player2002001_stand.png</filename>
-            <filename>../sprites/player/player2003001_stand.png</filename>
-            <filename>../sprites/player/player2004001_left1.png</filename>
-            <filename>../sprites/player/player2004001_left2.png</filename>
-            <filename>../sprites/player/player2004001_left3.png</filename>
-            <filename>../sprites/player/player2004001_right1.png</filename>
-            <filename>../sprites/player/player2004001_right2.png</filename>
-            <filename>../sprites/player/player2004001_right3.png</filename>
-            <filename>../sprites/player/player2004001_stand.png</filename>
-            <filename>../sprites/player/player2005001_left1.png</filename>
-            <filename>../sprites/player/player2005001_left2.png</filename>
-            <filename>../sprites/player/player2005001_left3.png</filename>
-            <filename>../sprites/player/player2005001_right1.png</filename>
-            <filename>../sprites/player/player2005001_right2.png</filename>
-            <filename>../sprites/player/player2005001_right3.png</filename>
-            <filename>../sprites/player/player2005001_stand.png</filename>
+            <filename>../sprites/player/player2000001_right3.png</filename>
+            <filename>../sprites/player/player2000002_left1.png</filename>
+            <filename>../sprites/player/player2000002_left2.png</filename>
+            <filename>../sprites/player/player2000002_left3.png</filename>
+            <filename>../sprites/player/player2000002_right1.png</filename>
+            <filename>../sprites/player/player2000002_right2.png</filename>
+            <filename>../sprites/player/player2000002_right3.png</filename>
+            <filename>../sprites/player/player2000003_left1.png</filename>
+            <filename>../sprites/player/player2000003_left2.png</filename>
+            <filename>../sprites/player/player2000003_left3.png</filename>
+            <filename>../sprites/player/player2000003_right1.png</filename>
+            <filename>../sprites/player/player2000003_right2.png</filename>
+            <filename>../sprites/player/player2000003_right3.png</filename>
+            <filename>../sprites/player/player2000004_left1.png</filename>
+            <filename>../sprites/player/player2000004_left2.png</filename>
+            <filename>../sprites/player/player2000004_left3.png</filename>
+            <filename>../sprites/player/player2000004_right1.png</filename>
+            <filename>../sprites/player/player2000004_right2.png</filename>
+            <filename>../sprites/player/player2000004_right3.png</filename>
+            <filename>../sprites/player/player2000005_left1.png</filename>
+            <filename>../sprites/player/player2000005_left2.png</filename>
+            <filename>../sprites/player/player2000005_left3.png</filename>
+            <filename>../sprites/player/player2000005_right1.png</filename>
+            <filename>../sprites/player/player2000005_right2.png</filename>
+            <filename>../sprites/player/player2000005_right3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

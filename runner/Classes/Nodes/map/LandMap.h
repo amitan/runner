@@ -32,9 +32,11 @@
 - (void)takeItemsIfCollided:(CGRect)rect;
 - (BOOL)jumpIfCollided:(CGRect)rect;
 - (Item*)takeItemIfCollided:(CGRect)rect;
+- (Crystal*)takeCrystalIfCollided:(CGRect)rect;
 
 // 敵チェック
-- (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction;
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction isForce:(BOOL)isForce;
+- (NSArray*)attackAllEnemies;
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction;
 
 // スピードアップするか判定する
@@ -43,6 +45,7 @@
 - (BOOL)checkFire2:(ccTime)dt;
 - (void)fire1;
 - (void)fire2;
+- (void)clearBullets;
 
 // 必要に応じてページの追加/削除を行う
 - (void)refillIfNeeded;

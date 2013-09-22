@@ -10,6 +10,15 @@
 		F9052E5D17A179580078EE9C /* land.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9052E5B17A179570078EE9C /* land.plist */; };
 		F9052E5E17A179580078EE9C /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = F9052E5C17A179570078EE9C /* land.png */; };
 		F9052E6E17A56D170078EE9C /* GameResultLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9052E6D17A56D170078EE9C /* GameResultLayer.m */; };
+		F9087E2A17EB2BBF009EE1EC /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E2717EB2BBF009EE1EC /* Plane.m */; };
+		F9087E2B17EB2BBF009EE1EC /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E2917EB2BBF009EE1EC /* Player.m */; };
+		F9087E3117EB2C0C009EE1EC /* PlayerState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E3017EB2C0C009EE1EC /* PlayerState.m */; };
+		F9087E3417EB2D53009EE1EC /* StandardState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E3317EB2D53009EE1EC /* StandardState.m */; };
+		F9087E3717EB4162009EE1EC /* SharpDownState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E3617EB4162009EE1EC /* SharpDownState.m */; };
+		F9087E3A17EB4C92009EE1EC /* SkyRunState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E3917EB4C92009EE1EC /* SkyRunState.m */; };
+		F9087E3D17EB55EC009EE1EC /* effect.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9087E3B17EB55EC009EE1EC /* effect.plist */; };
+		F9087E3E17EB55EC009EE1EC /* effect.png in Resources */ = {isa = PBXBuildFile; fileRef = F9087E3C17EB55EC009EE1EC /* effect.png */; };
+		F9087E4117ED944A009EE1EC /* ThunderState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E4017ED9448009EE1EC /* ThunderState.m */; };
 		F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F617CF7ACC005177A2 /* LandMap.m */; };
 		F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F817CF7ACC005177A2 /* SkyMap.m */; };
 		F922C8FD17CF7B00005177A2 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8FC17CF7B00005177A2 /* Map.m */; };
@@ -48,8 +57,6 @@
 		F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63117C4FAC4007CF0CF /* GameDao.m */; };
 		F923F63517C500B1007CF0CF /* UnitDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63417C500B1007CF0CF /* UnitDao.m */; };
 		F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63717C5F6F3007CF0CF /* MonsterGifter.m */; };
-		F923F63B17CA5486007CF0CF /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63A17CA5483007CF0CF /* Follower.m */; };
-		F923F63E17CD021C007CF0CF /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63D17CD021C007CF0CF /* Plane.m */; };
 		F9363E1D17BA579100F832C0 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1C17BA579100F832C0 /* Door.m */; };
 		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
 		F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2217BA5D3600F832C0 /* Carpenter.m */; };
@@ -193,14 +200,13 @@
 		F93DF6AE178AF914007AD085 /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6AD178AF914007AD085 /* MapController.m */; };
 		F93DF6B1178AF9F0007AD085 /* gameparts.plist in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6AF178AF9F0007AD085 /* gameparts.plist */; };
 		F93DF6B2178AF9F0007AD085 /* gameparts.png in Resources */ = {isa = PBXBuildFile; fileRef = F93DF6B0178AF9F0007AD085 /* gameparts.png */; };
-		F93DF6B5178AFE2F007AD085 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6B4178AFE2F007AD085 /* Player.m */; };
 		F93DF6BB178B0758007AD085 /* LabelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6BA178B0758007AD085 /* LabelUtil.m */; };
 		F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6BD178B085B007AD085 /* ColorUtil.m */; };
 		F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C0178B1F48007AD085 /* PlayerAnimation.m */; };
 		F93DF6C4178B1F54007AD085 /* CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C3178B1F54007AD085 /* CommonAnimation.m */; };
 		F93DF6C7178B221E007AD085 /* GameInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */; };
 		F94A566317E46F6700440AB6 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = F94A566217E46F6700440AB6 /* Item.m */; };
-		F94A566617E4766400440AB6 /* Page14.m in Sources */ = {isa = PBXBuildFile; fileRef = F94A566517E4766400440AB6 /* Page14.m */; };
+		F94A566917E6CE8400440AB6 /* Crystal.m in Sources */ = {isa = PBXBuildFile; fileRef = F94A566817E6CE8200440AB6 /* Crystal.m */; };
 		F96DDCF717DCBE8600DE88D0 /* NeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F96DDCF617DCBE8600DE88D0 /* NeedleEnemy.m */; };
 		F99DFA9E17B93707001E1EA8 /* towner.plist in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9C17B93707001E1EA8 /* towner.plist */; };
 		F99DFA9F17B93707001E1EA8 /* towner.png in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9D17B93707001E1EA8 /* towner.png */; };
@@ -263,6 +269,22 @@
 		F9052E5C17A179570078EE9C /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
 		F9052E6C17A56D170078EE9C /* GameResultLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultLayer.h; sourceTree = "<group>"; };
 		F9052E6D17A56D170078EE9C /* GameResultLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultLayer.m; sourceTree = "<group>"; };
+		F9087E2617EB2BBF009EE1EC /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		F9087E2717EB2BBF009EE1EC /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
+		F9087E2817EB2BBF009EE1EC /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		F9087E2917EB2BBF009EE1EC /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		F9087E2F17EB2C0C009EE1EC /* PlayerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerState.h; sourceTree = "<group>"; };
+		F9087E3017EB2C0C009EE1EC /* PlayerState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerState.m; sourceTree = "<group>"; };
+		F9087E3217EB2D53009EE1EC /* StandardState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardState.h; sourceTree = "<group>"; };
+		F9087E3317EB2D53009EE1EC /* StandardState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardState.m; sourceTree = "<group>"; };
+		F9087E3517EB4162009EE1EC /* SharpDownState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharpDownState.h; sourceTree = "<group>"; };
+		F9087E3617EB4162009EE1EC /* SharpDownState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharpDownState.m; sourceTree = "<group>"; };
+		F9087E3817EB4C92009EE1EC /* SkyRunState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyRunState.h; sourceTree = "<group>"; };
+		F9087E3917EB4C92009EE1EC /* SkyRunState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyRunState.m; sourceTree = "<group>"; };
+		F9087E3B17EB55EC009EE1EC /* effect.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = effect.plist; sourceTree = "<group>"; };
+		F9087E3C17EB55EC009EE1EC /* effect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = effect.png; sourceTree = "<group>"; };
+		F9087E3F17ED9447009EE1EC /* ThunderState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThunderState.h; sourceTree = "<group>"; };
+		F9087E4017ED9448009EE1EC /* ThunderState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThunderState.m; sourceTree = "<group>"; };
 		F922C8F517CF7ACC005177A2 /* LandMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandMap.h; sourceTree = "<group>"; };
 		F922C8F617CF7ACC005177A2 /* LandMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandMap.m; sourceTree = "<group>"; };
 		F922C8F717CF7ACC005177A2 /* SkyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyMap.h; sourceTree = "<group>"; };
@@ -337,10 +359,6 @@
 		F923F63417C500B1007CF0CF /* UnitDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDao.m; sourceTree = "<group>"; };
 		F923F63617C5F6F3007CF0CF /* MonsterGifter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterGifter.h; sourceTree = "<group>"; };
 		F923F63717C5F6F3007CF0CF /* MonsterGifter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterGifter.m; sourceTree = "<group>"; };
-		F923F63917CA5481007CF0CF /* Follower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Follower.h; sourceTree = "<group>"; };
-		F923F63A17CA5483007CF0CF /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
-		F923F63C17CD021C007CF0CF /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
-		F923F63D17CD021C007CF0CF /* Plane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
 		F9363E1B17BA579100F832C0 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		F9363E1C17BA579100F832C0 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
@@ -638,8 +656,6 @@
 		F93DF6AD178AF914007AD085 /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
 		F93DF6AF178AF9F0007AD085 /* gameparts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gameparts.plist; sourceTree = "<group>"; };
 		F93DF6B0178AF9F0007AD085 /* gameparts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameparts.png; sourceTree = "<group>"; };
-		F93DF6B3178AFE2F007AD085 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		F93DF6B4178AFE2F007AD085 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		F93DF6B9178B0758007AD085 /* LabelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelUtil.h; sourceTree = "<group>"; };
 		F93DF6BA178B0758007AD085 /* LabelUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelUtil.m; sourceTree = "<group>"; };
 		F93DF6BC178B085B007AD085 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
@@ -652,8 +668,8 @@
 		F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInterfaceLayer.m; sourceTree = "<group>"; };
 		F94A566117E46F6700440AB6 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		F94A566217E46F6700440AB6 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
-		F94A566417E4766400440AB6 /* Page14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page14.h; sourceTree = "<group>"; };
-		F94A566517E4766400440AB6 /* Page14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page14.m; sourceTree = "<group>"; };
+		F94A566717E6CE8000440AB6 /* Crystal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crystal.h; sourceTree = "<group>"; };
+		F94A566817E6CE8200440AB6 /* Crystal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crystal.m; sourceTree = "<group>"; };
 		F96DDCF517DCBE8600DE88D0 /* NeedleEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeedleEnemy.h; sourceTree = "<group>"; };
 		F96DDCF617DCBE8600DE88D0 /* NeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeedleEnemy.m; sourceTree = "<group>"; };
 		F99DFA9C17B93707001E1EA8 /* towner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = towner.plist; sourceTree = "<group>"; };
@@ -766,6 +782,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9087E2517EB2BBF009EE1EC /* player */ = {
+			isa = PBXGroup;
+			children = (
+				F9087E2617EB2BBF009EE1EC /* Plane.h */,
+				F9087E2717EB2BBF009EE1EC /* Plane.m */,
+				F9087E2817EB2BBF009EE1EC /* Player.h */,
+				F9087E2917EB2BBF009EE1EC /* Player.m */,
+				F9087E2F17EB2C0C009EE1EC /* PlayerState.h */,
+				F9087E3017EB2C0C009EE1EC /* PlayerState.m */,
+				F9087E3217EB2D53009EE1EC /* StandardState.h */,
+				F9087E3317EB2D53009EE1EC /* StandardState.m */,
+				F9087E3517EB4162009EE1EC /* SharpDownState.h */,
+				F9087E3617EB4162009EE1EC /* SharpDownState.m */,
+				F9087E3817EB4C92009EE1EC /* SkyRunState.h */,
+				F9087E3917EB4C92009EE1EC /* SkyRunState.m */,
+				F9087E3F17ED9447009EE1EC /* ThunderState.h */,
+				F9087E4017ED9448009EE1EC /* ThunderState.m */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
 		F922C8F417CF7ACC005177A2 /* map */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,8 +851,6 @@
 				F922C90A17CF8099005177A2 /* Page12.m */,
 				F922C90B17CF8099005177A2 /* Page13.h */,
 				F922C90C17CF8099005177A2 /* Page13.m */,
-				F94A566417E4766400440AB6 /* Page14.h */,
-				F94A566517E4766400440AB6 /* Page14.m */,
 				F922C91D17CF8099005177A2 /* Page900.h */,
 				F922C91E17CF8099005177A2 /* Page900.m */,
 			);
@@ -1375,18 +1410,13 @@
 		F93DF68B178AB5BF007AD085 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				F9087E2517EB2BBF009EE1EC /* player */,
 				F922C8F417CF7ACC005177A2 /* map */,
 				F9363E1A17BA578400F832C0 /* home */,
 				F9C9812317B8C86200DDCE95 /* gimmick */,
 				F9A468F3179EC198002BAFB7 /* hud */,
 				F922C8FE17CF8099005177A2 /* landPages */,
 				F922C94317D1C401005177A2 /* skyPages */,
-				F93DF6B3178AFE2F007AD085 /* Player.h */,
-				F93DF6B4178AFE2F007AD085 /* Player.m */,
-				F923F63917CA5481007CF0CF /* Follower.h */,
-				F923F63A17CA5483007CF0CF /* Follower.m */,
-				F923F63C17CD021C007CF0CF /* Plane.h */,
-				F923F63D17CD021C007CF0CF /* Plane.m */,
 				F922C95B17D24082005177A2 /* Gun.h */,
 				F922C95C17D24085005177A2 /* Gun.m */,
 				F922C95E17D2557D005177A2 /* Bullet.h */,
@@ -1466,6 +1496,8 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F9087E3B17EB55EC009EE1EC /* effect.plist */,
+				F9087E3C17EB55EC009EE1EC /* effect.png */,
 				F922C94D17D1C879005177A2 /* enemy.plist */,
 				F922C94E17D1C879005177A2 /* enemy.png */,
 				F9DAF99917BF572700422467 /* team.plist */,
@@ -1548,6 +1580,8 @@
 				F9C9813F17B8C86200DDCE95 /* Rail.m */,
 				F94A566117E46F6700440AB6 /* Item.h */,
 				F94A566217E46F6700440AB6 /* Item.m */,
+				F94A566717E6CE8000440AB6 /* Crystal.h */,
+				F94A566817E6CE8200440AB6 /* Crystal.m */,
 			);
 			path = gimmick;
 			sourceTree = "<group>";
@@ -1692,6 +1726,8 @@
 				F9DAF99C17BF572700422467 /* team.png in Resources */,
 				F922C94F17D1C879005177A2 /* enemy.plist in Resources */,
 				F922C95017D1C879005177A2 /* enemy.png in Resources */,
+				F9087E3D17EB55EC009EE1EC /* effect.plist in Resources */,
+				F9087E3E17EB55EC009EE1EC /* effect.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1818,7 +1854,6 @@
 				F93DF6A0178AEF59007AD085 /* PointUtil.m in Sources */,
 				F93DF6A3178AF043007AD085 /* GameUtil.m in Sources */,
 				F93DF6AE178AF914007AD085 /* MapController.m in Sources */,
-				F93DF6B5178AFE2F007AD085 /* Player.m in Sources */,
 				F93DF6BB178B0758007AD085 /* LabelUtil.m in Sources */,
 				F93DF6BE178B085B007AD085 /* ColorUtil.m in Sources */,
 				F93DF6C1178B1F48007AD085 /* PlayerAnimation.m in Sources */,
@@ -1864,8 +1899,6 @@
 				F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */,
 				F923F63517C500B1007CF0CF /* UnitDao.m in Sources */,
 				F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */,
-				F923F63B17CA5486007CF0CF /* Follower.m in Sources */,
-				F923F63E17CD021C007CF0CF /* Plane.m in Sources */,
 				F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */,
 				F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */,
 				F922C8FD17CF7B00005177A2 /* Map.m in Sources */,
@@ -1896,7 +1929,14 @@
 				F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */,
 				F96DDCF717DCBE8600DE88D0 /* NeedleEnemy.m in Sources */,
 				F94A566317E46F6700440AB6 /* Item.m in Sources */,
-				F94A566617E4766400440AB6 /* Page14.m in Sources */,
+				F94A566917E6CE8400440AB6 /* Crystal.m in Sources */,
+				F9087E2A17EB2BBF009EE1EC /* Plane.m in Sources */,
+				F9087E2B17EB2BBF009EE1EC /* Player.m in Sources */,
+				F9087E3117EB2C0C009EE1EC /* PlayerState.m in Sources */,
+				F9087E3417EB2D53009EE1EC /* StandardState.m in Sources */,
+				F9087E3717EB4162009EE1EC /* SharpDownState.m in Sources */,
+				F9087E3A17EB4C92009EE1EC /* SkyRunState.m in Sources */,
+				F9087E4117ED944A009EE1EC /* ThunderState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

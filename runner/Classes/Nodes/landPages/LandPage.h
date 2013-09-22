@@ -16,6 +16,7 @@
 #import "GameUtil.h"
 #import "Enemy.h"
 #import "Item.h"
+#import "Crystal.h"
 
 @interface LandPage : Page {
     
@@ -27,6 +28,7 @@
 @property (nonatomic, retain)NSArray *_trampolines;
 @property (nonatomic, retain)NSArray *_rails;
 @property (nonatomic, retain)Item *_item;
+@property (nonatomic, retain)Crystal *_crystal;
 
 // ページ幅を取得
 - (CGPoint)getLandPosition:(Block*)block;
@@ -40,9 +42,11 @@
 - (BOOL)pressSwitchesIfCollided:(CGRect)rect;
 - (BOOL)jumpIfCollided:(CGRect)rect;
 - (Item*)takeItemIfCollided:(CGRect)rect;
+- (Crystal*)takeCrystalIfCollided:(CGRect)rect;
 
 // 敵判定
-- (Enemy*)attackEnemyIfCollided:(CGPoint)point  direction:(DIRECTION)direction;
+- (Enemy*)attackEnemyIfCollided:(CGPoint)point direction:(DIRECTION)direction isForce:(BOOL)isForce;
+- (NSArray*)attackEnemiesBetween:(CGPoint)point end:(CGPoint)endPoint;
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction;
 
 @end

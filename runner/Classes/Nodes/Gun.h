@@ -24,5 +24,6 @@
 - (void)suspend;
 - (void)resume;
 - (BOOL)isReady;
+- (void)clearBullets;
 
 @end

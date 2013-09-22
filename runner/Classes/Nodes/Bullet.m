@@ -47,18 +47,23 @@ const int BULLET_DISAPPEAR_X = -200;
     self.position = self._initPosition;
 }
 
+- (void)clear {
+    [self stop];
+    [self reset];
+    [self removeFromParentAndCleanup:NO];
+    self.isStaged = false;
+}
+
 - (void)update:(ccTime)dt {
     float dx = [PointUtil getPoint:BULLET_SPEED];
     self.position = ccp(self.position.x - dx, self.position.y);
     
     // 画面外に出た場合
     if (self.position.x < [PointUtil getPoint:BULLET_DISAPPEAR_X]) {
-        [self stop];
-        [self reset];
-        [self removeFromParentAndCleanup:NO];
-        self.isStaged = false;
+        [self clear];
+    } else {
+        [[GameScene sharedInstance].playerController deadIfBulletCollided:self.position];
     }
-    [[GameScene sharedInstance].playerController deadIfBulletCollided:self.position];
 }
 
 @end

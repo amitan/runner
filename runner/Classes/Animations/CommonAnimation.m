@@ -57,6 +57,14 @@
     return [CCRepeatForever actionWithAction:blink];
 }
 
++ (id)getTopDownAction {
+    float dy = [PointUtil getPoint:15];
+    id moveTop = [CCMoveBy actionWithDuration:0.3f position:ccp(0, dy)];
+    id moveDown = [CCMoveBy actionWithDuration:0.3f position:ccp(0, -dy)];
+    id seq = [CCSequence actions:moveTop, moveDown, moveDown, moveTop, nil];
+    return [CCRepeatForever actionWithAction:seq];
+}
+
 + (id)getEffectAppearAction:(float)dx {
     id fadeIn = [CCFadeIn actionWithDuration:0];
     id moveTo = [CCMoveBy actionWithDuration:0.5f position:[PointUtil getPosition:dx y:0]];
@@ -71,6 +79,12 @@
     id blink = [CCBlink actionWithDuration:2.0f blinks:2];
     id scale2 = [CCScaleTo actionWithDuration:0 scale:0];
     return [CCSequence actions:scale1, blink, scale2, nil];
+}
+
++ (id)getShakeAction {
+    id shake = [CCWaves3D actionWithDuration:0.5f];
+//    id shake = [CCShaky3D actionWithRange:4 shakeZ:NO grid:ccg(12, 12) duration:0.5];
+    return [CCSequence actions:shake, nil];
 }
 
 @end

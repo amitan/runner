@@ -157,7 +157,7 @@ static GameScene *_scene = nil;
     [self.countController stop];
     [self.mapController suspend];
     [self.hudController stop];
-    [self.playerController stop];    
+    [self.playerController stop];
 }
 
 - (void)stop {
@@ -186,6 +186,7 @@ static GameScene *_scene = nil;
 
 - (void)fever {
     [self.hudController fever];
+    [self.mapController.landMap clearBullets];
     [self.playerController ride];
 }
 

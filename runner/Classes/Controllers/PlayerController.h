@@ -27,6 +27,8 @@
 - (void)speedUp;
 - (void)fly;
 - (BOOL)deadIfBulletCollided:(CGPoint)position;
+- (void)changePlayer:(int)crystalId;
+- (void)backToDefaultPlayer;
 
 // 取得
 - (CGPoint)getPlayerFootPosition;

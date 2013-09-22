@@ -8,6 +8,7 @@
 
 #import "Page8.h"
 #import "PointUtil.h"
+#import "Crystal.h"
 
 // 反転ブロックとでかコイン
 @implementation Page8
@@ -51,7 +52,11 @@
                         [Block createBlock:303 x:1820 y:-130]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
-        }        
+        }
+        
+        // クリスタル
+        self._crystal = [Crystal createCrystal:1070 y:-150];
+        [self._crystal stageOn:self];
     }
     return self;
 }
