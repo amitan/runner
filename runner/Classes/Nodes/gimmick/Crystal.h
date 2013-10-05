@@ -15,7 +15,7 @@
 }
 
 typedef enum {
-    CRYSTAL_BLUE = 1,
+//    CRYSTAL_BLUE = 1,
     CRYSTAL_YELLOW = 2,
     CRYSTAL_RED = 3,
     CRYSTAL_BLACK = 4,

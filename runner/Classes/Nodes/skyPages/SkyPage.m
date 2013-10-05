@@ -18,10 +18,13 @@
 - (BOOL)takeCoinsIfCollided:(CGPoint)center radius:(float)radius {
     
     // コイン取得チェック
+    BOOL result = false;
     for (Coin *coin in self._coins) {
-        if ([coin takenIfCollided:center radius:radius]) return true;
+        if ([coin takenIfCollided:center radius:radius]) {
+            result = true;
+        };
     }
-    return false;
+    return result;
 }
 
 - (BOOL)isEnemyHit:(CGPoint)center radius:(float)radius {

@@ -16,6 +16,7 @@
 @property (nonatomic, readwrite)float _vx, _vy;
 @property (nonatomic, readwrite)BOOL _isUp, _isFlyingAway;
 @property (nonatomic, readwrite)CGPoint _initPosition;
+@property (nonatomic, readwrite)int _currentItemId;
 @end
 
 @implementation Plane
@@ -31,6 +32,7 @@ const int UPDOWN_SPEED = 300;
         self._vy = [PointUtil getPoint:UPDOWN_SPEED];
         self._isUp = true;
         self._isFlyingAway = false;
+        self._currentItemId = 0;
         
         // 画像設定
         self._sprite = [CCSprite spriteWithSpriteFrameName:@"plane.png"];

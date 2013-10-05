@@ -18,6 +18,8 @@
 	if (self) {
         self.isPlaying = false;
         self.isStaged = false;
+        self.isItem = false;
+        self.isSpeedUp = false;
         [self resetAppearNum];
     }
     return self;

@@ -18,6 +18,7 @@
 + (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num;
 + (id)getFrameRepeatAction:(NSString*)name frameNum:(int)num duration:(float)duration;
 + (id)getFrameAction:(NSString*)name frameNum:(int)num duration:(float)duration count:(int)count func:(id)func;
++ (id)getSingleFrameAction:(NSString*)name;
 
 
 // 点滅アニメーションを取得

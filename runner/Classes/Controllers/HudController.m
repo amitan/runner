@@ -31,13 +31,13 @@
 const int COIN_BONUS_EFFECT_X = 300;
 const float EXP_BAR_FULL = 234;
 const float DISTANCE_FACTOR = 128.0f;
-const int MAX_EXP = 30;
+const int INIT_EXP = 30;
 
 - (id)init {
     self = [super init];
 	if (self) {
         self.isPausing = false;
-        self._maxExp = MAX_EXP;
+        self._maxExp = INIT_EXP;
     }
     return self;
 }
@@ -245,7 +245,7 @@ const int MAX_EXP = 30;
 
 - (void)resetExp {
     self._exp = 0;
-    self._maxExp += 1.5 * MAX_EXP;
+    self._maxExp *= 2.7;
 }
 
 - (void)fever {

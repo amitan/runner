@@ -55,9 +55,9 @@
     
     } else if (self.appearNum == 2) {
         NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
-        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:800 y:-522]];
-        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:870 y:-522]];
-        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:940 y:-522]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:780 y:-522]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:850 y:-522]];
+        [extraEnemies addObject:[Enemy createEnemy:E_KINOKO x:920 y:-522]];
         self._enemies = extraEnemies;
     }
     [super reset];

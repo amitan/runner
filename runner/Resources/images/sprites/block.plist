@@ -7,7 +7,7 @@
             <key>block101.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{723,3},{60,60}}</string>
+                <string>{{603,3},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>block103.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{539,3},{180,60}}</string>
+                <string>{{667,3},{180,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>block104.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{127,255},{60,180}}</string>
+                <string>{{907,191},{60,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>block105.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{319,255},{60,300}}</string>
+                <string>{{435,375},{60,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>block106.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,131},{900,120}}</string>
+                <string>{{3,191},{900,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>block107.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{687,255},{300,600}}</string>
+                <string>{{499,375},{300,600}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>block108.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,255},{120,120}}</string>
+                <string>{{307,67},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +111,7 @@
             <key>block109.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{383,255},{300,300}}</string>
+                <string>{{131,375},{300,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +189,7 @@
             <key>block303.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{255,255},{60,300}}</string>
+                <string>{{67,375},{60,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>block304.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{191,255},{60,300}}</string>
+                <string>{{3,375},{60,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -225,6 +225,19 @@
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
+            <key>block402.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{539,3},{60,60}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{60,60}}</string>
+                <key>sourceSize</key>
+                <string>{60,60}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -235,7 +248,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b1d1eff11cf467f70564b03d0303e44f$</string>
+            <string>$TexturePacker:SmartUpdate:08d5d10f2504ca8c7932ad4c86f9c336$</string>
             <key>textureFileName</key>
             <string>block.png</string>
         </dict>

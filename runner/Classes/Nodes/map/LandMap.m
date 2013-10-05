@@ -74,12 +74,19 @@ const float MIN_FIRE2_SECONDS = 10;
     return [currentPage getHitRail:newRect];
 }
 
-- (void)takeItemsIfCollided:(CGRect)rect {
+- (void)takeCoinsIfCollided:(CGRect)rect magnet:(BOOL)isMagnet {
     CGPoint point = [self _getCollisionPoint:rect];
     LandPage *currentPage = [self getCurrentPage:point];
     CGPoint location = ccpSub(point, self.position);
     CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
-    [currentPage takeCoinsIfCollided:worldRect];
+    [currentPage takeCoinsIfCollided:worldRect magnet:isMagnet];
+}
+
+- (void)takeOthersIfCollided:(CGRect)rect {
+    CGPoint point = [self _getCollisionPoint:rect];
+    LandPage *currentPage = [self getCurrentPage:point];
+    CGPoint location = ccpSub(point, self.position);
+    CGRect worldRect = CGRectMake(location.x - rect.size.width / 2, location.y - rect.size.height / 2, rect.size.width, rect.size.height);
     [currentPage pressSwitchesIfCollided:worldRect];
 }
 
@@ -148,6 +155,13 @@ const float MIN_FIRE2_SECONDS = 10;
     return false;
 }
 
+- (BOOL)checkItem {
+    for (Page *page in self._pages) {
+        if (page.isItem) return true;
+    }
+    return [[GameScene sharedInstance].playerController isItemEffecting];
+}
+
 - (LandPage*)getCurrentPage:(CGPoint)point {
     CGPoint location = ccpSub(point, self.position);
     for (LandPage *page in self._pages) {
@@ -179,7 +193,11 @@ const float MIN_FIRE2_SECONDS = 10;
         [self._pages removeObject:page];        
     }
     if (self._pages.count < MIN_LAND_PAGE_STOCK_NUM) {
-        [self addPage:[[GameScene sharedInstance].pageController getLandPage]];
+        if (![self checkItem] && CCRANDOM_0_1() < 0.1) {
+            [self addPage:[[GameScene sharedInstance].pageController getLandItemPage]];
+        } else {
+            [self addPage:[[GameScene sharedInstance].pageController getLandPage]];
+        }
     }
 }
 

@@ -34,7 +34,7 @@ typedef enum {
 -(id)initWithCoinId:(int)coinId groupId:(int)groupId;
 
 // 座標がコインに含まれているか判定する
-- (BOOL)takenIfCollided:(CGRect)rect;
+- (BOOL)takenIfCollided:(CGRect)rect magnet:(BOOL)isMagnet;
 - (BOOL)takenIfCollided:(CGPoint)point radius:(float)radius;
 
 // コインを取得済みか

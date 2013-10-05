@@ -62,5 +62,7 @@
 
 // エフェクトを発動する
 - (void)runChangeEffect:(id)func;
+- (BOOL)isItemEffecting;
+- (void)clearItemEffect;
 
 @end

@@ -628,19 +628,6 @@
                 <key>sourceSize</key>
                 <string>{960,453}</string>
             </dict>
-            <key>thunder1_6.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{7013148,7012453},{-14024903,-14024903}}</string>
-                <key>offset</key>
-                <string>{-7.01245e+06,7.01245e+06}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{-14024903,-14024903}}</string>
-                <key>sourceSize</key>
-                <string>{-1,-1}</string>
-            </dict>
         </dict>
         <key>metadata</key>
         <dict>

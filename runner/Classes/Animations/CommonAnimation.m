@@ -43,6 +43,13 @@
     return [CCAnimation animationWithSpriteFrames:frames delay:duration];
 }
 
++ (id)getSingleFrameAction:(NSString *)name{
+    NSMutableArray *frames = [NSMutableArray arrayWithCapacity:1];
+    CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:name];
+    [frames addObject:frame];
+    return [CCAnimate actionWithAnimation:[CCAnimation animationWithSpriteFrames:frames delay:0]];
+}
+
 + (id)getFrameRepeatAction:(NSString *)name frameNum:(int)num {
     return [self getFrameRepeatAction:name frameNum:num duration:0.5f];
 }

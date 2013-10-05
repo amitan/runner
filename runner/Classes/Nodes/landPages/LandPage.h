@@ -38,7 +38,7 @@
 - (Rail*)getHitRail:(CGRect)rect;
 
 // ギミック衝突判定
-- (BOOL)takeCoinsIfCollided:(CGRect)rect;
+- (BOOL)takeCoinsIfCollided:(CGRect)rect magnet:(BOOL)isMagnet;
 - (BOOL)pressSwitchesIfCollided:(CGRect)rect;
 - (BOOL)jumpIfCollided:(CGRect)rect;
 - (Item*)takeItemIfCollided:(CGRect)rect;

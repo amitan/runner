@@ -17,6 +17,7 @@
 
 // ページを取得する
 - (LandPage*)getLandPage;
+- (LandPage*)getLandItemPage;
 - (Page*)getSkyPage;
 - (Page*)getPageBy:(int)pageId;
 - (void)resetPages:(int)pageId;

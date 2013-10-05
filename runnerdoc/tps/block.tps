@@ -158,6 +158,7 @@
             <filename>../sprites/block/block109.png</filename>
             <filename>../sprites/block/block401.png</filename>
             <filename>../sprites/block/block110.png</filename>
+            <filename>../sprites/block/block402.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

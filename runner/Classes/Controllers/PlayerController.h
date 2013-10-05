@@ -33,5 +33,6 @@
 
 // 取得
 - (CGPoint)getPlayerFootPosition;
+- (BOOL)isItemEffecting;
 
 @end

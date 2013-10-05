@@ -23,12 +23,14 @@
 @property (nonatomic, readwrite)int _monsterId;
 @property (nonatomic, readwrite)BOOL _isStaged, _isBulletHit, _isInvisible, _isTouching, _isPlaying;
 @property (nonatomic, readwrite)int _currentJumpNum, _jumpSpeed, _crystalId;
-@property (nonatomic, retain)CCSprite *_playerSprite, *_effectSprite;
+@property (nonatomic, retain)CCSprite *_playerSprite, *_effectSprite, *_itemEffectSprite;
 @property (nonatomic, readwrite)BOOL _onGround, _isForwardAdjusting, _isBackAdjusting, _isReverse, _onTopBlock, _onRailed;
 @property (nonatomic, readwrite)float _vx, _vy, _invisibleTime, _limitY;
 @property (nonatomic, readwrite)CGPoint _properPosition;
 @property (nonatomic, retain)Rail *_currentRail;
 @property (nonatomic, retain)PlayerState *_state;
+@property (nonatomic, readwrite)float _currentItemTime;
+@property (nonatomic, readwrite)int _currentItemId;
 @end
 
 @implementation Player
@@ -66,6 +68,8 @@ const float INVISIBLE_TIME = 2;
         self._crystalId = [[PlayerMaster getInstance] getCrystalId:monsterId];
         self._invisibleTime = 0;
         self._isPlaying = false;
+        self._currentItemTime = 0;
+        self._currentItemId = 0;
         
         // アニメーションの最初のコマを読み込む
         NSString *direction = (isReverse) ? @"left" : @"right";
@@ -183,6 +187,20 @@ const float INVISIBLE_TIME = 2;
     return false;
 }
 
+- (void)useItem:(Item*)item {
+    if (self._currentItemTime <= 0) {
+        self._currentItemTime = [item getItemTime];
+        self._itemEffectSprite = [CCSprite spriteWithSpriteFrameName:@"none.png"];
+        [self addChild:self._itemEffectSprite];
+        self._currentItemId = [item getItemId];
+        switch (self._currentItemId) {
+            case ITEM_MAGNET:
+                [self._itemEffectSprite runAction:[CommonAnimation getFrameRepeatAction:@"item1_" frameNum:3 duration:0.3f]];
+                break;
+        }
+    }
+}
+
 - (void)update:(ccTime)dt {
 
     // ステージ上にいなければ何も処理しない
@@ -197,6 +215,16 @@ const float INVISIBLE_TIME = 2;
             self._isInvisible = false;
             self._invisibleTime = 0;
             self._playerSprite.opacity = 255;
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////
+    // アイテム効果判定
+    ///////////////////////////////////////////////////////////////
+    if (self._currentItemTime > 0) {
+        self._currentItemTime -= dt;
+        if (self._currentItemTime <= 0) {
+            [self clearItemEffect];
         }
     }
     
@@ -246,13 +274,14 @@ const float INVISIBLE_TIME = 2;
     ///////////////////////////////////////////////////////////////
     // コイン/アイテム判定
     ///////////////////////////////////////////////////////////////
-    [mapController.landMap takeItemsIfCollided:[self getRect]];
+    BOOL isMagnet = self._currentItemId == ITEM_MAGNET;
+    [mapController.landMap takeCoinsIfCollided:[self getRect] magnet:isMagnet];
     if ([mapController.landMap jumpIfCollided:[self getRect]]) {
         return;
     }
     Item *item = [mapController.landMap takeItemIfCollided:[self getRect]];
     if (item) {
-        CCLOG(@"take!!");
+        [self useItem:item];
     }
     Crystal *crystal = [mapController.landMap takeCrystalIfCollided:[self getRect]];
     if (crystal) {
@@ -261,6 +290,7 @@ const float INVISIBLE_TIME = 2;
             [[GameScene sharedInstance].playerController changePlayer:[crystal getCrystalId]];
         }
     }
+    [mapController.landMap takeOthersIfCollided:[self getRect]];
     
     ///////////////////////////////////////////////////////////////
     // 横軸の判定
@@ -508,9 +538,17 @@ const float INVISIBLE_TIME = 2;
 - (float)getWidth {
     return self._playerSprite.contentSize.width;
 }
-
 - (float)getHeight {
     return self._playerSprite.contentSize.height;
+}
+- (BOOL)isItemEffecting {
+    return self._currentItemTime > 0;
+}
+- (void)clearItemEffect {
+    self._currentItemTime = 0;
+    self._currentItemId = 0;
+    [self._itemEffectSprite stopAllActions];
+    [self._itemEffectSprite removeFromParentAndCleanup:YES];
 }
 
 @end

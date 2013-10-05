@@ -10,6 +10,7 @@
 #import "PointUtil.h"
 #import "GameUtil.h"
 #import "CommonAnimation.h"
+#import "GameScene.h"
 
 @interface SharpDownState ()
 @property (nonatomic, readwrite)BOOL _isDowning, _isInvincibility;
@@ -60,6 +61,11 @@
             [sprite addChild:self._underSprite z:-1];
         }
         
+        NSArray *array = [[GameScene sharedInstance].mapController.landMap attackAllEnemies];
+        for (Enemy *enemy in array) {
+            BOOL result = [[GameScene sharedInstance].hudController addExp:[enemy getExp]];
+            if (result) break;
+        }
         [self._underSprite runAction:[CommonAnimation getFrameAction:@"skydown1_" frameNum:7 duration:0.05f count:1 func:[CCCallBlock actionWithBlock:^{
             self._isInvincibility = false;
         }]]];

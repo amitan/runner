@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../runner/Resources/images/sprites/gameparts.png</filename>
+        <filename>../../runner/Resources/images/sprites/itemeffect.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>gameparts.java</filename>
+            <filename>itemeffect.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>../../runner/Resources/images/sprites/gameparts.plist</filename>
+        <filename>../../runner/Resources/images/sprites/itemeffect.plist</filename>
         <key>mainExtension</key>
         <string></string>
         <key>forceIdenticalLayout</key>
@@ -141,34 +141,9 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../sprites/gameparts/black_belt.png</filename>
-            <filename>../sprites/gameparts/coin1_1.png</filename>
-            <filename>../sprites/gameparts/coin1_2.png</filename>
-            <filename>../sprites/gameparts/coin4_1.png</filename>
-            <filename>../sprites/gameparts/coin4_2.png</filename>
-            <filename>../sprites/gameparts/switch101_1.png</filename>
-            <filename>../sprites/gameparts/switch101_2.png</filename>
-            <filename>../sprites/gameparts/switch102_1.png</filename>
-            <filename>../sprites/gameparts/switch102_2.png</filename>
-            <filename>../sprites/gameparts/coin5_1.png</filename>
-            <filename>../sprites/gameparts/coin5_2.png</filename>
-            <filename>../sprites/gameparts/trampoline1_1.png</filename>
-            <filename>../sprites/gameparts/trampoline1_2.png</filename>
-            <filename>../sprites/gameparts/rail1_1.png</filename>
-            <filename>../sprites/gameparts/rail2_1.png</filename>
-            <filename>../sprites/gameparts/rope.png</filename>
-            <filename>../sprites/gameparts/plane.png</filename>
-            <filename>../sprites/gameparts/fire_warning1.png</filename>
-            <filename>../sprites/gameparts/fire_warning2.png</filename>
-            <filename>../sprites/gameparts/fire.png</filename>
-            <filename>../sprites/gameparts/red_belt.png</filename>
-            <filename>../sprites/gameparts/item_base.png</filename>
-            <filename>../sprites/gameparts/crystal1_1.png</filename>
-            <filename>../sprites/gameparts/crystal2_1.png</filename>
-            <filename>../sprites/gameparts/crystal3_1.png</filename>
-            <filename>../sprites/gameparts/none.png</filename>
-            <filename>../sprites/gameparts/crystal4_1.png</filename>
-            <filename>../sprites/gameparts/item1.png</filename>
+            <filename>../sprites/itemeffect/item1_1.png</filename>
+            <filename>../sprites/itemeffect/item1_2.png</filename>
+            <filename>../sprites/itemeffect/item1_3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

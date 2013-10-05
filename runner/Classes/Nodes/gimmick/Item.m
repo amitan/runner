@@ -8,9 +8,13 @@
 
 #import "Item.h"
 #import "PointUtil.h"
+#import "GameScene.h"
 
 @interface Item ()
+@property (nonatomic, readwrite)int _itemId;
 @property (nonatomic, retain)CCSprite *_item;
+@property (nonatomic, readwrite)BOOL _isStaged;
+@property (nonatomic, readwrite)float _itemTime;
 @end
 
 @implementation Item
@@ -43,9 +47,22 @@
     self._isStaged = true;
 }
 
+- (void)reset {
+    [self removeItem];
+    [self addItem];
+}
+
 - (void)addItem {
-    self._item = [CCSprite spriteWithSpriteFrameName:@"item_magnet.png"];
-    [self addChild:self._item z:0];    
+    // TODO: アイテムをランダムに決定
+    // self._itemId = floor(CCRANDOM_0_1()*4) + 1;
+    self._itemId = ITEM_MAGNET;
+    self._itemTime = 7.0f;
+    self._item = [CCSprite spriteWithSpriteFrameName:@"item1.png"];
+    [self addChild:self._item z:0];
+}
+
+- (void)removeItem {
+    [self._item removeFromParentAndCleanup:YES];
 }
 
 - (BOOL)takenIfCollided:(CGRect)rect {
@@ -60,5 +77,12 @@
         return true;
     }
     return false;
+}
+
+- (int)getItemId {
+    return self._itemId;
+}
+- (float)getItemTime {
+    return self._itemTime;
 }
 @end

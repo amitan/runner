@@ -19,12 +19,10 @@
 @end
 
 @implementation LandPage
-@synthesize isSpeedUp;
 
 - (id)init {
     self = [super init];
 	if (self) {
-        self.isSpeedUp = false;
         self._finishCoinBonus = false;
     }
     return self;
@@ -124,12 +122,12 @@
 }
 
 
-- (BOOL)takeCoinsIfCollided:(CGRect)rect {
+- (BOOL)takeCoinsIfCollided:(CGRect)rect magnet:(BOOL)isMagnet {
     
     // コイン取得チェック
     BOOL result = false;
     for (Coin *coin in self._coins) {
-        if ([coin takenIfCollided:rect]) result = true;
+        if ([coin takenIfCollided:rect magnet:isMagnet]) result = true;
     }
     // コインボーナスチェック
     if (!self._finishCoinBonus && self._lastCoin && [self._lastCoin hasTaken]) {

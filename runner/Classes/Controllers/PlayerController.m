@@ -107,6 +107,7 @@
 
 - (void)ride {
     [self._player stop];
+    [self._player clearItemEffect];
     [self._plane takeOff:[CCCallBlock actionWithBlock:^{
         [self._player stageOff];
         self._player.position = ccp(0, [self._player getHeight] / 2);
@@ -137,6 +138,10 @@
 
 - (CGPoint)getPlayerFootPosition {
     return ccpSub(self._player.position, ccp(0, [self._player getHeight] / 2));
+}
+
+- (BOOL)isItemEffecting {
+    return [self._player isItemEffecting];
 }
 
 @end

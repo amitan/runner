@@ -13,12 +13,15 @@
 @interface Item : Gimmick {
     
 }
-@property (nonatomic, readwrite)int _itemId;
-@property (nonatomic, readwrite)BOOL _isStaged;
+
+typedef enum {
+    ITEM_MAGNET = 1,
+} ITEM_TYPE;
 
 // 指定したアイテムを生成する
 + (Item*)createItem:(float)x y:(float)y;
 
 - (BOOL)takenIfCollided:(CGRect)rect;
-
+- (int)getItemId;
+- (float)getItemTime;
 @end

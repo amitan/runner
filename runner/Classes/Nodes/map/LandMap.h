@@ -29,7 +29,8 @@
 - (Rail*)getHitRail:(CGRect)rect;
 
 // コインを取得しているかチェックする
-- (void)takeItemsIfCollided:(CGRect)rect;
+- (void)takeCoinsIfCollided:(CGRect)rect magnet:(BOOL)isMagnet;
+- (void)takeOthersIfCollided:(CGRect)rect;
 - (BOOL)jumpIfCollided:(CGRect)rect;
 - (Item*)takeItemIfCollided:(CGRect)rect;
 - (Crystal*)takeCrystalIfCollided:(CGRect)rect;

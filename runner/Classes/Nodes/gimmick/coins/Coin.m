@@ -13,7 +13,13 @@
 #import "SwitchCoin.h"
 #import "PointUtil.h"
 
+@interface Coin ()
+@property (nonatomic, readwrite)CGPoint _initPosition;
+@property (nonatomic, readwrite)float _moveDistance;
+@end
+
 @implementation Coin
+const int MAGNET_FACTOR = 12;
 
 + (Coin*)createCoin:(int)coinId {
     return [Coin createCoin:coinId groupId:0];
@@ -52,6 +58,7 @@
         self._coinId = coinId;
         self._groupId = groupId;
         self._value = 1;
+        self._moveDistance = [PointUtil getPoint:15];
         
         // アニメーションの最初のコマを読み込む
         self._sprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"coin%d_1.png", self._coinId]];
@@ -62,17 +69,24 @@
 
 - (void)stageOn:(CCNode*)page {
     [super stageOn:page];
+    self._initPosition = self.position;
     self._isStaged = true;
 }
 
-- (BOOL)takenIfCollided:(CGRect)rect {
+- (BOOL)takenIfCollided:(CGRect)rect magnet:(BOOL)isMagnet {
     
     // コインがステージ上にない場合はfalse
     if (!self._isStaged) return false;
     
+    CGRect playerRect = rect;
+    if (isMagnet) {
+        playerRect = CGRectMake(rect.origin.x - rect.size.width * MAGNET_FACTOR / 2, rect.origin.y - rect.size.height * MAGNET_FACTOR / 2,
+                                MAGNET_FACTOR * rect.size.width, MAGNET_FACTOR * rect.size.height);
+    }
+    
     // 当たり判定チェック
-    if (CGRectIntersectsRect([self getLayerBasedBox], rect)) {
-        [self _takeCoin];
+    if (CGRectIntersectsRect([self getLayerBasedBox], playerRect)) {
+        isMagnet ? [self _moveCoin:rect] : [self _takeCoin];
         return true;
     }
     return false;
@@ -87,11 +101,28 @@
     CGRect rect = [self getLayerBasedBox];
     float dx = rect.origin.x - point.x;
     float dy = rect.origin.y - point.y;
-    if(pow(dx, 2) + pow(dy, 2) <= pow(radius, 2)) {
+    if (pow(dx, 2) + pow(dy, 2) <= pow(radius, 2)) {
         [self _takeCoin];
         return true;
     }
     return false;
+}
+
+- (void)_moveCoin:(CGRect)rect {
+    CGPoint diff = ccpSub([self getLayerBasedPosition], ccp(CGRectGetMidX(rect), CGRectGetMidY(rect)));
+    float dx = diff.x >= 0 ? - self._moveDistance : self._moveDistance;
+    float dy = diff.y >= 0 ? - self._moveDistance : self._moveDistance;
+    self.position = ccpAdd(self.position, ccp(dx, dy));
+    
+    if (CGRectIntersectsRect([self getLayerBasedBox], rect)) {
+        [self _takeCoin];
+        self.position = self._initPosition;
+    }
+}
+
+- (void)reset {
+    [super reset];
+    self.position = self._initPosition;
 }
 
 - (void)_takeCoin {

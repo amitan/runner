@@ -20,6 +20,10 @@
 		F9087E3E17EB55EC009EE1EC /* effect.png in Resources */ = {isa = PBXBuildFile; fileRef = F9087E3C17EB55EC009EE1EC /* effect.png */; };
 		F9087E4117ED944A009EE1EC /* ThunderState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E4017ED9448009EE1EC /* ThunderState.m */; };
 		F9087E4417EF3B4F009EE1EC /* ScrewState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E4317EF3B4D009EE1EC /* ScrewState.m */; };
+		F9087E4717F00F6D009EE1EC /* Page2001.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E4617F00F6D009EE1EC /* Page2001.m */; };
+		F9087E4A17F02410009EE1EC /* itemeffect.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9087E4817F02410009EE1EC /* itemeffect.plist */; };
+		F9087E4B17F02410009EE1EC /* itemeffect.png in Resources */ = {isa = PBXBuildFile; fileRef = F9087E4917F02410009EE1EC /* itemeffect.png */; };
+		F9087E5017F47421009EE1EC /* Page14.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E4F17F47420009EE1EC /* Page14.m */; };
 		F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F617CF7ACC005177A2 /* LandMap.m */; };
 		F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F817CF7ACC005177A2 /* SkyMap.m */; };
 		F922C8FD17CF7B00005177A2 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8FC17CF7B00005177A2 /* Map.m */; };
@@ -288,6 +292,12 @@
 		F9087E4017ED9448009EE1EC /* ThunderState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThunderState.m; sourceTree = "<group>"; };
 		F9087E4217EF3B4C009EE1EC /* ScrewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrewState.h; sourceTree = "<group>"; };
 		F9087E4317EF3B4D009EE1EC /* ScrewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrewState.m; sourceTree = "<group>"; };
+		F9087E4517F00F6D009EE1EC /* Page2001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page2001.h; sourceTree = "<group>"; };
+		F9087E4617F00F6D009EE1EC /* Page2001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2001.m; sourceTree = "<group>"; };
+		F9087E4817F02410009EE1EC /* itemeffect.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = itemeffect.plist; sourceTree = "<group>"; };
+		F9087E4917F02410009EE1EC /* itemeffect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itemeffect.png; sourceTree = "<group>"; };
+		F9087E4E17F47420009EE1EC /* Page14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page14.h; sourceTree = "<group>"; };
+		F9087E4F17F47420009EE1EC /* Page14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page14.m; sourceTree = "<group>"; };
 		F922C8F517CF7ACC005177A2 /* LandMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandMap.h; sourceTree = "<group>"; };
 		F922C8F617CF7ACC005177A2 /* LandMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandMap.m; sourceTree = "<group>"; };
 		F922C8F717CF7ACC005177A2 /* SkyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyMap.h; sourceTree = "<group>"; };
@@ -808,28 +818,9 @@
 			path = player;
 			sourceTree = "<group>";
 		};
-		F922C8F417CF7ACC005177A2 /* map */ = {
+		F9087E4D17F47308009EE1EC /* 010 */ = {
 			isa = PBXGroup;
 			children = (
-				F922C8FB17CF7B00005177A2 /* Map.h */,
-				F922C8FC17CF7B00005177A2 /* Map.m */,
-				F922C8F517CF7ACC005177A2 /* LandMap.h */,
-				F922C8F617CF7ACC005177A2 /* LandMap.m */,
-				F922C8F717CF7ACC005177A2 /* SkyMap.h */,
-				F922C8F817CF7ACC005177A2 /* SkyMap.m */,
-			);
-			path = map;
-			sourceTree = "<group>";
-		};
-		F922C8FE17CF8099005177A2 /* landPages */ = {
-			isa = PBXGroup;
-			children = (
-				F922C93617CF839D005177A2 /* Page.h */,
-				F922C93717CF839D005177A2 /* Page.m */,
-				F922C8FF17CF8099005177A2 /* LandPage.h */,
-				F922C90017CF8099005177A2 /* LandPage.m */,
-				F922C90117CF8099005177A2 /* Page0.h */,
-				F922C90217CF8099005177A2 /* Page0.m */,
 				F922C90317CF8099005177A2 /* Page1.h */,
 				F922C90417CF8099005177A2 /* Page1.m */,
 				F922C90D17CF8099005177A2 /* Page2.h */,
@@ -850,12 +841,43 @@
 				F922C91C17CF8099005177A2 /* Page9.m */,
 				F922C90517CF8099005177A2 /* Page10.h */,
 				F922C90617CF8099005177A2 /* Page10.m */,
+			);
+			name = 010;
+			sourceTree = "<group>";
+		};
+		F922C8F417CF7ACC005177A2 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				F922C8FB17CF7B00005177A2 /* Map.h */,
+				F922C8FC17CF7B00005177A2 /* Map.m */,
+				F922C8F517CF7ACC005177A2 /* LandMap.h */,
+				F922C8F617CF7ACC005177A2 /* LandMap.m */,
+				F922C8F717CF7ACC005177A2 /* SkyMap.h */,
+				F922C8F817CF7ACC005177A2 /* SkyMap.m */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		F922C8FE17CF8099005177A2 /* landPages */ = {
+			isa = PBXGroup;
+			children = (
+				F9087E4D17F47308009EE1EC /* 010 */,
+				F922C93617CF839D005177A2 /* Page.h */,
+				F922C93717CF839D005177A2 /* Page.m */,
+				F922C8FF17CF8099005177A2 /* LandPage.h */,
+				F922C90017CF8099005177A2 /* LandPage.m */,
+				F922C90117CF8099005177A2 /* Page0.h */,
+				F922C90217CF8099005177A2 /* Page0.m */,
 				F922C90717CF8099005177A2 /* Page11.h */,
 				F922C90817CF8099005177A2 /* Page11.m */,
 				F922C90917CF8099005177A2 /* Page12.h */,
 				F922C90A17CF8099005177A2 /* Page12.m */,
 				F922C90B17CF8099005177A2 /* Page13.h */,
 				F922C90C17CF8099005177A2 /* Page13.m */,
+				F9087E4E17F47420009EE1EC /* Page14.h */,
+				F9087E4F17F47420009EE1EC /* Page14.m */,
+				F9087E4517F00F6D009EE1EC /* Page2001.h */,
+				F9087E4617F00F6D009EE1EC /* Page2001.m */,
 				F922C91D17CF8099005177A2 /* Page900.h */,
 				F922C91E17CF8099005177A2 /* Page900.m */,
 			);
@@ -1501,6 +1523,8 @@
 		F93DF69B178AEEBB007AD085 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				F9087E4817F02410009EE1EC /* itemeffect.plist */,
+				F9087E4917F02410009EE1EC /* itemeffect.png */,
 				F9087E3B17EB55EC009EE1EC /* effect.plist */,
 				F9087E3C17EB55EC009EE1EC /* effect.png */,
 				F922C94D17D1C879005177A2 /* enemy.plist */,
@@ -1733,6 +1757,8 @@
 				F922C95017D1C879005177A2 /* enemy.png in Resources */,
 				F9087E3D17EB55EC009EE1EC /* effect.plist in Resources */,
 				F9087E3E17EB55EC009EE1EC /* effect.png in Resources */,
+				F9087E4A17F02410009EE1EC /* itemeffect.plist in Resources */,
+				F9087E4B17F02410009EE1EC /* itemeffect.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1943,6 +1969,8 @@
 				F9087E3A17EB4C92009EE1EC /* SkyRunState.m in Sources */,
 				F9087E4117ED944A009EE1EC /* ThunderState.m in Sources */,
 				F9087E4417EF3B4F009EE1EC /* ScrewState.m in Sources */,
+				F9087E4717F00F6D009EE1EC /* Page2001.m in Sources */,
+				F9087E5017F47421009EE1EC /* Page14.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

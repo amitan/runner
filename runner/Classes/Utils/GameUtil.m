@@ -16,6 +16,7 @@ const int INIT_PLAYER_Z = 200;
 const int GRAVITY = 70;
 const int SPEED_UP_PAGE = 900;
 const int SKY_PAGE_BASE_ID = 1000;
+const int ITEM_PAGE_BASE_ID = 2000;
 
 + (NSString*) getBgSpriteName:(NSString *)fileName ext:(NSString *)ext {
     if ([GameUtil is4inchDevice]) {

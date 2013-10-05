@@ -26,6 +26,7 @@
 #import "Page900.h"
 #import "Page1000.h"
 #import "Page1001.h"
+#import "Page2001.h"
 
 @interface PageController ()
 @property (nonatomic, retain)NSMutableDictionary *_dictionary;
@@ -53,6 +54,7 @@ const int INIT_ARRAY_CAPACITY = 5;
         case 900: return [Page900 node]; // スピードアップ
         case 1000: return [Page1000 node]; // 空：何もなし
         case 1001: return [Page1001 node]; // 空：コイン
+        case 2001: return [Page2001 node]; // アイテム
         default: return [Page0 node]; // 地面のみ
     }
 }
@@ -68,6 +70,8 @@ const int INIT_ARRAY_CAPACITY = 5;
         [self._pageDictionary setObject:@[@1, @3, @5, @6, @11, @12, @13] forKey:@"4"];
         [self._pageDictionary setObject:@[@1, @6, @11] forKey:@"5"];
         [self._pageDictionary setObject:@[@1001] forKey:@"1000"]; // 空
+        [self._pageDictionary setObject:@[@2001] forKey:@"2000"]; // アイテム
+        
     }
     return self;
 }
@@ -79,7 +83,7 @@ const int INIT_ARRAY_CAPACITY = 5;
 }
 
 - (Page*)getPageBy:(int)pageId {
-    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 7; // TODO:
+//    pageId = (pageId == 0 || pageId == SPEED_UP_PAGE || pageId >= 1000) ? pageId : 1; // TODO:
     Page *page = [self _findAvailablePage:pageId];
     if (page) {
         return page;
@@ -93,6 +97,13 @@ const int INIT_ARRAY_CAPACITY = 5;
     int pageIndex = floor(CCRANDOM_0_1()*array.count);
     int pageId = [[array objectAtIndex:pageIndex] intValue];
     return [self getPageBy:pageId];
+}
+
+- (Page*)getLandItemPage {
+    NSArray *array = [self._pageDictionary objectForKey:[NSString stringWithFormat:@"%d", ITEM_PAGE_BASE_ID]];
+    int pageIndex = floor(CCRANDOM_0_1()*array.count);
+    int pageId = [[array objectAtIndex:pageIndex] intValue];
+    return [self getPageBy:pageId];    
 }
 
 - (Page*)getSkyPage {

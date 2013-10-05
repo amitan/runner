@@ -61,15 +61,4 @@
     return self;
 }
 
-- (void)reset {
-    
-    if (self.appearNum == 1) {
-        NSMutableArray *extraCoins = [NSMutableArray arrayWithArray:self._coins];
-        [extraCoins addObject:[Coin createCoin:C_100 x:1700 y:-130]];
-        self._coins = extraCoins;
-    }
-    
-    [super reset];
-}
-
 @end

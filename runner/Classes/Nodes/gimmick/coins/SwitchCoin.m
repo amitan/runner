@@ -19,9 +19,9 @@
     return self;
 }
 
-- (BOOL)takenIfCollided:(CGRect)rect {
+- (BOOL)takenIfCollided:(CGRect)rect magnet:(BOOL)isMagnet {
     if (self.visible) {
-        return [super takenIfCollided:rect];
+        return [super takenIfCollided:rect magnet:isMagnet];
     }
     return false;
 }
