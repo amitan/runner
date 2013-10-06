@@ -9,7 +9,6 @@
 #import "GameResultLayer.h"
 #import "CCSpriteButton.h"
 #import "GameUtil.h"
-#import "HomeScene.h"
 #import "TitleLayer.h"
 #import "PointUtil.h"
 #import "LabelUtil.h"
@@ -145,7 +144,7 @@
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    [GameUtil replaceScene:[HomeScene createInstance]];
+    [GameUtil replaceScene:[TitleLayer scene]];
     return YES;
 }
 

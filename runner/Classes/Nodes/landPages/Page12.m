@@ -10,10 +10,6 @@
 #import "PointUtil.h"
 #import "Rail.h"
 
-@interface Page12 ()
-@property (nonatomic, retain)Block *_land2;
-@end
-
 // レールとコイン
 @implementation Page12
 const int PAGE12_INTERVAL1 = 2100;
@@ -23,14 +19,16 @@ const int PAGE12_INTERVAL1 = 2100;
 	if (self) {
         
         // 地面を追加
-        self._land = [Block createBlock:2];
-        self._land.position = [self getLandPosition:self._land];
-        [self._land stageOn:self];
-        
-        float rightX = self._land.position.x + [self._land getWidth] / 2;
-        self._land2 = [Block createBlock:2];
-        self._land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:PAGE12_INTERVAL1], 0), [self getLandPosition:self._land2]);
-        [self._land2 stageOn:self];
+        Block *land = [Block createBlock:2];
+        land.position = [self getLandPosition:land];
+        [land stageOn:self];
+
+        float rightX = land.position.x + [land getWidth] / 2;
+        Block *land2 = [Block createBlock:2];
+        land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:PAGE12_INTERVAL1], 0), [self getLandPosition:land2]);
+        [land2 stageOn:self];
+        self._lands = @[land, land2];
+
         
         // ブロック追加
         self._blocks = @[[Block createBlock:102 x:170 y:-490]];
@@ -72,24 +70,6 @@ const int PAGE12_INTERVAL1 = 2100;
         }
     }
     return self;
-}
-
-- (void)dealloc {
-    self._land2 = nil;
-    [super dealloc];
-}
-
-- (float)getWidth {
-    return [self._land getWidth] + [self._land2 getWidth] + [PointUtil getPoint:PAGE12_INTERVAL1];
-}
-
-- (Block*)getHitBlock:(CGPoint)point {
-    for (Block *block in self._blocks) {
-        if ([block isHit:point]) return block;
-    }
-    if ([self._land isHit:point]) return self._land;
-    if ([self._land2 isHit:point]) return self._land2;
-    return NULL;
 }
 
 - (void)reset {

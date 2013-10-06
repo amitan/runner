@@ -18,9 +18,15 @@
 typedef enum {
     LAND_DEFAULT = 1280,
     LAND_LONG = 2560,
-    LAND_240 = 240,
-    LAND_360 = 360,
-    LAND_1440 = 1440,
+    LAND_2 = 120,
+    LAND_4 = 240,
+    LAND_6 = 360,
+    LAND_8 = 480,
+    LAND_12 = 720,
+    LAND_16 = 960,
+    LAND_24 = 1440,
+    LAND_26 = 1560,
+    LAND_30 = 1800,
 } LAND_W;
 
 // ブロック種類

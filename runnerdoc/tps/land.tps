@@ -142,10 +142,15 @@
         <key>fileList</key>
         <array>
             <filename>../sprites/land/block360.png</filename>
-            <filename>../sprites/land/block1280.png</filename>
             <filename>../sprites/land/block2560.png</filename>
             <filename>../sprites/land/block240.png</filename>
             <filename>../sprites/land/block1440.png</filename>
+            <filename>../sprites/land/block120.png</filename>
+            <filename>../sprites/land/block480.png</filename>
+            <filename>../sprites/land/block720.png</filename>
+            <filename>../sprites/land/block960.png</filename>
+            <filename>../sprites/land/block1560.png</filename>
+            <filename>../sprites/land/block1800.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

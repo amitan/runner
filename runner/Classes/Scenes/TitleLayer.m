@@ -11,7 +11,6 @@
 #import "LabelUtil.h"
 #import "CCSpriteButton.h"
 #import "CommonAnimation.h"
-#import "HomeScene.h"
 #import "GameUtil.h"
 #import "GameScene.h"
 
@@ -78,7 +77,7 @@
 
 // ぼうけんをはじめる
 - (void)clickPlayButton:(id)sender {
-    [GameUtil replaceScene:[HomeScene createInstance]];
+    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1 isRandom:true]];
 }
 
 // せっていをかえる

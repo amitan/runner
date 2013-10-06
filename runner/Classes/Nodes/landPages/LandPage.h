@@ -21,7 +21,7 @@
 @interface LandPage : Page {
     
 }
-@property (nonatomic, retain)Block *_land;
+@property (nonatomic, retain)NSArray *_lands;
 @property (nonatomic, retain)Coin *_lastCoin;
 @property (nonatomic, retain)NSArray *_blocks;
 @property (nonatomic, retain)NSArray *_switches;

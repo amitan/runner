@@ -29,7 +29,7 @@
 }
 
 - (void)dealloc {
-    self._land = nil;
+    self._lands = nil;
     self._lastCoin = nil;
     self._blocks = nil;
     self._switches = nil;
@@ -99,7 +99,14 @@
 }
 
 - (float)getWidth {
-    return [self._land getWidth];
+    if (self._lands.count == 1) {
+        return [[self._lands objectAtIndex:0] getWidth];
+    } else if (self._lands.count > 1) {
+        Block *first = [self._lands objectAtIndex:0];
+        Block *last = [self._lands objectAtIndex:self._lands.count - 1];
+        return last.position.x + [last getWidth] / 2 - first.position.x + [first getWidth] / 2;
+    }
+    return 0;
 }
 
 - (CGPoint)getLandPosition:(Block*)block {
@@ -110,7 +117,9 @@
     for (Block *block in self._blocks) {
         if ([block isHit:point]) return block;
     }
-    if ([self._land isHit:point]) return self._land;
+    for (Block *land in self._lands) {
+        if ([land isHit:point]) return land;
+    }
     return NULL;
 }
 

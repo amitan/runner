@@ -54,17 +54,11 @@
 		F922C95D17D24089005177A2 /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95C17D24085005177A2 /* Gun.m */; };
 		F922C96017D25586005177A2 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95F17D25582005177A2 /* Bullet.m */; };
 		F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */; };
-		F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61B17C22FD7007CF0CF /* ConversationLayer.m */; };
-		F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */; };
 		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
-		F923F62817C4EE18007CF0CF /* CoinWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62717C4EE18007CF0CF /* CoinWindow.m */; };
 		F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62B17C4F778007CF0CF /* UserPlayerDao.m */; };
 		F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63117C4FAC4007CF0CF /* GameDao.m */; };
 		F923F63517C500B1007CF0CF /* UnitDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63417C500B1007CF0CF /* UnitDao.m */; };
-		F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63717C5F6F3007CF0CF /* MonsterGifter.m */; };
-		F9363E1D17BA579100F832C0 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1C17BA579100F832C0 /* Door.m */; };
 		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
-		F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E2217BA5D3600F832C0 /* Carpenter.m */; };
 		F93DF4D6178AB447007AD085 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D5178AB447007AD085 /* QuartzCore.framework */; };
 		F93DF4D8178AB447007AD085 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D7178AB447007AD085 /* OpenGLES.framework */; };
 		F93DF4DA178AB447007AD085 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D9178AB447007AD085 /* OpenAL.framework */; };
@@ -215,9 +209,6 @@
 		F96DDCF717DCBE8600DE88D0 /* NeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F96DDCF617DCBE8600DE88D0 /* NeedleEnemy.m */; };
 		F99DFA9E17B93707001E1EA8 /* towner.plist in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9C17B93707001E1EA8 /* towner.plist */; };
 		F99DFA9F17B93707001E1EA8 /* towner.png in Resources */ = {isa = PBXBuildFile; fileRef = F99DFA9D17B93707001E1EA8 /* towner.png */; };
-		F99DFAA217B9466C001E1EA8 /* HomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA117B9466C001E1EA8 /* HomeScene.m */; };
-		F99DFAA517B94781001E1EA8 /* HomeInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */; };
-		F99DFAA817BA3765001E1EA8 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99DFAA717BA3765001E1EA8 /* HomeController.m */; };
 		F9A468C51795E2B2002BAFB7 /* HudController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A468C41795E2B1002BAFB7 /* HudController.m */; };
 		F9A468DA179A7E9A002BAFB7 /* dead.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D8179A7E9A002BAFB7 /* dead.plist */; };
 		F9A468DB179A7E9A002BAFB7 /* stars.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A468D9179A7E9A002BAFB7 /* stars.png */; };
@@ -258,18 +249,15 @@
 		F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814217B8C86200DDCE95 /* CoinSwitch.m */; };
 		F9C9815517B8C86200DDCE95 /* Switch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814417B8C86200DDCE95 /* Switch.m */; };
 		F9C9815617B8C86200DDCE95 /* Trampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9814617B8C86200DDCE95 /* Trampoline.m */; };
-		F9D849CE17C13969004EC908 /* LevelupCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D849CD17C13969004EC908 /* LevelupCounter.m */; };
 		F9DAF99417BF417400422467 /* player.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99217BF417400422467 /* player.plist */; };
 		F9DAF99517BF417400422467 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99317BF417400422467 /* player.png */; };
-		F9DAF99817BF4C7900422467 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99717BF4C7900422467 /* Team.m */; };
 		F9DAF99B17BF572700422467 /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99917BF572700422467 /* team.plist */; };
 		F9DAF99C17BF572700422467 /* team.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAF99A17BF572700422467 /* team.png */; };
-		F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99E17BFAB7700422467 /* TeamLayer.m */; };
-		F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */; };
 		F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9B817C0B28A00422467 /* PlayerMaster.m */; };
 		F9E8D13217FFFB9900997396 /* Page10101001.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13117FFFB9900997396 /* Page10101001.m */; };
 		F9E8D13517FFFDA800997396 /* Page10101002.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13417FFFDA800997396 /* Page10101002.m */; };
 		F9E8D13817FFFDB400997396 /* Page10101003.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13717FFFDB400997396 /* Page10101003.m */; };
+		F9E8D13C18011C3A00997396 /* Page10102001.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13B18011C3A00997396 /* Page10102001.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -359,28 +347,16 @@
 		F922C95F17D25582005177A2 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
 		F922C96117D32A79005177A2 /* HalfNeedleEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfNeedleEnemy.h; sourceTree = "<group>"; };
 		F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfNeedleEnemy.m; sourceTree = "<group>"; };
-		F923F61A17C22FD7007CF0CF /* ConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationLayer.h; sourceTree = "<group>"; };
-		F923F61B17C22FD7007CF0CF /* ConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationLayer.m; sourceTree = "<group>"; };
-		F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarpenterConversationLayer.h; sourceTree = "<group>"; };
-		F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarpenterConversationLayer.m; sourceTree = "<group>"; };
 		F923F62017C273A0007CF0CF /* HomeDebugLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDebugLayer.h; sourceTree = "<group>"; };
 		F923F62117C273A0007CF0CF /* HomeDebugLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDebugLayer.m; sourceTree = "<group>"; };
-		F923F62617C4EE18007CF0CF /* CoinWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinWindow.h; sourceTree = "<group>"; };
-		F923F62717C4EE18007CF0CF /* CoinWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinWindow.m; sourceTree = "<group>"; };
 		F923F62A17C4F778007CF0CF /* UserPlayerDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPlayerDao.h; sourceTree = "<group>"; };
 		F923F62B17C4F778007CF0CF /* UserPlayerDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPlayerDao.m; sourceTree = "<group>"; };
 		F923F63017C4FAC4007CF0CF /* GameDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDao.h; sourceTree = "<group>"; };
 		F923F63117C4FAC4007CF0CF /* GameDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDao.m; sourceTree = "<group>"; };
 		F923F63317C500B0007CF0CF /* UnitDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitDao.h; sourceTree = "<group>"; };
 		F923F63417C500B1007CF0CF /* UnitDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDao.m; sourceTree = "<group>"; };
-		F923F63617C5F6F3007CF0CF /* MonsterGifter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterGifter.h; sourceTree = "<group>"; };
-		F923F63717C5F6F3007CF0CF /* MonsterGifter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterGifter.m; sourceTree = "<group>"; };
-		F9363E1B17BA579100F832C0 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
-		F9363E1C17BA579100F832C0 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
 		F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNodeButton.m; sourceTree = "<group>"; };
-		F9363E2117BA5D3600F832C0 /* Carpenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carpenter.h; sourceTree = "<group>"; };
-		F9363E2217BA5D3600F832C0 /* Carpenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carpenter.m; sourceTree = "<group>"; };
 		F93DF4D2178AB447007AD085 /* runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93DF4D5178AB447007AD085 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F93DF4D7178AB447007AD085 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -690,12 +666,6 @@
 		F96DDCF617DCBE8600DE88D0 /* NeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeedleEnemy.m; sourceTree = "<group>"; };
 		F99DFA9C17B93707001E1EA8 /* towner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = towner.plist; sourceTree = "<group>"; };
 		F99DFA9D17B93707001E1EA8 /* towner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = towner.png; sourceTree = "<group>"; };
-		F99DFAA017B9466C001E1EA8 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScene.h; sourceTree = "<group>"; };
-		F99DFAA117B9466C001E1EA8 /* HomeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScene.m; sourceTree = "<group>"; };
-		F99DFAA317B94780001E1EA8 /* HomeInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeInterfaceLayer.h; sourceTree = "<group>"; };
-		F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeInterfaceLayer.m; sourceTree = "<group>"; };
-		F99DFAA617BA3765001E1EA8 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
-		F99DFAA717BA3765001E1EA8 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		F9A468C31795E2B1002BAFB7 /* HudController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudController.h; sourceTree = "<group>"; };
 		F9A468C41795E2B1002BAFB7 /* HudController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudController.m; sourceTree = "<group>"; };
 		F9A468D8179A7E9A002BAFB7 /* dead.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dead.plist; sourceTree = "<group>"; };
@@ -758,18 +728,10 @@
 		F9C9814417B8C86200DDCE95 /* Switch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Switch.m; sourceTree = "<group>"; };
 		F9C9814517B8C86200DDCE95 /* Trampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trampoline.h; sourceTree = "<group>"; };
 		F9C9814617B8C86200DDCE95 /* Trampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trampoline.m; sourceTree = "<group>"; };
-		F9D849CC17C13969004EC908 /* LevelupCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelupCounter.h; sourceTree = "<group>"; };
-		F9D849CD17C13969004EC908 /* LevelupCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelupCounter.m; sourceTree = "<group>"; };
 		F9DAF99217BF417400422467 /* player.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = player.plist; sourceTree = "<group>"; };
 		F9DAF99317BF417400422467 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
-		F9DAF99617BF4C7800422467 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
-		F9DAF99717BF4C7900422467 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		F9DAF99917BF572700422467 /* team.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team.plist; sourceTree = "<group>"; };
 		F9DAF99A17BF572700422467 /* team.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team.png; sourceTree = "<group>"; };
-		F9DAF99D17BFAB7500422467 /* TeamLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamLayer.h; sourceTree = "<group>"; };
-		F9DAF99E17BFAB7700422467 /* TeamLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamLayer.m; sourceTree = "<group>"; };
-		F9DAF9A017C054AE00422467 /* PlayerSelectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectLayer.h; sourceTree = "<group>"; };
-		F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectLayer.m; sourceTree = "<group>"; };
 		F9DAF9B717C0B28900422467 /* PlayerMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMaster.h; sourceTree = "<group>"; };
 		F9DAF9B817C0B28A00422467 /* PlayerMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMaster.m; sourceTree = "<group>"; };
 		F9E8D13017FFFB9900997396 /* Page10101001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10101001.h; sourceTree = "<group>"; };
@@ -778,6 +740,8 @@
 		F9E8D13417FFFDA800997396 /* Page10101002.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10101002.m; sourceTree = "<group>"; };
 		F9E8D13617FFFDB400997396 /* Page10101003.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10101003.h; sourceTree = "<group>"; };
 		F9E8D13717FFFDB400997396 /* Page10101003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10101003.m; sourceTree = "<group>"; };
+		F9E8D13A18011C3A00997396 /* Page10102001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10102001.h; sourceTree = "<group>"; };
+		F9E8D13B18011C3A00997396 /* Page10102001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102001.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -871,6 +835,7 @@
 			isa = PBXGroup;
 			children = (
 				F9E8D12F17FFFB7C00997396 /* stage1_1 */,
+				F9E8D13918011C0F00997396 /* stage1_2 */,
 				F9087E4D17F47308009EE1EC /* 010 */,
 				F922C93617CF839D005177A2 /* Page.h */,
 				F922C93717CF839D005177A2 /* Page.m */,
@@ -922,17 +887,6 @@
 			path = enemy;
 			sourceTree = "<group>";
 		};
-		F923F61917C22FC6007CF0CF /* conversation */ = {
-			isa = PBXGroup;
-			children = (
-				F923F61A17C22FD7007CF0CF /* ConversationLayer.h */,
-				F923F61B17C22FD7007CF0CF /* ConversationLayer.m */,
-				F923F61D17C2300C007CF0CF /* CarpenterConversationLayer.h */,
-				F923F61E17C2300C007CF0CF /* CarpenterConversationLayer.m */,
-			);
-			path = conversation;
-			sourceTree = "<group>";
-		};
 		F923F62917C4F755007CF0CF /* Dao */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,25 +898,6 @@
 				F923F63417C500B1007CF0CF /* UnitDao.m */,
 			);
 			path = Dao;
-			sourceTree = "<group>";
-		};
-		F9363E1A17BA578400F832C0 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				F9363E1B17BA579100F832C0 /* Door.h */,
-				F9363E1C17BA579100F832C0 /* Door.m */,
-				F9363E2117BA5D3600F832C0 /* Carpenter.h */,
-				F9363E2217BA5D3600F832C0 /* Carpenter.m */,
-				F9DAF99617BF4C7800422467 /* Team.h */,
-				F9DAF99717BF4C7900422467 /* Team.m */,
-				F9D849CC17C13969004EC908 /* LevelupCounter.h */,
-				F9D849CD17C13969004EC908 /* LevelupCounter.m */,
-				F923F63617C5F6F3007CF0CF /* MonsterGifter.h */,
-				F923F63717C5F6F3007CF0CF /* MonsterGifter.m */,
-				F923F62617C4EE18007CF0CF /* CoinWindow.h */,
-				F923F62717C4EE18007CF0CF /* CoinWindow.m */,
-			);
-			path = home;
 			sourceTree = "<group>";
 		};
 		F93DF4C9178AB447007AD085 = {
@@ -1438,8 +1373,6 @@
 				F9A468C41795E2B1002BAFB7 /* HudController.m */,
 				F9A468E7179B7102002BAFB7 /* PageController.h */,
 				F9A468E8179B7102002BAFB7 /* PageController.m */,
-				F99DFAA617BA3765001E1EA8 /* HomeController.h */,
-				F99DFAA717BA3765001E1EA8 /* HomeController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1449,7 +1382,6 @@
 			children = (
 				F9087E2517EB2BBF009EE1EC /* player */,
 				F922C8F417CF7ACC005177A2 /* map */,
-				F9363E1A17BA578400F832C0 /* home */,
 				F9C9812317B8C86200DDCE95 /* gimmick */,
 				F9A468F3179EC198002BAFB7 /* hud */,
 				F922C8FE17CF8099005177A2 /* landPages */,
@@ -1465,17 +1397,8 @@
 		F93DF68C178AB5BF007AD085 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F923F61917C22FC6007CF0CF /* conversation */,
 				F9ABA62E178E84C300A02626 /* TitleLayer.h */,
 				F9ABA62F178E84C300A02626 /* TitleLayer.m */,
-				F99DFAA017B9466C001E1EA8 /* HomeScene.h */,
-				F99DFAA117B9466C001E1EA8 /* HomeScene.m */,
-				F99DFAA317B94780001E1EA8 /* HomeInterfaceLayer.h */,
-				F99DFAA417B94781001E1EA8 /* HomeInterfaceLayer.m */,
-				F9DAF99D17BFAB7500422467 /* TeamLayer.h */,
-				F9DAF99E17BFAB7700422467 /* TeamLayer.m */,
-				F9DAF9A017C054AE00422467 /* PlayerSelectLayer.h */,
-				F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */,
 				F93DF68E178AB5D8007AD085 /* GameScene.h */,
 				F93DF68F178AB5D8007AD085 /* GameScene.m */,
 				F93DF6C5178B221E007AD085 /* GameInterfaceLayer.h */,
@@ -1684,6 +1607,15 @@
 				F9E8D13717FFFDB400997396 /* Page10101003.m */,
 			);
 			path = stage1_1;
+			sourceTree = "<group>";
+		};
+		F9E8D13918011C0F00997396 /* stage1_2 */ = {
+			isa = PBXGroup;
+			children = (
+				F9E8D13A18011C3A00997396 /* Page10102001.h */,
+				F9E8D13B18011C3A00997396 /* Page10102001.m */,
+			);
+			path = stage1_2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1934,25 +1866,12 @@
 				F9C9815417B8C86200DDCE95 /* CoinSwitch.m in Sources */,
 				F9C9815517B8C86200DDCE95 /* Switch.m in Sources */,
 				F9C9815617B8C86200DDCE95 /* Trampoline.m in Sources */,
-				F99DFAA217B9466C001E1EA8 /* HomeScene.m in Sources */,
-				F99DFAA517B94781001E1EA8 /* HomeInterfaceLayer.m in Sources */,
-				F99DFAA817BA3765001E1EA8 /* HomeController.m in Sources */,
-				F9363E1D17BA579100F832C0 /* Door.m in Sources */,
 				F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */,
-				F9363E2317BA5D3600F832C0 /* Carpenter.m in Sources */,
-				F9DAF99817BF4C7900422467 /* Team.m in Sources */,
-				F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */,
-				F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */,
 				F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */,
-				F9D849CE17C13969004EC908 /* LevelupCounter.m in Sources */,
-				F923F61C17C22FD7007CF0CF /* ConversationLayer.m in Sources */,
-				F923F61F17C2300C007CF0CF /* CarpenterConversationLayer.m in Sources */,
 				F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */,
-				F923F62817C4EE18007CF0CF /* CoinWindow.m in Sources */,
 				F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */,
 				F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */,
 				F923F63517C500B1007CF0CF /* UnitDao.m in Sources */,
-				F923F63817C5F6F4007CF0CF /* MonsterGifter.m in Sources */,
 				F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */,
 				F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */,
 				F922C8FD17CF7B00005177A2 /* Map.m in Sources */,
@@ -1997,6 +1916,7 @@
 				F9E8D13217FFFB9900997396 /* Page10101001.m in Sources */,
 				F9E8D13517FFFDA800997396 /* Page10101002.m in Sources */,
 				F9E8D13817FFFDB400997396 /* Page10101003.m in Sources */,
+				F9E8D13C18011C3A00997396 /* Page10102001.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

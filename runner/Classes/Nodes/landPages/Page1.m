@@ -20,9 +20,10 @@
 	if (self) {
         
         // 地面を追加
-        self._land = [Block createBlock:1];
-        self._land.position =  [self getLandPosition:self._land];
-        [self._land stageOn:self];
+        Block *land = [Block createBlock:1];
+        land.position = [self getLandPosition:land];
+        [land stageOn:self];
+        self._lands = @[land];
         
         // コインを追加
         self._coins = @[[Coin createCoin:C_STANDARD x:100 y:-480],

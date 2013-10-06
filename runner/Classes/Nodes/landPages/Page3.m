@@ -18,9 +18,10 @@
 	if (self) {
         
         // 地面を追加
-        self._land = [Block createBlock:1];
-        self._land.position = [self getLandPosition:self._land];
-        [self._land stageOn:self];
+        Block *land = [Block createBlock:1];
+        land.position = [self getLandPosition:land];
+        [land stageOn:self];
+        self._lands = @[land];
         
         // 敵を追加
         self._enemies = @[[Enemy createEnemy:1 x:184 y:-522],
