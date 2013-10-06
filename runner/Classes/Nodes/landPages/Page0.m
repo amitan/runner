@@ -19,7 +19,7 @@
 	if (self) {
         
         // 地面を追加
-        self._land = [Block createBlock:1];
+        self._land = [Block createBlock:LAND_DEFAULT];
         self._land.position = [self getLandPosition:self._land];
         [self._land stageOn:self];
     }

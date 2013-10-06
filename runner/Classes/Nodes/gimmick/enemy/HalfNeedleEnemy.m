@@ -14,7 +14,6 @@
 
 + (HalfNeedleEnemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y {
     HalfNeedleEnemy *enemy = [[[self alloc] initWithEnemyId:enemyId] autorelease];
-    enemy.position = [PointUtil getPosition:x y:y];
     return enemy;
 }
 

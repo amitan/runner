@@ -207,4 +207,9 @@
     }
     return false;
 }
+
+- (float)getCoinBx:(float)baseBx index:(int)index {
+    return baseBx + 0.75 * index;
+}
+
 @end

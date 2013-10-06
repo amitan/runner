@@ -14,9 +14,34 @@
     
 }
 
+// 地面種類
+typedef enum {
+    LAND_DEFAULT = 1280,
+    LAND_LONG = 2560,
+    LAND_240 = 240,
+    LAND_360 = 360,
+    LAND_1440 = 1440,
+} LAND_W;
+
+// ブロック種類
+typedef enum {
+    B_STANDARD = 101,
+    B_X2 = 102,
+    B_X3 = 103,
+    B_X4 = 104,
+    B_X5 = 105,
+    B_X6 = 106,
+    B_X7 = 107,
+    B_X8 = 108,
+    B_X9 = 109,
+    B_X10 = 110,
+    B_X2Y2 = 301,
+} BLOCK_TYPE;
+
 // 指定したブロックを生成する
 + (Block*)createBlock:(int)blockId;
 + (Block*)createBlock:(int)blockId x:(float)x y:(float)y;
++ (Block*)createBlock:(int)blockId bx:(float)bx by:(float)by;
 
 // ブロックを指定して初期化する
 -(id) initWithBlockId:(int)blockId;

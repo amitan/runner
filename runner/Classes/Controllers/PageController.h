@@ -20,5 +20,6 @@
 - (LandPage*)getLandItemPage;
 - (Page*)getSkyPage;
 - (Page*)getPageBy:(int)pageId;
+- (Page*)getPageWithStageId:(int)stageId index:(int)i;
 - (void)resetPages:(int)pageId;
 @end

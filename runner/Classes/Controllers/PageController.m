@@ -28,6 +28,10 @@
 #import "Page1001.h"
 #import "Page2001.h"
 
+#import "Page10101001.h"
+#import "Page10101002.h"
+#import "Page10101003.h"
+
 @interface PageController ()
 @property (nonatomic, retain)NSMutableDictionary *_dictionary;
 @property (nonatomic, retain)NSMutableDictionary *_pageDictionary;
@@ -38,6 +42,10 @@ const int INIT_ARRAY_CAPACITY = 5;
 
 - (Page*)_getNewPage:(int)pageId {
     switch (pageId) {
+        case 10101001: return [Page10101001 node];
+        case 10101002: return [Page10101002 node];
+        case 10101003: return [Page10101003 node];
+        
         case 1: return [Page1 node]; // 地面とコイン + 敵（きのこ、炎神）
         case 2: return [Page2 node]; // ブロック縦に3つ並んでいて間にコイン + 間に敵（スライム、とげとげ）
         case 3: return [Page3 node]; // 敵敵敵とブロック（下にコイン）+ 敵（スライム、とげ）+ 100コイン
@@ -80,6 +88,11 @@ const int INIT_ARRAY_CAPACITY = 5;
     self._dictionary = nil;
     self._pageDictionary = nil;
     [super dealloc];
+}
+
+- (Page*)getPageWithStageId:(int)stageId index:(int)i {
+    NSString *pageNo = [NSString stringWithFormat:@"%d%03d", stageId, i];
+    return [self _getNewPage:[pageNo intValue]];
 }
 
 - (Page*)getPageBy:(int)pageId {

@@ -23,13 +23,23 @@
     return [Enemy createEnemy:enemyId x:0 y:0];
 }
 
++ (Enemy*)createEnemy:(ENEMY_TYPE)enemyId bx:(float)bx by:(float)by {
+    float x = (bx + 1) * 60;
+    float y = (by - 1) * 60 - 640;
+    return [Enemy createEnemy:enemyId x:x y:y];
+}
+
 + (Enemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y {
+    Enemy *enemy;
     if (enemyId == 200) {
-        return [HalfNeedleEnemy createEnemy:enemyId x:x y:y];
+        enemy = [HalfNeedleEnemy createEnemy:enemyId x:x y:y];
     } else if (enemyId == 201) {
-        return [NeedleEnemy createEnemy:enemyId x:x y:y];
+        enemy = [NeedleEnemy createEnemy:enemyId x:x y:y];
+    } else {
+        enemy = [StandardEnemy createEnemy:enemyId x:x y:y];
     }
-    return [StandardEnemy createEnemy:enemyId x:x y:y];
+    enemy.position = [PointUtil getPosition:x y:y];
+    return enemy;
 }
 
 - (int)getExp {

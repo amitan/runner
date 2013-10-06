@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>block1.png</key>
+            <key>block1280.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3,3},{1280,120}}</string>
@@ -17,49 +17,36 @@
                 <key>sourceSize</key>
                 <string>{1280,120}</string>
             </dict>
-            <key>block2.png</key>
+            <key>block1440.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1287,3},{320,120}}</string>
+                <string>{{1287,3},{1440,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{320,120}}</string>
+                <string>{{0,0},{1440,120}}</string>
                 <key>sourceSize</key>
-                <string>{320,120}</string>
+                <string>{1440,120}</string>
             </dict>
-            <key>block3.png</key>
+            <key>block240.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1611,3},{1920,120}}</string>
+                <string>{{2731,3},{240,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{1920,120}}</string>
+                <string>{{0,0},{240,120}}</string>
                 <key>sourceSize</key>
-                <string>{1920,120}</string>
+                <string>{240,120}</string>
             </dict>
-            <key>block4.png</key>
+            <key>block2560.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,127},{640,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{640,120}}</string>
-                <key>sourceSize</key>
-                <string>{640,120}</string>
-            </dict>
-            <key>block5.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{647,127},{2560,120}}</string>
+                <string>{{3,127},{2560,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -68,6 +55,19 @@
                 <string>{{0,0},{2560,120}}</string>
                 <key>sourceSize</key>
                 <string>{2560,120}</string>
+            </dict>
+            <key>block360.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2567,127},{360,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{360,120}}</string>
+                <key>sourceSize</key>
+                <string>{360,120}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -79,7 +79,7 @@
             <key>size</key>
             <string>{4096,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c85612396014eb4d7cacdf0eb5e27bde$</string>
+            <string>$TexturePacker:SmartUpdate:e951ef3c7ea6f10c213b1d4cbae890a7$</string>
             <key>textureFileName</key>
             <string>land.png</string>
         </dict>

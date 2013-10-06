@@ -33,6 +33,20 @@ const int MAGNET_FACTOR = 12;
     return [Coin createCoin:coinId groupId:0 x:x y:y];
 }
 
++ (NSArray*)createCoins:(int)coinId bx:(float)bx by:(float)by num:(int)num {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:num];
+    for (int i = 0; i < num; i++) {
+        
+    }
+    return array;
+}
+
++ (Coin*)createCoin:(int)coinId bx:(float)bx by:(float)by {
+    float x = bx * 60;
+    float y = by * 60 - 640;
+    return [Coin createCoin:coinId groupId:0 x:x y:y];
+}
+
 + (Coin*)createCoin:(int)coinId groupId:(int)groupId x:(float)x y:(float)y {
     Coin *coin;
     switch (coinId) {
@@ -45,7 +59,7 @@ const int MAGNET_FACTOR = 12;
         default:
             coin = [[[StandardCoin alloc] initWithCoinId:coinId groupId:groupId] autorelease];
     }
-    coin.position = [PointUtil getPosition:x y:y];
+    coin.position = ccpAdd([PointUtil getPosition:x y:y], ccp([coin getWidth] / 2, -[coin getHeight] / 2));
     return coin;
 }
 

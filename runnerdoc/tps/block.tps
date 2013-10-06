@@ -149,16 +149,9 @@
             <filename>../sprites/block/block106.png</filename>
             <filename>../sprites/block/block107.png</filename>
             <filename>../sprites/block/block108.png</filename>
-            <filename>../sprites/block/block201.png</filename>
-            <filename>../sprites/block/block202.png</filename>
-            <filename>../sprites/block/block301.png</filename>
-            <filename>../sprites/block/block302.png</filename>
-            <filename>../sprites/block/block303.png</filename>
-            <filename>../sprites/block/block304.png</filename>
             <filename>../sprites/block/block109.png</filename>
-            <filename>../sprites/block/block401.png</filename>
             <filename>../sprites/block/block110.png</filename>
-            <filename>../sprites/block/block402.png</filename>
+            <filename>../sprites/block/block301.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

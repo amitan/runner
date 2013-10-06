@@ -49,4 +49,6 @@
 - (NSArray*)attackEnemiesBetween:(CGPoint)point end:(CGPoint)endPoint;
 - (BOOL)isEnemyHit:(CGPoint)point direction:(DIRECTION)direction;
 
+// コイン幅
+- (float)getCoinBx:(float)baseBx index:(int)index;
 @end

@@ -22,21 +22,27 @@
     return [Block createBlock:blockId x:0 y:0];
 }
 
++ (Block*)createBlock:(int)blockId bx:(float)bx by:(float)by {
+    float x = bx * 60;
+    float y = by * 60 - 640;
+    return [Block createBlock:blockId x:x y:y];
+}
+
 + (Block*)createBlock:(int)blockId x:(float)x y:(float)y {
     Block *block;
     switch (blockId) {
-        case 301:
-        case 303:
-            block = [[[LeftReverseBlock alloc] initWithBlockId:blockId] autorelease];
-            break;
-        case 302:
-        case 304:
-            block = [[[RightReverseBlock alloc] initWithBlockId:blockId] autorelease];
-            break;
+//        case 301:
+//        case 303:
+//            block = [[[LeftReverseBlock alloc] initWithBlockId:blockId] autorelease];
+//            break;
+//        case 302:
+//        case 304:
+//            block = [[[RightReverseBlock alloc] initWithBlockId:blockId] autorelease];
+//            break;
         default:
             block = [[[StandardBlock alloc] initWithBlockId:blockId] autorelease];
     }
-    block.position = [PointUtil getPosition:x y:y];
+    block.position = ccpAdd([PointUtil getPosition:x y:y], ccp([block getWidth] / 2, -[block getHeight] / 2));
     return block;
 }
 

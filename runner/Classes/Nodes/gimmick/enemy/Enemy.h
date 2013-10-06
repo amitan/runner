@@ -27,6 +27,7 @@ typedef enum {
 // 指定した敵を生成する
 + (Enemy*)createEnemy:(ENEMY_TYPE)enemyId;
 + (Enemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y;
++ (Enemy*)createEnemy:(ENEMY_TYPE)enemyId bx:(float)bx by:(float)by;
 
 // EXPを取得する
 - (int)getExp;

@@ -14,7 +14,6 @@
 
 + (StandardEnemy*)createEnemy:(ENEMY_TYPE)enemyId x:(float)x y:(float)y {
     StandardEnemy *enemy = [[[self alloc] initWithEnemyId:enemyId] autorelease];
-    enemy.position = [PointUtil getPosition:x y:y];
     return enemy;
 }
 

@@ -52,9 +52,14 @@ const float MIN_FIRE2_SECONDS = 10;
         
         // 初期ページを追加
         PageController *pageController = [GameScene sharedInstance].pageController;
-        for (int i = 0; i <= INIT_PAGE_NUM; i++) {
-            [self addPage:[pageController getPageBy:i]];
+//        [self addPage:[pageController getPageBy:0]];
+        for (int i = 0; i < 3; i++) {
+            [self addPage:[pageController getPageWithStageId:10101 index:i + 1]];
         }
+        // TODO::stage
+//        for (int i = 0; i <= INIT_PAGE_NUM; i++) {
+//            [self addPage:[pageController getPageBy:i]];
+//        }
     }
     return self;
 }

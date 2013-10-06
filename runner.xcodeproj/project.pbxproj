@@ -267,6 +267,9 @@
 		F9DAF99F17BFAB7800422467 /* TeamLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF99E17BFAB7700422467 /* TeamLayer.m */; };
 		F9DAF9A217C054AE00422467 /* PlayerSelectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */; };
 		F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DAF9B817C0B28A00422467 /* PlayerMaster.m */; };
+		F9E8D13217FFFB9900997396 /* Page10101001.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13117FFFB9900997396 /* Page10101001.m */; };
+		F9E8D13517FFFDA800997396 /* Page10101002.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13417FFFDA800997396 /* Page10101002.m */; };
+		F9E8D13817FFFDB400997396 /* Page10101003.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13717FFFDB400997396 /* Page10101003.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -769,6 +772,12 @@
 		F9DAF9A117C054AE00422467 /* PlayerSelectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectLayer.m; sourceTree = "<group>"; };
 		F9DAF9B717C0B28900422467 /* PlayerMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMaster.h; sourceTree = "<group>"; };
 		F9DAF9B817C0B28A00422467 /* PlayerMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMaster.m; sourceTree = "<group>"; };
+		F9E8D13017FFFB9900997396 /* Page10101001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10101001.h; sourceTree = "<group>"; };
+		F9E8D13117FFFB9900997396 /* Page10101001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10101001.m; sourceTree = "<group>"; };
+		F9E8D13317FFFDA800997396 /* Page10101002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10101002.h; sourceTree = "<group>"; };
+		F9E8D13417FFFDA800997396 /* Page10101002.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10101002.m; sourceTree = "<group>"; };
+		F9E8D13617FFFDB400997396 /* Page10101003.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10101003.h; sourceTree = "<group>"; };
+		F9E8D13717FFFDB400997396 /* Page10101003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10101003.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -861,6 +870,7 @@
 		F922C8FE17CF8099005177A2 /* landPages */ = {
 			isa = PBXGroup;
 			children = (
+				F9E8D12F17FFFB7C00997396 /* stage1_1 */,
 				F9087E4D17F47308009EE1EC /* 010 */,
 				F922C93617CF839D005177A2 /* Page.h */,
 				F922C93717CF839D005177A2 /* Page.m */,
@@ -1663,6 +1673,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F9E8D12F17FFFB7C00997396 /* stage1_1 */ = {
+			isa = PBXGroup;
+			children = (
+				F9E8D13017FFFB9900997396 /* Page10101001.h */,
+				F9E8D13117FFFB9900997396 /* Page10101001.m */,
+				F9E8D13317FFFDA800997396 /* Page10101002.h */,
+				F9E8D13417FFFDA800997396 /* Page10101002.m */,
+				F9E8D13617FFFDB400997396 /* Page10101003.h */,
+				F9E8D13717FFFDB400997396 /* Page10101003.m */,
+			);
+			path = stage1_1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1971,6 +1994,9 @@
 				F9087E4417EF3B4F009EE1EC /* ScrewState.m in Sources */,
 				F9087E4717F00F6D009EE1EC /* Page2001.m in Sources */,
 				F9087E5017F47421009EE1EC /* Page14.m in Sources */,
+				F9E8D13217FFFB9900997396 /* Page10101001.m in Sources */,
+				F9E8D13517FFFDA800997396 /* Page10101002.m in Sources */,
+				F9E8D13817FFFDB400997396 /* Page10101003.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

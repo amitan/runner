@@ -34,7 +34,7 @@
 @end
 
 @implementation Player
-const int INIT_SCROLL_SPEED = 500;
+const int INIT_SCROLL_SPEED = 400;
 const int BLOCK_TOP_REFLECTION = -10;
 const float INVISIBLE_TIME = 2;
 
