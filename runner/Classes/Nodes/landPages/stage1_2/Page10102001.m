@@ -7,7 +7,7 @@
 //
 
 #import "Page10102001.h"
-
+#import "PointUtil.h"
 
 @implementation Page10102001
 
@@ -16,10 +16,16 @@
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:LAND_LONG];
+        Block *land = [Block createBlock:LAND_30];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
-        self._lands = @[land];
+        
+        float rightX = land.position.x + [land getWidth] / 2;
+        Block *land2 = [Block createBlock:LAND_8];
+        land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:240], 0), [self getLandPosition:land2]);
+        [land2 stageOn:self];
+
+        self._lands = @[land, land2];
         
         // ブロック追加
         self._blocks = @[[Block createBlock:B_X6 bx:9 by:5],
@@ -38,6 +44,8 @@
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:9 index:3] by:6],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:9 index:4] by:6],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:9 index:5] by:6],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:9 index:6] by:6],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:9 index:7] by:6],
                         ];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

@@ -19,29 +19,29 @@
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:5];
+        Block *land = [Block createBlock:LAND_LONG];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         self._lands = @[land];
 
         // ブロック追加
-        self._blocks = @[[Block createBlock:102 x:170 y:-490],
-                        [Block createBlock:102 x:470 y:-490],
-                        [Block createBlock:102 x:230 y:-430],
-                        [Block createBlock:102 x:290 y:-370],
-                        [Block createBlock:102 x:350 y:-310],
-                        [Block createBlock:102 x:410 y:-250],
-                        [Block createBlock:102 x:470 y:-190], // ここまで階段
-                        [Block createBlock:103 x:470 y:-430],
-                        [Block createBlock:103 x:530 y:-370],
-                        [Block createBlock:101 x:590 y:-430],
-                        [Block createBlock:101 x:530 y:-310],
-                        [Block createBlock:101 x:590 y:-310],
-                        [Block createBlock:101 x:590 y:-250], // ここまで山
+        self._blocks = @[[Block createBlock:102 x:170 y:-460],
+                        [Block createBlock:102 x:470 y:-460],
+                        [Block createBlock:102 x:230 y:-400],
+                        [Block createBlock:102 x:290 y:-340],
+                        [Block createBlock:102 x:350 y:-280],
+                        [Block createBlock:102 x:410 y:-220],
+                        [Block createBlock:102 x:470 y:-160], // ここまで階段
+                        [Block createBlock:103 x:470 y:-400],
+                        [Block createBlock:103 x:530 y:-340],
+                        [Block createBlock:101 x:590 y:-400],
+                        [Block createBlock:101 x:530 y:-280],
+                        [Block createBlock:101 x:590 y:-280],
+                        [Block createBlock:101 x:590 y:-220], // ここまで山
                         [Block createBlock:105 x:770 y:-60],
-                        [Block createBlock:106 x:1070 y:-460],
-                        [Block createBlock:106 x:1970 y:-460],
-                        [Block createBlock:106 x:1250 y:-150],
+                        [Block createBlock:106 x:1070 y:-430],
+                        [Block createBlock:106 x:1970 y:-430],
+                        [Block createBlock:106 x:1250 y:-120],
                         [Block createBlock:106 x:1250 y:-30]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
@@ -49,7 +49,7 @@
         
         // スイッチ
         self._switches = [NSArray arrayWithObjects:
-                          [Switch createSwitch:101 x:718 y:-150],
+                          [Switch createSwitch:101 x:748 y:-90],
                           nil];
         for (Switch *sw in self._switches) {
             [sw stageOn:self];

@@ -17,7 +17,7 @@
         self.isItem = true;
         
         // 地面を追加
-        Block *land = [Block createBlock:1];
+        Block *land = [Block createBlock:LAND_DEFAULT];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         self._lands = @[land];

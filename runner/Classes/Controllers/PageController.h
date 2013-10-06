@@ -16,10 +16,10 @@
 }
 
 // ページを取得する
-- (LandPage*)getLandPage;
+- (LandPage*)getRandomLandPage;
 - (LandPage*)getLandItemPage;
 - (Page*)getSkyPage;
 - (Page*)getPageBy:(int)pageId;
-- (Page*)getPageWithStageId:(int)stageId index:(int)i;
+- (Page*)getPageWithStageId:(int)stageId pageNo:(int)pageNo;
 - (void)resetPages:(int)pageId;
 @end

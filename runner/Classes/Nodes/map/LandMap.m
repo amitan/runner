@@ -15,12 +15,14 @@
 
 @interface LandMap ()
 @property (nonatomic, readwrite)int _stageId;
+@property (nonatomic, readwrite)BOOL _isRandom;
 @property (nonatomic, readwrite)float _fire1Time, _fire2Time;
 @property (nonatomic, retain)Gun *_gun1, *_gun2;
+@property (nonatomic, readwrite)int _fixedPageNo;
 @end
 
 @implementation LandMap
-const int MAX_SPEED_STEP = 5;
+const int MAX_SPEED_STEP = 9;
 const int MIN_LAND_PAGE_STOCK_NUM = 3;
 const int INIT_PAGE_NUM = 1;
 const int MIN_FIRE1_SPEED = 2;
@@ -32,38 +34,44 @@ const float MIN_FIRE2_SECONDS = 10;
 
 @synthesize isPlaying;
 
-+ (Map*)createMap:(int)stageId {
-    return [[[self alloc] initWithStageId:stageId] autorelease];
++ (Map*)createMap:(int)stageId isRandom:(BOOL)isRandom {
+    return [[[self alloc] initWithStageId:stageId isRandom:isRandom] autorelease];
 }
 
-- (id)initWithStageId:(int)stageId {
+- (id)initWithStageId:(int)stageId isRandom:(BOOL)isRandom {
     self = [super init];
 	if (self) {
 
         // 初期設定
         self._stageId = stageId;
-        self._pages = [NSMutableArray arrayWithCapacity:5];
+        self._isRandom = isRandom;
         self.speed = 1;
         self.isPlaying = false;
-        self._fire1Time = MIN_FIRE1_SECONDS;
-        self._fire2Time = MIN_FIRE2_SECONDS;
-        self._gun1 = [Gun node];
-        self._gun2 = [Gun node];
-        
-        // 初期ページを追加
+        self._pages = [NSMutableArray arrayWithCapacity:5];
+        self._fixedPageNo = 1;
+
         PageController *pageController = [GameScene sharedInstance].pageController;
-//        [self addPage:[pageController getPageBy:0]];
-        for (int i = 0; i < 3; i++) {
-            [self addPage:[pageController getPageWithStageId:10101 index:i + 1]];
+
+        // 初期ページ追加
+        if (self._isRandom) {
+            for (int i = 0; i <= INIT_PAGE_NUM; i++) {
+                [self addPage:[pageController getPageBy:i]];
+            }
+            // 大砲があるのはエンドレスステージのみ
+            self._fire1Time = MIN_FIRE1_SECONDS;
+            self._fire2Time = MIN_FIRE2_SECONDS;
+            self._gun1 = [Gun node];
+            self._gun2 = [Gun node];
+            
+        } else {
+            for (int i = 0; i <= INIT_PAGE_NUM; i++) {
+                [self addPage:[pageController getPageWithStageId:stageId pageNo:self._fixedPageNo]];
+                self._fixedPageNo++;
+            }
         }
-        // TODO::stage
-//        for (int i = 0; i <= INIT_PAGE_NUM; i++) {
-//            [self addPage:[pageController getPageBy:i]];
-//        }
     }
     return self;
 }
-
 
 - (Block*)getHitBlock:(CGPoint)point {
     LandPage *currentPage = [self getCurrentPage:point];
@@ -177,7 +185,37 @@ const float MIN_FIRE2_SECONDS = 10;
     return NULL;
 }
 
+
 - (void)refillIfNeeded {
+    if (self._isRandom) {
+        [self refillRandomPageIfNeeded];
+    } else {
+        [self refillFixedPageIfNeeded];
+    }
+}
+
+- (void)refillFixedPageIfNeeded {
+    BOOL result = false;
+    for (Page *page in self._pages) {
+        if ([page isOut]) {
+            result = true;
+            break;
+        }
+    }
+    if (result) {
+        Page *page = [self._pages objectAtIndex:0];
+        [page stageOff];
+    }
+    if (self._pages.count < MIN_LAND_PAGE_STOCK_NUM) {
+        Page *page = [[GameScene sharedInstance].pageController getPageWithStageId:self._stageId pageNo:self._fixedPageNo];
+        if (page) {
+            [self addPage:page];
+            self._fixedPageNo++;
+        }
+    }
+}
+
+- (void)refillRandomPageIfNeeded {
     
     int nextSpeed = [self _getSpeed:[[GameScene sharedInstance].hudController getLandDistance]];
     if (self.speed != nextSpeed) {
@@ -201,7 +239,7 @@ const float MIN_FIRE2_SECONDS = 10;
         if (![self checkItem] && CCRANDOM_0_1() < 0.1) {
             [self addPage:[[GameScene sharedInstance].pageController getLandItemPage]];
         } else {
-            [self addPage:[[GameScene sharedInstance].pageController getLandPage]];
+            [self addPage:[[GameScene sharedInstance].pageController getRandomLandPage]];
         }
     }
 }
@@ -291,10 +329,15 @@ const float MIN_FIRE2_SECONDS = 10;
         return self.speed;
     }
 // TODO:back
-    if (distance > 1500) return 5;
-    if (distance > 800) return 4;
-    if (distance > 300) return 3;
-    if (distance > 50) return 2;
+    CCLOG(@"%d", distance);
+    if (distance > 1500) return 9;
+    if (distance > 1300) return 8;
+    if (distance > 1000) return 7;
+    if (distance > 700) return 6;
+    if (distance > 500) return 5;
+    if (distance > 300) return 4;
+    if (distance > 70) return 3;
+    if (distance > 20) return 2;
 //    if (distance > 120) return 5;
 //    if (distance > 90) return 4;
 //    if (distance > 60) return 3;

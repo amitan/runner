@@ -12,7 +12,6 @@
 #import "GameScene.h"
 #import "TitleLayer.h"
 #import "GameUtil.h"
-#import "UserPlayerDao.h"
 
 @implementation MyNavigationController
 @synthesize adController;
@@ -67,24 +66,6 @@
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"team.plist"];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"effect.plist"];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"itemeffect.plist"];
-
-        // シーケンス値設定
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
-        int sequenceId = 1;
-        [defaults setObject:[NSNumber numberWithInt:sequenceId] forKey:@"userPlayerSequence"];
-
-        // ユーザーの初期所持キャラ定義
-        NSMutableDictionary *userPlayer = [UserPlayerDao createUserPlayer:INIT_PLAYER_ID sequenceId:sequenceId];
-        NSMutableArray *userPlayers = [NSMutableArray arrayWithObjects:userPlayer, nil];
-        NSData *classData = [NSKeyedArchiver archivedDataWithRootObject:userPlayers];
-        [defaults setObject:classData forKey:@"userPlayers"];
-        
-        // ユーザーの初期編成キャラ定義
-        [defaults setObject:[NSNumber numberWithInt:sequenceId] forKey:@"player1"];
-        
-        [userDefaults registerDefaults:defaults];
-        [userDefaults synchronize];
 
         // ゲーム開始
 		[director runWithScene: [TitleLayer scene]];

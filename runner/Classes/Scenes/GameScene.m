@@ -95,7 +95,6 @@ static GameScene *_scene = nil;
     return self;
 }
 
-// TODO:: deallocの実装
 - (void)dealloc {
     [self stop];
     self.backgroundLayer = nil;
@@ -128,7 +127,7 @@ static GameScene *_scene = nil;
 
 - (void)setup {
     [self.countController setup];
-    [self.mapController setup:self._stageId];
+    [self.mapController setup:self._stageId isRandom:self._isRandom];
     [self.hudController setup];
     [self.playerController setup];
 }
@@ -149,15 +148,15 @@ static GameScene *_scene = nil;
 
 - (void)resume {
     [self.mapController resume];
-    [self.hudController start];
-    [self.playerController start];    
+    [self.hudController resume];
+    [self.playerController resume];
 }
 
 - (void)suspend {
-    [self.countController stop];
+    [self.countController suspend];
     [self.mapController suspend];
-    [self.hudController stop];
-    [self.playerController stop];
+    [self.hudController suspend];
+    [self.playerController suspend];
 }
 
 - (void)stop {

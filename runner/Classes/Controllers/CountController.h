@@ -17,6 +17,8 @@
 - (void)setup;
 - (void)start;
 - (void)stop;
+- (void)suspend;
+- (void)resume;
 
 // カウント終了後のリスナーを登録する
 - (void)addEndListner:(id)target selector:(SEL)selector;

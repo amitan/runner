@@ -31,14 +31,14 @@
 + (Block*)createBlock:(int)blockId x:(float)x y:(float)y {
     Block *block;
     switch (blockId) {
-//        case 301:
-//        case 303:
-//            block = [[[LeftReverseBlock alloc] initWithBlockId:blockId] autorelease];
-//            break;
-//        case 302:
-//        case 304:
-//            block = [[[RightReverseBlock alloc] initWithBlockId:blockId] autorelease];
-//            break;
+        case 501:
+        case 503:
+            block = [[[LeftReverseBlock alloc] initWithBlockId:blockId] autorelease];
+            break;
+        case 502:
+        case 504:
+            block = [[[RightReverseBlock alloc] initWithBlockId:blockId] autorelease];
+            break;
         default:
             block = [[[StandardBlock alloc] initWithBlockId:blockId] autorelease];
     }

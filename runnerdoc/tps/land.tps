@@ -151,6 +151,7 @@
             <filename>../sprites/land/block960.png</filename>
             <filename>../sprites/land/block1560.png</filename>
             <filename>../sprites/land/block1800.png</filename>
+            <filename>../sprites/land/block1280.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

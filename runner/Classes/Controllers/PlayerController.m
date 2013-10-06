@@ -8,8 +8,6 @@
 
 #import "PlayerController.h"
 #import "Player.h"
-#import "UnitDao.h"
-#import "UserPlayerDao.h"
 #import "PlayerMaster.h"
 #import "Plane.h"
 #import "GameScene.h"
@@ -38,10 +36,7 @@
 - (void)setup {
     
     // 操作キャラ追加
-    int playerSequenceId = [UnitDao getUnitSequenceId:1];
-    NSMutableDictionary *userPlayer = [UserPlayerDao getUserPlayer:playerSequenceId];
-    int playerId = [userPlayer[@"playerId"] intValue];
-    self._player = [Player createPlayer:playerId];
+    self._player = [Player createPlayer:2000001];
     [self._player stageOn];
     
     // 乗り物追加
@@ -79,6 +74,13 @@
 
 - (void)stop {
     [self._player stop];
+}
+
+- (void)suspend {
+    [self stop];
+}
+- (void)resume {
+    [self start];
 }
 
 - (void)touchBegan {

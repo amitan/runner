@@ -19,19 +19,19 @@ const int PAGE12_INTERVAL1 = 2100;
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:2];
+        Block *land = [Block createBlock:LAND_6];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
 
         float rightX = land.position.x + [land getWidth] / 2;
-        Block *land2 = [Block createBlock:2];
+        Block *land2 = [Block createBlock:LAND_16];
         land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:PAGE12_INTERVAL1], 0), [self getLandPosition:land2]);
         [land2 stageOn:self];
         self._lands = @[land, land2];
 
         
         // ブロック追加
-        self._blocks = @[[Block createBlock:102 x:170 y:-490]];
+        self._blocks = @[[Block createBlock:102 x:170 y:-460]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }

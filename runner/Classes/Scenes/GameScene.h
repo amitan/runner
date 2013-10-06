@@ -43,8 +43,6 @@
 - (void)stop;
 - (void)resume;
 - (void)suspend;
-
-// ゲームを終了する
 - (void)finishGame;
 
 // フィーバー

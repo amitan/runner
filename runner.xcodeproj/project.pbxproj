@@ -23,20 +23,16 @@
 		F9087E4717F00F6D009EE1EC /* Page2001.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E4617F00F6D009EE1EC /* Page2001.m */; };
 		F9087E4A17F02410009EE1EC /* itemeffect.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9087E4817F02410009EE1EC /* itemeffect.plist */; };
 		F9087E4B17F02410009EE1EC /* itemeffect.png in Resources */ = {isa = PBXBuildFile; fileRef = F9087E4917F02410009EE1EC /* itemeffect.png */; };
-		F9087E5017F47421009EE1EC /* Page14.m in Sources */ = {isa = PBXBuildFile; fileRef = F9087E4F17F47420009EE1EC /* Page14.m */; };
 		F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F617CF7ACC005177A2 /* LandMap.m */; };
 		F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F817CF7ACC005177A2 /* SkyMap.m */; };
 		F922C8FD17CF7B00005177A2 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8FC17CF7B00005177A2 /* Map.m */; };
 		F922C91F17CF8099005177A2 /* LandPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90017CF8099005177A2 /* LandPage.m */; };
 		F922C92017CF8099005177A2 /* Page0.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90217CF8099005177A2 /* Page0.m */; };
 		F922C92117CF8099005177A2 /* Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90417CF8099005177A2 /* Page1.m */; };
-		F922C92217CF8099005177A2 /* Page10.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90617CF8099005177A2 /* Page10.m */; };
 		F922C92317CF8099005177A2 /* Page11.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90817CF8099005177A2 /* Page11.m */; };
 		F922C92417CF8099005177A2 /* Page12.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90A17CF8099005177A2 /* Page12.m */; };
-		F922C92517CF8099005177A2 /* Page13.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90C17CF8099005177A2 /* Page13.m */; };
 		F922C92617CF8099005177A2 /* Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90E17CF8099005177A2 /* Page2.m */; };
 		F922C92717CF8099005177A2 /* Page3.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91017CF8099005177A2 /* Page3.m */; };
-		F922C92817CF8099005177A2 /* Page4.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91217CF8099005177A2 /* Page4.m */; };
 		F922C92917CF8099005177A2 /* Page5.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91417CF8099005177A2 /* Page5.m */; };
 		F922C92A17CF8099005177A2 /* Page6.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91617CF8099005177A2 /* Page6.m */; };
 		F922C92B17CF8099005177A2 /* Page7.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91817CF8099005177A2 /* Page7.m */; };
@@ -55,9 +51,7 @@
 		F922C96017D25586005177A2 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95F17D25582005177A2 /* Bullet.m */; };
 		F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */; };
 		F923F62217C273A1007CF0CF /* StageDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* StageDebugLayer.m */; };
-		F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62B17C4F778007CF0CF /* UserPlayerDao.m */; };
 		F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63117C4FAC4007CF0CF /* GameDao.m */; };
-		F923F63517C500B1007CF0CF /* UnitDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63417C500B1007CF0CF /* UnitDao.m */; };
 		F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */; };
 		F93DF4D6178AB447007AD085 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D5178AB447007AD085 /* QuartzCore.framework */; };
 		F93DF4D8178AB447007AD085 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93DF4D7178AB447007AD085 /* OpenGLES.framework */; };
@@ -258,6 +252,9 @@
 		F9E8D13517FFFDA800997396 /* Page10101002.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13417FFFDA800997396 /* Page10101002.m */; };
 		F9E8D13817FFFDB400997396 /* Page10101003.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13717FFFDB400997396 /* Page10101003.m */; };
 		F9E8D13C18011C3A00997396 /* Page10102001.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D13B18011C3A00997396 /* Page10102001.m */; };
+		F9E8D1421801A94300997396 /* Page10102002.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1411801A94300997396 /* Page10102002.m */; };
+		F9E8D1451801A95400997396 /* Page10102003.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1441801A95400997396 /* Page10102003.m */; };
+		F9E8D1481801A96400997396 /* Page10102004.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1471801A96400997396 /* Page10102004.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -287,8 +284,6 @@
 		F9087E4617F00F6D009EE1EC /* Page2001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2001.m; sourceTree = "<group>"; };
 		F9087E4817F02410009EE1EC /* itemeffect.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = itemeffect.plist; sourceTree = "<group>"; };
 		F9087E4917F02410009EE1EC /* itemeffect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itemeffect.png; sourceTree = "<group>"; };
-		F9087E4E17F47420009EE1EC /* Page14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page14.h; sourceTree = "<group>"; };
-		F9087E4F17F47420009EE1EC /* Page14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page14.m; sourceTree = "<group>"; };
 		F922C8F517CF7ACC005177A2 /* LandMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandMap.h; sourceTree = "<group>"; };
 		F922C8F617CF7ACC005177A2 /* LandMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandMap.m; sourceTree = "<group>"; };
 		F922C8F717CF7ACC005177A2 /* SkyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyMap.h; sourceTree = "<group>"; };
@@ -301,20 +296,14 @@
 		F922C90217CF8099005177A2 /* Page0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page0.m; sourceTree = "<group>"; };
 		F922C90317CF8099005177A2 /* Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1.h; sourceTree = "<group>"; };
 		F922C90417CF8099005177A2 /* Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1.m; sourceTree = "<group>"; };
-		F922C90517CF8099005177A2 /* Page10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10.h; sourceTree = "<group>"; };
-		F922C90617CF8099005177A2 /* Page10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10.m; sourceTree = "<group>"; };
 		F922C90717CF8099005177A2 /* Page11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page11.h; sourceTree = "<group>"; };
 		F922C90817CF8099005177A2 /* Page11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page11.m; sourceTree = "<group>"; };
 		F922C90917CF8099005177A2 /* Page12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page12.h; sourceTree = "<group>"; };
 		F922C90A17CF8099005177A2 /* Page12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page12.m; sourceTree = "<group>"; };
-		F922C90B17CF8099005177A2 /* Page13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page13.h; sourceTree = "<group>"; };
-		F922C90C17CF8099005177A2 /* Page13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page13.m; sourceTree = "<group>"; };
 		F922C90D17CF8099005177A2 /* Page2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page2.h; sourceTree = "<group>"; };
 		F922C90E17CF8099005177A2 /* Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2.m; sourceTree = "<group>"; };
 		F922C90F17CF8099005177A2 /* Page3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page3.h; sourceTree = "<group>"; };
 		F922C91017CF8099005177A2 /* Page3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page3.m; sourceTree = "<group>"; };
-		F922C91117CF8099005177A2 /* Page4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page4.h; sourceTree = "<group>"; };
-		F922C91217CF8099005177A2 /* Page4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page4.m; sourceTree = "<group>"; };
 		F922C91317CF8099005177A2 /* Page5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page5.h; sourceTree = "<group>"; };
 		F922C91417CF8099005177A2 /* Page5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page5.m; sourceTree = "<group>"; };
 		F922C91517CF8099005177A2 /* Page6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page6.h; sourceTree = "<group>"; };
@@ -349,12 +338,8 @@
 		F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfNeedleEnemy.m; sourceTree = "<group>"; };
 		F923F62017C273A0007CF0CF /* StageDebugLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageDebugLayer.h; sourceTree = "<group>"; };
 		F923F62117C273A0007CF0CF /* StageDebugLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageDebugLayer.m; sourceTree = "<group>"; };
-		F923F62A17C4F778007CF0CF /* UserPlayerDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPlayerDao.h; sourceTree = "<group>"; };
-		F923F62B17C4F778007CF0CF /* UserPlayerDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPlayerDao.m; sourceTree = "<group>"; };
 		F923F63017C4FAC4007CF0CF /* GameDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDao.h; sourceTree = "<group>"; };
 		F923F63117C4FAC4007CF0CF /* GameDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDao.m; sourceTree = "<group>"; };
-		F923F63317C500B0007CF0CF /* UnitDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitDao.h; sourceTree = "<group>"; };
-		F923F63417C500B1007CF0CF /* UnitDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDao.m; sourceTree = "<group>"; };
 		F9363E1E17BA58BC00F832C0 /* CCNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeButton.h; sourceTree = "<group>"; };
 		F9363E1F17BA58BC00F832C0 /* CCNodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNodeButton.m; sourceTree = "<group>"; };
 		F93DF4D2178AB447007AD085 /* runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -742,6 +727,12 @@
 		F9E8D13717FFFDB400997396 /* Page10101003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10101003.m; sourceTree = "<group>"; };
 		F9E8D13A18011C3A00997396 /* Page10102001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10102001.h; sourceTree = "<group>"; };
 		F9E8D13B18011C3A00997396 /* Page10102001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102001.m; sourceTree = "<group>"; };
+		F9E8D1401801A94300997396 /* Page10102002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10102002.h; sourceTree = "<group>"; };
+		F9E8D1411801A94300997396 /* Page10102002.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102002.m; sourceTree = "<group>"; };
+		F9E8D1431801A95400997396 /* Page10102003.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10102003.h; sourceTree = "<group>"; };
+		F9E8D1441801A95400997396 /* Page10102003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102003.m; sourceTree = "<group>"; };
+		F9E8D1461801A96300997396 /* Page10102004.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10102004.h; sourceTree = "<group>"; };
+		F9E8D1471801A96400997396 /* Page10102004.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102004.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -800,8 +791,6 @@
 				F922C90E17CF8099005177A2 /* Page2.m */,
 				F922C90F17CF8099005177A2 /* Page3.h */,
 				F922C91017CF8099005177A2 /* Page3.m */,
-				F922C91117CF8099005177A2 /* Page4.h */,
-				F922C91217CF8099005177A2 /* Page4.m */,
 				F922C91317CF8099005177A2 /* Page5.h */,
 				F922C91417CF8099005177A2 /* Page5.m */,
 				F922C91517CF8099005177A2 /* Page6.h */,
@@ -812,8 +801,6 @@
 				F922C91A17CF8099005177A2 /* Page8.m */,
 				F922C91B17CF8099005177A2 /* Page9.h */,
 				F922C91C17CF8099005177A2 /* Page9.m */,
-				F922C90517CF8099005177A2 /* Page10.h */,
-				F922C90617CF8099005177A2 /* Page10.m */,
 			);
 			name = 010;
 			sourceTree = "<group>";
@@ -847,10 +834,6 @@
 				F922C90817CF8099005177A2 /* Page11.m */,
 				F922C90917CF8099005177A2 /* Page12.h */,
 				F922C90A17CF8099005177A2 /* Page12.m */,
-				F922C90B17CF8099005177A2 /* Page13.h */,
-				F922C90C17CF8099005177A2 /* Page13.m */,
-				F9087E4E17F47420009EE1EC /* Page14.h */,
-				F9087E4F17F47420009EE1EC /* Page14.m */,
 				F9087E4517F00F6D009EE1EC /* Page2001.h */,
 				F9087E4617F00F6D009EE1EC /* Page2001.m */,
 				F922C91D17CF8099005177A2 /* Page900.h */,
@@ -890,12 +873,8 @@
 		F923F62917C4F755007CF0CF /* Dao */ = {
 			isa = PBXGroup;
 			children = (
-				F923F62A17C4F778007CF0CF /* UserPlayerDao.h */,
-				F923F62B17C4F778007CF0CF /* UserPlayerDao.m */,
 				F923F63017C4FAC4007CF0CF /* GameDao.h */,
 				F923F63117C4FAC4007CF0CF /* GameDao.m */,
-				F923F63317C500B0007CF0CF /* UnitDao.h */,
-				F923F63417C500B1007CF0CF /* UnitDao.m */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -1614,6 +1593,12 @@
 			children = (
 				F9E8D13A18011C3A00997396 /* Page10102001.h */,
 				F9E8D13B18011C3A00997396 /* Page10102001.m */,
+				F9E8D1401801A94300997396 /* Page10102002.h */,
+				F9E8D1411801A94300997396 /* Page10102002.m */,
+				F9E8D1431801A95400997396 /* Page10102003.h */,
+				F9E8D1441801A95400997396 /* Page10102003.m */,
+				F9E8D1461801A96300997396 /* Page10102004.h */,
+				F9E8D1471801A96400997396 /* Page10102004.m */,
 			);
 			path = stage1_2;
 			sourceTree = "<group>";
@@ -1869,22 +1854,17 @@
 				F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */,
 				F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */,
 				F923F62217C273A1007CF0CF /* StageDebugLayer.m in Sources */,
-				F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */,
 				F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */,
-				F923F63517C500B1007CF0CF /* UnitDao.m in Sources */,
 				F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */,
 				F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */,
 				F922C8FD17CF7B00005177A2 /* Map.m in Sources */,
 				F922C91F17CF8099005177A2 /* LandPage.m in Sources */,
 				F922C92017CF8099005177A2 /* Page0.m in Sources */,
 				F922C92117CF8099005177A2 /* Page1.m in Sources */,
-				F922C92217CF8099005177A2 /* Page10.m in Sources */,
 				F922C92317CF8099005177A2 /* Page11.m in Sources */,
 				F922C92417CF8099005177A2 /* Page12.m in Sources */,
-				F922C92517CF8099005177A2 /* Page13.m in Sources */,
 				F922C92617CF8099005177A2 /* Page2.m in Sources */,
 				F922C92717CF8099005177A2 /* Page3.m in Sources */,
-				F922C92817CF8099005177A2 /* Page4.m in Sources */,
 				F922C92917CF8099005177A2 /* Page5.m in Sources */,
 				F922C92A17CF8099005177A2 /* Page6.m in Sources */,
 				F922C92B17CF8099005177A2 /* Page7.m in Sources */,
@@ -1912,11 +1892,13 @@
 				F9087E4117ED944A009EE1EC /* ThunderState.m in Sources */,
 				F9087E4417EF3B4F009EE1EC /* ScrewState.m in Sources */,
 				F9087E4717F00F6D009EE1EC /* Page2001.m in Sources */,
-				F9087E5017F47421009EE1EC /* Page14.m in Sources */,
 				F9E8D13217FFFB9900997396 /* Page10101001.m in Sources */,
 				F9E8D13517FFFDA800997396 /* Page10101002.m in Sources */,
 				F9E8D13817FFFDB400997396 /* Page10101003.m in Sources */,
 				F9E8D13C18011C3A00997396 /* Page10102001.m in Sources */,
+				F9E8D1421801A94300997396 /* Page10102002.m in Sources */,
+				F9E8D1451801A95400997396 /* Page10102003.m in Sources */,
+				F9E8D1481801A96400997396 /* Page10102004.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

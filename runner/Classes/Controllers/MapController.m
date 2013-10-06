@@ -11,10 +11,6 @@
 #import "PointUtil.h"
 #import "Block.h"
 #import "Map.h"
-#import "Page1.h"
-#import "Page2.h"
-#import "Page3.h"
-#import "Page4.h"
 
 @interface MapController ()
 @property (nonatomic, readwrite)CGPoint _tempPosition;
@@ -37,13 +33,17 @@
     [super dealloc];
 }
 
-- (void)setup:(int)stageId {
-    self.landMap = [LandMap createMap:stageId];
+- (void)setup:(int)stageId isRandom:(BOOL)isRandom {
+    self.landMap = [LandMap createMap:stageId isRandom:isRandom];
     [PointUtil setTLPosition:self.landMap x:0 y:0];
     [[GameScene sharedInstance].gameLayer addChild:self.landMap];
-    self.skyMap = [SkyMap createMap:stageId];
-    [PointUtil setTLPosition:self.skyMap x:0 y:-BASE_HEIGHT];
-    [[GameScene sharedInstance].gameLayer addChild:self.skyMap];
+    
+    // 空マップがあるのはエンドレスステージのみ
+    if (isRandom) {
+        self.skyMap = [SkyMap createMap:stageId];
+        [PointUtil setTLPosition:self.skyMap x:0 y:-BASE_HEIGHT];
+        [[GameScene sharedInstance].gameLayer addChild:self.skyMap];
+    }
 }
 
 - (void)start {
@@ -75,17 +75,21 @@
 - (void)scroll:(float)dx {
     self.landMap.position = ccp(self.landMap.position.x - dx, self.landMap.position.y);
     [[GameScene sharedInstance].hudController addLandDistance:dx];
-    // TODO::stage
-//    [self.landMap refillIfNeeded];
+    [self.landMap refillIfNeeded];
 }
 
+////////////////////////////////////////////////////////////////////////////////////////
+// 空マップ
+////////////////////////////////////////////////////////////////////////////////////////
 - (void)skyScroll:(float)dx {
+    if (!self.skyMap) return;
     self.skyMap.position = ccp(self.skyMap.position.x - dx, self.skyMap.position.y);
     [[GameScene sharedInstance].hudController addSkyDistance:dx];
     [self.skyMap refillIfNeeded];
 }
 
 - (void)flyUp {
+    if (!self.skyMap) return;
     self._tempPosition = self.landMap.position;
     self._isFlyingUp = true;
     [self.skyMap start];
@@ -94,6 +98,7 @@
 }
 
 - (void)flyDown {
+    if (!self.skyMap) return;
     self._isFlyingDown = true;
     [self scheduleUpdate];
 }

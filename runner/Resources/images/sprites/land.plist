@@ -17,10 +17,23 @@
                 <key>sourceSize</key>
                 <string>{120,120}</string>
             </dict>
+            <key>block1280.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{127,3},{1280,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{1280,120}}</string>
+                <key>sourceSize</key>
+                <string>{1280,120}</string>
+            </dict>
             <key>block1440.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{127,3},{1440,120}}</string>
+                <string>{{1411,3},{1440,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>block1560.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1571,3},{1560,120}}</string>
+                <string>{{3,127},{1560,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +59,7 @@
             <key>block1800.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{3,127},{1800,120}}</string>
+                <string>{{1567,127},{1800,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>block240.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1807,127},{240,120}}</string>
+                <string>{{3371,127},{240,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -144,7 +157,7 @@
             <key>size</key>
             <string>{4096,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:fffd17dc6e5ee6a0409603c1645b3d49$</string>
+            <string>$TexturePacker:SmartUpdate:5da0e1d8b0dac29ef499b7719046cd6a$</string>
             <key>textureFileName</key>
             <string>land.png</string>
         </dict>

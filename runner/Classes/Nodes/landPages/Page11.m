@@ -22,16 +22,16 @@
         self._trampolines = [NSMutableArray arrayWithCapacity:1];
 
         // 地面を追加
-        Block *land = [Block createBlock:1];
+        Block *land = [Block createBlock:LAND_DEFAULT];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         self._lands = @[land];
 
         // ブロック追加
-        self._blocks = @[[Block createBlock:101 x:40 y:-490],
-                        [Block createBlock:101 x:100 y:-490],
-                        [Block createBlock:101 x:160 y:-490],
-                        [Block createBlock:101 x:220 y:-490], // ジャンプ台ブロック
+        self._blocks = @[[Block createBlock:101 x:40 y:-460],
+                        [Block createBlock:101 x:100 y:-460],
+                        [Block createBlock:101 x:160 y:-460],
+                        [Block createBlock:101 x:220 y:-460], // ジャンプ台ブロック
                         [Block createBlock:101 x:500 y:-140],
                         [Block createBlock:101 x:560 y:-140],
                         [Block createBlock:101 x:620 y:-140],

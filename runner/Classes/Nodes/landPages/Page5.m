@@ -25,17 +25,17 @@ const int PAGE5_INTERVAL2 = 150;
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:4];
+        Block *land = [Block createBlock:LAND_12];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         
         float rightX = land.position.x + [land getWidth] / 2;
-        Block *land2= [Block createBlock:1];
+        Block *land2= [Block createBlock:LAND_12];
         land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:PAGE5_INTERVAL1], 0), [self getLandPosition:land2]);
         [land2 stageOn:self];
         
         float rightX2 = land2.position.x + [land2 getWidth] / 2;
-        Block *land3= [Block createBlock:4];
+        Block *land3= [Block createBlock:LAND_8];
         land3.position = ccpAdd(ccp(rightX2 + [PointUtil getPoint:PAGE5_INTERVAL2], 0), [self getLandPosition:land3]);
         [land3 stageOn:self];
         self._lands = @[land, land2, land3];

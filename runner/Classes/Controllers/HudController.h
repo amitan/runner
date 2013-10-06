@@ -18,6 +18,8 @@
 - (void)setup;
 - (void)start;
 - (void)stop;
+- (void)suspend;
+- (void)resume;
 
 // コインを加算する
 - (void)addCoin:(int)num;

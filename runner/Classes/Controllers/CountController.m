@@ -46,6 +46,13 @@
     [self._counter stageOff];
 }
 
+- (void)suspend {
+    [self stop];
+}
+- (void)resume {
+    [self start];
+}
+
 - (void)_stopTimer {
     if (self._timer) {
         [self._timer invalidate];

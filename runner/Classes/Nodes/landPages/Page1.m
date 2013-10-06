@@ -20,20 +20,20 @@
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:1];
+        Block *land = [Block createBlock:LAND_DEFAULT];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         self._lands = @[land];
         
         // コインを追加
-        self._coins = @[[Coin createCoin:C_STANDARD x:100 y:-480],
-                       [Coin createCoin:C_STANDARD x:150 y:-480],
-                       [Coin createCoin:C_STANDARD x:200 y:-480],
-                       [Coin createCoin:C_STANDARD x:250 y:-480],
-                       [Coin createCoin:C_STANDARD x:300 y:-480],
-                       [Coin createCoin:C_STANDARD x:350 y:-480],
-                       [Coin createCoin:C_STANDARD x:400 y:-480],
-                       [Coin createCoin:C_STANDARD x:450 y:-480],
+        self._coins = @[[Coin createCoin:C_STANDARD x:100 y:-450],
+                       [Coin createCoin:C_STANDARD x:150 y:-450],
+                       [Coin createCoin:C_STANDARD x:200 y:-450],
+                       [Coin createCoin:C_STANDARD x:250 y:-450],
+                       [Coin createCoin:C_STANDARD x:300 y:-450],
+                       [Coin createCoin:C_STANDARD x:350 y:-450],
+                       [Coin createCoin:C_STANDARD x:400 y:-450],
+                       [Coin createCoin:C_STANDARD x:450 y:-450],
                        [Coin createCoin:C_STANDARD x:600 y:-360],
                        [Coin createCoin:C_STANDARD x:650 y:-310],
                        [Coin createCoin:C_STANDARD x:700 y:-310],

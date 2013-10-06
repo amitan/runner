@@ -8,7 +8,6 @@
 
 #import "GameInterfaceLayer.h"
 #import "GameScene.h"
-#import "PointUtil.h"
 
 @implementation GameInterfaceLayer
 

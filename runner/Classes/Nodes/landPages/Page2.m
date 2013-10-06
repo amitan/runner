@@ -20,26 +20,26 @@
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:1];
+        Block *land = [Block createBlock:LAND_DEFAULT];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         self._lands = @[land];
         
         // ブロック追加
-        self._blocks = @[[Block createBlock:101 x:300 y:-490],
-                        [Block createBlock:101 x:300 y:-430],
-                        [Block createBlock:101 x:360 y:-490],
-                        [Block createBlock:101 x:360 y:-430],
-                        [Block createBlock:101 x:640 y:-490],
-                        [Block createBlock:101 x:640 y:-430],
-                        [Block createBlock:101 x:700 y:-490],
-                        [Block createBlock:101 x:700 y:-430],
-                        [Block createBlock:101 x:970 y:-490],
-                        [Block createBlock:101 x:970 y:-430],
-                        [Block createBlock:101 x:970 y:-370],
-                        [Block createBlock:101 x:1030 y:-490],
-                        [Block createBlock:101 x:1030 y:-430],
-                        [Block createBlock:101 x:1030 y:-370]];
+        self._blocks = @[[Block createBlock:101 x:300 y:-460],
+                        [Block createBlock:101 x:300 y:-400],
+                        [Block createBlock:101 x:360 y:-460],
+                        [Block createBlock:101 x:360 y:-400],
+                        [Block createBlock:101 x:640 y:-460],
+                        [Block createBlock:101 x:640 y:-400],
+                        [Block createBlock:101 x:700 y:-460],
+                        [Block createBlock:101 x:700 y:-400],
+                        [Block createBlock:101 x:970 y:-460],
+                        [Block createBlock:101 x:970 y:-400],
+                        [Block createBlock:101 x:970 y:-340],
+                        [Block createBlock:101 x:1030 y:-460],
+                        [Block createBlock:101 x:1030 y:-400],
+                        [Block createBlock:101 x:1030 y:-340]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
@@ -73,13 +73,13 @@
     
     if (self.appearNum == 1) {
         NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
-        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:500 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:530 y:-520]];
         self._enemies = extraEnemies;
 
     } else if (self.appearNum == 2) {
         NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
-        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:430 y:-520]];
-        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:570 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:460 y:-520]];
+        [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:600 y:-520]];
         self._enemies = extraEnemies;
 
     } else if (self.appearNum == 3) {

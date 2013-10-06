@@ -12,10 +12,8 @@
 #import "TitleLayer.h"
 #import "PointUtil.h"
 #import "LabelUtil.h"
-#import "UserPlayerDao.h"
 #import "PlayerMaster.h"
 #import "GameDao.h"
-#import "UnitDao.h"
 
 @interface GameResultLayer ()
 @property (nonatomic, retain)CCSprite* _popupBaseSprite;
@@ -72,48 +70,19 @@
     distanceLabel.position = [PointUtil getPosition:260 y:600];
     [self._popupBaseSprite addChild:distanceLabel];
     
-    int intervalY = 130;
     int totalCoin = 0;
-    for (int i = 0; i < 3; i++) {
         
-        // プレイヤー情報取得
-        int playerSequenceId = [UnitDao getUnitSequenceId:i + 1];
-        NSMutableDictionary *userPlayer = [UserPlayerDao getUserPlayer:playerSequenceId];
+    // 獲得コイン
+    NSString *coinNumStr = [NSString stringWithFormat:@"COIN: %d G", self._coinNum];
+    CCLabelTTF *coinLabel = [LabelUtil createLabel:coinNumStr fontSize:26 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
+    coinLabel.position = [PointUtil getPosition:360 y:530];
+    [self._popupBaseSprite addChild:coinLabel];
 
-        // コイン数決定
-        if (userPlayer) {
-            
-            // プレイヤー画像
-            int playerId = [userPlayer[@"playerId"] intValue];
-            CCSprite *playerImage = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"player%d_stand.png", playerId]];
-            playerImage.position = [PointUtil getPosition:90 y:500 - i * intervalY];
-            [self._popupBaseSprite addChild:playerImage];
-
-            // 獲得コイン
-            NSString *coinNumStr = [NSString stringWithFormat:@"COIN: %d G", self._coinNum];
-            CCLabelTTF *coinLabel = [LabelUtil createLabel:coinNumStr fontSize:26 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
-            coinLabel.position = [PointUtil getPosition:360 y:530 - i * intervalY];
-            [self._popupBaseSprite addChild:coinLabel];
-
-            // コインボーナス
-            int level = [userPlayer[@"level"] intValue];
-            int coinBonus = [[PlayerMaster getInstance] getGoldBonus:playerId currentLevel:level];
-            NSString *coinBonusStr = [NSString stringWithFormat:@"BONUS +%d%@", coinBonus, @"%"];
-            CCLabelTTF *coinBonusLabel = [LabelUtil createLabel:coinBonusStr fontSize:26 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
-            coinBonusLabel.position = [PointUtil getPosition:360 y:500 - i * intervalY];
-            [self._popupBaseSprite addChild:coinBonusLabel];
-
-            // コイン合計
-            float coinBonusFactor = (float)coinBonus / 100.0f + 1;
-            int playerTotalCoin = floor((float)self._coinNum * coinBonusFactor);
-            totalCoin += playerTotalCoin;
-            
-            NSString *playerTotalStr = [NSString stringWithFormat:@"TOTAL COIN: %d G", playerTotalCoin];
-            CCLabelTTF *playerTotalLabel = [LabelUtil createLabel:playerTotalStr fontSize:30 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
-            playerTotalLabel.position = [PointUtil getPosition:360 y:460 - i * intervalY];
-            [self._popupBaseSprite addChild:playerTotalLabel];
-        }
-    }
+    // コイン合計
+    float coinBonusFactor = 1;
+    int playerTotalCoin = floor((float)self._coinNum * coinBonusFactor);
+    totalCoin += playerTotalCoin;
+    
     NSString *totalCoinStr = [NSString stringWithFormat:@"TOTAL: %d G", totalCoin];
     CCLabelTTF *totalCoinLabel = [LabelUtil createLabel:totalCoinStr fontSize:42 dimensions:CGSizeMake(500, 80) alignment:kCCTextAlignmentCenter];
     totalCoinLabel.position = [PointUtil getPosition:260 y:100];

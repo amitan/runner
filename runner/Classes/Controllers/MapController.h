@@ -20,7 +20,7 @@
 @property (nonatomic, retain)SkyMap *skyMap;
 
 // 動作を開始/停止する
-- (void)setup:(int)stageId;
+- (void)setup:(int)stageId isRandom:(BOOL)isRandom;
 - (void)start;
 - (void)stop;
 - (void)suspend;

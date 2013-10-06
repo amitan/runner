@@ -18,7 +18,7 @@
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:1];
+        Block *land = [Block createBlock:LAND_DEFAULT];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         self._lands = @[land];
@@ -32,24 +32,24 @@
         }
         
         // ブロック追加
-        self._blocks = @[[Block createBlock:101 x:792 y:-360],
-                        [Block createBlock:101 x:852 y:-360],
-                        [Block createBlock:101 x:912 y:-360],
-                        [Block createBlock:101 x:972 y:-360],
-                        [Block createBlock:101 x:1032 y:-360]];
+        self._blocks = @[[Block createBlock:101 x:792 y:-330],
+                        [Block createBlock:101 x:852 y:-330],
+                        [Block createBlock:101 x:912 y:-330],
+                        [Block createBlock:101 x:972 y:-330],
+                        [Block createBlock:101 x:1032 y:-330]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }
         
         // コインを追加
-        self._coins = @[[Coin createCoin:C_STANDARD x:600 y:-495],
-                       [Coin createCoin:C_STANDARD x:664 y:-495],
-                       [Coin createCoin:C_STANDARD x:728 y:-495],
-                       [Coin createCoin:C_STANDARD x:792 y:-495],
-                       [Coin createCoin:C_STANDARD x:852 y:-495],
-                       [Coin createCoin:C_STANDARD x:912 y:-495],
-                       [Coin createCoin:C_STANDARD x:972 y:-495],
-                       [Coin createCoin:C_STANDARD x:1032 y:-495]];
+        self._coins = @[[Coin createCoin:C_STANDARD x:600 y:-465],
+                       [Coin createCoin:C_STANDARD x:664 y:-465],
+                       [Coin createCoin:C_STANDARD x:728 y:-465],
+                       [Coin createCoin:C_STANDARD x:792 y:-465],
+                       [Coin createCoin:C_STANDARD x:852 y:-465],
+                       [Coin createCoin:C_STANDARD x:912 y:-465],
+                       [Coin createCoin:C_STANDARD x:972 y:-465],
+                       [Coin createCoin:C_STANDARD x:1032 y:-465]];
         self._lastCoin = [self._coins objectAtIndex:self._coins.count - 1];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];
@@ -69,11 +69,6 @@
         NSMutableArray *extraEnemies = [NSMutableArray arrayWithArray:self._enemies];
         [extraEnemies addObject:[Enemy createEnemy:E_SLYME x:912 y:-330]];
         self._enemies = extraEnemies;
-        
-    } else if (self.appearNum == 3) {
-        NSMutableArray *extraCoins = [NSMutableArray arrayWithArray:self._coins];
-        [extraCoins addObject:[Coin createCoin:C_100 x:912 y:-200]];
-        self._coins = extraCoins;
     }
     
     [super reset];

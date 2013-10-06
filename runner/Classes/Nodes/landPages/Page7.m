@@ -19,16 +19,16 @@
 	if (self) {
         
         // 地面を追加
-        Block *land = [Block createBlock:3];
+        Block *land = [Block createBlock:LAND_LONG];
         land.position = [self getLandPosition:land];
         [land stageOn:self];
         self._lands = @[land];
         
         
         // ブロック追加
-        self._blocks = @[[Block createBlock:101 x:300 y:-490],
-                        [Block createBlock:101 x:300 y:-430],
-                        [Block createBlock:101 x:300 y:-370]];
+        self._blocks = @[[Block createBlock:101 x:300 y:-460],
+                        [Block createBlock:101 x:300 y:-400],
+                        [Block createBlock:101 x:300 y:-310]];
         for (Block *block in self._blocks) {
             [block stageOn:self];
         }

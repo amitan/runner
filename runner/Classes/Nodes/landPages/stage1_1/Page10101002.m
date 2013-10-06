@@ -9,20 +9,11 @@
 #import "Page10101002.h"
 #import "PointUtil.h"
 
-@interface Page10101002 ()
-@property (nonatomic, readwrite)float _interval1;
-@property (nonatomic, readwrite)float _interval2;
-@end
-
 @implementation Page10101002
 
 - (id)init {
     self = [super init];
 	if (self) {
-        
-        // 初期値設定
-        self._interval1 = [PointUtil getPoint:240];
-        self._interval2 = [PointUtil getPoint:240];
         
         // 地面を追加
         Block *land = [Block createBlock:LAND_24];
@@ -31,12 +22,12 @@
 
         float rightX = land.position.x + [land getWidth] / 2;
         Block *land2 = [Block createBlock:LAND_6];
-        land2.position = ccpAdd(ccp(rightX + self._interval1, 0), [self getLandPosition:land2]);
+        land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:240], 0), [self getLandPosition:land2]);
         [land2 stageOn:self];
 
         float rightX2 = land2.position.x + [land2 getWidth] / 2;
         Block *land3 = [Block createBlock:LAND_4];
-        land3.position = ccpAdd(ccp(rightX2 + self._interval2, 0), [self getLandPosition:land3]);
+        land3.position = ccpAdd(ccp(rightX2 + [PointUtil getPoint:240], 0), [self getLandPosition:land3]);
         [land3 stageOn:self];
         self._lands = @[land, land2, land3];
         
@@ -67,7 +58,6 @@
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:1] by:5],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:2] by:5],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:3] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:4] by:5],
                         ];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

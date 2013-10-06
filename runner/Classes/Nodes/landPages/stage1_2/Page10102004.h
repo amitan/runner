@@ -1,8 +1,8 @@
 //
-//  Page4.h
+//  Page10102004.h
 //  runner
 //
-//  Created by Ayumi Otomo on 2013/07/21.
+//  Created by Ayumi Otomo on 2013/10/06.
 //  Copyright 2013年 Ayumi Otomo. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import "LandPage.h"
 
-@interface Page4 : LandPage {
+@interface Page10102004 : LandPage {
     
 }
 

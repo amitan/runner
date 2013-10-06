@@ -131,6 +131,12 @@ const int INIT_EXP = 30;
 - (void)stop {
 }
 
+- (void)suspend {
+    [self stop];
+}
+- (void)resume {
+    [self start];
+}
 - (void)sync {
     [self._coinNumLabel setString:[NSString stringWithFormat:@"%d", self._totalCoinNum]];
     [self._distanceLabel setString:[NSString stringWithFormat:@"%dM", self._currentDistance]];
