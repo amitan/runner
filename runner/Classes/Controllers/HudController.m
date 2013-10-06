@@ -16,7 +16,7 @@
 #import "Pause.h"
 
 @interface HudController ()
-@property (nonatomic, readwrite)int _totalCoinNum, _player1CoinNum, _player2CoinNum, _player3CoinNum;
+@property (nonatomic, readwrite)int _totalCoinNum;
 @property (nonatomic, readwrite)float _dx, _skyDx, _landDx;
 @property (nonatomic, readwrite)int _currentDistance, _exp, _maxExp;
 @property (nonatomic, retain)CCLabelTTF *_coinNumLabel, *_distanceLabel;
@@ -146,45 +146,7 @@ const int INIT_EXP = 30;
 }
 
 - (void)addCoin:(int)num {
-    [self addCoin:num playerNo:[[GameScene sharedInstance] getPlayerNo]];
-}
-
-- (void)addCoin:(int)num playerNo:(int)playerNo {
     self._totalCoinNum += num;
-    switch (playerNo) {
-        case 1:
-            self._player1CoinNum += num;
-            break;
-        case 2:
-            self._player2CoinNum += num;
-            break;
-        case 3:
-            self._player3CoinNum += num;
-            break;
-    }
-    [self sync];
-}
-
-- (void)addCoinBonus:(int)num {
-    [self addCoinBonus:num playerNo:[[GameScene sharedInstance] getPlayerNo]];
-}
-
-- (void)addCoinBonus:(int)num playerNo:(int)playerNo {
-    self._coinBonus.visible = YES;
-    [self._coinBonusLabel setString:[NSString stringWithFormat:@"+%d", num]];
-    [self._coinBonus runAction:[CommonAnimation getEffectAppearAction:COIN_BONUS_EFFECT_X + 20]];
-    self._totalCoinNum += num;
-    switch (playerNo) {
-        case 1:
-            self._player1CoinNum += num;
-            break;
-        case 2:
-            self._player2CoinNum += num;
-            break;
-        case 3:
-            self._player3CoinNum += num;
-            break;
-    }
     [self sync];
 }
 
@@ -223,14 +185,8 @@ const int INIT_EXP = 30;
     self._skyDx = 0;
 }
 
-- (int)getPlayer1Coin {
-    return self._player1CoinNum;
-}
-- (int)getPlayer2Coin {
-    return self._player2CoinNum;
-}
-- (int)getPlayer3Coin {
-    return self._player3CoinNum;
+- (int)getTotalCoin {
+    return self._totalCoinNum;
 }
 
 - (BOOL)addExp:(int)num {

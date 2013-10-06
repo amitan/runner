@@ -19,7 +19,7 @@
 
 @interface GameResultLayer ()
 @property (nonatomic, retain)CCSprite* _popupBaseSprite;
-@property (nonatomic, readwrite)int _coin1, _coin2, _coin3, _distance;
+@property (nonatomic, readwrite)int _coinNum, _distance;
 @end
 
 @implementation GameResultLayer
@@ -52,10 +52,8 @@
     self._distance = distance;
 }
 
-- (void)setCoin:(int)coin1 player2Coin:(int)coin2 player3Coin:(int)coin3 {
-    self._coin1 = coin1;
-    self._coin2 = coin2;
-    self._coin3 = coin3;
+- (void)setCoin:(int)coinNum {
+    self._coinNum = coinNum;
 }
 
 - (void)onEnter {
@@ -83,19 +81,6 @@
         NSMutableDictionary *userPlayer = [UserPlayerDao getUserPlayer:playerSequenceId];
 
         // コイン数決定
-        int coinNum;
-        switch (i + 1) {
-            case 1:
-                coinNum = self._coin1;
-                break;
-            case 2:
-                coinNum = self._coin2;
-                break;
-            case 3:
-                coinNum = self._coin3;
-                break;
-        }
-        
         if (userPlayer) {
             
             // プレイヤー画像
@@ -105,7 +90,7 @@
             [self._popupBaseSprite addChild:playerImage];
 
             // 獲得コイン
-            NSString *coinNumStr = [NSString stringWithFormat:@"COIN: %d G", coinNum];
+            NSString *coinNumStr = [NSString stringWithFormat:@"COIN: %d G", self._coinNum];
             CCLabelTTF *coinLabel = [LabelUtil createLabel:coinNumStr fontSize:26 dimensions:CGSizeMake(400, 60) alignment:kCCTextAlignmentLeft];
             coinLabel.position = [PointUtil getPosition:360 y:530 - i * intervalY];
             [self._popupBaseSprite addChild:coinLabel];
@@ -120,7 +105,7 @@
 
             // コイン合計
             float coinBonusFactor = (float)coinBonus / 100.0f + 1;
-            int playerTotalCoin = floor((float)coinNum * coinBonusFactor);
+            int playerTotalCoin = floor((float)self._coinNum * coinBonusFactor);
             totalCoin += playerTotalCoin;
             
             NSString *playerTotalStr = [NSString stringWithFormat:@"TOTAL COIN: %d G", playerTotalCoin];

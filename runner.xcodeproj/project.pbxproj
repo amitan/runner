@@ -54,7 +54,7 @@
 		F922C95D17D24089005177A2 /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95C17D24085005177A2 /* Gun.m */; };
 		F922C96017D25586005177A2 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C95F17D25582005177A2 /* Bullet.m */; };
 		F922C96317D32A7C005177A2 /* HalfNeedleEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */; };
-		F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* HomeDebugLayer.m */; };
+		F923F62217C273A1007CF0CF /* StageDebugLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62117C273A0007CF0CF /* StageDebugLayer.m */; };
 		F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F62B17C4F778007CF0CF /* UserPlayerDao.m */; };
 		F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63117C4FAC4007CF0CF /* GameDao.m */; };
 		F923F63517C500B1007CF0CF /* UnitDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F923F63417C500B1007CF0CF /* UnitDao.m */; };
@@ -347,8 +347,8 @@
 		F922C95F17D25582005177A2 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
 		F922C96117D32A79005177A2 /* HalfNeedleEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfNeedleEnemy.h; sourceTree = "<group>"; };
 		F922C96217D32A7B005177A2 /* HalfNeedleEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfNeedleEnemy.m; sourceTree = "<group>"; };
-		F923F62017C273A0007CF0CF /* HomeDebugLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDebugLayer.h; sourceTree = "<group>"; };
-		F923F62117C273A0007CF0CF /* HomeDebugLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDebugLayer.m; sourceTree = "<group>"; };
+		F923F62017C273A0007CF0CF /* StageDebugLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageDebugLayer.h; sourceTree = "<group>"; };
+		F923F62117C273A0007CF0CF /* StageDebugLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageDebugLayer.m; sourceTree = "<group>"; };
 		F923F62A17C4F778007CF0CF /* UserPlayerDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPlayerDao.h; sourceTree = "<group>"; };
 		F923F62B17C4F778007CF0CF /* UserPlayerDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPlayerDao.m; sourceTree = "<group>"; };
 		F923F63017C4FAC4007CF0CF /* GameDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDao.h; sourceTree = "<group>"; };
@@ -1405,8 +1405,8 @@
 				F93DF6C6178B221E007AD085 /* GameInterfaceLayer.m */,
 				F9052E6C17A56D170078EE9C /* GameResultLayer.h */,
 				F9052E6D17A56D170078EE9C /* GameResultLayer.m */,
-				F923F62017C273A0007CF0CF /* HomeDebugLayer.h */,
-				F923F62117C273A0007CF0CF /* HomeDebugLayer.m */,
+				F923F62017C273A0007CF0CF /* StageDebugLayer.h */,
+				F923F62117C273A0007CF0CF /* StageDebugLayer.m */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1868,7 +1868,7 @@
 				F9C9815617B8C86200DDCE95 /* Trampoline.m in Sources */,
 				F9363E2017BA58BC00F832C0 /* CCNodeButton.m in Sources */,
 				F9DAF9B917C0B28A00422467 /* PlayerMaster.m in Sources */,
-				F923F62217C273A1007CF0CF /* HomeDebugLayer.m in Sources */,
+				F923F62217C273A1007CF0CF /* StageDebugLayer.m in Sources */,
 				F923F62C17C4F778007CF0CF /* UserPlayerDao.m in Sources */,
 				F923F63217C4FAC4007CF0CF /* GameDao.m in Sources */,
 				F923F63517C500B1007CF0CF /* UnitDao.m in Sources */,

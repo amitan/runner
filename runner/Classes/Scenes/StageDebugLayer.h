@@ -1,5 +1,5 @@
 //
-//  HomeDebugLayer.h
+//  StageDebugLayer.h
 //  runner
 //
 //  Created by Ayumi Otomo on 2013/08/20.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface HomeDebugLayer : CCLayer {
+@interface StageDebugLayer : CCLayer {
     
 }
 

@@ -138,17 +138,6 @@
     for (Coin *coin in self._coins) {
         if ([coin takenIfCollided:rect magnet:isMagnet]) result = true;
     }
-    // コインボーナスチェック
-    if (!self._finishCoinBonus && self._lastCoin && [self._lastCoin hasTaken]) {
-        self._finishCoinBonus = true;
-        BOOL bonus = true;
-        for (Coin *coin in self._coins) {
-            if (![coin hasTaken]) bonus = false;
-        }
-        if (bonus) {
-            [[GameScene sharedInstance].hudController addCoinBonus:self._coins.count];
-        }
-    }
     return result;
 }
 

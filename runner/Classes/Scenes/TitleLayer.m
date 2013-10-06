@@ -13,6 +13,7 @@
 #import "CommonAnimation.h"
 #import "GameUtil.h"
 #import "GameScene.h"
+#import "StageDebugLayer.h"
 
 @implementation TitleLayer
 
@@ -48,45 +49,19 @@
         [configButton addLabel:configLabel offsetX:50 offsetY:0];
         [configButton addClickListner:self selector:@selector(clickConfigButton:)];
         [self addChild:configButton];
-
-        CCSpriteButton *othersButton = [CCSpriteButton spriteWithSpriteFrameName:@"title_btn.png"];
-        [PointUtil setTLPosition:othersButton x:46 y:326];
-        CCLabelTTF *othersLabel = [LabelUtil createLabel:@"おすすめをみる" fontSize:30 dimensions:CGSizeMake(320, 88) alignment:kCCTextAlignmentLeft];
-        [othersButton addLabel:othersLabel offsetX:50 offsetY:0];
-        [othersButton addClickListner:self selector:@selector(clickOthersButton:)];
-        [self addChild:othersButton];
         
-        // ラベルの追加
-        CCLabelTTF *titleLabel = [LabelUtil createLabel:@"ぼくわるいスライムじゃないよっ！"
-                                               fontSize:30 dimensions:CGSizeMake(550, 200) alignment:kCCTextAlignmentLeft];
-        [PointUtil setTLPosition:titleLabel x:80 y:660];
-        [self addChild:titleLabel];
-        
-        // セレクター
-        CCSprite *selectorSprite = [CCSprite spriteWithSpriteFrameName:@"selector.png"];
-        [PointUtil setCenterPosition:selectorSprite x:71 y:190];
-        [self addChild:selectorSprite];
-        [selectorSprite runAction:[CommonAnimation getBlinkAction]];
     }
     return self;
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
-
 // ぼうけんをはじめる
 - (void)clickPlayButton:(id)sender {
-    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1 isRandom:true]];
+    [self addChild:[StageDebugLayer node]];
 }
 
 // せっていをかえる
 - (void)clickConfigButton:(id)sender {
-    [GameUtil replaceScene:[GameScene createInstance:1 areaId:101 stageId:1 isRandom:true]];
-}
-
-// おすすめをみる
-- (void)clickOthersButton:(id)sender {
+    [GameUtil replaceScene:[GameScene createInstance:1 isRandom:true]];
 }
 
 @end

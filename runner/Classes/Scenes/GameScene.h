@@ -34,7 +34,7 @@
 + (GameScene *)sharedInstance;
 
 // シングルトンオブジェクトの有無に関わらずインスタンスを生成するメソッド
-+ (GameScene *)createInstance:(int)worldId areaId:(int)areaId stageId:(int)stageId isRandom:(BOOL)isRandom;
++ (GameScene *)createInstance:(int)stageId isRandom:(BOOL)isRandom;
 
 // ゲームを開始/停止する
 - (void)setup;
@@ -46,9 +46,6 @@
 
 // ゲームを終了する
 - (void)finishGame;
-
-// プレイヤー番号を取得する
-- (int)getPlayerNo;
 
 // フィーバー
 - (void)fever;
