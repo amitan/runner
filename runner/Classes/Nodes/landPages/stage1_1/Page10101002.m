@@ -20,14 +20,12 @@
         land.position = [self getLandPosition:land];
         [land stageOn:self];
 
-        float rightX = land.position.x + [land getWidth] / 2;
         Block *land2 = [Block createBlock:LAND_6];
-        land2.position = ccpAdd(ccp(rightX + [PointUtil getPoint:240], 0), [self getLandPosition:land2]);
+        land2.position = ccpAdd(ccp([land getRightX] + [PointUtil getPoint:240], 0), [self getLandPosition:land2]);
         [land2 stageOn:self];
 
-        float rightX2 = land2.position.x + [land2 getWidth] / 2;
-        Block *land3 = [Block createBlock:LAND_4];
-        land3.position = ccpAdd(ccp(rightX2 + [PointUtil getPoint:240], 0), [self getLandPosition:land3]);
+        Block *land3 = [Block createBlock:LAND_6];
+        land3.position = ccpAdd(ccp([land2 getRightX] + [PointUtil getPoint:240], 0), [self getLandPosition:land3]);
         [land3 stageOn:self];
         self._lands = @[land, land2, land3];
         
@@ -54,10 +52,11 @@
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:30 index:2] by:3],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:30 index:3] by:3],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:30 index:4] by:3],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:0] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:1] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:2] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:39 index:3] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:41 index:0] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:41 index:1] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:41 index:2] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:41 index:3] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:41 index:3] by:5],
                         ];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

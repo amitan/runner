@@ -22,9 +22,11 @@
         self._lands = @[land];
         
         // ブロック追加
-        self._blocks = @[[Block createBlock:B_X10 bx:23 by:5],
-                         [Block createBlock:B_X4 bx:33 by:8],
-                         [Block createBlock:B_X4 bx:40 by:8],
+        self._blocks = @[[Block createBlock:B_X2 bx:25 by:6],
+                         [Block createBlock:B_HATENA bx:27 by:6],
+                         [Block createBlock:B_X7 bx:28 by:6],
+                         [Block createBlock:B_X4 bx:35 by:10],
+                         [Block createBlock:B_X4 bx:42 by:10],
                          ];
         for (Block *block in self._blocks) {
             [block stageOn:self];
@@ -41,16 +43,16 @@
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:13 index:2] by:6],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:13 index:3] by:6],
                         [Coin createCoin:C_STANDARD bx:[self getCoinBx:13 index:4] by:6],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:18 index:0] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:18 index:1] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:18 index:2] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:18 index:3] by:5],
-                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:18 index:4] by:5],
-                        [Coin createCoin:C_STANDARD bx:24 by:8],
-                        [Coin createCoin:C_STANDARD bx:26 by:8],
-                        [Coin createCoin:C_STANDARD bx:28 by:8],
-                        [Coin createCoin:C_STANDARD bx:30 by:8],
-                        [Coin createCoin:C_100 bx:38 by:10],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:19 index:0] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:19 index:1] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:19 index:2] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:19 index:3] by:5],
+                        [Coin createCoin:C_STANDARD bx:[self getCoinBx:19 index:4] by:5],
+                        [Coin createCoin:C_STANDARD bx:26 by:9],
+                        [Coin createCoin:C_STANDARD bx:28 by:9],
+                        [Coin createCoin:C_STANDARD bx:30 by:9],
+                        [Coin createCoin:C_STANDARD bx:32 by:9],
+                        [Coin createCoin:C_100 bx:40 by:11],
                         ];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

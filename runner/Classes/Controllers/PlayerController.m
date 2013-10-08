@@ -55,6 +55,7 @@
 - (void)_changePlayer:(int)crystalId {
     int newPlayerId = INIT_PLAYER_ID + crystalId;
     Player *newPlayer = [Player createPlayer:newPlayerId isReverse:[self._player isReverse]];
+    [newPlayer setVx:[self._player getVx]];
     CGPoint position = self._player.position;
     
     [self._player removeFromParentAndCleanup:YES];

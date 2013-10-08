@@ -196,11 +196,14 @@ const int INIT_EXP = 30;
 }
 
 - (BOOL)addExp:(int)num {
-    self._exp = min(self._exp + num, self._maxExp);
-    [self sync];
-    if (self._exp >= self._maxExp) {
-        [[GameScene sharedInstance] fever];
-        return true;
+    BOOL isRandom = [[GameScene sharedInstance].mapController.landMap isRandom];
+    if (isRandom) {
+        self._exp = min(self._exp + num, self._maxExp);
+        [self sync];
+        if (self._exp >= self._maxExp) {
+            [[GameScene sharedInstance] fever];
+            return true;
+        }
     }
     return false;
 }

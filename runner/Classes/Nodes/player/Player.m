@@ -91,7 +91,7 @@ const float INVISIBLE_TIME = 2;
 
 - (void)stageOn {
     self._isStaged = true;
-    [PointUtil setPosition:self x:INIT_PLAYER_X y:520 offsetX:0 offsetY:-[self getHeight] / 2];
+    [PointUtil setPosition:self x:INIT_PLAYER_X y:540 offsetX:0 offsetY:-[self getHeight] / 2];
     self._properPosition = self.position;
     [[GameScene sharedInstance].gameLayer addChild:self z:INIT_PLAYER_Z];
 }
@@ -165,7 +165,7 @@ const float INVISIBLE_TIME = 2;
 
 - (void)speedUp {
     [[GameScene sharedInstance].hudController showSpeedUpEffect];
-    self._vx *= 1.1;
+    self._vx *= 1.2;
 }
 
 - (void)trampoline {
@@ -549,6 +549,13 @@ const float INVISIBLE_TIME = 2;
     self._currentItemId = 0;
     [self._itemEffectSprite stopAllActions];
     [self._itemEffectSprite removeFromParentAndCleanup:YES];
+}
+
+- (void)setVx:(float)vx {
+    self._vx = vx;
+}
+- (float)getVx {
+    return self._vx;
 }
 
 @end

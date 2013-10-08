@@ -42,8 +42,8 @@ const int MAGNET_FACTOR = 12;
 }
 
 + (Coin*)createCoin:(int)coinId bx:(float)bx by:(float)by {
-    float x = bx * 60;
-    float y = by * 60 - 640;
+    float x = (bx - 1) * 50;
+    float y = by * 50 - 640;
     return [Coin createCoin:coinId groupId:0 x:x y:y];
 }
 

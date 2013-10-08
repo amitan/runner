@@ -205,6 +205,7 @@ const float MIN_FIRE2_SECONDS = 10;
     if (result) {
         Page *page = [self._pages objectAtIndex:0];
         [page stageOff];
+        [self._pages removeObject:page];
     }
     if (self._pages.count < MIN_LAND_PAGE_STOCK_NUM) {
         Page *page = [[GameScene sharedInstance].pageController getPageWithStageId:self._stageId pageNo:self._fixedPageNo];
@@ -328,8 +329,6 @@ const float MIN_FIRE2_SECONDS = 10;
     if (self.speed >= MAX_SPEED_STEP) {
         return self.speed;
     }
-// TODO:back
-    CCLOG(@"%d", distance);
     if (distance > 1500) return 9;
     if (distance > 1300) return 8;
     if (distance > 1000) return 7;
@@ -338,11 +337,11 @@ const float MIN_FIRE2_SECONDS = 10;
     if (distance > 300) return 4;
     if (distance > 70) return 3;
     if (distance > 20) return 2;
-//    if (distance > 120) return 5;
-//    if (distance > 90) return 4;
-//    if (distance > 60) return 3;
-//    if (distance > 30) return 2;
     return 1;
+}
+
+- (BOOL)isRandom {
+    return self._isRandom;
 }
 
 @end

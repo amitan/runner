@@ -16,17 +16,19 @@
 
 // 地面種類
 typedef enum {
-    LAND_DEFAULT = 1280,
-    LAND_LONG = 2560,
-    LAND_2 = 120,
-    LAND_4 = 240,
-    LAND_6 = 360,
-    LAND_8 = 480,
-    LAND_12 = 720,
-    LAND_16 = 960,
-    LAND_24 = 1440,
-    LAND_26 = 1560,
-    LAND_30 = 1800,
+    LAND_DEFAULT = 24,
+    LAND_LONG = 50,
+    LAND_2 = 2,
+    LAND_4 = 4,
+    LAND_6 = 6,
+    LAND_8 = 8,
+    LAND_9 = 9,
+    LAND_12 = 12,
+    LAND_16 = 16,
+    LAND_17 = 17,
+    LAND_24 = 24,
+    LAND_26 = 26,
+    LAND_30 = 30,
 } LAND_W;
 
 // ブロック種類
@@ -42,15 +44,13 @@ typedef enum {
     B_X9 = 109,
     B_X10 = 110,
     B_X2Y2 = 301,
+    B_HATENA = 401,
 } BLOCK_TYPE;
 
 // 指定したブロックを生成する
 + (Block*)createBlock:(int)blockId;
 + (Block*)createBlock:(int)blockId x:(float)x y:(float)y;
 + (Block*)createBlock:(int)blockId bx:(float)bx by:(float)by;
-
-// ブロックを指定して初期化する
--(id) initWithBlockId:(int)blockId;
 
 // 座標がブロックに含まれているか判定する
 - (BOOL)isHit:(CGPoint)point;
@@ -62,9 +62,14 @@ typedef enum {
 - (float)getLeftPoint;
 - (float)getRightPoint;
 
+// 座標を取得する
+- (float)getRightX;
+
 // 反転判定
 - (BOOL)isLeftReverse;
 - (BOOL)isRightReverse;
 
+// 突き上げ処理
+- (void)knockUp;
 
 @end

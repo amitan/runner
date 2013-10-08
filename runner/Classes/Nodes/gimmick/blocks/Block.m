@@ -12,6 +12,7 @@
 #import "StandardBlock.h"
 #import "LeftReverseBlock.h"
 #import "RightReverseBlock.h"
+#import "HatenaBlock.h"
 
 @interface Block ()
 @end
@@ -23,14 +24,16 @@
 }
 
 + (Block*)createBlock:(int)blockId bx:(float)bx by:(float)by {
-    float x = bx * 60;
-    float y = by * 60 - 640;
+    float x = (bx - 1) * 50;
+    float y = by * 50 - 640;
     return [Block createBlock:blockId x:x y:y];
 }
 
 + (Block*)createBlock:(int)blockId x:(float)x y:(float)y {
     Block *block;
     switch (blockId) {
+        case 401:
+            block = [[[HatenaBlock alloc] initWithBlockId:blockId] autorelease];
         case 501:
         case 503:
             block = [[[LeftReverseBlock alloc] initWithBlockId:blockId] autorelease];
@@ -49,7 +52,7 @@
 - (id)initWithBlockId:(int)blockId {
     self = [super init];
 	if (self) {
-        self._sprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"block%d.png", blockId]];
+        self._sprite = [CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"block%03d.png", blockId]];
         [self addChild:self._sprite];
     }
     return self;
@@ -89,12 +92,19 @@
     return self.position.x + [self parent].position.x + [[self parent] parent].position.x + [self getWidth] / 2;
 }
 
+- (float)getRightX {
+    return self.position.x + [self getWidth] / 2;
+}
+
 - (BOOL)isLeftReverse {
     return false;
 }
 
 - (BOOL)isRightReverse {
     return false;
+}
+
+- (void)knockUp {
 }
 
 @end

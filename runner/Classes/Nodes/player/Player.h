@@ -65,4 +65,7 @@
 - (BOOL)isItemEffecting;
 - (void)clearItemEffect;
 
+- (void)setVx:(float)vx;
+- (float)getVx;
+
 @end

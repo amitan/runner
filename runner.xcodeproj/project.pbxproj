@@ -255,6 +255,7 @@
 		F9E8D1421801A94300997396 /* Page10102002.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1411801A94300997396 /* Page10102002.m */; };
 		F9E8D1451801A95400997396 /* Page10102003.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1441801A95400997396 /* Page10102003.m */; };
 		F9E8D1481801A96400997396 /* Page10102004.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1471801A96400997396 /* Page10102004.m */; };
+		F9E8D14B1802FB1700997396 /* HatenaBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D14A1802FB1400997396 /* HatenaBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -733,6 +734,8 @@
 		F9E8D1441801A95400997396 /* Page10102003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102003.m; sourceTree = "<group>"; };
 		F9E8D1461801A96300997396 /* Page10102004.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page10102004.h; sourceTree = "<group>"; };
 		F9E8D1471801A96400997396 /* Page10102004.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102004.m; sourceTree = "<group>"; };
+		F9E8D1491802FB1200997396 /* HatenaBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaBlock.h; sourceTree = "<group>"; };
+		F9E8D14A1802FB1400997396 /* HatenaBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1538,6 +1541,8 @@
 				F9C9812C17B8C86200DDCE95 /* RightReverseBlock.m */,
 				F9C9812D17B8C86200DDCE95 /* StandardBlock.h */,
 				F9C9812E17B8C86200DDCE95 /* StandardBlock.m */,
+				F9E8D1491802FB1200997396 /* HatenaBlock.h */,
+				F9E8D14A1802FB1400997396 /* HatenaBlock.m */,
 			);
 			path = blocks;
 			sourceTree = "<group>";
@@ -1899,6 +1904,7 @@
 				F9E8D1421801A94300997396 /* Page10102002.m in Sources */,
 				F9E8D1451801A95400997396 /* Page10102003.m in Sources */,
 				F9E8D1481801A96400997396 /* Page10102004.m in Sources */,
+				F9E8D14B1802FB1700997396 /* HatenaBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

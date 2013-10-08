@@ -51,4 +51,7 @@
 - (void)refillIfNeeded;
 - (void)restructure;
 
+// プロパティを取得する
+- (BOOL)isRandom;
+
 @end

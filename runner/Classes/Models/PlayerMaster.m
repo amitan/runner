@@ -28,7 +28,7 @@ static PlayerMaster *_master = nil;
 	if (self) {
         self._masterDictionary = [NSMutableDictionary dictionary];
         [self._masterDictionary setObject:
-         @{ @"name": @"ホワイトウルフ", @"specialType": @1, @"frameNum": @2, @"jumpSpeed": @1300, @"crystalId": @0} forKey:@"2000001"];
+         @{ @"name": @"ホワイトウルフ", @"specialType": @1, @"frameNum": @2, @"jumpSpeed": @1160, @"crystalId": @0} forKey:@"2000001"];
         [self._masterDictionary setObject:
          @{ @"name": @"ブルーウルフ", @"specialType": @2, @"frameNum": @3, @"jumpSpeed": @1500, @"crystalId": @1} forKey:@"2000002"];
         [self._masterDictionary setObject:
