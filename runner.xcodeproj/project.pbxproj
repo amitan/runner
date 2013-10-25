@@ -26,8 +26,6 @@
 		F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F617CF7ACC005177A2 /* LandMap.m */; };
 		F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8F817CF7ACC005177A2 /* SkyMap.m */; };
 		F922C8FD17CF7B00005177A2 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C8FC17CF7B00005177A2 /* Map.m */; };
-		F922C91F17CF8099005177A2 /* LandPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90017CF8099005177A2 /* LandPage.m */; };
-		F922C92017CF8099005177A2 /* Page0.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90217CF8099005177A2 /* Page0.m */; };
 		F922C92117CF8099005177A2 /* Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90417CF8099005177A2 /* Page1.m */; };
 		F922C92317CF8099005177A2 /* Page11.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90817CF8099005177A2 /* Page11.m */; };
 		F922C92417CF8099005177A2 /* Page12.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C90A17CF8099005177A2 /* Page12.m */; };
@@ -39,7 +37,6 @@
 		F922C92C17CF8099005177A2 /* Page8.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91A17CF8099005177A2 /* Page8.m */; };
 		F922C92D17CF8099005177A2 /* Page9.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91C17CF8099005177A2 /* Page9.m */; };
 		F922C92E17CF8099005177A2 /* Page900.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C91E17CF8099005177A2 /* Page900.m */; };
-		F922C93817CF839E005177A2 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C93717CF839D005177A2 /* Page.m */; };
 		F922C94A17D1C402005177A2 /* Page1000.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94517D1C402005177A2 /* Page1000.m */; };
 		F922C94B17D1C402005177A2 /* Page1001.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94717D1C402005177A2 /* Page1001.m */; };
 		F922C94C17D1C402005177A2 /* SkyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F922C94917D1C402005177A2 /* SkyPage.m */; };
@@ -256,6 +253,9 @@
 		F9E8D1451801A95400997396 /* Page10102003.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1441801A95400997396 /* Page10102003.m */; };
 		F9E8D1481801A96400997396 /* Page10102004.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D1471801A96400997396 /* Page10102004.m */; };
 		F9E8D14B1802FB1700997396 /* HatenaBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D14A1802FB1400997396 /* HatenaBlock.m */; };
+		F9E8D15118055C4E00997396 /* LandPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D14E18055C4E00997396 /* LandPage.m */; };
+		F9E8D15518055C6900997396 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D15418055C6900997396 /* Page.m */; };
+		F9E8D15818055F8200997396 /* Page0.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E8D15718055F7500997396 /* Page0.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -291,10 +291,6 @@
 		F922C8F817CF7ACC005177A2 /* SkyMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyMap.m; sourceTree = "<group>"; };
 		F922C8FB17CF7B00005177A2 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		F922C8FC17CF7B00005177A2 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
-		F922C8FF17CF8099005177A2 /* LandPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandPage.h; sourceTree = "<group>"; };
-		F922C90017CF8099005177A2 /* LandPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandPage.m; sourceTree = "<group>"; };
-		F922C90117CF8099005177A2 /* Page0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page0.h; sourceTree = "<group>"; };
-		F922C90217CF8099005177A2 /* Page0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page0.m; sourceTree = "<group>"; };
 		F922C90317CF8099005177A2 /* Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1.h; sourceTree = "<group>"; };
 		F922C90417CF8099005177A2 /* Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1.m; sourceTree = "<group>"; };
 		F922C90717CF8099005177A2 /* Page11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page11.h; sourceTree = "<group>"; };
@@ -317,8 +313,6 @@
 		F922C91C17CF8099005177A2 /* Page9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page9.m; sourceTree = "<group>"; };
 		F922C91D17CF8099005177A2 /* Page900.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page900.h; sourceTree = "<group>"; };
 		F922C91E17CF8099005177A2 /* Page900.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page900.m; sourceTree = "<group>"; };
-		F922C93617CF839D005177A2 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
-		F922C93717CF839D005177A2 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
 		F922C94417D1C402005177A2 /* Page1000.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1000.h; sourceTree = "<group>"; };
 		F922C94517D1C402005177A2 /* Page1000.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1000.m; sourceTree = "<group>"; };
 		F922C94617D1C402005177A2 /* Page1001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1001.h; sourceTree = "<group>"; };
@@ -736,6 +730,12 @@
 		F9E8D1471801A96400997396 /* Page10102004.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page10102004.m; sourceTree = "<group>"; };
 		F9E8D1491802FB1200997396 /* HatenaBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaBlock.h; sourceTree = "<group>"; };
 		F9E8D14A1802FB1400997396 /* HatenaBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaBlock.m; sourceTree = "<group>"; };
+		F9E8D14D18055C4E00997396 /* LandPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandPage.h; sourceTree = "<group>"; };
+		F9E8D14E18055C4E00997396 /* LandPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandPage.m; sourceTree = "<group>"; };
+		F9E8D15318055C6900997396 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		F9E8D15418055C6900997396 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		F9E8D15618055F6F00997396 /* Page0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page0.h; sourceTree = "<group>"; };
+		F9E8D15718055F7500997396 /* Page0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page0.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -824,15 +824,12 @@
 		F922C8FE17CF8099005177A2 /* landPages */ = {
 			isa = PBXGroup;
 			children = (
+				F9E8D15618055F6F00997396 /* Page0.h */,
+				F9E8D15718055F7500997396 /* Page0.m */,
+				F9E8D14C18055C4E00997396 /* common */,
 				F9E8D12F17FFFB7C00997396 /* stage1_1 */,
 				F9E8D13918011C0F00997396 /* stage1_2 */,
 				F9087E4D17F47308009EE1EC /* 010 */,
-				F922C93617CF839D005177A2 /* Page.h */,
-				F922C93717CF839D005177A2 /* Page.m */,
-				F922C8FF17CF8099005177A2 /* LandPage.h */,
-				F922C90017CF8099005177A2 /* LandPage.m */,
-				F922C90117CF8099005177A2 /* Page0.h */,
-				F922C90217CF8099005177A2 /* Page0.m */,
 				F922C90717CF8099005177A2 /* Page11.h */,
 				F922C90817CF8099005177A2 /* Page11.m */,
 				F922C90917CF8099005177A2 /* Page12.h */,
@@ -1608,6 +1605,17 @@
 			path = stage1_2;
 			sourceTree = "<group>";
 		};
+		F9E8D14C18055C4E00997396 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				F9E8D15318055C6900997396 /* Page.h */,
+				F9E8D15418055C6900997396 /* Page.m */,
+				F9E8D14D18055C4E00997396 /* LandPage.h */,
+				F9E8D14E18055C4E00997396 /* LandPage.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1863,8 +1871,6 @@
 				F922C8F917CF7ACC005177A2 /* LandMap.m in Sources */,
 				F922C8FA17CF7ACC005177A2 /* SkyMap.m in Sources */,
 				F922C8FD17CF7B00005177A2 /* Map.m in Sources */,
-				F922C91F17CF8099005177A2 /* LandPage.m in Sources */,
-				F922C92017CF8099005177A2 /* Page0.m in Sources */,
 				F922C92117CF8099005177A2 /* Page1.m in Sources */,
 				F922C92317CF8099005177A2 /* Page11.m in Sources */,
 				F922C92417CF8099005177A2 /* Page12.m in Sources */,
@@ -1876,7 +1882,6 @@
 				F922C92C17CF8099005177A2 /* Page8.m in Sources */,
 				F922C92D17CF8099005177A2 /* Page9.m in Sources */,
 				F922C92E17CF8099005177A2 /* Page900.m in Sources */,
-				F922C93817CF839E005177A2 /* Page.m in Sources */,
 				F922C94A17D1C402005177A2 /* Page1000.m in Sources */,
 				F922C94B17D1C402005177A2 /* Page1001.m in Sources */,
 				F922C94C17D1C402005177A2 /* SkyPage.m in Sources */,
@@ -1905,6 +1910,9 @@
 				F9E8D1451801A95400997396 /* Page10102003.m in Sources */,
 				F9E8D1481801A96400997396 /* Page10102004.m in Sources */,
 				F9E8D14B1802FB1700997396 /* HatenaBlock.m in Sources */,
+				F9E8D15118055C4E00997396 /* LandPage.m in Sources */,
+				F9E8D15518055C6900997396 /* Page.m in Sources */,
+				F9E8D15818055F8200997396 /* Page0.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,6 +45,8 @@ const int INIT_ARRAY_CAPACITY = 5;
 
 - (Page*)_getNewPage:(int)pageId {
     switch (pageId) {
+
+        // 固定ステージ
         case 10101001: return [Page10101001 node];
         case 10101002: return [Page10101002 node];
         case 10101003: return [Page10101003 node];
@@ -52,7 +54,14 @@ const int INIT_ARRAY_CAPACITY = 5;
         case 10102002: return [Page10102002 node];
         case 10102003: return [Page10102003 node];
         case 10102004: return [Page10102004 node];
+
+        // 固定ステージ共通
+        case 20000001: return [Page0 node]; // 地面のみ
+            
+
+        // ランダム専用
         
+            
         case 0: return [Page0 node]; // 地面のみ
         case 1: return [Page1 node]; // 地面とコイン + 敵（きのこ、炎神）
         case 2: return [Page2 node]; // ブロック縦に3つ並んでいて間にコイン + 間に敵（スライム、とげとげ）

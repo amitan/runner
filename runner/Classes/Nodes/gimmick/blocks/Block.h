@@ -16,7 +16,7 @@
 
 // 地面種類
 typedef enum {
-    LAND_DEFAULT = 24,
+    LAND_DEFAULT = 16,
     LAND_LONG = 50,
     LAND_2 = 2,
     LAND_4 = 4,

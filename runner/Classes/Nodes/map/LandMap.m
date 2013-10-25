@@ -8,7 +8,6 @@
 
 #import "LandMap.h"
 #import "PointUtil.h"
-#import "Page1.h"
 #import "GameScene.h"
 #import "GameUtil.h"
 #import "Gun.h"
@@ -64,6 +63,7 @@ const float MIN_FIRE2_SECONDS = 10;
             self._gun2 = [Gun node];
             
         } else {
+            [self addPage:[pageController getPageBy:PAGE_START]];
             for (int i = 0; i <= INIT_PAGE_NUM; i++) {
                 [self addPage:[pageController getPageWithStageId:stageId pageNo:self._fixedPageNo]];
                 self._fixedPageNo++;

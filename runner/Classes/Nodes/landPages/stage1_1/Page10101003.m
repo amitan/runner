@@ -26,7 +26,7 @@
                          [Block createBlock:B_X2 bx:7 by:7],
                          [Block createBlock:B_X2 bx:11 by:9],
                          [Block createBlock:B_X6 bx:17 by:6],
-                         [Block createBlock:B_X6 bx:25 by:10],
+                         [Block createBlock:B_X6 bx:25 by:9],
                          
                          // 階段
                          [Block createBlock:B_X10 bx:41 by:3],
@@ -49,11 +49,11 @@
                         [Coin createCoin:C_STANDARD bx:20 by:7],
                         [Coin createCoin:C_STANDARD bx:21 by:7],
                         [Coin createCoin:C_STANDARD bx:22 by:7],
-                        [Coin createCoin:C_STANDARD bx:26 by:11],
-                        [Coin createCoin:C_STANDARD bx:27 by:11],
-                        [Coin createCoin:C_STANDARD bx:28 by:11],
-                        [Coin createCoin:C_STANDARD bx:29 by:11],
-                        [Coin createCoin:C_STANDARD bx:30 by:11],
+                        [Coin createCoin:C_STANDARD bx:26 by:10],
+                        [Coin createCoin:C_STANDARD bx:27 by:10],
+                        [Coin createCoin:C_STANDARD bx:28 by:10],
+                        [Coin createCoin:C_STANDARD bx:29 by:10],
+                        [Coin createCoin:C_STANDARD bx:30 by:10],
                         ];
         for (Coin *coin in self._coins) {
             [coin stageOn:self];

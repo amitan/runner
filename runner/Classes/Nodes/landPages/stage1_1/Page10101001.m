@@ -22,11 +22,9 @@
         self._lands = @[land];
         
         // ブロック追加
-        self._blocks = @[[Block createBlock:B_X2 bx:25 by:6],
-                         [Block createBlock:B_HATENA bx:27 by:6],
-                         [Block createBlock:B_X7 bx:28 by:6],
-                         [Block createBlock:B_X4 bx:35 by:10],
-                         [Block createBlock:B_X4 bx:42 by:10],
+        self._blocks = @[[Block createBlock:B_X10 bx:25 by:5],
+                         [Block createBlock:B_X4 bx:35 by:8],
+                         [Block createBlock:B_X4 bx:42 by:8],
                          ];
         for (Block *block in self._blocks) {
             [block stageOn:self];
